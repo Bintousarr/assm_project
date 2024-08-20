@@ -1,0 +1,206 @@
+{
+    "accueil": {
+        "header-block": {
+            "lieu": "Abidjan, Côte d'Ivoire",
+            "contact": "Envoyez-nous un message",
+            "telephone": "Demande de rappel",
+            "inscription": "INSCRIVEZ-VOUS ICI"
+
+        },
+        "navbar-block": {
+            "titre1": "ACCUEIL",
+            "titre2": "PROGRAMME",
+            "titre3": "ASSM 2024",
+            "desc1": "Sponsors",
+            "desc2": "Orateurs",
+            "desc3": "Accomodation",
+            "desc4": "À propos",
+            "titre4": "CONTACT"
+        }, 
+      "banner-block": {
+        "date": "Du 02 décembre au 06 décembre 2024",
+        "lieu": "Abidjan, Côte d'Ivoire",
+        "theme": " GESTION DES RESSOURCES NATURELLES ET CATASTROPHES",
+        "desc1": "À propos",
+        "desc2": "INSCRIVEZ-VOUS",
+        "desc3":"L'espace n'est pas une option, mais une nécessité. La technologie spatiale est fondamentale pour les pays africains."
+      },
+      "sponsor-block":{
+        "titre1":"Nos sponsors"
+      },
+      "compte-rebours":{
+        "titre1": "Compte A Rebours de l'Evénement",
+        "titre2":"Jours",
+        "titre3":"Heures",
+        "titre4":"Minutes",
+        "titre5":"Secondes",
+        "desc1": "Participants",
+        "desc2":"Conférenciers",
+        "desc3": "Jours de Sommet",
+        "desc4": "Ateliers"
+      },
+      "orateur-block":{
+        "titre1":"Orateurs principaux",
+        "titre2":"Dr TIDIANE OUATTARA",
+        "titre3":"Prof SHERIF SEDGY",
+        "titre4":"Mr ADAMA DIAWARA",
+        "titre5":"Mr IRIE Bi FABRICE",
+        "desc1":"Commission de l'Union Africaine, Agence Spatiale Africaine",
+        "desc2": "Agence Spatiale Égyptienne",
+        "desc3":"Ministère de l’Enseignement Supérieur et de la Recherche Scientifique",
+        "desc4":"OTIF Espace Afrique"
+      },
+      "footer-block":{
+        "titre1":"Liens utils",
+        "titre2":"Nous suivre",
+        "titre3":"Nous Contacter",
+        "desc1":"Accueil",
+        "desc2":"A propos",
+        "desc3":"Linkdin",
+        "desc4":"Contact",
+        "desc5":" Tous droits réservés"
+      }
+    },
+    "contact":{
+        "contact-block":{
+            "telephone": "Appelez au",
+            "mail":"Mail",
+            "lieu": "Abidjan, Côte d'Ivoire",
+            "titre1":"Prêt à commencer ",
+            "titre2":"Nous sommes à votre disponibilité pour toute question",
+            "titre3":"Nom",
+            "titre4":"Email",
+            "titre5":"Votre Message",
+            "titre6":"Envoyer"
+        }
+    },
+    "sponsor":{
+        "info-block":{
+            "desc":"Nos sponsors",
+            "titre1":" OTIF 2024 BROCHURE",
+            "titre2":"Pour plus d'informations, veuillez nous contactez"
+            
+        }
+    },
+    "orateur":{
+        "block":{
+            "titr1":"Rencontrez nos intervenants",
+            "titre2":"Ingénieur en SIG et Topographe",
+            "titre3":"Expert en Sciences Technologiques et Spatiales à la Commission de l'Union Africaine",
+            "titre4":"Ministre de l’Enseignement Supérieur et de la Recherche scientifique",
+            "titre5":"Directeur général de l'Agence spatiale égyptienne"
+        }
+    },
+    "accomodation":{
+        "logistique-block":{
+            "desc":"INFORMATION LOGISTIQUE",
+            "titre1":"VENUE",
+            "titre2":"VOLS",
+            "titre3":"TRANSFERTS AÉROPORTUAIRES ET TRANSPORT",
+            "titre4":"VISA, PASSEPORTS ET FORMALITÉS D'ENTRÉE",
+            "titre5":"EXIGENCES EN MATIÈRE DE VACCINATION",
+            "titre6":"DSA ET HÉBERGEMENT",
+            "titre7":"KIT D'INFORMATION ET ACCRÉDITATION",
+            "titre8":"DEVISES ET SERVICES BANCAIRES",
+            "titre9":"ÉLECTRICITÉ",
+            "titre10":"INSTALLATIONS DE COMMUNICATION",
+            "titre11":"PRODUITS DE TOILETTE",
+            "titre12":"MÉTÉO",
+            "titre13":"LANGUE",
+            "titre14":"MALADIE OU ACCIDENT",
+            "titre15":"INFORMATIONS DE CONTACT:"
+        }
+    },
+    "program":{
+        "first-block":{
+            "desc":"Information de l'événement",
+            "day":"JOUR",
+            "titre1":" ÉVÉNEMENT SOCIAL",
+            "titre2":"DON SOCIAL",
+            "titre3":"CONFERENCE DANS UNE ECOLE",
+            "titre4":"REUNION POUR LE CLUB D'AFFAIRES",
+            "titre5":"Orateur",
+            "time1":"10:00 – 12:00",
+            "time2":"14:00 – 16:00",
+            "time3":"16:00 – 17:30"
+        },
+        "second-block":{
+            "titre1":" Cérémonie d'ouvertures et Ressources Naturelles",
+            "titre2":"Petit-déjeuner",
+            "titre3":"Prise de parole de quelques autorités et directeurs",
+            "titre4":"Déjeuner",
+            "titre5":"Session 1: Solution spatiale pour la gestion foncière",
+            "titre6":"Pause café et Visite de stand",
+            "titre7":"Session 2: Solution spatiale pour la gestion foncière",
+            "orateur":"Orateur",
+            "time":"09:00 - 10:00",
+            "time1":"10:00 – 12:00",
+            "time2":"12:15 - 14:00",
+            "time3":"14:00 - 15:30",
+            "time4":"15:30 - 16:30",
+            "time5":"16:30 - 17:30"
+        },
+        "third-block":{
+            "titre1":" Ressources Naturelles",
+            "titre2":"Petit-déjeuner",
+            "titre3":"Session 4: Solutions pour l'agriculture, l'eau et les fôrets",
+            "titre4":"Déjeuner",
+            "titre5":"Session 5: Solution spatiale pour les inondations",
+            "titre6":"Pause café et Visite de stand",
+            "titre7":"Dîner: Prix spatial annuel",
+            "orateur":"Orateur",
+            "time":"09:00 - 10:00",
+            "time1":"10:00 – 12:00",
+            "time2":"12:15 - 14:00",
+            "time3":"14:00 - 15:30",
+            "time4":"15:30 - 16:30",
+            "time5":"19:00 - 23:00"
+        },
+        "fourth-block":{
+            "titre1":" Sécurité & Défense",
+            "titre2":"Petit-déjeuner",
+            "titre3":"Session 7: Solutions pour la sécurité et la défense",
+            "titre4":"Déjeuner",
+            "titre5":"Session 8: Solution spatiale pour le maritime",
+            "titre6":"Pause café et Visite de stand",
+            "titre7":"Réservé au club d'affaires",
+            "orateur":"Orateur",
+            "time":"09:00 - 10:00",
+            "time1":"10:00 – 12:00",
+            "time2":"12:15 - 14:00",
+            "time3":"14:00 - 15:00",
+            "time4":"15:00 - 16:00",
+            "time5":"16:00 - 17:00"
+        },
+        "fifth-block":{
+            "titre1":"Clôture",
+            "titre2":"Petit-déjeuner",
+            "titre3":"Prise de parole de quelques autorités et directeurs",
+            "titre4":"Déjeuner",
+            "titre5":"Visite touristique",
+            "orateur":"Orateur",
+            "time":"09:00 - 10:00",
+            "time1":"10:00 – 12:00",
+            "time2":"12:15 - 14:00",
+            "time3":"14:00 - 17:00"
+          
+        }
+    },
+    "register":{
+        "block":{
+            "desc":"Remplissez le formulaire pour réserver votre place",
+            "titre1":"Sélectionnez votre titre",
+            "titre2":"Prénom et nom",
+            "titre3":"Genre",
+            "desc1":"Homme",
+            "desc2":"Femme",
+            "titre4":"Email",
+            "titre5":"Téléphone",
+            "titre6":"Pays",
+            "titre7":"Sélectionnez le type de participation",
+            "titre8":"S'inscrire"
+
+        }
+    }
+  }
+  

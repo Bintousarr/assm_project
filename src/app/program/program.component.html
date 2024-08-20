@@ -1,0 +1,32 @@
+<div class="container mx-auto p-4 font-poppins rounded-lg mt-10" *ngFor="let day of days">
+  <h2 class="text-center text-2xl font-bold my-4">{{ day.day }}</h2>
+  <div class="border-t-4 border-red-500 w-16 mx-auto my-2"></div>
+  <div class="mt-4 space-y-4" [ngClass]="getBackgroundColor(day.day)">
+    <div *ngFor="let event of day.events" class="grid grid-cols-5 gap-4 items-center p-4 border">
+      <div class="col-span-1 bg-red-900 text-white p-2 text-center">
+        <div>
+          <i class="far fa-calendar-alt mr-2"></i>{{ event.type }}
+        </div>
+        <div class="mt-4">
+          <i class="far fa-clock mr-2"></i>{{ event.time }}
+        </div>
+      </div>
+      <div class="col-span-1 flex justify-center">
+        <img class="w-32 h-32 rounded-lg" [src]="event.speakerImg" alt="Speaker Image">
+      </div>
+      <div class="col-span-3 grid grid-cols-4 items-center">
+        <div class="col-span-3">
+          <div class="font-bold">{{ event.speakerName }}</div>
+          <div class="text-xl font-bold text-red-900">{{ event.title }}</div>
+          <div class="mt-4">{{ event.description }}</div>
+        </div>
+        <div class="col-span-1 flex flex-col items-center">
+          <div class="border-l-2 h-full border-gray-300 ml-4"></div>
+          <div class="mt-4" *ngIf="(day.day === 'Deuxième Jour' || day.day === 'Cinquième Jour') && event.description.startsWith('Prise de parole')">
+            <button [routerLink]="['/orateur']" class="bg-blue-500 text-white px-4 py-2 rounded-full">Orateur</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

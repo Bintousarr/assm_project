@@ -1,0 +1,202 @@
+{
+    "accueil": {
+      "header-block": {
+        "lieu": "Abidjan, Ivory Coast",
+        "contact": "Send us a message",
+        "telephone": "Request a call back",
+        "inscription": "REGISTER HERE"
+      },
+      "navbar-block": {
+        "titre1": "HOME",
+        "titre2": "PROGRAM",
+        "titre3": "ASSM 2024",
+        "desc1": "Sponsors",
+        "desc2": "Speakers",
+        "desc3": "Accommodation",
+        "desc4": "About",
+        "titre4": "CONTACT"
+      },
+      "banner-block": {
+        "date": "From December 2 to December 6, 2024",
+        "lieu": "Abidjan, Ivory Coast",
+        "theme": "NATURAL RESOURCES AND DISASTER MANAGEMENT",
+        "desc1": "About",
+        "desc2": "REGISTER",
+        "desc3": "Space is not an option, but a necessity. Space technology is fundamental for African countries."
+      },
+      "sponsor-block": {
+        "titre1": "Our sponsors"
+      },
+      "compte-rebours": {
+        "titre1": "Event Countdown",
+        "titre2": "Days",
+        "titre3": "Hours",
+        "titre4": "Minutes",
+        "titre5": "Seconds",
+        "desc1": "Participants",
+        "desc2": "Speakers",
+        "desc3": "Summit Days",
+        "desc4": "Workshops"
+      },
+      "orateur-block": {
+        "titre1": "Keynote Speakers",
+        "titre2": "Dr. TIDIANE OUATTARA",
+        "titre3": "Prof. SHERIF SEDGY",
+        "titre4": "Mr. ADAMA DIAWARA",
+        "titre5": "Mr. IRIE Bi FABRICE",
+        "desc1": "African Union Commission, African Space Agency",
+        "desc2": "Egyptian Space Agency",
+        "desc3": "Ministry of Higher Education and Scientific Research",
+        "desc4": "OTIF Space Africa"
+      },
+      "footer-block": {
+        "titre1": "Useful Links",
+        "titre2": "Follow Us",
+        "titre3": "Contact Us",
+        "desc1": "Home",
+        "desc2": "About",
+        "desc3": "LinkedIn",
+        "desc4": "Contact",
+        "desc5": "All rights reserved"
+      }
+    },
+    "contact": {
+      "contact-block": {
+        "telephone": "Call at",
+        "mail": "Mail",
+        "lieu": "Abidjan, Ivory Coast",
+        "titre1": "Ready to start",
+        "titre2": "We are available for any questions",
+        "titre3": "Name",
+        "titre4": "Email",
+        "titre5": "Your Message",
+        "titre6": "Send"
+      }
+    },
+    "sponsor": {
+      "info-block": {
+        "desc": "Our sponsors",
+        "titre1": "OTIF 2024 BROCHURE",
+        "titre2": "For more information, please contact us"
+      }
+    },
+    "orateur": {
+      "block": {
+        "titre1": "Meet our speakers",
+        "titre2": "GIS Engineer and Surveyor",
+        "titre3": "Expert in Technological and Space Sciences at the African Union Commission",
+        "titre4": "Minister of Higher Education and Scientific Research",
+        "titre5": "Director General of the Egyptian Space Agency"
+      }
+    },
+    "accomodation": {
+      "logistique-block": {
+        "desc": "LOGISTICAL INFORMATION",
+        "titre1": "VENUE",
+        "titre2": "FLIGHTS",
+        "titre3": "AIRPORT TRANSFERS AND TRANSPORT",
+        "titre4": "VISA, PASSPORTS AND ENTRY REQUIREMENTS",
+        "titre5": "VACCINATION REQUIREMENTS",
+        "titre6": "DSA AND ACCOMMODATION",
+        "titre7": "INFORMATION KIT AND ACCREDITATION",
+        "titre8": "CURRENCY AND BANKING SERVICES",
+        "titre9": "ELECTRICITY",
+        "titre10": "COMMUNICATION FACILITIES",
+        "titre11": "TOILETRIES",
+        "titre12": "WEATHER",
+        "titre13": "LANGUAGE",
+        "titre14": "ILLNESS OR ACCIDENT",
+        "titre15": "CONTACT INFORMATION:"
+      }
+    },
+    "program": {
+      "first-block": {
+        "desc": "Event Information",
+        "day": "DAY",
+        "titre1": "SOCIAL EVENT",
+        "titre2": "SOCIAL DONATION",
+        "titre3": "SCHOOL LECTURE",
+        "titre4": "BUSINESS CLUB MEETING",
+        "titre5": "Speaker",
+        "time1": "10:00 – 12:00",
+        "time2": "14:00 – 16:00",
+        "time3": "16:00 – 17:30"
+      },
+      "second-block": {
+        "titre1": "Opening Ceremony and Natural Resources",
+        "titre2": "Breakfast",
+        "titre3": "Speeches by some authorities and directors",
+        "titre4": "Lunch",
+        "titre5": "Session 1: Spatial solution for land management",
+        "titre6": "Coffee break and Exhibition visit",
+        "titre7": "Session 2: Spatial solution for land management",
+        "orateur": "Speaker",
+        "time": "09:00 - 10:00",
+        "time1": "10:00 – 12:00",
+        "time2": "12:15 - 14:00",
+        "time3": "14:00 - 15:30",
+        "time4": "15:30 - 16:30",
+        "time5": "16:30 - 17:30"
+      },
+      "third-block": {
+        "titre1": "Natural Resources",
+        "titre2": "Breakfast",
+        "titre3": "Session 4: Solutions for agriculture, water, and forests",
+        "titre4": "Lunch",
+        "titre5": "Session 5: Spatial solution for floods",
+        "titre6": "Coffee break and Exhibition visit",
+        "titre7": "Dinner: Annual Space Award",
+        "orateur": "Speaker",
+        "time": "09:00 - 10:00",
+        "time1": "10:00 – 12:00",
+        "time2": "12:15 - 14:00",
+        "time3": "14:00 - 15:30",
+        "time4": "15:30 - 16:30",
+        "time5": "19:00 - 23:00"
+      },
+      "fourth-block": {
+        "titre1": "Security & Defense",
+        "titre2": "Breakfast",
+        "titre3": "Session 7: Solutions for security and defense",
+        "titre4": "Lunch",
+        "titre5": "Session 8: Spatial solution for maritime",
+        "titre6": "Coffee break and Exhibition visit",
+        "titre7": "Reserved for business club",
+        "orateur": "Speaker",
+        "time": "09:00 - 10:00",
+        "time1": "10:00 – 12:00",
+        "time2": "12:15 - 14:00",
+        "time3": "14:00 - 15:00",
+        "time4": "15:00 - 16:00",
+        "time5": "16:00 - 17:00"
+      },
+      "fifth-block": {
+        "titre1": "Closing",
+        "titre2": "Breakfast",
+        "titre3": "Speeches by some authorities and directors",
+        "titre4": "Lunch",
+        "titre5": "Tourist visit",
+        "orateur": "Speaker",
+        "time": "09:00 - 10:00",
+        "time1": "10:00 – 12:00",
+        "time2": "12:15 - 14:00",
+        "time3": "14:00 - 17:00"
+      }
+    },
+    "register": {
+      "block": {
+        "desc": "Fill out the form to reserve your spot",
+        "titre1": "Select your title",
+        "titre2": "First and Last Name",
+        "titre3": "Gender",
+        "desc1": "Male",
+        "desc2": "Female",
+        "titre4": "Email",
+        "titre5": "Phone",
+        "titre6": "Country",
+        "titre7": "Select participation type",
+        "titre8": "Register"
+      }
+    }
+  }
+  

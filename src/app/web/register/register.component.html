@@ -1,0 +1,197 @@
+<div class="flex ml-20 p-10 mt-20 font-poppins mr-4">
+  <div class="w-1/2 bg-white flex flex-col justify-center items-center">
+      <div class="w-2/3">
+          <h1 class="mt-2 mb-8 text-2xl font-bold animate-fade-in-up">Remplissez le formulaire pour réserver votre place.</h1>
+          <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <!-- Sélection du Titre -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Sélectionnez votre titre</label>
+              <select formControlName="titre" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <option value="">Choisissez...</option>
+                <option>Prof.</option>
+                <option>Dr.</option>
+                <option>M.</option>
+                <option>Mdme.</option>
+                <option>Mlle.</option>
+              </select>
+              <div *ngIf="registrationForm.get('titre')?.invalid && registrationForm.get('titre')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+            </div>
+          
+            <!-- Prénom -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Prénom</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <i class="fas fa-user text-gray-500"></i>
+                </span>
+                <input formControlName="prenom" type="text" placeholder="Prénom" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('prenom')?.invalid && registrationForm.get('prenom')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              </div>
+            </div>
+          
+            <!-- Nom -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Nom</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <i class="fas fa-user text-gray-500"></i>
+                </span>
+                <input formControlName="nom" type="text" placeholder="Nom" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('nom')?.invalid && registrationForm.get('nom')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              </div>
+            </div>
+          
+            <!-- Genre -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Genre</label>
+              <div class="flex items-center">
+                <input formControlName="genre" type="radio" id="male" value="male" class="mr-2">
+                <label for="male" class="mr-4">Homme</label>
+                <input formControlName="genre" type="radio" id="female" value="female" class="mr-2">
+                <label for="female">Femme</label>
+              </div>
+              <div *ngIf="registrationForm.get('genre')?.invalid && registrationForm.get('genre')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+            </div>
+          
+            <!-- Email -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <i class="fas fa-envelope text-gray-500"></i>
+                </span>
+                <input formControlName="email" type="email" id="email" placeholder="Email" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="text-red-500 text-sm">
+                  <span *ngIf="registrationForm.get('email')?.errors?.['required']">Ce champ est requis.</span>
+                  <span *ngIf="registrationForm.get('email')?.errors?.['email']">Adresse email invalide.</span>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Téléphone -->
+            <div class="mb-6">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Téléphone</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <i class="fas fa-phone text-gray-500"></i>
+                </span>
+                <input formControlName="telephone" type="text" placeholder="Téléphone" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('telephone')?.invalid && registrationForm.get('telephone')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              </div>
+            </div>
+          
+            <!-- Pays -->
+            <div class="mb-4">
+                <label class="block mb-2 text-sm font-medium text-gray-700">Pays</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <i class="fas fa-globe text-gray-500"></i>
+                  </span>
+                  <input formControlName="pays" type="text" placeholder="Pays" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" (input)="onCountryInput()">
+                  <ul *ngIf="filteredCountries.length > 0" class="absolute z-10 w-full bg-white shadow-md max-h-40 overflow-y-auto">
+                    <li *ngFor="let country of filteredCountries" (click)="registrationForm.get('pays')?.setValue(country)" class="p-2 cursor-pointer hover:bg-blue-500 hover:text-white">
+                      {{ country }}
+                    </li>
+                  </ul>
+                  <div *ngIf="registrationForm.get('pays')?.invalid && registrationForm.get('pays')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+                </div>
+              </div>
+          
+            <!-- Type de Participation -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Sélectionnez le type de participation</label>
+              <select formControlName="participation" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <option value="">Choisissez...</option>
+                <option>Sponsor</option>
+                <option>Animateur(trice)</option>
+                <option>Intervenant</option>
+                <option>Présentation par affiche</option>
+                <option>Co-auteur</option>
+              </select>
+              <div *ngIf="registrationForm.get('participation')?.invalid && registrationForm.get('participation')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+            </div>
+          
+            <!-- Bouton de Soumission -->
+            <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-900" [disabled]="registrationForm.invalid">S'inscrire</button>
+          </form>
+          
+      </div>
+  </div>
+  <div class="w-1/2 ml-28 bg-blue-500 rounded-lg items-center justify-center">
+      <!-- left side contact infos -->
+      <div>
+          <div class="p-[40px] sm:p-[30px] space-y-[24px] text-[16px]">
+              <!-- single contact info -->
+              <div class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0 animate-fade-in-left">
+                  <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                      <img src="../../../assets/call-msg.svg" alt="icon">
+                  </span>
+                  <div class="txt">
+                      <span class="font-light">Appelez au </span>
+                      <h4 class="font-semibold text-[24px]"><a href="tel:+208-555-0112">+336 78 55 85 45</a></h4>
+                  </div>
+              </div>
+              <!-- single contact info -->
+              <div class="flex items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0 animate-fade-in-left">
+                  <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                      <img src="../../../assets/mail.svg" alt="icon">
+                  </span>
+                  <div class="txt">
+                      <span class="font-light">Mail</span>
+                      <h4 class="font-semibold text-[24px]"><a href="mailto:contact@otif-africa-space.com">contact&#64;otif-africa-space.com</a></h4>
+                  </div>
+              </div>
+              <!-- single contact info -->
+              <div class="flex items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0 animate-fade-in-left">
+                  <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                      <img src="../../../assets/location-dot-circle.svg" alt="icon">
+                  </span>
+                  <div class="txt">
+                      <span class="font-light">Lieu</span>
+                      <h4 class="font-semibold text-[24px]">Abidjan, Côte d'Ivoire</h4>
+                  </div>
+              </div>
+          </div>
+          <img class="max-w-full transition-transform duration-500 ease-in-out hover:scale-110 animate-fade-in" src="../../../assets/register.jpg" alt="">
+      </div>
+  </div>
+</div>
+
+<!-- Tailwind CSS animation classes -->
+<style>
+@keyframes fade-in-up {
+0% {
+  opacity: 0;
+  transform: translateY(20px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+@keyframes fade-in-left {
+0% {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+100% {
+  opacity: 1;
+  transform: translateX(0);
+}
+}
+@keyframes fade-in {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+}
+.animate-fade-in-up {
+animation: fade-in-up 0.5s ease-out forwards;
+}
+.animate-fade-in-left {
+animation: fade-in-left 0.5s ease-out forwards;
+}
+
+</style>

@@ -1,0 +1,36 @@
+<div class="bg-customBlue font-poppins text-white ">
+  <div class="container mx-auto flex items-center justify-between py-4">
+    <nav class="flex items-center space-x-1.5 sm:space-x-4">
+      <div class="relative group">
+        <button class="nav-item hover:text-red-600 focus:outline-none"  [routerLink]="['banner']" aria-haspopup="true" aria-expanded="false">ACCUEIL</button>
+        <div class="absolute left-0 mt-2 w-42 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+          <a [routerLink]="['marche']" class="block px-4 py-2 hover:bg-gray-200">Marché</a>
+          <a [routerLink]="['voir-marche']" class="block px-4 py-2 hover:bg-gray-200">A voir sur le marché</a>
+          <a [routerLink]="['espace-visiteur']" class="block px-4 py-2 hover:bg-gray-200">Espace visiteurs</a>
+        </div>
+      </div>
+      <span class="text-white">|</span>
+      <a [routerLink]="['program']" class="nav-item hover:text-red-600">AGENDA</a>
+      <span class="text-white">|</span>
+      <div class="relative group">
+        <button class="nav-item hover:text-red-600 focus:outline-none" aria-haspopup="true" aria-expanded="false">MASS 2024</button>
+        <div class="absolute left-0 mt-2 w-42 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+          <a [routerLink]="['sponsor-page']" class="block px-4 py-2 hover:bg-gray-200">PARTENAIRES & FOURNISSEURS OFFICIELS</a>
+          <a [routerLink]="['orateur']" class="block px-4 py-2 hover:bg-gray-200">INTERVENANT</a>
+          <a [routerLink]="['accomodation']" class="block px-4 py-2 hover:bg-gray-200">Accomodation</a>
+          <a [routerLink]="['about']" class="block px-4 py-2 hover:bg-gray-200">À propos</a>
+        </div>
+      </div>
+      <span class="text-white">|</span>
+      <div class="relative group">
+        <button class="nav-item hover:text-red-600 focus:outline-none" aria-haspopup="true" aria-expanded="false">INFORMATION</button>
+        <div class="absolute left-0 mt-2 w-42 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+          <a [routerLink]="['sponsor-page']" class="block px-4 py-2 hover:bg-gray-200">INFORMATIONS DE VOYAGES</a>
+          <a [routerLink]="['orateur']" class="block px-4 py-2 hover:bg-gray-200">INFORMATIONS PRATIQUES</a>
+       </div>
+      </div>
+       <span class="text-white">|</span>
+      <a [routerLink]="['contact']" class="nav-item hover:text-red-600">CONTACT</a>
+    </nav>
+  </div>
+</div>
