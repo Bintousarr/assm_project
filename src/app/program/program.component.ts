@@ -38,7 +38,7 @@ export class ProgramComponent {
           type: '02, Dec-2024',
           speakerImg: '../../../assets/don.png',
           speakerName: '',
-          title: 'Don Social',
+          title: 'Action Sociale',
           description: " OTIF organisera un événement social en Côte d'Ivoire, qui a connu cette année des inondations causant des dégâts matériels et humains. L'objectif est de mobiliser le public, de rendre visite aux familles touchées et de leur offrir des dons. Cela permettra également de sensibiliser le public à l’impact des défis climatiques sur les nations africaines, souvent dépourvues de solutions durables."
         },
         {

@@ -75,6 +75,10 @@ export const routes: Routes = [
         path: 'profil/sherif', loadComponent: () => 
           import('./web/profil/sherif/sherif.component').then((c) => c.SherifComponent)
       },
+      {
+        path: 'actualite', loadComponent: () => 
+          import('./web/actualite/actualite.component').then((c) => c.ActualiteComponent)
+      },
       
       {
         path: '**', redirectTo:'banner',pathMatch:'full'
