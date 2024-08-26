@@ -56,7 +56,7 @@ export class RegisterComponent {
     this.filteredCountries = this.countries.filter(country => 
       country.toLowerCase().startsWith(input)
     );
-  }
+  }   
 
   onSubmit() {
     if (this.registrationForm.valid) {

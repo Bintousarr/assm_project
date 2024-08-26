@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class RegisterService {
 
-  private apiUrl = 'http://localhost:3000/server';
+  private apiUrl = 'http://localhost/OTIF_BACKEND/register.php'; // URL de votre fichier PHP
 
   constructor(private http: HttpClient) { }
 
