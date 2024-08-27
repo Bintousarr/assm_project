@@ -79,7 +79,10 @@ export const routes: Routes = [
         path: 'actualite', loadComponent: () => 
           import('./web/actualite/actualite.component').then((c) => c.ActualiteComponent)
       },
-      
+      {
+        path: 'fournisseurs', loadComponent: () => 
+          import('./web/fournisseurs/fournisseurs.component').then((c) => c.FournisseursComponent)
+      },   
       {
         path: '**', redirectTo:'banner',pathMatch:'full'
        
