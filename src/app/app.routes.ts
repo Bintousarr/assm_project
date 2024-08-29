@@ -82,7 +82,35 @@ export const routes: Routes = [
       {
         path: 'fournisseurs', loadComponent: () => 
           import('./web/fournisseurs/fournisseurs.component').then((c) => c.FournisseursComponent)
-      },   
+      }, 
+      {
+        path: 'rendez-vous', loadComponent: () => 
+          import('./web/rendez-vous/accueil/accueil.component').then((c) => c.AccueilComponent)
+      }, 
+      {
+        path: 'login', loadComponent: () => 
+          import('./web/login/login.component').then((c) => c.LoginComponent)
+      },  
+      {
+        path: 'rendez-vous/intervenant/sherif', loadComponent: () => 
+          import('./web/rendez-vous/intervenant/sherif/sherif.component').then((c) => c.SherifComponent)
+      },
+      {
+        path: 'rendez-vous/intervenant/adama', loadComponent: () => 
+          import('./web/rendez-vous/intervenant/adama/adama.component').then((c) => c.AdamaComponent)
+      },
+      {
+        path: 'rendez-vous/intervenant/tidiane', loadComponent: () => 
+          import('./web/rendez-vous/intervenant/tidiane/tidiane.component').then((c) => c.TidianeComponent)
+      },
+      {
+        path: 'rendez-vous/intervenant/fabrice', loadComponent: () => 
+          import('./web/rendez-vous/intervenant/fabrice/fabrice.component').then((c) => c.FabriceComponent)
+      },
+      {
+        path: 'detail-rv', loadComponent: () => 
+          import('./web/rendez-vous/detail-rv/detail-rv.component').then((c) => c.DetailRvComponent)
+      },
       {
         path: '**', redirectTo:'banner',pathMatch:'full'
        

@@ -1,0 +1,109 @@
+<div class="flex ml-20 p-10 mt-2 font-poppins mr-4">
+    <div class="w-1/2 bg-white flex flex-col justify-center items-center">
+        <div class="w-2/3">
+            <h1 class="mt-1 mb-8 text-2xl font-bold animate-fade-in-up">Connectez-vous pour accéder à votre espace personnel</h1>
+            <form>
+              <div class="mb-4">
+                <label class="block mb-2 text-lg font-medium text-gray-700">Email</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <i class="fas fa-envelope text-gray-500"></i>
+                  </span>
+                  <input formControlName="email" type="email" id="email" placeholder="Email" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="block mb-2 text-lg font-medium text-gray-700">Password</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <i class="fas fa-eye text-gray-500"></i>
+                  </span>
+                  <input formControlName="email" type="email" id="email" placeholder="Password" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                </div>
+              </div>
+            
+              <button type="submit" class="w-full bg-blue-500 text-white text-lg font-bold py-2 rounded-lg hover:bg-blue-900">Se connecter</button>
+            </form>
+            
+        </div>
+    </div>
+    <div class="w-1/2 ml-28 bg-blue-500 rounded-lg items-center justify-center">
+        <!-- left side contact infos -->
+        <div>
+            <div class="p-[40px] sm:p-[30px] space-y-[24px] text-[16px]">
+                <!-- single contact info -->
+                <div class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0 animate-fade-in-left">
+                    <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                        <img src="../../../assets/call-msg.svg" alt="icon">
+                    </span>
+                    <div class="txt">
+                        <span class="font-light">Appelez au </span>
+                        <h4 class="font-semibold text-[24px]"><a href="tel:+208-555-0112">+336 78 55 85 45</a></h4>
+                    </div>
+                </div>
+                <!-- single contact info -->
+                <div class="flex items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0 animate-fade-in-left">
+                    <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                        <img src="../../../assets/mail.svg" alt="icon">
+                    </span>
+                    <div class="txt">
+                        <span class="font-light">Mail</span>
+                        <h4 class="font-semibold text-[24px]"><a href="mailto:contact@otif-africa-space.com">contact&#64;otif-africa-space.com</a></h4>
+                    </div>
+                </div>
+                <!-- single contact info -->
+                <div class="flex items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0 animate-fade-in-left">
+                    <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                        <img src="../../../assets/location-dot-circle.svg" alt="icon">
+                    </span>
+                    <div class="txt">
+                        <span class="font-light">Lieu</span>
+                        <h4 class="font-semibold text-[24px]">Abidjan, Côte d'Ivoire</h4>
+                    </div>
+                </div>
+            </div>
+            <img class="max-w-full transition-transform duration-500 ease-in-out hover:scale-110 animate-fade-in" src="../../../assets/register.jpg" alt="">
+        </div>
+    </div>
+  </div>
+  
+  <!-- Tailwind CSS animation classes -->
+  <style>
+  @keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
+  @keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  }
+  @keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  }
+  .animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+  }
+  .animate-fade-in-left {
+  animation: fade-in-left 0.5s ease-out forwards;
+  }
+  
+  </style>
+  
