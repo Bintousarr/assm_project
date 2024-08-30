@@ -1,12 +1,12 @@
 <div class="flex ml-20 p-10 mt-20 font-poppins mr-4">
   <div class="w-1/2 bg-white flex flex-col justify-center items-center">
       <div class="w-2/3">
-          <h1 class="mt-2 mb-8 text-2xl font-bold animate-fade-in-up">Remplir le formulaire pour vous s'inscrire </h1>
+          <h1 class="mt-2 mb-8 text-2xl font-bold animate-fade-in-up">Remplissez le formulaire pour vous inscrire.</h1>
           <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
             <!-- Sélection du Titre -->
             <div class="mb-4">
               <label class="block mb-2 text-sm font-medium text-gray-700">Sélectionnez votre titre</label>
-              <select formControlName="titre" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <select formControlName="title" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                 <option value="">Choisissez...</option>
                 <option>Prof.</option>
                 <option>Dr.</option>
@@ -14,7 +14,7 @@
                 <option>Mdme.</option>
                 <option>Mlle.</option>
               </select>
-              <div *ngIf="registrationForm.get('titre')?.invalid && registrationForm.get('titre')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              <div *ngIf="registrationForm.get('title')?.invalid && registrationForm.get('title')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
             </div>
           
             <!-- Prénom -->
@@ -24,8 +24,8 @@
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                   <i class="fas fa-user text-gray-500"></i>
                 </span>
-                <input formControlName="prenom" type="text" placeholder="Prénom" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                <div *ngIf="registrationForm.get('prenom')?.invalid && registrationForm.get('prenom')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+                <input formControlName="first_name" type="text" placeholder="Prénom" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('first_name')?.invalid && registrationForm.get('first_name')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
               </div>
             </div>
           
@@ -36,8 +36,8 @@
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                   <i class="fas fa-user text-gray-500"></i>
                 </span>
-                <input formControlName="nom" type="text" placeholder="Nom" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                <div *ngIf="registrationForm.get('nom')?.invalid && registrationForm.get('nom')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+                <input formControlName="last_name" type="text" placeholder="Nom" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('last_name')?.invalid && registrationForm.get('last_name')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
               </div>
             </div>
           
@@ -45,12 +45,12 @@
             <div class="mb-4">
               <label class="block mb-2 text-sm font-medium text-gray-700">Genre</label>
               <div class="flex items-center">
-                <input formControlName="genre" type="radio" id="male" value="male" class="mr-2">
+                <input formControlName="gender" type="radio" id="male" value="male" class="mr-2">
                 <label for="male" class="mr-4">Homme</label>
-                <input formControlName="genre" type="radio" id="female" value="female" class="mr-2">
+                <input formControlName="gender" type="radio" id="female" value="female" class="mr-2">
                 <label for="female">Femme</label>
               </div>
-              <div *ngIf="registrationForm.get('genre')?.invalid && registrationForm.get('genre')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              <div *ngIf="registrationForm.get('gender')?.invalid && registrationForm.get('gender')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
             </div>
           
             <!-- Email -->
@@ -67,6 +67,17 @@
                 </div>
               </div>
             </div>
+            <!-- Prénom -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Mot de Pass</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <i class="fas fa-lock text-gray-500"></i>
+                </span>
+                <input formControlName="password" type="text" placeholder="Mot de pass" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              </div>
+            </div>
           
             <!-- Téléphone -->
             <div class="mb-6">
@@ -75,32 +86,60 @@
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                   <i class="fas fa-phone text-gray-500"></i>
                 </span>
-                <input formControlName="telephone" type="text" placeholder="Téléphone" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                <div *ngIf="registrationForm.get('telephone')?.invalid && registrationForm.get('telephone')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+                <input formControlName="phone" type="text" placeholder="Téléphone" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('phone')?.invalid && registrationForm.get('phone')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
               </div>
             </div>
           
             <!-- Pays -->
             <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Pays</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <i class="fas fa-globe text-gray-500"></i>
+                </span>
+                <input
+                  formControlName="country"
+                  type="text"
+                  placeholder="Pays"
+                  class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  (input)="onCountryInput()"
+                />
+                <ul *ngIf="filteredCountries.length > 0" class="absolute z-10 w-full bg-white shadow-md max-h-40 overflow-y-auto">
+                  <li
+                    *ngFor="let country of filteredCountries"
+                    (click)="selectCountry(country)"
+                    class="p-2 cursor-pointer hover:bg-blue-500 hover:text-white"
+                  >
+                    {{ country }}
+                  </li>
+                </ul>
+                <div *ngIf="registrationForm.get('country')?.invalid && registrationForm.get('country')?.touched" class="text-red-500 text-sm">
+                  Ce champ est requis.
+                </div>
+              </div>
+            </div>
+            
+            <!-- <div class="mb-4">
                 <label class="block mb-2 text-sm font-medium text-gray-700">Pays</label>
                 <div class="relative">
                   <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                     <i class="fas fa-globe text-gray-500"></i>
                   </span>
-                  <input formControlName="pays" type="text" placeholder="Pays" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" (input)="onCountryInput()">
+                  <input formControlName="country" type="text" placeholder="Pays" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" (input)="onCountryInput()">
                   <ul *ngIf="filteredCountries.length > 0" class="absolute z-10 w-full bg-white shadow-md max-h-40 overflow-y-auto">
-                    <li *ngFor="let country of filteredCountries" (click)="registrationForm.get('pays')?.setValue(country)" class="p-2 cursor-pointer hover:bg-blue-500 hover:text-white">
+                    <li *ngFor="let country of filteredCountries" (click)="registrationForm.get('country')?.setValue(country)" class="p-2 cursor-pointer hover:bg-blue-500 hover:text-white">
                       {{ country }}
                     </li>
                   </ul>
-                  <div *ngIf="registrationForm.get('pays')?.invalid && registrationForm.get('pays')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+                  <div *ngIf="registrationForm.get('country')?.invalid && registrationForm.get('country')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
                 </div>
-              </div>
+              </div> -->
           
             <!-- Type de Participation -->
             <div class="mb-4">
               <label class="block mb-2 text-sm font-medium text-gray-700">Sélectionnez le type de participation</label>
-              <select formControlName="participation" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <select formControlName="role" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                 <option value="">Choisissez...</option>
                 <option>Sponsor</option>
                 <option>Animateur(trice)</option>
@@ -108,7 +147,7 @@
                 <option>Présentation par affiche</option>
                 <option>Co-auteur</option>
               </select>
-              <div *ngIf="registrationForm.get('participation')?.invalid && registrationForm.get('participation')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              <div *ngIf="registrationForm.get('role')?.invalid && registrationForm.get('role')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
             </div>
           
             <!-- Bouton de Soumission -->

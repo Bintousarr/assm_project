@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders  } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,11 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class RegisterService {
 
-  private apiUrl = 'http://localhost/appointment/api.php'; // URL de votre fichier PHP
+  private apiUrl = 'https://mass.otif-africa-space.com/api/public/api.php'; // URL de l'API; // URL de votre fichier PHP
 
   constructor(private http: HttpClient) { }
 
-  register(data: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, data);
+   // Méthode pour enregistrer un utilisateur
+   register(userData: any): Observable<any> {
+    const url = `${this.apiUrl}?action=register`;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.post(url, userData, { headers });
   }
 }

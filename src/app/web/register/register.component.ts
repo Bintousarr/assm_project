@@ -3,11 +3,13 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { RegisterService } from '../../services/registerService/register.service';
 import { CommonModule } from '@angular/common';
 
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { RegistrationSuccessDialogComponent } from '../../registration-success-dialog/registration-success-dialog.component';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule,MatDialogModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
@@ -38,36 +40,56 @@ export class RegisterComponent {
 ];
 
 
-  constructor(private fb: FormBuilder, private registerService: RegisterService) {
+  constructor(private fb: FormBuilder, private registerService: RegisterService,    private dialog: MatDialog) {
     this.registrationForm = this.fb.group({
-      titre: ['', Validators.required],
-      prenom: ['', Validators.required],
-      nom: ['', Validators.required],
-      genre: ['', Validators.required],
+      title: ['', Validators.required],
+      first_name: ['', Validators.required],
+      last_name: ['', Validators.required],
+      gender: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      telephone: ['', Validators.required],
-      pays: ['', Validators.required],
-      participation: ['', Validators.required]
+      password:['', Validators.required],
+      phone: ['', Validators.required],
+      country: ['', Validators.required],
+      role: ['', Validators.required]
     });
   }
 
-  onCountryInput() {
-    const input = this.registrationForm.get('pays')?.value.toLowerCase();
-    this.filteredCountries = this.countries.filter(country => 
-      country.toLowerCase().startsWith(input)
-    );
-  }   
+  // onCountryInput() {
+  //   const input = this.registrationForm.get('country')?.value.toLowerCase();
+  //   this.filteredCountries = this.countries.filter(country => 
+  //     country.toLowerCase().startsWith(input)
+  //   );
+  // }   
 
+  onCountryInput() {
+    const inputValue = this.registrationForm.get('country')?.value.toLowerCase();
+    this.filteredCountries = this.countries.filter(country =>
+      country.toLowerCase().includes(inputValue)
+    );
+  }
+
+  selectCountry(country: string) {
+    this.registrationForm.get('country')?.setValue(country);
+    this.filteredCountries = []; // Clear the dropdown after selection
+  }
   onSubmit() {
+    console.log(this.registrationForm.value)
     if (this.registrationForm.valid) {
       this.registerService.register(this.registrationForm.value).subscribe(
         response => {
-          console.log('Inscription réussie !', response);
+          console.log('User registered successfully', response);
+          this.openDialog(response.message, true); // isSuccess = true pour succès
         },
         error => {
-          console.error('Erreur lors de l\'inscription', error);
+          console.error('Error registering user', error);
+          this.openDialog(error.error.message, false); // isSucce
         }
       );
     }
+  }
+  openDialog(message: string, isSuccess: boolean): void {
+    this.dialog.open(RegistrationSuccessDialogComponent, {
+      data: { message: message, isSuccess: isSuccess }
+    });
   }
 }

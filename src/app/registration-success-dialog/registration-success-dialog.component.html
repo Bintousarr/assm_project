@@ -1,0 +1,14 @@
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-xs w-full text-center">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">
+        {{ isSuccess ? 'Inscription Réussie' : 'Erreur' }}
+      </h2>
+      <p class="text-gray-600 mb-6">
+        {{ apiMessage }}
+      </p>
+      <button (click)="onOkClick()" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        OK
+      </button>
+    </div>
+  </div>
+  
