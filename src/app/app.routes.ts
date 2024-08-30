@@ -107,10 +107,7 @@ export const routes: Routes = [
         path: 'rendez-vous/intervenant/fabrice', loadComponent: () => 
           import('./web/rendez-vous/intervenant/fabrice/fabrice.component').then((c) => c.FabriceComponent)
       },
-      {
-        path: 'detail-rv', loadComponent: () => 
-          import('./web/rendez-vous/detail-rv/detail-rv.component').then((c) => c.DetailRvComponent)
-      },
+      
       {
         path: '**', redirectTo:'banner',pathMatch:'full'
        

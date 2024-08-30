@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class RegisterService {
 
-  private apiUrl = 'http://localhost/OTIF_BACKEND/register.php'; // URL de votre fichier PHP
+  private apiUrl = 'http://localhost/appointment/api.php'; // URL de votre fichier PHP
 
   constructor(private http: HttpClient) { }
 
