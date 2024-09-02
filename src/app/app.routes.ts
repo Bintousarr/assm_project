@@ -112,6 +112,10 @@ export const routes: Routes = [
           import('./web/dashboard/dashboard.component').then((c) => c.DashboardComponent)
       },
       {
+        path: 'dashboard/gestion-rv', loadComponent: () => 
+          import('./web/dashboard/gestion-rv/gestion-rv.component').then((c) => c.GestionRvComponent)
+      },
+      {
         path: '**', redirectTo:'banner',pathMatch:'full'
        
       }
