@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmailService } from '../../services/email.service';
+import { EmailService } from '../../services/emailService/email.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
