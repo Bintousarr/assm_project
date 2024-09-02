@@ -1,6 +1,6 @@
 
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RegisterService } from '../services/register.service';
+import { RegisterService } from '../services/registerService/register.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';

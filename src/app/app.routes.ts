@@ -89,7 +89,7 @@ export const routes: Routes = [
       }, 
       {
         path: 'login', loadComponent: () => 
-          import('./web/login/login.component').then((c) => c.LoginComponent)
+          import('../app/login/login.component').then((c) => c.LoginComponent)
       },  
       {
         path: 'rendez-vous/intervenant/sherif', loadComponent: () => 
