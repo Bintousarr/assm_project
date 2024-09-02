@@ -39,5 +39,11 @@ export class HomeUserComponent {
     this.router.navigate(['/intervenant', intervenantId]);
   }
 
+  goToRdv(){
+    this.router.navigate(['/mes-rendez-vous']);
+
+
+  }
+
 
 }
