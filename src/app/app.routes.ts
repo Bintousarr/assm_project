@@ -107,7 +107,10 @@ export const routes: Routes = [
         path: 'rendez-vous/intervenant/fabrice', loadComponent: () => 
           import('./web/rendez-vous/intervenant/fabrice/fabrice.component').then((c) => c.FabriceComponent)
       },
-      
+      {
+        path: 'dashboard', loadComponent: () => 
+          import('./web/dashboard/dashboard.component').then((c) => c.DashboardComponent)
+      },
       {
         path: '**', redirectTo:'banner',pathMatch:'full'
        
