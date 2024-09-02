@@ -1,0 +1,27 @@
+<button (click)="logout()">Déconnexion</button>
+<div class="mt-8 font-poppins bg-gray-200 rounded-lg p-6">
+    <div>
+      <h2 class="text-3xl ml-12 font-bold mb-4">
+        Rencontrez nos intervenants
+        <span class="block w-12 h-1 bg-red-800 mt-1"></span>
+      </h2>
+    </div>
+    <div  class="w-full flex flex-wrap mt-12 justify-center  font-poppins  p-6">
+  
+      
+      <div  *ngFor="let intervenant of intervenants"  class="relative bg-white rounded-lg shadow-lg w-72 m-4 text-center overflow-hidden group transition-transform transform hover:scale-105" (click)="goToDetail(intervenant.id)">
+        <img class="w-full h-80 object-cover" [src]="'../../../assets/' + intervenant.image">
+        <div class="p-4 mt-12 mb-4">
+          <button routerLink="/profil/adama" class="text-lg font-semibold">{{intervenant.first_name
+        }} {{intervenant.last_name
+        }}</button>
+          <p class="text-lg text-red-900 font-bold mb-4">{{intervenant.poste
+        }}</p>
+        </div>
+      </div>
+     
+  
+    </div>
+  </div>
+  
+
