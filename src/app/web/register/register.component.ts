@@ -14,6 +14,12 @@ import { RegistrationSuccessDialogComponent } from '../../registration-success-d
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+  public get registerService(): RegisterService {
+    return this._registerService;
+  }
+  public set registerService(value: RegisterService) {
+    this._registerService = value;
+  }
 
   registrationForm: FormGroup;
   filteredCountries: string[] = [];
@@ -40,7 +46,7 @@ export class RegisterComponent {
 ];
 
 
-  constructor(private fb: FormBuilder, private registerService: RegisterService,    private dialog: MatDialog) {
+  constructor(private fb: FormBuilder, private _registerService: RegisterService,    private dialog: MatDialog) {
     this.registrationForm = this.fb.group({
       title: ['', Validators.required],
       first_name: ['', Validators.required],

@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-
+import { authGuard } from './auth.guard';
 export const routes: Routes = [
-    {
-      path: '',
-      loadComponent: () =>
-        import('./banner/banner.component').then((x) => x.BannerComponent),
-      children:[
-        
-        
-    
+  {
+    path: '',
+    loadComponent: () =>
+      import('./banner/banner.component').then((x) => x.BannerComponent),
+    children: [
+
+
+
     ],
       },
       {
@@ -114,6 +114,24 @@ export const routes: Routes = [
       {
         path: 'dashboard/gestion-rv', loadComponent: () => 
           import('./web/dashboard/gestion-rv/gestion-rv.component').then((c) => c.GestionRvComponent)
+      },{
+
+
+        path: 'homeuser',
+        loadComponent: () => import('../app/user/home-user/home-user.component').then((c) => c.HomeUserComponent),
+        canActivate: [authGuard]  // Protection de la route
+      },
+      {
+        path: 'intervenant/:id',
+        loadComponent: () => import('../app/user/intervenant-detail/intervenant-detail.component').then(m => m.IntervenantDetailComponent),
+        canActivate: [authGuard]  // Protection de la route
+      },
+    
+      {
+        path: 'mes-rendez-vous',
+        loadComponent: () => import('../app/user/user-appointments/user-appointments.component').then(m => m.UserAppointmentsComponent),
+        canActivate: [authGuard]  // Protection de la route
+    
       },
       {
         path: '**', redirectTo:'banner',pathMatch:'full'
