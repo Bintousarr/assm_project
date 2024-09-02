@@ -112,6 +112,11 @@ export const routes: Routes = [
           import('./web/dashboard/dashboard.component').then((c) => c.DashboardComponent)
       },
       {
+        path: 'dashboard/gestion-rv', loadComponent: () => 
+          import('./web/dashboard/gestion-rv/gestion-rv.component').then((c) => c.GestionRvComponent)
+      },{
+
+
         path: 'homeuser',
         loadComponent: () => import('../app/user/home-user/home-user.component').then((c) => c.HomeUserComponent),
         canActivate: [authGuard]  // Protection de la route
