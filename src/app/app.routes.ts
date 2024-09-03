@@ -109,11 +109,13 @@ export const routes: Routes = [
       },
       {
         path: 'dashboard', loadComponent: () => 
-          import('./web/dashboard/dashboard.component').then((c) => c.DashboardComponent)
+          import('./web/dashboard/dashboard.component').then((c) => c.DashboardComponent),
+        canActivate: [authGuard]  // Protection de la route
       },
       {
         path: 'dashboard/gestion-rv', loadComponent: () => 
-          import('./web/dashboard/gestion-rv/gestion-rv.component').then((c) => c.GestionRvComponent)
+          import('./web/dashboard/gestion-rv/gestion-rv.component').then((c) => c.GestionRvComponent),
+        canActivate: [authGuard]  // Protection de la route
       },{
 
 

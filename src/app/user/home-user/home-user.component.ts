@@ -32,7 +32,13 @@ export class HomeUserComponent {
     localStorage.removeItem('userToken');
     
     // Rediriger vers la page de login
-    this.router.navigate(['/login']);
+    window.location.href = '/login';
+
+    //this.router.navigate(['/login']);
+  }
+
+  goToIntervenant(){
+    window.location.href = '/homeuser';
   }
 
   goToDetail(intervenantId: number) {

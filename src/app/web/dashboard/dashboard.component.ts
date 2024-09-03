@@ -10,4 +10,16 @@ import { RouterLink } from '@angular/router';
 })
 export class DashboardComponent {
 
+  goToRdv(){
+
+  }
+  logout() {
+    // Vider le token du localStorage
+    localStorage.removeItem('userToken');
+    
+    // Rediriger vers la page de login
+    window.location.href = '/login';
+
+    //this.router.navigate(['/login']);
+  }
 }

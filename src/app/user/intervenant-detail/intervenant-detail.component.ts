@@ -6,6 +6,7 @@ import { SpeakerAvalabilityService } from '../../services/speaker-avalability.se
 import { ApppointmentService } from '../../services/apppointment.service'
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-intervenant-detail',
@@ -51,7 +52,7 @@ intervant_id:any;
   ];
 
 
-  constructor(private route: ActivatedRoute, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService, private apppointmentService:ApppointmentService) { }
+  constructor(private route: ActivatedRoute, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService,private router:Router, private apppointmentService:ApppointmentService) { }
 
   ngOnInit(): void {
 
@@ -135,5 +136,28 @@ intervant_id:any;
         })
       
     this.closeModal();
+  }
+
+  logout() {
+    // Vider le token du localStorage
+    localStorage.removeItem('userToken');
+    
+    // Rediriger vers la page de login
+    window.location.href = '/login';
+
+    //this.router.navigate(['/login']);
+  }
+  goToRdv(){
+    this.router.navigate(['/mes-rendez-vous']);
+
+
+  }
+
+  goToIntervenant(){
+    window.location.href = '/homeuser';
+  }
+
+  goToDetail(intervenantId: number) {
+    this.router.navigate(['/intervenant', intervenantId]);
   }
 }

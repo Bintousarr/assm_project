@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApppointmentService } from '../../services/apppointment.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class UserAppointmentsComponent implements OnInit {
   appointments: any[] = [];
   storedUser:any;
 
-  constructor(private appointmentService: ApppointmentService) {}
+  constructor(private appointmentService: ApppointmentService, private router:Router,) {}
 
   ngOnInit(): void {
     const storedUserString = localStorage.getItem('userToken');
@@ -40,4 +41,24 @@ export class UserAppointmentsComponent implements OnInit {
       );
     }
   }
+  goToRdv(){
+    this.router.navigate(['/mes-rendez-vous']);
+
+
+  }
+
+  goToIntervenant(){
+    window.location.href = '/homeuser';
+  }
+
+  logout() {
+    // Vider le token du localStorage
+    localStorage.removeItem('userToken');
+    
+    // Rediriger vers la page de login
+    window.location.href = '/login';
+
+    //this.router.navigate(['/login']);
+  }
+
 }

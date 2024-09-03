@@ -1,126 +1,161 @@
-<div class="flex font-poppins">
-    <aside class="w-1/5 bg-red-900 text-white h-screen p-4">
-      <div class="mb-8 mt-10">
-        <p class="text-white text-xl">BONJOUR</p>
-      </div>
-      <ul>
-        <li class="flex items-center p-2 text-gray-200 hover:bg-red-700">
-          <i class="fas fa-home mr-3"></i><button routerLink="/dashboard" class="text-white hover:text-gray-200">Tableau de bord</button> 
-        </li>
-        <li class="flex items-center p-2 text-gray-200 hover:bg-red-700">
-          <i class="fas fa-bell mr-3"></i> Notification
-          <span class="bg-red-600 text-white text-xs ml-auto rounded-full px-2"></span>
-        </li>
-        <li class="flex items-center p-2 text-gray-200 hover:bg-red-700">
-          <i class="fas fa-database mr-3"></i>
-          <button routerLink="dashboard/gestion-rv" class="text-white hover:text-gray-200">Gestion des rendez-vous</button>
-        </li>
-      </ul>
-    </aside>
-    
-    <div class="flex-1 p-6 mt-6">
-      <h1 class="text-2xl font-semibold text-gray-700 mb-6 text-center">LISTE DES DEMANDES DE RENDEZ-VOUS</h1>
-  
-      <div class="flex justify-between items-center mb-4 mt-20">
-        <div class="relative inline-block text-left">
-          <button (click)="toggleDropdown()" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-            Filtrer
-            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div [ngClass]="{'hidden': !isDropdownOpen, 'block': isDropdownOpen}" class="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-            <div class="py-1">
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">En attente</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Validées</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Refusées</a>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="overflow-x-auto mt-4">
-        <table class="min-w-full divide-y divide-gray-200">
-          <thead class="bg-red-900 text-white">
-            <tr>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">#Id</th>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Statut</th>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Date</th>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Actions</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y divide-gray-200">
-            <tr *ngFor="let item of items">
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ item.id }}</td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <span 
-                  class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
-                  [ngClass]="{
-                    'bg-green-100 text-green-800': item.statut === 'VALIDÉE',
-                    'bg-red-500 text-white': item.statut === 'REFUSÉE'
-                  }"
-                >{{ item.statut }}</span>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.date }}</td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                <button class="text-blue-600 hover:text-blue-900" (click)="openPopup(item)">
-                  <i class="fas fa-calendar-alt"></i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div *ngIf="isPopupOpen" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-        <div class="bg-white rounded-lg shadow-lg w-1/2" role="dialog" aria-labelledby="popup-title">
-          <div class="flex justify-between items-center border-b px-4 py-2">
-            <h2 id="popup-title" class="text-lg font-semibold">Détail de la demande</h2>
-            <button class="text-gray-500 hover:text-gray-700" (click)="closePopup()" aria-label="Fermer le popup">×</button>
-          </div>
-          <div class="px-4 py-3">
-            <ul class="flex border-b">
-              <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold" href="#">Initiateur</a>
-            </li>
-              <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold" href="#">Motif du rv</a></li>
-              <li><a class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold border-l-2 border-t-2 border-r-2 border-blue-500" href="#">Traitement</a></li>
-            </ul>
-    
-            <div class="mt-4">
-              <div class="bg-gray-100 rounded-lg p-4 mb-4">
-                <button class="flex justify-between items-center w-full text-left text-gray-700" (click)="validateRequest()">
-                  Valider la demande de rendez-vous
-                  <span class="text-green-500">✔️</span>
-                </button>
-              </div>
-              <div class="bg-gray-100 rounded-lg p-4">
-                <button class="flex justify-between items-center w-full text-left text-gray-700" (click)="refuseRequest()">
-                  Refuser la demande de rendez-vous
-                  <span class="text-red-500">❌</span>
-                </button>
-              </div>
-            </div>
+<div class="flex font-poppins min-h-screen">
+  <!-- Aside Section -->
+  <aside class="w-1/5 bg-red-900 text-white flex flex-col p-4">
+    <div class="p-8">
+      <p class="text-white text-xl font-semibold">BONJOUR</p>
+    </div>
+    <ul class="px-4 flex-grow">
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+        <i class="fas fa-home mr-3"></i>
+        <button (click)="goTobord()" class="w-full text-left"> Tableau de bord</button>
+      </li>
+      <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
+        <i class="fas fa-bell mr-3"></i> Notification
+        <span
+          class="bg-red-600 text-white text-xs ml-auto rounded-full px-2">3</span>
+      </li>
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+        <i class="fas fa-database mr-3"></i>
+        <button routerLink="/dashboard/gestion-rv"
+          class="w-full text-left">Gestion des rendez-vous</button>
+      </li>
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+        <i class="fas fa-sign-out-alt mr-3"></i>
+        <button (click)="logout()" class="w-full text-left">Déconnexion</button>
+      </li>
+    </ul>
+  </aside>
 
-            
+  <!-- Main Content Section -->
+  <div class="flex-1 p-6 bg-gray-100">
+    <h1 class="text-2xl font-semibold text-gray-700 mb-6 text-center">LISTE DES
+      DEMANDES DE RENDEZ-VOUS</h1>
+
+    <div class="flex justify-between items-center mb-4">
+      <div class="relative inline-block text-left">
+        <button (click)="toggleDropdown()"
+          class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          Filtrer
+          <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div [ngClass]="{'hidden': !isDropdownOpen, 'block': isDropdownOpen}"
+          class="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <div class="py-1">
+            <a href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">En
+              attente</a>
+            <a href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Validées</a>
+            <a href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Refusées</a>
           </div>
-        </div>
-      </div>
-  
-      <div class="flex justify-between items-center mt-20">
-        <div class="flex items-center">
-          <span class="text-sm text-gray-700">Items per page:</span>
-          <select class="ml-2 p-2 border border-gray-300 rounded-md">
-            <option>5</option>
-            <option>10</option>
-            <option>20</option>
-          </select>
-        </div>
-        <div class="flex items-center">
-          <span class="text-sm text-gray-700 mr-4">1 - 5 of 29</span>
-          <a href="#" class="text-gray-700 hover:text-gray-900 mx-2">&laquo;</a>
-          <a href="#" class="text-gray-700 hover:text-gray-900 mx-2">&raquo;</a>
         </div>
       </div>
     </div>
+
+    <div class="overflow-x-auto mt-4">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-red-900 text-white">
+          <tr>
+            <th
+              class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">#Id</th>
+            <th
+              class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Statut</th>
+            <th
+              class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Date</th>
+            <th
+              class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr *ngFor="let item of items" class="hover:bg-gray-100">
+            <td
+              class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{
+              item.id }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span
+                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
+                [ngClass]="{
+                              'bg-green-100 text-green-800': item.statut === 'VALIDÉE',
+                              'bg-red-500 text-white': item.statut === 'REFUSÉE'
+                            }">{{ item.statut }}</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{
+              item.date }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <button class="text-blue-600 hover:text-blue-900"
+                (click)="openPopup(item)">
+                <i class="fas fa-calendar-alt"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div *ngIf="isPopupOpen"
+      class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+      <div class="bg-white rounded-lg shadow-lg w-1/2" role="dialog"
+        aria-labelledby="popup-title">
+        <div class="flex justify-between items-center border-b px-4 py-2">
+          <h2 id="popup-title" class="text-lg font-semibold">Détail de la
+            demande</h2>
+          <button class="text-gray-500 hover:text-gray-700"
+            (click)="closePopup()" aria-label="Fermer le popup">×</button>
+        </div>
+        <div class="px-4 py-3">
+          <ul class="flex border-b">
+            <li class="mr-1"><a
+                class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold"
+                href="#">Initiateur</a></li>
+            <li class="mr-1"><a
+                class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold"
+                href="#">Motif du rv</a></li>
+            <li><a
+                class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold border-l-2 border-t-2 border-r-2 border-blue-500"
+                href="#">Traitement</a></li>
+          </ul>
+
+          <div class="mt-4">
+            <div class="bg-gray-100 rounded-lg p-4 mb-4">
+              <button
+                class="flex justify-between items-center w-full text-left text-gray-700"
+                (click)="validateRequest()">
+                Valider la demande de rendez-vous
+                <span class="text-green-500">✔️</span>
+              </button>
+            </div>
+            <div class="bg-gray-100 rounded-lg p-4">
+              <button
+                class="flex justify-between items-center w-full text-left text-gray-700"
+                (click)="refuseRequest()">
+                Refuser la demande de rendez-vous
+                <span class="text-red-500">❌</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-center mt-20">
+      <div class="flex items-center">
+        <span class="text-sm text-gray-700">Items per page:</span>
+        <select class="ml-2 p-2 border border-gray-300 rounded-md">
+          <option>5</option>
+          <option>10</option>
+          <option>20</option>
+        </select>
+      </div>
+      <div class="flex items-center">
+        <span class="text-sm text-gray-700 mr-4">1 - 5 of 29</span>
+        <a href="#" class="text-gray-700 hover:text-gray-900 mx-2">&laquo;</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900 mx-2">&raquo;</a>
+      </div>
+    </div>
   </div>
-  
+</div>

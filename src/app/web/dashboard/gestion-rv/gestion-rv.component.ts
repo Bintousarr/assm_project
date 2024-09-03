@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 
@@ -15,12 +15,12 @@ interface Item {
   templateUrl: './gestion-rv.component.html',
   styleUrl: './gestion-rv.component.scss'
 })
-export class GestionRvComponent {
+export class GestionRvComponent implements OnInit {
   isDropdownOpen = false;
   isPopupOpen = false;
   selectedItem: Item | null = null;
   
-
+ngOnInit(){}
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
@@ -55,4 +55,19 @@ export class GestionRvComponent {
       this.closePopup(); // Ferme le popup après refus
     }
   }
+  logout() {
+    // Vider le token du localStorage
+    localStorage.removeItem('userToken');
+    
+    // Rediriger vers la page de login
+    window.location.href = '/login';
+
+    //this.router.navigate(['/login']);
+  }
+
+  goTobord(){
+    window.location.href = '/dashboard';
+
+  }
+  
 }

@@ -17,7 +17,7 @@
     </div>
 
 
-    <div class="main-bar flex justify-between items-center text-red-700 mt-2 py-2">
+    <div class="main-bar flex justify-between items-center text-red-700 mt-2 py-2 px-5">
       <img src="../../../assets/logo.png" alt="OTIFFF" class="ml-24 h-25 w-60" />
       <div class="contact-info items-center ml-10 hidden sm:flex  ">
         <i class="material-icons mr-4">email</i>
@@ -38,9 +38,9 @@
             </button>
             
         </span>
-        <a  [routerLink]="['register']" class="register-btn bg-red-800 text-white py-2 px-4 ml-8 mr-4  rounded-xl">S'INSCRIRE</a>
+        <a  [routerLink]="['register']" class="register-btn bg-red-800 text-white py-2 px-4 ml-8 mr-4  rounded-xl" *ngIf="!isLoggedIn">S'INSCRIRE</a>
 
-        <a  [routerLink]="['login']" class="register-btn bg-red-800 text-white py-2 px-4 ml-6 mr-4  rounded-xl">SE CONNECTER</a>
+        <a  [routerLink]="['login']" class="register-btn bg-red-800 text-white py-2 px-4 ml-6 mr-4  rounded-xl"  *ngIf="!isLoggedIn">SE CONNECTER</a>
 
       </div>
     </div>
