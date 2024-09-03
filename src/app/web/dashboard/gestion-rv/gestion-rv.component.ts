@@ -20,7 +20,9 @@ export class GestionRvComponent implements OnInit {
   isPopupOpen = false;
   selectedItem: Item | null = null;
   
-ngOnInit(){}
+ngOnInit(){
+  console.log(localStorage.getItem('userToken'))
+}
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
