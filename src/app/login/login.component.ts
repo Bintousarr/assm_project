@@ -45,14 +45,14 @@ onLogin() {
       response => {
         console.log('User login successfully', response);
         // Extraire l'objet 'user' depuis la réponse
-      const user = response.user;
+        const user = response.user;
 
-      // Convertir l'objet 'user' en chaîne JSON
-      const userString = JSON.stringify(user);
+        // Convertir l'objet 'user' en chaîne JSON
+        const userString = JSON.stringify(user);
 
-      // Stocker la chaîne JSON dans le localStorage
-      localStorage.setItem('userToken', userString);
-       // localStorage.setItem('userToken', 'fake-jwt-token');
+        // Stocker la chaîne JSON dans le localStorage
+        localStorage.setItem('userToken', userString);
+        // localStorage.setItem('userToken', 'fake-jwt-token');
         this.router.navigate(['/homeuser']);
        // isSuccess = true pour succès
       },
