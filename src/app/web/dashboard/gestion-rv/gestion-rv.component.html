@@ -4,18 +4,23 @@
         <p class="text-white text-xl">BONJOUR</p>
       </div>
       <ul>
-        <li class="flex items-center p-2 text-gray-200 hover:bg-red-700">
+        <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
           <i class="fas fa-home mr-3"></i><button routerLink="/dashboard" class="text-white hover:text-gray-200">Tableau de bord</button> 
         </li>
-        <li class="flex items-center p-2 text-gray-200 hover:bg-red-700">
-          <i class="fas fa-bell mr-3"></i> Notification
+        <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+          <i class="fas fa-bell mr-3"></i> <button routerLink="/dashboard/notification">Notification</button>  
           <span class="bg-red-600 text-white text-xs ml-auto rounded-full px-2"></span>
         </li>
-        <li class="flex items-center p-2 text-gray-200 hover:bg-red-700">
+        <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
           <i class="fas fa-database mr-3"></i>
           <button routerLink="dashboard/gestion-rv" class="text-white hover:text-gray-200">Gestion des rendez-vous</button>
         </li>
+        <li class="flex items-center p-2 mt-64 text-gray-200 hover:bg-red-700">
+          <i class="fas fa-sign-out-alt mr-3"></i>
+          <button class="text-white hover:text-gray-200" (click)="logout()">Déconnexion</button>
+        </li>
       </ul>
+      
     </aside>
     
     <div class="flex-1 p-6 mt-6">
@@ -49,15 +54,22 @@
               <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Actions</th>
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-200">
-            <tr *ngFor="let item of items">
+          <tbody class="bg-white divide-y p-6 m-10 divide-gray-200">
+            <tr *ngFor="let item of items" 
+                [ngClass]="{
+                  'bg-green-100': item.statut === 'Validée',
+                  'bg-red-100': item.statut === 'Refusée',
+                  'bg-gray-100': item.statut === 'En attente'
+                  
+                }">
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ item.id }}</td>
               <td class="px-6 py-4 whitespace-nowrap">
                 <span 
                   class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
                   [ngClass]="{
-                    'bg-green-100 text-green-800': item.statut === 'VALIDÉE',
-                    'bg-red-500 text-white': item.statut === 'REFUSÉE'
+                    'bg-green-100 text-green-800': item.statut === 'Validée',
+                    'bg-red-100 text-red-800': item.statut === 'Refusée',
+                    'bg-gray-300 text-gray-800': item.statut === 'En attente'
                   }"
                 >{{ item.statut }}</span>
               </td>
@@ -73,38 +85,87 @@
       </div>
       
       <div *ngIf="isPopupOpen" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-        <div class="bg-white rounded-lg shadow-lg w-1/2" role="dialog" aria-labelledby="popup-title">
+        <div class="bg-white rounded-lg shadow-lg w-1/2">
           <div class="flex justify-between items-center border-b px-4 py-2">
-            <h2 id="popup-title" class="text-lg font-semibold">Détail de la demande</h2>
-            <button class="text-gray-500 hover:text-gray-700" (click)="closePopup()" aria-label="Fermer le popup">×</button>
+            <h2 class="text-lg font-semibold">Détail de la demande</h2>
+            <button class="text-gray-500 hover:text-gray-700" (click)="closePopup()">×</button>
           </div>
           <div class="px-4 py-3">
+            <!-- Onglets -->
             <ul class="flex border-b">
-              <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold" href="#">Initiateur</a>
-            </li>
-              <li class="mr-1"><a class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold" href="#">Motif du rv</a></li>
-              <li><a class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold border-l-2 border-t-2 border-r-2 border-blue-500" href="#">Traitement</a></li>
+              <li class="mr-1">
+                <a (click)="selectTab('initiator')" [ngClass]="{'border-l-2 border-t-2 border-r-2 border-blue-500': selectedTab === 'initiator'}"
+                   class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold cursor-pointer">Initiateur</a>
+              </li>
+              <li class="mr-1">
+                <a (click)="selectTab('reason')" [ngClass]="{'border-l-2 border-t-2 border-r-2 border-blue-500': selectedTab === 'reason'}"
+                   class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold cursor-pointer">Motif du RV</a>
+              </li>
+              <li>
+                <a (click)="selectTab('treatment')" [ngClass]="{'border-l-2 border-t-2 border-r-2 border-blue-500': selectedTab === 'treatment'}"
+                   class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold cursor-pointer">Traitement</a>
+              </li>
             </ul>
-    
+            
+            <!-- Contenu de l'onglet -->
             <div class="mt-4">
-              <div class="bg-gray-100 rounded-lg p-4 mb-4">
-                <button class="flex justify-between items-center w-full text-left text-gray-700" (click)="validateRequest()">
-                  Valider la demande de rendez-vous
-                  <span class="text-green-500">✔️</span>
-                </button>
+              <div *ngIf="selectedTab === 'initiator'">
+                <table class="w-full">
+                  <tr>
+                    <td class="font-semibold">Nom</td>
+                    <td>{{selectedItem?.nom}}</td>
+                    <td class="font-semibold">Téléphone</td>
+                    <td>{{selectedItem?.telephone}}</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr class="my-4 p-6">
+                    <td class="font-semibold">Prénom</td>
+                    <td>{{selectedItem?.prenom}}</td>
+                    <td class="font-semibold">Email</td>
+                    <td>{{selectedItem?.email}}</td>
+                  </tr>
+                </table>
               </div>
-              <div class="bg-gray-100 rounded-lg p-4">
-                <button class="flex justify-between items-center w-full text-left text-gray-700" (click)="refuseRequest()">
-                  Refuser la demande de rendez-vous
-                  <span class="text-red-500">❌</span>
-                </button>
+      
+              <div *ngIf="selectedTab === 'reason'">
+                <p>{{selectedItem?.motif}}</p>
+              </div>
+      
+              <div *ngIf="selectedTab === 'treatment'">
+                <div class="space-y-4">
+                  <button (click)="validateRequest()" class="flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-md w-full justify-between">
+                    Valider la demande de rendez-vous.
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10 18a1 1 0 001.707.707l5-5a1 1 0 00-1.414-1.414L11 16.586 8.707 14.293a1 1 0 00-1.414 1.414l2 2zM4 10a6 6 0 1112 0 6 6 0 01-12 0zm6-4a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                  <button (click)="refuseRequest()" class="flex items-center bg-red-100 text-red-700 px-4 py-2 rounded-md w-full justify-between">
+                    Refuser la demande de rendez-vous.
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10 18a1 1 0 01-1.414-1.414L12.172 13l-3.586-3.586a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5A1 1 0 0110 18z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
-
-            
           </div>
         </div>
       </div>
+
+
+
+
+              
+      
+      
   
       <div class="flex justify-between items-center mt-20">
         <div class="flex items-center">
@@ -123,4 +184,4 @@
       </div>
     </div>
   </div>
-  
+
