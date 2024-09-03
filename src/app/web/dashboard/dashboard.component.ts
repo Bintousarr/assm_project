@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +9,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
+  constructor( private router:Router) {
+  }  
 
   goToRdv(){
 
@@ -21,5 +23,6 @@ export class DashboardComponent {
     window.location.href = '/login';
 
     //this.router.navigate(['/login']);
+   // this.router.navigate(['/login']);
   }
 }

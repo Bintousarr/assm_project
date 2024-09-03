@@ -124,15 +124,23 @@ export const routes: Routes = [
         canActivate: [authGuard]  // Protection de la route
       },
       {
-        path: 'intervenant/:id',
-        loadComponent: () => import('../app/user/intervenant-detail/intervenant-detail.component').then(m => m.IntervenantDetailComponent),
-        canActivate: [authGuard]  // Protection de la route
+        path: 'dashboard/notification', loadComponent: () => 
+          import('./web/dashboard/notification/notification.component').then((c) => c.NotificationComponent)
       },
-    
       {
-        path: 'mes-rendez-vous',
-        loadComponent: () => import('../app/user/user-appointments/user-appointments.component').then(m => m.UserAppointmentsComponent),
-        canActivate: [authGuard]  // Protection de la route
+        path: 'homeuser', loadComponent: () =>
+          import('../app/user/home-user/home-user.component').then((c) => c.HomeUserComponent),
+          canActivate: [authGuard]  // Protection de la route
+      },
+      {
+        path: 'intervenant/:id', loadComponent: () => 
+          import('../app/user/intervenant-detail/intervenant-detail.component').then(m => m.IntervenantDetailComponent),
+          canActivate: [authGuard]  // Protection de la route
+      },
+      {
+        path: 'mes-rendez-vous', loadComponent: () =>
+           import('../app/user/user-appointments/user-appointments.component').then(m => m.UserAppointmentsComponent),
+           canActivate: [authGuard]  // Protection de la route
     
       },
       {
