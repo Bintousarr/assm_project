@@ -109,31 +109,54 @@
             
             <!-- Contenu de l'onglet -->
             <div class="mt-4">
-              <div *ngIf="selectedTab === 'initiator'">
-                <table class="w-full">
-                  <tr>
-                    <td class="font-semibold">Nom</td>
-                    <td>{{selectedItem?.nom}}</td>
+              <div *ngIf="selectedTab === 'initiator'" class="overflow-x-auto">
+                <table class="w-full table-auto border-separate border-spacing-4 bg-white rounded-lg shadow-md">
+                  <tr class="border-b">
+                    <td class="font-semibold">Titre</td>
+                    <td class="p-2">{{selectedItem?.title}}</td>
                     <td class="font-semibold">Téléphone</td>
-                    <td>{{selectedItem?.telephone}}</td>
+                    <td class="p-2">{{selectedItem?.telephone}}</td>
                   </tr>
-                  <tr>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                  </tr>
-                  <tr class="my-4 p-6">
+                
+                  <tr class="border-b">
+                    <td class="font-semibold">Nom</td>
+                    <td class="p-2">{{selectedItem?.nom}}</td>
                     <td class="font-semibold">Prénom</td>
-                    <td>{{selectedItem?.prenom}}</td>
+                    <td class="p-2">{{selectedItem?.prenom}}</td>
+                  </tr>
+                
+                  <tr class="border-b">
+                    <td class="font-semibold">Genre</td>
+                    <td class="p-2">{{selectedItem?.gender}}</td>
                     <td class="font-semibold">Email</td>
-                    <td>{{selectedItem?.email}}</td>
+                    <td class="p-2">{{selectedItem?.email}}</td>
+                  </tr>
+                
+                  <tr class="border-b">
+                    <td class="font-semibold">Pays</td>
+                    <td class="p-2">{{selectedItem?.country}}</td>
+                    <td class="font-semibold">Rôle</td>
+                    <td class="p-2">{{selectedItem?.role}}</td>
+                  </tr>
+                
+                  <tr class="border-b">
+                    <td class="font-semibold">Profession</td>
+                    <td class="p-2">{{selectedItem?.profession}}</td>
+                    <td class="font-semibold">Organisme</td>
+                    <td class="p-2">{{selectedItem?.organisme}}</td>
+                  </tr>
+                
+                  <tr>
+                    <td class="font-semibold">Photo</td>
+                    <td class="p-2">
+                      <img *ngIf="selectedItem?.photo" [src]="selectedItem?.photo" alt="Photo" class="w-16 h-16 object-cover rounded-full border">
+                    </td>
+                    <td></td>
+                    <td></td>
                   </tr>
                 </table>
               </div>
+            
       
               <div *ngIf="selectedTab === 'reason'">
                 <p>{{selectedItem?.motif}}</p>

@@ -13,6 +13,14 @@ interface Item {
   telephone: string;
   email: string;
   motif: string;
+  title: string;
+  organisme: string;
+  photo: string;
+  gender: string;
+  country: string;
+  role: string;
+  profession:string;
+
 }
 
 @Component({
@@ -29,8 +37,8 @@ export class GestionRvComponent {
   selectedTab: string = 'initiator';
 
   items: Item[] = [
-    { id: 1, statut: 'En attente', date: '09 Aout 2024', nom: 'PAPE', prenom: 'SOW', telephone: '776666666', email: 'pape@gmail.com', motif: 'Proposition d\'affaire' },
-    { id: 2, statut: 'En attente', date: '11 Aout 2024', nom: 'Bintou', prenom: 'Sarr', telephone:'789999880', email: 'sarr@gmail.com', motif: 'Entretien pour un éventuel collaboration' }
+    { id: 1, statut: 'En attente', date: '09 Aout 2024', nom: 'PAPE', prenom: 'SOW', telephone: '776666666', email: 'pape@gmail.com', motif: 'Proposition d\'affaire' , title:'Directeur', organisme:'Orange', profession:'Ingénieur ', gender:"Homme", country:"France", role:'Orateur',photo:''},
+    { id: 2, statut: 'En attente', date: '11 Aout 2024', nom: 'Bintou', prenom: 'Sarr', telephone:'789999880', email: 'sarr@gmail.com', motif: 'Entretien pour un éventuel collaboration', title:'Directeur', organisme:'Orange', profession:'Ingénieur ', gender:"Homme", country:"France", role:'Orateur',photo:'' }
   ];
 
   constructor(private router: Router) {}

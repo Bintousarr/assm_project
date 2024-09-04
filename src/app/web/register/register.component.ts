@@ -45,6 +45,7 @@ export class RegisterComponent {
   'Viêt Nam', 'Yémen', 'Zambie', 'Zimbabwe'
 ];
 
+selectedFile: File | null = null;
 
   constructor(private fb: FormBuilder, private _registerService: RegisterService,    private dialog: MatDialog) {
     this.registrationForm = this.fb.group({
@@ -56,7 +57,10 @@ export class RegisterComponent {
       password:['', Validators.required],
       phone: ['', Validators.required],
       country: ['', Validators.required],
-      role: ['', Validators.required]
+      role: ['', Validators.required],
+      profession: ['', Validators.required],  // Champ ajouté pour la profession
+      organisme: ['', Validators.required],  // Champ ajouté pour l'organisme
+      photo: [null]  // Champ ajouté pour la photo (fichier)
     });
   }
 
@@ -78,17 +82,34 @@ export class RegisterComponent {
     this.registrationForm.get('country')?.setValue(country);
     this.filteredCountries = []; // Clear the dropdown after selection
   }
+
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      this.selectedFile = file;
+      this.registrationForm.patchValue({ photo: file });
+    }
+  }
   onSubmit() {
-    console.log(this.registrationForm.value)
+    console.log(this.registrationForm.value);
     if (this.registrationForm.valid) {
-      this.registerService.register(this.registrationForm.value).subscribe(
+      const formData = new FormData();
+      Object.keys(this.registrationForm.controls).forEach(key => {
+        formData.append(key, this.registrationForm.get(key)?.value);
+      });
+
+      if (this.selectedFile) {
+        formData.append('photo', this.selectedFile);
+      }
+
+      this._registerService.register(formData).subscribe(
         response => {
           console.log('User registered successfully', response);
           this.openDialog(response.message, true); // isSuccess = true pour succès
         },
         error => {
           console.error('Error registering user', error);
-          this.openDialog(error.error.message, false); // isSucce
+          this.openDialog(error.error.message, false); // isSuccess = false pour erreur
         }
       );
     }
