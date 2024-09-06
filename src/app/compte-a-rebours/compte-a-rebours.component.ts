@@ -15,7 +15,7 @@ export class CompteAReboursComponent {
   seconds: number | undefined;
   countdownMessage: string = '';
 
-  private eventDate: Date = new Date('2024-12-02T00:00:00'); // Date de l'événement
+  private eventDate: Date = new Date('2025-06-16T00:00:00'); // Date de l'événement
 
   ngOnInit(): void {
 

@@ -36,7 +36,7 @@ export class ProgramComponent {
       events: [
         {
           //time: '10:00 - 12:00',
-          type: 'Lundi 05 Mai 2025',
+          type: 'Lundi 16 Juin 2025',
           speakerImg: '../../../assets/affaire.jpg',
           speakerName: '',
           title: 'Program',
@@ -51,7 +51,7 @@ export class ProgramComponent {
       events: [
         {
           //time: '10:00 - 12:00',
-          type: 'Mardi 06 Mai 2025',
+          type: 'Mardi 17 Juin 2025',
           speakerImg: '../../assets/propulsion.jpg',
           speakerName: '',
           title: 'Thème : Télécommunication par satellite ',
@@ -82,7 +82,7 @@ export class ProgramComponent {
       events: [
         {
           //time: '10:00 - 12:00',
-          type: ' Mercredi 07 Mai 2025 ',
+          type: ' Mercredi 18 Juin 2025 ',
           speakerImg: '../../assets/observ.jpg',
           speakerName: '',
           title: 'Thème : Observation de la terre',
@@ -91,7 +91,7 @@ export class ProgramComponent {
         },
         {
          // time: '',
-          type: 'Mercredi 07 Mai 2025 ',
+          type: 'Mercredi 18 Juin 2025 ',
           speakerImg: '../../assets/diner.jpeg',
           speakerName: '',
           title: 'Soirée: Dîner gala et récompense des Awards du spatial',
@@ -106,7 +106,7 @@ export class ProgramComponent {
       events: [
         {
          // time: '10:00 - 12:00',
-          type: 'Jeudi 08 Mai 2025 ',
+          type: 'Jeudi 19 Juin 2025 ',
           speakerImg: '../../assets/galileo-satellite.jpg',
           speakerName: '',
           title: 'Thème : Navigation et le positionnement',
@@ -121,7 +121,7 @@ export class ProgramComponent {
       events: [
         {
           //time: '10:00 - 12:00',
-          type: 'Vendredi 09 Mai 2025 ',
+          type: 'Vendredi 20 Juin 2025 ',
           speakerImg: '../../assets/agriculture.jpeg',
           speakerName: '',
           title: 'Thème : Astronomie et les expériences scientifiques dans l’espace',
@@ -130,7 +130,7 @@ export class ProgramComponent {
         },
         {
           //time: '14:00 - 17:00',
-          type: 'Vendredi 09 Mai 2025',
+          type: 'Vendredi 20 Juin 2025',
           speakerImg: '../../assets/tourisme.png',
           speakerName: '',
           title: 'Thème : Activités sociales et conférence au sein d’une école ',

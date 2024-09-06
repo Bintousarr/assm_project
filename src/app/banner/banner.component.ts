@@ -18,18 +18,18 @@ export class BannerComponent implements OnInit, OnDestroy {
   slides = [
     {
       conference: 'Marché Africain des Solutions Spatiales (MASS)',
-      date: 'Du 02 décembre au 06 décembre 2024',
-      location: 'Abidjan - Côte d’Ivoire',
-      year: '2024',
-      description: 'THEME : GESTION EFFICACE DES RESSOURCES NATURELLES ET CATASTROPHES',
+      date: 'Du 16 au 20 Juin 2025',
+      location: '',
+      year: '2025',
+      description: 'Abidjan - Côte d’Ivoire,  Parc des Expositions',
       aboutText: 'A PROPOS',
       registerText: 'INSCRIVEZ-VOUS',
       image: '../../../assets/slide.jpeg'
     },
     {
       conference: 'L\'espace n\'est pas une option, mais une nécessité. La technologie spatiale est fondamentale pour les pays africains.',
-      year: '2024',
-      description: 'THEME : GESTION EFFICACE DES RESSOURCES NATURELLES ET CATASTROPHES',
+      year: '2025',
+      description: 'Abidjan - Côte d’Ivoire,  Parc des Expositions',
       aboutText: 'A PROPOS',
       registerText: 'INSCRIVEZ-VOUS',
       image: '../../../assets/page_2_img_1.png'
