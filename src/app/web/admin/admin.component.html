@@ -1,0 +1,58 @@
+<div class="flex font-poppins ">
+    <aside class="w-1/5 bg-red-900  text-white h-screen p-4">
+        <div class="mb-8">
+          <p class="text-white text-xl">BONJOUR</p>
+        </div>
+        <ul>
+          <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
+            <i class="fas fa-home mr-3"></i> Tableau de bord
+          </li>
+          <li class="flex items-center mt-6 p-2 text-gray-200  hover:bg-red-700">
+            <i class="fas fa-bell mr-3"></i> <button routerLink="/admin/gestion-user">Gestion des intervenants </button>  
+            <span class="bg-red-600 text-white text-xs ml-auto rounded-full px-2"></span>
+          </li>
+          <li class="flex items-center p-2 mt-6 text-gray-200  hover:bg-red-700">
+              <i class="fas fa-database  mr-3"></i><button routerLink="/admin/gestion-jour"> Gestion des jours</button> 
+          </li>
+          <li class="flex items-center p-2 mt-6 text-gray-200  hover:bg-red-700">
+            <i class="fas fa-database  mr-3"></i><button routerLink="/admin/gestion-horaire"> Gestion des horaires</button> 
+        </li>
+  
+          <li class="flex items-center p-2 mt-64 text-gray-200 hover:bg-red-700">
+            <i class="fas fa-sign-out-alt mr-3"></i>
+            <button class="text-white hover:text-gray-200" (click)="logout()">Déconnexion</button>
+          </li>
+         
+        </ul>
+      </aside>
+      <div class="w-4/5 p-8 mt-10" >
+        <h1 class="text-3xl font-bold text-red-900 mb-4">TABLEAU DE BORD</h1>
+        <hr class="mb-6">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ml-10">
+          
+          <div class="bg-white border rounded-lg shadow">
+            <div class="bg-red-800 text-white text-center text-2xl font-bold p-4">
+              10
+            </div>
+            <div class="p-6 text-center">
+              <img src="path/to/user-icon.png" alt="Utilisateurs" class="mx-auto mb-2">
+              <span class="text-gray-600">Utilisateurs</span>
+            </div>
+          </div>
+          
+          <div class="bg-white border rounded-lg shadow">
+            <div class="bg-red-800 text-white text-center text-2xl font-bold p-4">
+              8
+            </div>
+            <div class="p-6 text-center">
+              <img src="path/to/office-icon.png" alt="Bureaux" class="mx-auto mb-2">
+              <span class="text-gray-600">JOURS</span>
+            </div>
+          </div>
+                    
+        </div>
+      </div>
+    
+</div>
+  

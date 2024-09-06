@@ -52,6 +52,43 @@
               </div>
               <div *ngIf="registrationForm.get('gender')?.invalid && registrationForm.get('gender')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
             </div>
+
+            <!-- Profession -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Profession</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <i class="fas fa-briefcase text-gray-500"></i>
+                </span>
+                <input formControlName="profession" type="text" placeholder="Profession" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('profession')?.invalid && registrationForm.get('profession')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              </div>
+            </div>
+
+            <!-- Organisme -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Organisme</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <i class="fas fa-building text-gray-500"></i>
+                </span>
+                <input formControlName="organization" type="text" placeholder="Organisme" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('organization')?.invalid && registrationForm.get('organization')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              </div>
+            </div>
+
+            <!-- Insérer une photo -->
+            <div class="mb-4">
+              <label class="block mb-2 text-sm font-medium text-gray-700">Insérez votre photo</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                  <i class="fas fa-camera text-gray-500"></i>
+                </span>
+                <input formControlName="photo" type="file" accept="image/*" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                <div *ngIf="registrationForm.get('photo')?.invalid && registrationForm.get('photo')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+              </div>
+            </div>
+
           
             <!-- Email -->
             <div class="mb-4">

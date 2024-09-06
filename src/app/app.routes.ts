@@ -124,6 +124,22 @@ export const routes: Routes = [
 
       },
       {
+        path: 'admin', loadComponent: () => 
+          import('./web/admin/admin.component').then((c) => c.AdminComponent)
+      },
+      {
+        path: 'admin/gestion-user', loadComponent: () => 
+          import('./web/admin/gestion-user/gestion-user.component').then((c) => c.GestionUserComponent)
+      },
+      {
+        path: 'admin/gestion-jour', loadComponent: () => 
+          import('./web/admin/gestion-jour/gestion-jour.component').then((c) => c.GestionJourComponent)
+      },
+      {
+        path: 'admin/gestion-horaire', loadComponent: () => 
+          import('./web/admin/gestion-horaire/gestion-horaire.component').then((c) => c.GestionHoraireComponent)
+      },
+      {
         path: 'homeuser', loadComponent: () =>
           import('../app/user/home-user/home-user.component').then((c) => c.HomeUserComponent),
           canActivate: [authGuard]  // Protection de la route
