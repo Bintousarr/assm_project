@@ -2,20 +2,32 @@
     <!-- Aside Section -->
     <aside class="w-1/5 bg-red-900 text-white flex flex-col">
         <div class="p-8">
-            <p class="text-white text-xl">BONJOUR</p>
+            <p class="text-white text-xl font-semibold">Bonjour {{storedUser.first_name}} {{storedUser.last_name}}</p>
         </div>
         <ul class="px-4 flex-grow">
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-users mr-3"></i>
                 <button (click)="goToIntervenant()" class="w-full text-left">Les Intervenants</button>
             </li>
-            <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
+            <!-- <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-bell mr-3"></i> Notification
                 <span class="bg-red-600 text-white text-xs ml-auto rounded-full px-2"></span>
+            </li> -->
+            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+                <i class="fas fa-users mr-3"></i>
+                <button (click)="goToParticipants()" class="w-full text-left">Les Participants</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-calendar-alt mr-3"></i>
                 <button (click)="goToRdv()" class="w-full text-left">Mes Rendez-vous</button>
+            </li>
+            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+                <i class="fas fa-database mr-3"></i>
+                <button routerLink="/dashboard/gestion-rv" class="w-full text-left">Gestion des rendez-vous</button>
+            </li>
+            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+                <i class="fas fa-database mr-3"></i>
+                <button (click)="goTocandar()" class="w-full text-left">Gestion du calandrier</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-sign-out-alt mr-3"></i>
@@ -28,8 +40,9 @@
     <main class="w-4/5 px-6 flex-grow">
         <h1 class="text-3xl font-bold text-red-900 mb-8">DEMANDE D'INTERVIEW</h1>
         <div class="bg-red-900 font-poppins p-8 rounded-lg shadow-lg">
-            <div class="flex items-center space-x-6">
-                <img [src]="'../../../assets/' + intervenant?.image" class="w-60 h-60 rounded-full object-cover" />
+            <div class="flex items-center space-x-6"><img [src]="intervenant?.image ? '../../../assets/' + intervenant.image : '../../../assets/user.jpg'"
+                class="w-60 h-60 rounded-full object-cover" />
+           
                 <div>
                     <h1 class="text-white text-4xl font-bold">{{intervenant?.first_name }} {{intervenant?.last_name }}</h1>
                     <p class="text-white text-lg">{{intervenant?.poste }}</p>
@@ -51,7 +64,7 @@
 
             <div class="max-w-full mx-auto bg-gray-100 mt-10 p-6 shadow-lg rounded-lg">
                 <div class="flex items-center mb-4">
-                    <img [src]="'../../../assets/' + intervenant?.image" alt="Krys Logo" class="w-12 h-12 mr-4 rounded-full">
+                    <img [src]="intervenant?.image ? '../../../assets/' + intervenant.image : '../../../assets/user.jpg'" alt="Krys Logo" class="w-12 h-12 mr-4 rounded-full">
                     <div>
                         <h2 class="text-lg font-semibold text-blue-700">Entretien avec {{intervenant?.title }} {{intervenant?.first_name }}</h2>
                         <p class="text-gray-500"><i class="fas fa-map-marker-alt"></i> {{ intervenant?.country }}</p>
@@ -68,7 +81,7 @@
                     <div class="grid grid-cols-4 gap-4 text-center">
                         <div *ngFor="let disponibility of disponibilities" class="text-gray-500">
                             {{ disponibility.name }}<br>
-                            <span class="font-semibold">{{ disponibility.date }}</span>
+                            <span class="font-semibold">{{ disponibility.date |dateFormat  }}</span>
                         </div>
                     </div>
                     <div class="grid grid-cols-4 gap-4 text-center mt-2">

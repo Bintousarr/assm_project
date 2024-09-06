@@ -16,4 +16,23 @@ export class SpeakerAvalabilityService {
     const url = `${this.apiUrl}?action=getSpeakerAvailabilityWithDetails&speaker_id=${speakerId}`;
     return this.http.get<any>(url);
   }
+
+  getUserCalendar(speakerId: number): Observable<any> {
+    const url = `${this.apiUrl}?action=getUserCalendar&speaker_id=${speakerId}`;
+    return this.http.get<any>(url);
+  }
+  
+  updateAvailability(availabilityId: number): Observable<any> {
+    const url = `${this.apiUrl}?action=updateAvailability`;
+    
+    // Le payload que vous envoyez dans la requête POST
+    const payload = {
+        availability_id: availabilityId
+    };
+
+    return this.http.post<any>(url, payload);
+}
+
+  
+  
 }

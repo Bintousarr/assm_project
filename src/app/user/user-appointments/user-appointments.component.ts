@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 
+import { DateFormatPipe } from '../../date-format.pipe'; 
 
 @Component({
   selector: 'app-user-appointments',
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule,DateFormatPipe],
   standalone: true,
   templateUrl: './user-appointments.component.html',
   styleUrls: ['./user-appointments.component.scss']
@@ -59,6 +60,15 @@ export class UserAppointmentsComponent implements OnInit {
     window.location.href = '/login';
 
     //this.router.navigate(['/login']);
+  }
+
+  goToParticipants(){
+    window.location.href = '/participants';
+  }
+  goTocandar(){
+    this.router.navigate(['/calandar']);
+
+
   }
 
 }

@@ -2,20 +2,33 @@
     <!-- Aside Section -->
     <aside class="w-1/5 bg-red-900 text-white flex flex-col">
         <div class="p-8">
-            <p class="text-white text-xl">BONJOUR</p>
+            <p class="text-white text-xl font-semibold">Bonjour {{user.first_name}} {{user.last_name}}</p>
         </div>
         <ul class="px-4 flex-grow">
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-users mr-3"></i>
                 <button (click)="goToIntervenant()" class="w-full text-left">Les Intervenants</button>
             </li>
-            <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
+            <!-- <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-bell mr-3"></i> Notification
                 <span class="bg-red-600 text-white text-xs ml-auto rounded-full px-2"></span>
+            </li> -->
+            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+                <i class="fas fa-users mr-3"></i>
+                <button (click)="goToParticipants()" class="w-full text-left">Les Participants</button>
             </li>
+            
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-calendar-alt mr-3"></i>
                 <button (click)="goToRdv()" class="w-full text-left">Mes Rendez-vous</button>
+            </li>
+            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+                <i class="fas fa-database mr-3"></i>
+                <button (click)="gestionRdv()" class="w-full text-left">Gestion des rendez-vous</button>
+            </li>
+            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+                <i class="fas fa-database mr-3"></i>
+                <button (click)="goTocandar()" class="w-full text-left">Gestion du calandrier</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-sign-out-alt mr-3"></i>

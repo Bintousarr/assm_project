@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpHeaders  } from '@angular/common/http';
+import { HttpClient,HttpHeaders,HttpErrorResponse   } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 
 @Injectable({
@@ -17,8 +19,42 @@ export class UserService {
     const url = `${this.apiUrl}?action=getIntervenants`;
     return this.http.get<any>(url);
   }
+
   getIntervenantById(id: string): Observable<any> {
     const url = `${this.apiUrl}?action=getIntervenantById&id=${id}`;
+    return this.http.get<any>(url);
+  }
+  // getParticipants() :Observable<any> {
+  //   return this.http.get<any>(`${this.apiUrl}?action=user`, { responseType: 'text' as 'json' })
+  //   .pipe(
+  //     catchError((error: HttpErrorResponse) => {
+  //       console.error('Error occurred:', error);
+  //       return throwError(error);
+  //     })
+  //   );
+  // }
+  getParticipants(): Observable<any> {
+    const url = `${this.apiUrl}?action=user`;
+    return this.http.get<any>(url);
+  }
+  // getParticipants(): Observable<any> {
+   
+  //   return this.http.get<any>(`${this.apiUrl}?action=getIntervenants`, { responseType: 'text' as 'json' })
+  //     .pipe(
+  //       map(response => {
+  //         console.log('Response from API:', response);
+  //         return response;
+  //       }),
+  //       catchError((error: HttpErrorResponse) => {
+  //         console.error('Error occurred:', error);
+  //         return throwError(error);
+  //       })
+  //     );
+  // }
+  
+  
+  getParticipantById(id: string): Observable<any> {
+    const url = `${this.apiUrl}?action=user&id=${id}`;
     return this.http.get<any>(url);
   }
 }

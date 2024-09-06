@@ -1,189 +1,208 @@
-<div class="flex font-poppins">
+<div class="flex font-poppins min-h-screen">
+  <!-- Aside Section -->
   <aside class="w-1/5 bg-red-900 text-white flex flex-col p-4">
     <div class="p-8">
-      <p class="text-white text-xl font-semibold">BONJOUR</p>
+      <p class="text-white text-xl font-semibold">Bonjour {{user.first_name}} {{user.last_name}}</p>
     </div>
-    <ul class="px-4 flex-grow">
-      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+    <!-- <ul class="px-4 flex-grow">
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700 rounded-lg">
         <i class="fas fa-home mr-3"></i>
         <button (click)="goTobord()" class="w-full text-left"> Tableau de bord</button>
       </li>
-      <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
-        <i class="fas fa-bell mr-3"></i> Notification
-        <span
-          class="bg-red-600 text-white text-xs ml-auto rounded-full px-2">3</span>
-      </li>
-      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+      
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700 rounded-lg">
         <i class="fas fa-database mr-3"></i>
-        <button routerLink="/dashboard/gestion-rv"
-          class="w-full text-left">Gestion des rendez-vous</button>
+        <button routerLink="/dashboard/gestion-rv" class="w-full text-left">Gestion des rendez-vous</button>
       </li>
-      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700 rounded-lg">
         <i class="fas fa-sign-out-alt mr-3"></i>
         <button (click)="logout()" class="w-full text-left">Déconnexion</button>
       </li>
-    </ul>
+    </ul> -->
+
+    <ul class="px-4 flex-grow">
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+          <i class="fas fa-users mr-3"></i>
+          <button (click)="goToIntervenant()" class="w-full text-left">Les Intervenants</button>
+      </li>
+      <!-- <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
+          <i class="fas fa-bell mr-3"></i> Notification
+          <span class="bg-red-600 text-white text-xs ml-auto rounded-full px-2"></span>
+      </li> -->
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+          <i class="fas fa-users mr-3"></i>
+          <button (click)="goToParticipants()" class="w-full text-left">Les Participants</button>
+      </li>
+      
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+          <i class="fas fa-calendar-alt mr-3"></i>
+          <button (click)="goToRdv()" class="w-full text-left">Mes Rendez-vous</button>
+      </li>
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+          <i class="fas fa-database mr-3"></i>
+          <button (click)="gestionRdv()" class="w-full text-left">Gestion des rendez-vous</button>
+      </li>
+      <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+          <i class="fas fa-sign-out-alt mr-3"></i>
+          <button (click)="logout()" class="w-full text-left">Déconnexion</button>
+      </li>
+  </ul>
   </aside>
     
-    <div class="flex-1 p-6 mt-6">
-      <h1 class="text-2xl font-semibold text-gray-700 mb-6 text-center">LISTE DES DEMANDES DE RENDEZ-VOUS</h1>
-  
-      <div class="flex justify-between items-center mb-4 mt-20">
-        <div class="relative inline-block text-left">
-          <button (click)="toggleDropdown()" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-            Filtrer
-            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div [ngClass]="{'hidden': !isDropdownOpen, 'block': isDropdownOpen}" class="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-            <div class="py-1">
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">En attente</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Validées</a>
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Refusées</a>
-            </div>
+  <div class="flex-1 p-6 bg-gray-100 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-semibold text-gray-700 mb-6 text-center">LISTE DES DEMANDES DE RENDEZ-VOUS</h1>
+
+    <div class="flex justify-between items-center mb-4 mt-20">
+      <div class="relative inline-block text-left">
+        <button (click)="toggleDropdown()" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          Filtrer
+          <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div [ngClass]="{'hidden': !isDropdownOpen, 'block': isDropdownOpen}" class="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <div class="py-1">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">En attente</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Validées</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Refusées</a>
           </div>
-        </div>
-      </div>
-  
-      <div class="overflow-x-auto mt-4">
-        <table class="min-w-full divide-y divide-gray-200">
-          <thead class="bg-red-900 text-white">
-            <tr>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">#Id</th>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Statut</th>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Date</th>
-              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Actions</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y p-6 m-10 divide-gray-200">
-            <tr *ngFor="let item of items" 
-                [ngClass]="{
-                  'bg-green-100': item.statut === 'Validée',
-                  'bg-red-100': item.statut === 'Refusée',
-                  'bg-gray-100': item.statut === 'En attente'
-                  
-                }">
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ item.id }}</td>
-              <td class="px-6 py-4 whitespace-nowrap">
-                <span 
-                  class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
-                  [ngClass]="{
-                    'bg-green-100 text-green-800': item.statut === 'Validée',
-                    'bg-red-100 text-red-800': item.statut === 'Refusée',
-                    'bg-gray-300 text-gray-800': item.statut === 'En attente'
-                  }"
-                >{{ item.statut }}</span>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.date }}</td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                <button class="text-blue-600 hover:text-blue-900" (click)="openPopup(item)">
-                  <i class="fas fa-calendar-alt"></i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div *ngIf="isPopupOpen" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-        <div class="bg-white rounded-lg shadow-lg w-1/2">
-          <div class="flex justify-between items-center border-b px-4 py-2">
-            <h2 class="text-lg font-semibold">Détail de la demande</h2>
-            <button class="text-gray-500 hover:text-gray-700" (click)="closePopup()">×</button>
-          </div>
-          <div class="px-4 py-3">
-            <!-- Onglets -->
-            <ul class="flex border-b">
-              <li class="mr-1">
-                <a (click)="selectTab('initiator')" [ngClass]="{'border-l-2 border-t-2 border-r-2 border-blue-500': selectedTab === 'initiator'}"
-                   class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold cursor-pointer">Initiateur</a>
-              </li>
-              <li class="mr-1">
-                <a (click)="selectTab('reason')" [ngClass]="{'border-l-2 border-t-2 border-r-2 border-blue-500': selectedTab === 'reason'}"
-                   class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold cursor-pointer">Motif du RV</a>
-              </li>
-              <li>
-                <a (click)="selectTab('treatment')" [ngClass]="{'border-l-2 border-t-2 border-r-2 border-blue-500': selectedTab === 'treatment'}"
-                   class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold cursor-pointer">Traitement</a>
-              </li>
-            </ul>
-            
-            <!-- Contenu de l'onglet -->
-            <div class="mt-4">
-              <div *ngIf="selectedTab === 'initiator'">
-                <table class="w-full">
-                  <tr>
-                    <td class="font-semibold">Nom</td>
-                    <td>{{selectedItem?.nom}}</td>
-                    <td class="font-semibold">Téléphone</td>
-                    <td>{{selectedItem?.telephone}}</td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                  </tr>
-                  <tr class="my-4 p-6">
-                    <td class="font-semibold">Prénom</td>
-                    <td>{{selectedItem?.prenom}}</td>
-                    <td class="font-semibold">Email</td>
-                    <td>{{selectedItem?.email}}</td>
-                  </tr>
-                </table>
-              </div>
-      
-              <div *ngIf="selectedTab === 'reason'">
-                <p>{{selectedItem?.motif}}</p>
-              </div>
-      
-              <div *ngIf="selectedTab === 'treatment'">
-                <div class="space-y-4">
-                  <button (click)="validateRequest()" class="flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-md w-full justify-between">
-                    Valider la demande de rendez-vous.
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" d="M10 18a1 1 0 001.707.707l5-5a1 1 0 00-1.414-1.414L11 16.586 8.707 14.293a1 1 0 00-1.414 1.414l2 2zM4 10a6 6 0 1112 0 6 6 0 01-12 0zm6-4a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd" />
-                    </svg>
-                  </button>
-                  <button (click)="refuseRequest()" class="flex items-center bg-red-100 text-red-700 px-4 py-2 rounded-md w-full justify-between">
-                    Refuser la demande de rendez-vous.
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" d="M10 18a1 1 0 01-1.414-1.414L12.172 13l-3.586-3.586a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5A1 1 0 0110 18z" clip-rule="evenodd" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-              
-      
-      
-  
-      <div class="flex justify-between items-center mt-20">
-        <div class="flex items-center">
-          <span class="text-sm text-gray-700">Items per page:</span>
-          <select class="ml-2 p-2 border border-gray-300 rounded-md">
-            <option>5</option>
-            <option>10</option>
-            <option>20</option>
-          </select>
-        </div>
-        <div class="flex items-center">
-          <span class="text-sm text-gray-700 mr-4">1 - 5 of 29</span>
-          <a href="#" class="text-gray-700 hover:text-gray-900 mx-2">&laquo;</a>
-          <a href="#" class="text-gray-700 hover:text-gray-900 mx-2">&raquo;</a>
         </div>
       </div>
     </div>
-  </div>
 
+    <div class="overflow-x-auto mt-4">
+      <table class="min-w-full divide-y divide-gray-200 bg-white shadow-md rounded-lg">
+        <thead class="bg-red-900 text-white">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">#Id</th>
+            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Statut</th>
+            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Date</th>
+            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr *ngFor="let item of intervants" 
+              [ngClass]="{
+                'bg-green-100': item.status == 'approuvé',
+                'bg-red-100': item.status == 'décliné',
+                'bg-white': item.status === 'en attente'
+              }">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ item.id }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span 
+                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
+                [ngClass]="{
+                  'bg-green-100 text-green-800': item.status == 'approuvé',
+                  'bg-red-100 text-red-800': item.status == 'décliné',
+                  'bg-gray-300 text-gray-800': item.status === 'en attente'
+                }"
+              >{{ item.status }}</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ item.date  | dateFormat }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <button 
+                class="text-blue-600 hover:text-blue-900" 
+                (click)="openPopup(item)"
+                [disabled]="item.status === 'approuvé' || item.status === 'décliné'"
+                [ngClass]="{
+                  'opacity-50 cursor-not-allowed': item.status === 'approuvé' || item.status === 'décliné'
+                }"
+              >
+                <i class="fas fa-calendar-alt"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+
+    <div *ngIf="isPopupOpen" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
+      <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl">
+        <div class="flex justify-between items-center border-b px-6 py-4">
+          <h2 class="text-xl font-semibold text-gray-800">Détail de la demande</h2>
+          <button class="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-full p-2" (click)="closePopup()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="px-6 py-4">
+          <!-- Onglets -->
+          <ul class="flex border-b">
+            <li class="mr-1">
+              <a (click)="selectTab('initiator')" [ngClass]="{'border-blue-500 text-blue-500': selectedTab === 'initiator'}"
+                 class="bg-white inline-block py-2 px-4 text-gray-700 hover:text-blue-500 font-semibold cursor-pointer transition-colors duration-300 border-transparent border-b-2">Initiateur</a>
+            </li>
+            <li class="mr-1">
+              <a (click)="selectTab('reason')" [ngClass]="{'border-blue-500 text-blue-500': selectedTab === 'reason'}"
+                 class="bg-white inline-block py-2 px-4 text-gray-700 hover:text-blue-500 font-semibold cursor-pointer transition-colors duration-300 border-transparent border-b-2">Motif du RV</a>
+            </li>
+            <li>
+              <a (click)="selectTab('treatment')" [ngClass]="{'border-blue-500 text-blue-500': selectedTab === 'treatment'}"
+                 class="bg-white inline-block py-2 px-4 text-gray-700 hover:text-blue-500 font-semibold cursor-pointer transition-colors duration-300 border-transparent border-b-2">Traitement</a>
+            </li>
+          </ul>
+          
+          <!-- Contenu de l'onglet -->
+          <div class="mt-4">
+            <div *ngIf="selectedTab === 'initiator'">
+              <table class="w-full text-left">
+                <tr class="border-b">
+                  <td class="font-semibold py-2">Nom</td>
+                  <td class="py-2">{{selectedItem?.participant.last_name}}</td>
+                  <!-- <td class="font-semibold py-2">Téléphone</td>
+                  <td class="py-2">{{selectedItem?.telephone}}</td> -->
+                </tr>
+                <tr class="border-b">
+                  <td class="font-semibold py-2">Prénom</td>
+                  <td class="py-2">{{selectedItem?.participant.first_name}}</td>
+                  <!-- <td class="font-semibold py-2">Email</td>
+                  <td class="py-2">{{selectedItem?.email}}</td> -->
+                </tr>
+              </table>
+            </div>
+    
+            <div *ngIf="selectedTab === 'reason'">
+              <p class="text-gray-700 leading-relaxed">{{selectedItem?.theme}}</p>
+            </div>
+    
+            <div *ngIf="selectedTab === 'treatment'">
+              <div class="space-y-4">
+                <button (click)="validateRequest()" class="flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-md w-full justify-between hover:bg-green-200 transition-colors duration-300">
+                  Valider la demande de rendez-vous
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10 18a1 1 0 001.707.707l5-5a1 1 0 00-1.414-1.414L11 16.586 8.707 14.293a1 1 0 00-1.414 1.414l2 2zM4 10a6 6 0 1112 0 6 6 0 01-12 0zm6-4a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <button (click)="refuseRequest()" class="flex items-center bg-red-100 text-red-700 px-4 py-2 rounded-md w-full justify-between hover:bg-red-200 transition-colors duration-300">
+                  Refuser la demande de rendez-vous
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10 18a1 1 0 01-1.414-1.414L12.172 13l-3.586-3.586a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5A1 1 0 0110 18z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <div class="flex justify-between items-center mt-20">
+      <div class="flex items-center">
+        <span class="text-sm text-gray-700">Items per page:</span>
+        <select class="ml-2 p-2 border border-gray-300 rounded-md">
+          <option>5</option>
+          <option>10</option>
+          <option>20</option>
+        </select>
+      </div>
+      <div class="flex items-center">
+        <span class="text-sm text-gray-700 mr-4">1 - 5 of 29</span>
+        <a href="#" class="text-gray-700 hover:text-gray-900 mx-2">&laquo;</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900 mx-2">&raquo;</a>
+      </div>
+    </div>
+  </div>
+</div>

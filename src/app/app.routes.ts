@@ -116,16 +116,12 @@ export const routes: Routes = [
         path: 'dashboard/gestion-rv', loadComponent: () => 
           import('./web/dashboard/gestion-rv/gestion-rv.component').then((c) => c.GestionRvComponent),
         canActivate: [authGuard]  // Protection de la route
-      },{
-
-
-        path: 'homeuser',
-        loadComponent: () => import('../app/user/home-user/home-user.component').then((c) => c.HomeUserComponent),
-        canActivate: [authGuard]  // Protection de la route
       },
       {
         path: 'dashboard/notification', loadComponent: () => 
-          import('./web/dashboard/notification/notification.component').then((c) => c.NotificationComponent)
+          import('./web/dashboard/notification/notification.component').then((c) => c.NotificationComponent),
+        canActivate: [authGuard]  // Protection de la route
+
       },
       {
         path: 'homeuser', loadComponent: () =>
@@ -138,8 +134,25 @@ export const routes: Routes = [
           canActivate: [authGuard]  // Protection de la route
       },
       {
+        path: 'participant/:id', loadComponent: () => 
+          import('../app/user/participant-details/participant-details.component').then(m => m.ParticipantDetailsComponent),
+          canActivate: [authGuard]  // Protection de la route
+      },
+      {
         path: 'mes-rendez-vous', loadComponent: () =>
            import('../app/user/user-appointments/user-appointments.component').then(m => m.UserAppointmentsComponent),
+           canActivate: [authGuard]  // Protection de la route
+    
+      },
+      {
+        path: 'participants', loadComponent: () =>
+           import('../app/user/user-appointment/user-appointment.component').then(m => m.UserAppointmentComponent),
+           canActivate: [authGuard]  // Protection de la route
+    
+      },
+      {
+        path: 'calandar', loadComponent: () =>
+           import('../app/user/user-calendar/user-calendar.component').then(m => m.UserCalendarComponent),
            canActivate: [authGuard]  // Protection de la route
     
       },

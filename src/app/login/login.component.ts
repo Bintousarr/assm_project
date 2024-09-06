@@ -46,12 +46,12 @@ onLogin() {
           console.log('User login successfully', response);
           const userString = JSON.stringify(response.user);
           localStorage.setItem('userToken', userString);
-          if(response.user.role=="Intervenant"){
-            window.location.href = '/dashboard';
-          }else{
-            window.location.href = '/homeuser';
-          }
-          
+          // if(response.user.role=="Intervenant"){
+          //   window.location.href = '/dashboard';
+          // }else{
+          //   window.location.href = '/homeuser';
+          // }
+          window.location.href = '/homeuser';
           //this.router.navigate(['/homeuser']);
         } else {
           console.error('Unexpected response format', response);

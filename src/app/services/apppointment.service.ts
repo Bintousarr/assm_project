@@ -23,6 +23,18 @@ export class ApppointmentService {
   getAppointmentsByUser(userId: string): Observable<any[]> {
     const url = `${this.apiUrl}?action=getParticipantAppointments&participant_id=${userId}`;
     return this.http.get<any[]>(url);
-}
+  }
+  getBySpeaker(userId: string): Observable<any[]> {
+    const url = `${this.apiUrl}?action=appointments&speaker_id=${userId}`;
+    return this.http.get<any[]>(url);
+  }
+
+  updateAppointmentStatus(id: number, status: string): Observable<any> {
+    const url = `${this.apiUrl}?action=updateAppointmentStatus`;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const body = { id, status };
+
+    return this.http.post<any>(url, body, { headers });
+  }
 
 }
