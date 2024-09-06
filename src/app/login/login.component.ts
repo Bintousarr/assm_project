@@ -1,6 +1,6 @@
 
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RegisterService } from '../services/register.service';
+import { RegisterService } from '../services/registerService/register.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -39,26 +39,28 @@ constructor(private fb: FormBuilder, private registerService: RegisterService,  
 
 
 onLogin() {
-  console.log(this.loginForm.value)
   if (this.loginForm.valid) {
     this.registerService.login(this.loginForm.value).subscribe(
       response => {
-        console.log('User login successfully', response);
-        // Extraire l'objet 'user' depuis la réponse
-      const user = response.user;
-
-      // Convertir l'objet 'user' en chaîne JSON
-      const userString = JSON.stringify(user);
-
-      // Stocker la chaîne JSON dans le localStorage
-      localStorage.setItem('userToken', userString);
-       // localStorage.setItem('userToken', 'fake-jwt-token');
-        this.router.navigate(['/homeuser']);
-       // isSuccess = true pour succès
+        if (response.user) { // Vérifie si l'objet 'user' est présent dans la réponse
+          console.log('User login successfully', response);
+          const userString = JSON.stringify(response.user);
+          localStorage.setItem('userToken', userString);
+          // if(response.user.role=="Intervenant"){
+          //   window.location.href = '/dashboard';
+          // }else{
+          //   window.location.href = '/homeuser';
+          // }
+          window.location.href = '/homeuser';
+          //this.router.navigate(['/homeuser']);
+        } else {
+          console.error('Unexpected response format', response);
+          this.openDialog('Unexpected response format. Please try again.', false);
+        }
       },
       error => {
         console.error('Error login user', error);
-        this.openDialog(error.error.message, false); // isSucce
+        this.openDialog(error.error.message, false); // Affiche le popup d'erreur
       }
     );
   }

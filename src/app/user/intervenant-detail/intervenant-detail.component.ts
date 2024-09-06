@@ -6,11 +6,13 @@ import { SpeakerAvalabilityService } from '../../services/speaker-avalability.se
 import { ApppointmentService } from '../../services/apppointment.service'
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
+import { DateFormatPipe } from '../../date-format.pipe'; 
 
 @Component({
   selector: 'app-intervenant-detail',
   standalone: true,
-  imports: [RouterLink, CommonModule, FormsModule],
+  imports: [RouterLink, CommonModule, FormsModule,DateFormatPipe],
   templateUrl: './intervenant-detail.component.html',
   styleUrls: ['./intervenant-detail.component.scss']
 })
@@ -51,7 +53,7 @@ intervant_id:any;
   ];
 
 
-  constructor(private route: ActivatedRoute, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService, private apppointmentService:ApppointmentService) { }
+  constructor(private route: ActivatedRoute, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService,private router:Router, private apppointmentService:ApppointmentService) { }
 
   ngOnInit(): void {
 
@@ -72,10 +74,10 @@ intervant_id:any;
     console.log('Stored user:', this.storedUser);
     const intervenantId = this.route.snapshot.paramMap.get('id');
 
-
-    if (intervenantId) {
-      this.intervant_id=intervenantId;
-      this.userService.getIntervenantById(intervenantId).subscribe(
+  this.intervant_id=intervenantId;
+    if (this.storedUser.role=="Intervenant") {
+    
+      this.userService.getIntervenantById(this.intervant_id).subscribe(
         (data) => {
           this.intervenant = data;
           console.log('Intervenant:', this.intervenant);
@@ -85,7 +87,27 @@ intervant_id:any;
         }
       );
 
-      this.speakerAvalabilityService.getSpeakerAvailabilityWithDetails(parseInt(intervenantId)).subscribe((response) => {
+      this.speakerAvalabilityService.getSpeakerAvailabilityWithDetails(parseInt( this.intervant_id)).subscribe((response) => {
+        this.disponibilities = response;
+        console.log('Disponibilité:', this.disponibilities);
+      },
+        (error) => {
+          console.error('Error fetching disponibility details', error);
+
+        })
+    }else{
+      
+      this.userService.getParticipantById( this.intervant_id).subscribe(
+        (data) => {
+          this.intervenant = data;
+          console.log('Intervenant:', this.intervenant);
+        },
+        (error) => {
+          console.error('Error fetching intervenant details', error);
+        }
+      );
+
+      this.speakerAvalabilityService.getSpeakerAvailabilityWithDetails(parseInt( this.intervant_id)).subscribe((response) => {
         this.disponibilities = response;
         console.log('Disponibilité:', this.disponibilities);
       },
@@ -135,5 +157,37 @@ intervant_id:any;
         })
       
     this.closeModal();
+  }
+
+  logout() {
+    // Vider le token du localStorage
+    localStorage.removeItem('userToken');
+    
+    // Rediriger vers la page de login
+    window.location.href = '/login';
+
+    //this.router.navigate(['/login']);
+  }
+  goToRdv(){
+    this.router.navigate(['/mes-rendez-vous']);
+
+
+  }
+
+  goToIntervenant(){
+    window.location.href = '/homeuser';
+  }
+
+  goToDetail(intervenantId: number) {
+    this.router.navigate(['/intervenant', intervenantId]);
+  }
+
+  goToParticipants(){
+    window.location.href = '/participants';
+  }
+    goTocandar(){
+    this.router.navigate(['/calandar']);
+
+
   }
 }
