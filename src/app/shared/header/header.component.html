@@ -17,12 +17,12 @@
     </div> 
   </div>
 
-  <div class="main-bar flex justify-between items-center text-red-700 mt-2 py-2">
+  <div class="main-bar flex flex-col-6 items-center text-red-700 mt-2 py-2">
     <div class="logo flex items-center">
       <img src="../../../assets/logo (2).png" alt="OTIFFF" class="ml-2 h-25 w-62" />
     </div>
     <div class="mass-title flex flex-col items-start ml-4">
-      <h1 class="text-lg font-bold">
+      <h1 class="text-2xl font-bold">
         <span class="text-red-700">M</span><span class="text-black">ASS</span> -
         <span class="text-red-700">M</span><span class="text-black">arché</span>
         <span class="text-red-700"> A</span><span class="text-black">fricain</span>
@@ -32,13 +32,13 @@
       </h1>
     </div>
     
-    <div class="contact-info items-center ml-10 hidden sm:flex">
-      <i class="material-icons mr-4">email</i>
+    <div class="contact-info items-center ml-6 hidden sm:flex">
+      <i class="material-icons mr-1">email</i>
       <span class="mr-4">
-        <span class="font-bold">contact&#64;otif-africa-space.com</span> <br>
+        <span class="font-bold ">contact&#64;otif-africa-space.com</span> <br>
         <span class="text-sm">Envoyez-nous un message</span>
       </span>
-      <i class="material-icons ml-8 mr-4">phone</i>
+      <i class="material-icons ml-2 mr-4">phone</i>
       <span class="mr-2">
         <span class="font-bold">
           +33 678 55 85 45 <br>
@@ -49,8 +49,15 @@
           <i class="fab fa-whatsapp mr-2 text-green-400 text-3xl font-bold"></i> WhatsApp
         </button>
       </span>
-      <a [routerLink]="['register']" class="register-btn bg-red-800 text-white py-2 px-4 ml-8 mr-4 rounded-xl" *ngIf="!isLoggedIn">S'INSCRIRE</a>
-      <a [routerLink]="['login']" class="register-btn bg-red-800 text-white py-2 px-4 ml-6 mr-4 rounded-xl" *ngIf="!isLoggedIn">SE CONNECTER</a>
-    </div>
+      <div>
+        <div class="ml-2">
+          <a [routerLink]="['register']" class="register-btn bg-red-800 text-white py-2 px-2 ml-8  rounded-xl" *ngIf="!isLoggedIn">S'INSCRIRE</a>
+        </div>
+        <div class="mt-6">
+          <a [routerLink]="['login']" class="register-btn bg-red-800 text-white py-2 px-2 ml-6  rounded-xl" *ngIf="!isLoggedIn">SE CONNECTER</a>  
+
+        </div>
+      </div>
+      </div>
   </div>
 </div>
