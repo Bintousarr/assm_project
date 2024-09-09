@@ -153,5 +153,11 @@ export class GestionRvComponent implements OnInit {
     this.router.navigate(['/dashboard/gestion-rv']);
    
   }
+  
+  goTocandar(){
+    this.router.navigate(['/calandar']);
+
+
+  }
 
 }

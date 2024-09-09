@@ -13,12 +13,18 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
 
    // Méthode pour enregistrer un utilisateur
-   register(userData: any): Observable<any> {
-    const url = `${this.apiUrl}?action=register`;
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  //  register(userData: any): Observable<any> {
+  //   const url = `${this.apiUrl}?action=register`;
+  //   const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    return this.http.post(url, userData, { headers });
+  //   return this.http.post(url, userData, { headers });
+  // }
+
+  register(formData: FormData): Observable<any> {
+    console.log(formData)
+    return this.http.post<any>(`${this.apiUrl}?action=register`, formData, { responseType: 'json' });
   }
+  
 
   login(userData: any): Observable<any> {
     const url = `${this.apiUrl}?action=login`;

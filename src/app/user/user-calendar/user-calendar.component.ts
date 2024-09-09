@@ -115,4 +115,10 @@ export class UserCalendarComponent {
 
   }
 
+    goToRv(){
+    // window.location.href ='' 
+    this.router.navigate(['dashboard/gestion-rv']);
+
+  }
+
 }

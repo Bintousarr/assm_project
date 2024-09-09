@@ -41,4 +41,20 @@ export class NavbarComponent {
       this.activeDropdown = menu;  // Ouvre le dropdown du menu cliqué
     }
   }
+  toggleDropdownHome(menu: string) {
+    if (menu === 'accueil') {
+      if (this.router.url === '/') {
+        // Si on est déjà sur la page d'accueil, ouvrir le sous-menu
+        this.activeDropdown = this.activeDropdown === menu ? null : menu;
+      } else {
+        // Sinon, naviguer vers la page d'accueil
+        this.router.navigate(['/']);
+        this.closeMenu();  // Fermer le menu mobile après la navigation
+      }
+    } else {
+      // Pour les autres menus, basculer l'affichage des sous-menus
+      this.activeDropdown = this.activeDropdown === menu ? null : menu;
+    }
+  }
+
 }

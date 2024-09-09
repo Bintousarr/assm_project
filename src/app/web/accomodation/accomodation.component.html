@@ -1,10 +1,10 @@
-<div class="flex p-10 ml-40 mt-10 m-20 text-center font-poppins">
-  <div class="justify-center text-center">
+<div class="flex flex-col lg:flex-row p-10 lg:ml-40 mt-10 lg:m-20 text-center font-poppins">
+  <div class="w-full lg:w-2/3 justify-center text-center">
     <div class="bg-gray-100 p-4 rounded-lg shadow-md w-full max-w-6xl">
       <div class="flex justify-center bg-red-900 text-white font-bold text-lg p-2 rounded-t-lg">
         <div class="flex justify-between w-full">
           <div class="ml-4 animate-bounce">OTIF</div>
-          <div class="animate-bounce font-poppins ">INFORMATION LOGISTIQUE</div>
+          <div class="animate-bounce font-poppins">INFORMATION LOGISTIQUE</div>
         </div>
       </div>
 
@@ -150,317 +150,82 @@
           <p>Les trois principaux hôpitaux publics à Abidjan sont CHU de Yopougon, CHU de Treichville, et CHU de Cocody. Des services médicaux de base sont aussi disponibles dans la plupart des hôtels. En cas d'urgence, les participants peuvent contacter le personnel médical disponible sur place pour obtenir de l'aide.</p>
         </div>
       </div>
-
-      <!-- Section Vols -->
-      <div (click)="toggleSection('vols')" class="bg-white p-2 border-b cursor-pointer">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">flight</span>
-            <span class="animate-pulse">VOLS</span>
-          </div>
-        </div>
-        <div *ngIf="openSection === 'vols'" class="mt-2">
-          <p>Tous les participants sponsorisés par l'UA recevront un billet aller-retour (classe économique) conformément aux règles et règlements de l'UA. Des efforts ont été faits pour réserver votre billet en fonction des dates de la réunion. Tous les participants sont priés d'arriver à l'aéroport selon leurs billets d'avion respectifs. En cas de retard ou d'annulation de vol, veuillez en informer l'équipe dès que possible via les contacts fournis ci-dessous. Pour les participants qui couvrent leurs propres frais, merci de nous informer si vous avez besoin d'aide afin que l'équipe sur place puisse vous assister.</p>
-        </div>
-      </div>
     </div>
   </div>
 
-  <div class=" block max-w-screen-xl p-4 mx-auto justify-between">
+  <!-- Right side content -->
+  <div class="w-full lg:w-1/3 block max-w-screen-xl p-4 mx-auto justify-between mt-10 lg:mt-0">
 
-    <div class="rounded-lg">
-        <div class="container rounded-lg max-w-[1200px] px-[12px] xl:max-w-full">
-            <div class="bloc sm:flex space-x-6">
-                <!-- left side contact infos -->
-                <div>
-                    <div
-                        class="bg-red-900 p-[40px] sm:p-[30px] space-y-[24px] text-[16px]">
-                        <!-- single contact info -->
-                        <div
-                            class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
-                            <span
-                                class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
-                                <img src="../../../assets/call-msg.svg"
-                                    alt="icon">
-                            </span>
+    <div>
+      <div
+          class="bg-red-900 p-[40px] sm:p-[30px] space-y-[24px] text-[16px]">
+          <!-- single contact info -->
+          <div
+              class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
+              <span
+                  class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                  <img src="../../../assets/call-msg.svg"
+                      alt="icon">
+              </span>
 
-                            <div class="txt">
-                                <span class="font-light">Appelez au </span>
-                                <h4 class="font-semibold text-[24px]"> 
-                                    <a  class=""  href="tel:+208-555-0112">+225 07 07 15 39 01 </a>
-                                    <br>
-                                    <a href="tel:+208-555-0112">+336 78 55 85 45 </a>
-                                </h4>
-                            </div>
-                        </div>
+              <div class="txt">
+                  <span class="font-light">Appelez au </span>
+                  <h4 class="font-semibold text-[24px]"> 
+                      <a  class=""  href="tel:+208-555-0112">+225 07 07 15 39 01 </a>
+                      <br>
+                      <a href="tel:+208-555-0112">+336 78 55 85 45 </a>
+                  </h4>
+              </div>
+          </div>
 
-                        <!-- single contact info -->
-                        <div
-                            class="flex items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
-                            <div>
-                                <span
-                                    class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
-                                    <img src="../../../assets/mail.svg"
-                                        alt="icon">
-                                </span>
+          <!-- single contact info -->
+          <div
+              class="flex items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
+              <div>
+                  <span
+                      class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                      <img src="../../../assets/mail.svg"
+                          alt="icon">
+                  </span>
 
-                            </div>
+              </div>
 
-                            <div class="txt">
-                                <span class="font-light">Mail</span>
-                                <h4 class="font-semibold text-[24px]"><a
-                                        href="mailto:contact@otif-africa-space.com">contact&#64;otif-africa-space.com</a></h4>
-                            </div>
-                        </div>
+              <div class="txt">
+                  <span class="font-light">Mail</span>
+                  <h4 class="font-semibold text-[24px]"><a
+                          href="mailto:contact@otif-africa-space.com">contact&#64;otif-africa-space.com</a></h4>
+              </div>
+          </div>
 
-                        <!-- single contact info -->
-                        <div
-                            class="flex items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
-                            <span
-                                class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
-                                <img
-                                    src="../../../assets/location-dot-circle.svg"
-                                    alt="icon">
-                            </span>
+          <!-- single contact info -->
+          <div
+              class="flex items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
+              <span
+                  class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                  <img
+                      src="../../../assets/location-dot-circle.svg"
+                      alt="icon">
+              </span>
 
-                            <div class="txt">
-                                <span class="font-light">Lieu</span>
-                                <h4 class="font-semibold text-[24px]">Abidjan, Côte d'Ivoire</h4>
-                            </div>
-                        </div>
-                    </div>
+              <div class="txt">
+                  <span class="font-light">Lieu</span>
+                  <h4 class="font-semibold text-[24px]">Abidjan, Côte d'Ivoire</h4>
+              </div>
+          </div>
+      </div>
 
-                    <!-- video cover -->
-                    <div class="relative">
-                        <img src="../../../assets/contact-video-cover.jpg"
-                            alt="video cover" class="w-full">
-                        <a
-                            href="https://youtu.be/6KmuL6RcdNA?si=s1RJZZwk6XcqZAwX"
-                            data-fslightbox
-                            class="video-btn-shadow w-[58px] aspect-square rounded-full bg-white text-[18px] text-blbg-blue-700 flex items-center justify-center absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%]">
-                            <i class="fa-solid fa-play"></i>
-                        </a>
-                    </div>
-                </div>
+      <!-- video cover -->
+      <div class="relative">
+          <img src="../../../assets/im2.jpg"
+              alt="video cover" class="w-full">
+          <a
+              href="https://www.youtube.com/watch?v=rEZtf8tqD0U"
+              data-fslightbox
+              class="video-btn-shadow w-[58px] aspect-square rounded-full bg-white text-[18px] text-blbg-blue-700 flex items-center justify-center absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%]">
+              <i class="fa-solid fa-play"></i>
+          </a>
+      </div>
+  </div>
 
+  </div>
 </div>
-
-
-
-<!-- <div class="flex p-10 ml-40 mt-10 m-20 text-center">
-  <div class="justify-center text-center">
-    <div class="bg-gray-100 p-4 rounded-lg shadow-md w-full max-w-6xl">
-      <div class="flex justify-center bg-red-900 text-white font-bold text-lg p-2 rounded-t-lg">
-        <div class="justify-between">
-          <div class="ml-4 animate-bounce">OTIF</div>
-          <div class="animate-bounce">INFORMATION LOGISTIQUE</div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b group">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">place</span>
-            <span class="animate-pulse">VENUE</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-4 mr-10 mt-4 ">En décembre, la Côte d'Ivoire connaît un climat sec et chaud 
-               avec des températures entre 24°C et 32°C.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">flight</span>
-            <span class="animate-pulse">VOLS</span>
-          </div>
-          <div class="flex items-center  mt-2">
-            <span class="animate-pulse ml-60 mr-4 mt-4 ">Tous les participants sponsorisés par l'UA recevront un billet aller-retour
-               (classe économique) conformément aux règles et règlements de l'UA. Des efforts ont été faits pour réserver votre 
-               billet en fonction des dates de la réunion. Tous les participants sont priés d'arriver à l'aeroport selon leurs 
-               billets d'avion respectifs. En cas de retard ou d'annulation de vol, veuillez en informer l'équipe dès que possible
-                via les contacts fournis ci-dessous. Pour les participants qui couvrent leurs propres frais, merci de nous informer 
-                si vous avez besoin d'aide afin que l'équipe sur place puisse vous assister.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">airport_shuttle</span>
-            <span class="animate-pulse">TRANSFERTS AÉROPORTUAIRES <br> ET TRANSPORT</span>
-          </div>
-          <div class="flex items-center  mt-2 ">
-            <span class="animate-pulse  ml-40 mr-4 mt-4">Un comptoir d'assistance sera mis en place à l'aéroport pour 
-              répondre  à toutes vos questions à votre arrivée. Tous les participants sponsorisés par l'UA seront
-               pris en charge pour le transport de l'aéroport à l'hôtel. Veuillez chercher des pancartes portant 
-               en gros caractères  AU - GMES & AFRICA à l'aéroport pour la coordination de  votre transfert vers l'hôtel.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">assignment</span>
-            <span class="animate-pulse">VISA, PASSEPORTS ET FORMALITÉS D'ENTRÉE</span>
-          </div>
-          <div class="flex items-center  ml-20 mt-4">
-
-            <span class="animate-pulse mr-4 ml-12 mt-4 ">Tous les participants doivent détenir un passeport valide ou un autre document de voyage acceptable
-               Le passeport/document de voyage doit être valide et les passeports doivent également avoir des pages vierges pour les visas.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">vaccines</span>
-            <span class="animate-pulse">EXIGENCES EN MATIÈRE DE VACCINATION</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-8 mt-4 ">Tous les visiteurs de Sharm El Sheikh DOIVENT avoir un certificat de fièvre jaune valide depuis plus
-               de dix (10) jours avant le voyage.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">hotel</span>
-            <span class="animate-pulse">DSA ET HÉBERGEMENT</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-8 mt-4 ">En décembre, la Côte d'Ivoire connaît un climat sec et chaud 
-               avec des températures entre 24°C et 32°C.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">info</span>
-            <span class="animate-pulse">KIT D'INFORMATION ET ACCRÉDITATION</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-8 mt-4 ">Des copies de la note conceptuelle et de l'agenda vous
-               ont été fournies précédemment ou pourront vous être remises à votre arrivée sur le lieu de la réunion..</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">attach_money</span>
-            <span class="animate-pulse">DEVISES ET SERVICES BANCAIRES</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-40 mr-4 mt-4 ">La monnaie de la Côte d'Ivoire est le franc CFA (XOF). 
-              Le taux de change est d'environ 1 USD = 615 XOF.
-
-              Échange de devises
-              En Côte d'Ivoire, les visiteurs peuvent payer en XOF, EUR et USD. 
-              L'argent peut être échangé dans les bureaux de change, les banques, et à l'aéroport.
-              
-              Paiements sans espèces
-              Toutes les principales cartes de crédit et de débit (Visa et Mastercard) sont
-               acceptées dans la plupart des établissements en Côte d'Ivoire.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">power</span>
-            <span class="animate-pulse">ÉLECTRICITÉ</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-40 mr-4 mt-4 ">En Côte d'Ivoire, les prises
-              électriques sont de type C (Europlug) et E. La tension standard est de 230 V et 
-              la fréquence est de 50 Hz.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">wifi</span>
-            <span class="animate-pulse">INSTALLATIONS DE COMMUNICATION</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-40 mr-4 mt-4 ">Les principaux fournisseurs 
-              de communication en Côte d'Ivoire sont Orange, MTN et Moov Africa.
-               Vous pouvez obtenir votre carte SIM à l'aéroport et dans les bureaux des 
-               fournisseurs de communication.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">toys</span>
-            <span class="animate-pulse">PRODUITS DE TOILETTE</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-40 mr-4 mt-4 ">N'oubliez pas d'apporter tous les articles de toilette 
-              habituels dont vous pourriez avoir besoin. Si vous portez des lentilles de contact, apportez 
-              tous les produits nécessaires. Nous vous recommandons également d'apporter des vitamines 
-              et tous les médicaments/fournitures dont vous avez besoin (antiacides, aspirine, rasoirs 
-              et articles d'hygiène personnelle).</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">wb_sunny</span>
-            <span class="animate-pulse">MÉTÉO</span>  
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse  mt-4 ">En décembre, la Côte d'Ivoire connaît un climat sec et chaud 
-               avec des températures entre 24°C et 32°C.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b-2">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">language</span>
-            <span class="animate-pulse">LANGUE</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-8 mt-4 ">La langue officielle de la Côte d'Ivoire
-               est le français, et de nombreuses langues locales sont également parlées.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="material-icons animate-pulse mr-2">local_hospital</span>
-            <span class="animate-pulse">MALADIE OU <br> ACCIDENT</span>
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse ml-40 mr-4 mt-4 ">En cas de maladie ou d'accident pendant la réunion, 
-              vous devez immédiatement en informer un membre du personnel de l'UA ou du comité local
-               d'organisation (LOC) ou vous rendre à la clinique la plus proche.</span>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white p-2 border-b">
-        <div class="flex justify-between items-center">
-          <div class="flex items-center">
-            <span class="animate-pulse">INFORMATIONS DE CONTACT:  </span><br>
-       
-          </div>
-          <div class="flex items-center ">
-            <span class="animate-pulse text-center  mr-60 mt-4 ">Irie.fabrice&#64;otif-africa-space.com</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-
-  
-
- -->

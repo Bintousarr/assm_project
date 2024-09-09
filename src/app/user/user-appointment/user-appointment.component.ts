@@ -59,7 +59,7 @@ export class UserAppointmentComponent {
 
     this.userService.getIntervenants().subscribe(
       (data:User[]) => {
-        this.intervenants = data.filter(user => user.role !== 'Intervenant' && user.id !== this.user.id);
+       this.intervenants = data.filter(user => user.role !== 'Intervenant' && user.id !== this.user.id);
     
         console.log('Intervenants:', this.intervenants);
         //this.intervenants = data;
