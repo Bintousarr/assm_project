@@ -17,6 +17,11 @@
           <a [routerLink]="['marche']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t1' | translate}}</a>
           <a [routerLink]="['voir-marche']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t2' | translate}}</a>
           <a [routerLink]="['espace-visiteur']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t3' | translate}} </a>
+        <a [routerLink]="['']" class="nav-item capitalize hover:text-red-600">Accueil</a>
+        <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
+          <a [routerLink]="['marche']" class="block px-4 py-2 hover:bg-gray-200">Marché</a>
+          <a [routerLink]="['voir-marche']" class="block px-4 py-2 hover:bg-gray-200">A voir sur le marché</a>
+          <a [routerLink]="['espace-visiteur']" class="block px-4 py-2 hover:bg-gray-200">Espace visiteurs</a>
         </div>
       </div>
 
@@ -52,6 +57,7 @@
       <span class="text-white">|</span>
 
       <a [routerLink]="['contact']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre4' | translate}}</a>
+      
     </nav>
   </div>
 

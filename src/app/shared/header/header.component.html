@@ -1,5 +1,6 @@
-<div class="header font-poppins"> 
+<div class="header font-poppins">
   <!-- Top Bar -->
+<<<<<<< HEAD
   <div class="top-bar flex justify-between items-center bg-customBlue text-white text-sm py-4">
     <div class="top-bar-left flex items-center">
       <i class="material-icons ml-24">location_on</i>
@@ -15,14 +16,37 @@
         </button>
       </div>
     </div>  -->
+=======
+  <div class="top-bar flex justify-between items-center bg-customBlue text-white text-sm py-4 px-4 sm:px-16">
+    <div class="top-bar-left flex items-center space-x-2">
+      <i class="material-icons">location_on</i>
+      <span>Abidjan, Côte d'Ivoire</span>
+    </div>
+    <div class="top-bar-right flex items-center space-x-4">
+      <div class="language-switcher flex items-center space-x-2">
+        <button class="lang-btn flex items-center space-x-1">
+          <img src="../../../assets/fra.jpg" alt="FR" class="flag-icon w-4 h-4"> 
+          <span>FR</span>
+        </button>
+        <button class="lang-btn flex items-center space-x-1">
+          <img src="../../../assets/usa.png" alt="EN" class="flag-icon w-4 h-4"> 
+          <span>EN</span>
+        </button>
+      </div>
+    </div>
+>>>>>>> 8d7031ff34e9cd4e79335db0b5c71075488f010d
   </div>
 
-  <div class="main-bar flex flex-col-6 items-center text-red-700 mt-2 py-2">
-    <div class="logo flex items-center">
-      <img src="../../../assets/logo (2).png" alt="OTIFFF" class="ml-2 h-25 w-62" />
+  <!-- Main Bar -->
+  <div class="main-bar flex flex-col lg:flex-row items-center justify-between text-red-700 mt-4 py-4 px-4 sm:px-16">
+    <!-- Logo -->
+    <div class="logo flex items-center mb-4 lg:mb-0">
+      <img src="../../../assets/logo (2).png" alt="OTIFFF" class="h-16 w-48 object-contain" />
     </div>
-    <div class="mass-title flex flex-col items-start ml-4">
-      <h1 class="text-2xl font-bold">
+
+    <!-- MASS Title -->
+    <div class="mass-title text-center lg:text-left lg:mb-0">
+      <h1 class="text-xl lg:text-2xl font-bold leading-tight">
         <span class="text-red-700">M</span><span class="text-black">ASS</span> -
         <span class="text-red-700">M</span><span class="text-black">arché</span>
         <span class="text-red-700"> A</span><span class="text-black">fricain</span>
@@ -31,6 +55,7 @@
         <span class="text-red-700"> S</span><span class="text-black">patiales</span>
       </h1>
     </div>
+<<<<<<< HEAD
     
     <div class="contact-info items-center ml-6 hidden sm:flex">
       <i class="material-icons mr-1">email</i>
@@ -55,9 +80,37 @@
         </div>
         <div class="mt-6">
           <a [routerLink]="['login']" class="register-btn bg-red-800 text-white py-2 px-2 ml-6  rounded-xl" *ngIf="!isLoggedIn">{{'accueil.header-block.connexion' | translate}}</a>  
+=======
+>>>>>>> 8d7031ff34e9cd4e79335db0b5c71075488f010d
 
+    <!-- Contact Info -->
+    <div class="hidden contact-info sm:flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6">
+      <div class="flex items-center">
+        <i class="material-icons mr-2">email</i>
+        <div class="text-center lg:text-left">
+          <span class="font-bold block">contact&#64;otif-africa-space.com</span>
+          <span class="text-sm block">Envoyez-nous un message</span>
         </div>
       </div>
+      <div class="flex items-center">
+        <i class="material-icons mr-2">phone</i>
+        <div class="text-center lg:text-left">
+          <span class="font-bold block">
+            +33 678 55 85 45 <br> +225 07 07 15 39 01
+          </span>
+        </div>
       </div>
+      <div class="flex items-center">
+        <button class="flex items-center text-lg text-green-400">
+          <i class="fab fa-whatsapp mr-2 text-green-400 text-2xl"></i> WhatsApp
+        </button>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col items-center space-y-2 lg:space-y-0 lg:space-x-4 lg:flex-row">
+        <a [routerLink]="['register']" class="bg-red-800 text-white py-2 px-4 rounded-lg" *ngIf="!isLoggedIn">S'INSCRIRE</a>
+        <a [routerLink]="['login']" class="bg-red-800 text-white py-2 px-4 rounded-lg" *ngIf="!isLoggedIn">SE CONNECTER</a>
+      </div>
+    </div>
   </div>
 </div>
