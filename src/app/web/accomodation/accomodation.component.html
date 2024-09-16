@@ -3,8 +3,8 @@
     <div class="bg-gray-100 p-4 rounded-lg shadow-md w-full max-w-6xl">
       <div class="flex justify-center bg-red-900 text-white font-bold text-lg p-2 rounded-t-lg">
         <div class="flex justify-between w-full">
-          <div class="ml-4 animate-bounce">OTIF</div>
-          <div class="animate-bounce font-poppins">INFORMATION LOGISTIQUE</div>
+          <div class="ml-4 animate-bounce">{{'logistique.desc' | translate}}</div>
+          <div class="animate-bounce font-poppins">{{'logistique.titre' | translate}} </div>
         </div>
       </div>
 
@@ -13,11 +13,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">place</span>
-            <span class="animate-pulse font-poppins">VENUE</span>
+            <span class="animate-pulse font-poppins">{{'logistique.titre1' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'venue'" class="mt-2">
-          <p>En décembre, la Côte d'Ivoire connaît un climat sec et chaud avec des températures entre 24°C et 32°C.</p>
+          <p>{{'logistique.titre2' | translate}}</p>
         </div>
       </div>
 
@@ -26,11 +26,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">flight</span>
-            <span class="animate-pulse">VOLS</span>
+            <span class="animate-pulse">{{'logistique.titre3' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'vols'" class="mt-2">
-          <p>Tous les participants sponsorisés par l'UA recevront un billet aller-retour (classe économique) conformément aux règles et règlements de l'UA. Des efforts ont été faits pour réserver votre billet en fonction des dates de la réunion. Tous les participants sont priés d'arriver à l'aéroport selon leurs billets d'avion respectifs. En cas de retard ou d'annulation de vol, veuillez en informer l'équipe dès que possible via les contacts fournis ci-dessous. Pour les participants qui couvrent leurs propres frais, merci de nous informer si vous avez besoin d'aide afin que l'équipe sur place puisse vous assister.</p>
+          <p>{{'logistique.titre4' | translate}}</p>
         </div>
       </div>
 
@@ -39,11 +39,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">airport_shuttle</span>
-            <span class="animate-pulse">TRANSFERTS AÉROPORTUAIRES ET TRANSPORT</span>
+            <span class="animate-pulse">{{'logistique.titre5' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'transfers'" class="mt-2">
-          <p>Un comptoir d'assistance sera mis en place à l'aéroport pour répondre à toutes vos questions à votre arrivée. Tous les participants sponsorisés par l'UA seront pris en charge pour le transport de l'aéroport à l'hôtel. Veuillez chercher des pancartes portant en gros caractères AU - GMES & AFRICA à l'aéroport pour la coordination de votre transfert vers l'hôtel.</p>
+          <p>{{'logistique.titre6' | translate}}</p>
         </div>
       </div>
 
@@ -52,11 +52,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">assignment</span>
-            <span class="animate-pulse">VISA, PASSEPORTS ET FORMALITÉS D'ENTRÉE</span>
+            <span class="animate-pulse">{{'logistique.titre7' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'visa'" class="mt-2">
-          <p>Tous les participants doivent détenir un passeport valide ou un autre document de voyage acceptable. Le passeport/document de voyage doit être valide et les passeports doivent également avoir des pages vierges pour les visas.</p>
+          <p>{{'logistique.titre8' | translate}}</p>
         </div>
       </div>
 
@@ -65,11 +65,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">vaccines</span>
-            <span class="animate-pulse">EXIGENCES EN MATIÈRE DE VACCINATION</span>
+            <span class="animate-pulse">{{'logistique.titre9' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'vaccination'" class="mt-2">
-          <p>Tous les visiteurs de Sharm El Sheikh DOIVENT avoir un certificat de fièvre jaune valide depuis plus de dix (10) jours avant le voyage.</p>
+          <p>{{'logistique.titre10' | translate}}</p>
         </div>
       </div>
 
@@ -78,11 +78,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">hotel</span>
-            <span class="animate-pulse">HÉBERGEMENT</span>
+            <span class="animate-pulse">{{'logistique.titre11' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'accommodation'" class="mt-2">
-          <p>En décembre, la Côte d'Ivoire connaît un climat sec et chaud avec des températures entre 24°C et 32°C.</p>
+          <p>{{'logistique.titre12' | translate}}</p>
         </div>
       </div>
 
@@ -91,11 +91,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">info</span>
-            <span class="animate-pulse">KIT D'INFORMATION ET ACCRÉDITATION</span>
+            <span class="animate-pulse">{{'logistique.titre13' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'kit'" class="mt-2">
-          <p>Des copies de la note conceptuelle et de l'agenda vous ont été fournies précédemment ou pourront vous être remises à votre arrivée sur le lieu de la réunion.</p>
+          <p>{{'logistique.titre14' | translate}}</p>
         </div>
       </div>
 
@@ -104,11 +104,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">attach_money</span>
-            <span class="animate-pulse">DEVISES ET SERVICES BANCAIRES</span>
+            <span class="animate-pulse">{{'logistique.titre15' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'currency'" class="mt-2">
-          <p>La monnaie de la Côte d'Ivoire est le franc CFA (XOF). Le taux de change est d'environ 1 USD = 615 XOF. Échange de devises : En Côte d'Ivoire, les visiteurs peuvent payer en XOF, EUR et USD. L'argent peut être échangé dans les bureaux de change, les banques, et à l'aéroport. Paiements sans espèces : Toutes les principales cartes de crédit et de débit (Visa et Mastercard) sont acceptées dans la plupart des établissements en Côte d'Ivoire.</p>
+          <p>{{'logistique.titre16' | translate}}</p>
         </div>
       </div>
 
@@ -117,11 +117,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">power</span>
-            <span class="animate-pulse">ÉLECTRICITÉ</span>
+            <span class="animate-pulse">{{'logistique.titre17' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'electricity'" class="mt-2">
-          <p>En Côte d'Ivoire, les prises électriques sont de type C (Europlug) et E. La tension standard est de 230 V et la fréquence est de 50 Hz.</p>
+          <p>{{'logistique.titre18' | translate}}.</p>
         </div>
       </div>
 
@@ -130,11 +130,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">wifi</span>
-            <span class="animate-pulse">INSTALLATIONS DE COMMUNICATION</span>
+            <span class="animate-pulse">{{'logistique.titre19' | translate}}</span>
           </div>
         </div>
         <div *ngIf="openSection === 'communication'" class="mt-2">
-          <p>Les trois principaux fournisseurs de télécommunications en Côte d'Ivoire sont MTN, Orange, et Moov. Des services de téléphonie mobile et de connexion Internet sont disponibles avec une couverture réseau fiable dans la plupart des zones urbaines.</p>
+          <p>{{'logistique.titre20' | translate}}</p>
         </div>
       </div>
 
@@ -143,11 +143,11 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <span class="material-icons animate-pulse mr-2">medical_services</span>
-            <span class="animate-pulse">SERVICES MÉDICAUX</span>
+            <span class="animate-pulse">{{'logistique.titre21' | translate}} </span>
           </div>
         </div>
         <div *ngIf="openSection === 'medical'" class="mt-2">
-          <p>Les trois principaux hôpitaux publics à Abidjan sont CHU de Yopougon, CHU de Treichville, et CHU de Cocody. Des services médicaux de base sont aussi disponibles dans la plupart des hôtels. En cas d'urgence, les participants peuvent contacter le personnel médical disponible sur place pour obtenir de l'aide.</p>
+          <p>{{'logistique.titre22' | translate}}</p>
         </div>
       </div>
     </div>
@@ -169,7 +169,7 @@
               </span>
 
               <div class="txt">
-                  <span class="font-light">Appelez au </span>
+                  <span class="font-light">{{'login-block.card-block.titre1' | translate}} </span>
                   <h4 class="font-semibold text-[24px]"> 
                       <a  class=""  href="tel:+208-555-0112">+225 07 07 15 39 01 </a>
                       <br>
@@ -191,7 +191,7 @@
               </div>
 
               <div class="txt">
-                  <span class="font-light">Mail</span>
+                  <span class="font-light">{{'login-block.card-block.titre2' | translate}} </span>
                   <h4 class="font-semibold text-[24px]"><a
                           href="mailto:contact@otif-africa-space.com">contact&#64;otif-africa-space.com</a></h4>
               </div>
@@ -208,8 +208,8 @@
               </span>
 
               <div class="txt">
-                  <span class="font-light">Lieu</span>
-                  <h4 class="font-semibold text-[24px]">Abidjan, Côte d'Ivoire</h4>
+                  <span class="font-light">{{'login-block.card-block.titre3' | translate}} </span>
+                  <h4 class="font-semibold text-[24px]">{{'login-block.card-block.titre4' | translate}} </h4>
               </div>
           </div>
       </div>

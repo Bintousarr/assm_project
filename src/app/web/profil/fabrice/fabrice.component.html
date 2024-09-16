@@ -1,65 +1,59 @@
 <div class="bg-red-900 font-poppins p-8">
-    <div class="flex ml-20 items-center space-x-6 font-poppins ">
-      <img  src="../../../assets/fabrice.jpeg"  class="w-60 h-60  rounded-full object-cover"/>
-      <div>
-        <h1 class="text-white text-4xl font-bold">IRIE BI FABRICE</h1>
-        <p class="text-white text-lg">OTIF Space Africa</p>
+  <div class="flex ml-20 items-center space-x-6 font-poppins">
+    <img src="../../../assets/fabrice.jpeg" class="w-60 h-60 rounded-full object-cover"/>
+    <div>
+      <h1 class="text-white text-4xl font-bold">{{ 'fabrice.name' | translate }}</h1>
+      <p class="text-white text-lg">{{ 'fabrice.title' | translate }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="p-8 text-justify ml-20 font-poppins">
+  <div class="flex items-center">
+    <p class="text-gray-700 text-lg">
+      {{ 'fabrice.description' | translate }}
+    </p>
+    <div class="py-6 ml-40">
+      <img src="../../../../assets/logo.png" alt="">
+    </div>
+  </div>
+
+  <hr class="my-2 border-gray-300 mt-10" />
+  <h2 class="text-xl font-bold mb-4 font-poppins">{{ 'fabrice.speaking_days' | translate }}</h2>
+
+  <div class="flex items-center space-x-8">
+    <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="bg-customBlue text-white px-6 py-3 flex items-center">
+        <div>
+          <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
+          </svg>
+          <h3 class="text-xl font-semibold">{{ 'fabrice.day2' | translate }}</h3>
+          <p class="ml-auto text-lg">{{ 'fabrice.date_day2' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="px-6 py-4">
+        <span class="block text-xl font-bold mb-2">{{ 'fabrice.time' | translate }}</span>
+        <span class="text-black text-xl">{{ 'fabrice.speech' | translate }}</span>
+      </div>
+    </div>
+
+    <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="bg-customBlue text-white px-6 py-3 flex items-center">
+        <div>
+          <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2h14a2-2"></path>
+          </svg>
+          <h3 class="text-xl font-semibold">{{ 'fabrice.day5' | translate }}</h3>
+          <p class="ml-auto text-lg">{{ 'fabrice.date_day5' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="px-6 py-4">
+        <span class="block text-xl font-bold mb-2">{{ 'fabrice.time' | translate }}</span>
+        <span class="text-black text-xl">{{ 'fabrice.speech' | translate }}</span>
       </div>
     </div>
   </div>
-  
-  <div class="p-8 text-justify ml-20 font-poppins">
-    <div class="flex items-center">
-      <p class="text-gray-700 text-lg">
-        Ingénieur en géodésie doublé d'un master en Système d’information géographique 
-        de l'Université de <br>  Caen en France. Il est un expert international en SIG.
-        Durant la dizaine d’années où il a travaillé <br>chez ESRI France, il est intervenu 
-        sur les projets pour de grands comptes : Total, Grdf, Edf, Sncf etc... <br>  Il est le 
-        fondateur du groupe Modelis constitué de sept  entreprises dans
-        quatre pays : la Côte d’ivoire, <br> la France, le Sénégal et le Mali.
-      </p>
-      <div class="py-6 ml-40">
-        <img src="../../../../assets/logo.png" alt="">
-      </div>
-    </div>
-   
-    <hr class="my-2 border-gray-300 mt-10" />
-    <h2 class="text-xl font-bold mb-4 font-poppins ">Jour d'intervention</h2>
-    <div class="flex items-center space-x-8">
-      <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
-        <div class="bg-customBlue text-white px-6 py-3 flex items-center">
-          <div>
-            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
-            </svg>
-            <h3 class="text-xl font-semibold">Jour 2 </h3>
-            <p class="ml-auto text-lg">03, Déc-2024</p>
-          </div>
-        </div>
-        
-        <div class="px-6 py-4">
-          <span class="block text-xl font-bold mb-2">10:00 - 12:00</span>
-          <span class="text-black text-xl">Discours</span>
-        </div>
-      </div>
-    
-      <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
-        <div class="bg-customBlue text-white px-6 py-3 flex items-center">
-          <div>
-            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
-            </svg>
-            <h3 class="text-xl font-semibold">Jour 5 </h3>
-            <p class="ml-auto text-lg">05, Déc-2024</p>
-          </div>
-        </div>
-        
-        <div class="px-6 py-4">
-          <span class="block text-xl font-bold mb-2">10:00 - 12:00</span>
-          <span class="text-black text-xl">Discours</span>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  
+</div>

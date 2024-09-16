@@ -3,7 +3,7 @@
     <div class="mt-10 flex items-center justify-between align-center mb-10">
          <h2 class="text-4xl font-bold mb-4  ">
             <i class="fas fa-contact font-poppins text-4xl"></i>
-           Contact
+           {{'contact.contact-block.titre' | translate}}
           <span class="block w-12 h-1 bg-red-800 ml-4 mt-1"></span>
         </h2>
     </div>
@@ -24,7 +24,7 @@
                             </span>
 
                             <div class="txt">
-                                <span class="font-light">Appelez au </span>
+                                <span class="font-light">{{'contact.contact-block.telephone' | translate}}</span>
                                 <h4 class="font-semibold text-[24px]"> 
                                     <a  class=""  href="tel:+208-555-0112">+225 07 07 15 39 01 </a>
                                     <br>
@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="txt">
-                                <span class="font-light">Mail</span>
+                                <span class="font-light">{{'contact.contact-block.mail' | translate}}</span>
                                 <h4 class="font-semibold text-[24px]"><a
                                         href="mailto:contact@otif-africa-space.com">contact&#64;otif-africa-space.com</a></h4>
                             </div>
@@ -63,8 +63,8 @@
                             </span>
 
                             <div class="txt">
-                                <span class="font-light">Lieu</span>
-                                <h4 class="font-semibold text-[24px]">Abidjan, Côte d'Ivoire</h4>
+                                <span class="font-light">{{'login-block.card-block.titre3' | translate}}</span>
+                                <h4 class="font-semibold text-[24px]">{{'contact.contact-block.lieu' | translate}}</h4>
                             </div>
                         </div>
                     </div>
@@ -85,30 +85,29 @@
                 <!-- right side contact form -->
                 <div class="p-20">
                     <h2
-                        class="text-[40px] md:text-[35px] sm:text-[30px] xxs:text-[28px] font-medium text-etBlack mb-[7px]">Prêt à commencer ?</h2>
+                        class="text-[40px] md:text-[35px] sm:text-[30px] xxs:text-[28px] font-medium text-etBlack mb-[7px]">{{'contact.contact-block.titre1' | translate}}?</h2>
                     <p
-                        class="text-etGray font-light text-[16px] mb-[38px]">Nous sommes à votre disponibilité pour toute question</p>
+                        class="text-etGray font-light text-[16px] mb-[38px]">{{'contact.contact-block.titre2' | translate}}</p>
 
                         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm"  class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
                             <div>
-                              <label for="et-contact-name" class="font-lato font-semibold text-etBlack block mb-[12px]">Your Name*</label>
+                              <label for="et-contact-name" class="font-lato font-semibold text-etBlack block mb-[12px]">{{'contact.contact-block.titre3' | translate}}*</label>
                               <input type="text" name="name" id="et-contact-name" placeholder="Your Name"
                                      class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none" ngModel required>
                             </div>
                             <div>
-                              <label for="et-contact-email" class="font-lato font-semibold text-etBlack block mb-[12px]">Your Email*</label>
+                              <label for="et-contact-email" class="font-lato font-semibold text-etBlack block mb-[12px]">{{'contact.contact-block.titre4' | translate}}*</label>
                               <input type="email" name="email" id="et-contact-email" placeholder="Your Email"
                                      class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none" ngModel required>
                             </div>
                             <div class="col-span-2 xxs:col-span-1">
-                              <label for="et-contact-message" class="font-lato font-semibold text-etBlack block mb-[12px]">Your Message*</label>
+                              <label for="et-contact-message" class="font-lato font-semibold text-etBlack block mb-[12px]">{{'contact.contact-block.titre5' | translate}}*</label>
                               <textarea name="message" id="et-contact-message" placeholder="Your Message"
                                         class="border border-[#ECECEC] h-[145px] p-[20px] rounded-[4px] w-full focus:outline-none" ngModel required></textarea>
                             </div>
                             <div>
-                             
                               <button type="submit" class="bg-red-800 h-[55px] px-[24px] rounded-[10px] text-[16px] font-medium text-white hover:bg-etBlack">
-                                Send Message <span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span>
+                                {{'contact.contact-block.titre6' | translate}} <span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span>
                               </button>
                             </div>
                         </form>

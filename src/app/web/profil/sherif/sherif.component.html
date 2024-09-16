@@ -1,62 +1,55 @@
 <div class="bg-red-900 font-poppins p-8">
-    <div class="flex ml-20 items-center space-x-6 font-poppins ">
-      <img  src="../../../assets/sedky"  class="w-60 h-60 rounded-full object-cover"/>
-      <div>
-        <h1 class="text-white text-4xl font-bold">Sherif Mohamed Sedky</h1>
-        <p class="text-white text-lg">Directeur général de l'Agence spatiale égyptienne</p>
+  <div class="flex ml-20 items-center space-x-6 font-poppins">
+    <img src="../../../assets/sedky" class="w-60 h-60 rounded-full object-cover" />
+    <div>
+      <h1 class="text-white text-4xl font-bold">{{ 'sherifSedky.title' | translate }}</h1>
+      <p class="text-white text-lg">{{ 'sherifSedky.position' | translate }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="p-8 text-justify ml-20 font-poppins">
+  <div class="flex items-center">
+    <p class="text-gray-700 text-lg">
+      {{ 'sherifSedky.description' | translate }}
+    </p>
+    <div class="py-2 ml-40">
+      <img class="" src="../../../../assets/egsa-egyptian-space-agency.jpg" alt="EGSA Logo" />
+    </div>
+  </div>
+  <hr class="my-2 border-gray-300 mt-10" />
+  <h2 class="text-xl font-bold mb-4 font-poppins">{{ 'sherifSedky.interventionDays' | translate }}</h2>
+  <div class="flex items-center space-x-8">
+    <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="bg-customBlue text-white px-6 py-3 flex items-center">
+        <div>
+          <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
+          </svg>
+          <h3 class="text-xl font-semibold">{{ 'sherifSedky.days.day2.title' | translate }}</h3>
+          <p class="ml-auto text-lg">{{ 'sherifSedky.days.day2.date' | translate }}</p>
+        </div>
+      </div>
+      <div class="px-6 py-4">
+        <span class="block text-xl font-bold mb-2">{{ 'sherifSedky.days.day2.time' | translate }}</span>
+        <span class="text-black text-xl">{{ 'sherifSedky.days.day2.event' | translate }}</span>
+      </div>
+    </div>
+
+    <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="bg-customBlue text-white px-6 py-3 flex items-center">
+        <div>
+          <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
+          </svg>
+          <h3 class="text-xl font-semibold">{{ 'sherifSedky.days.day5.title' | translate }}</h3>
+          <p class="ml-auto text-lg">{{ 'sherifSedky.days.day5.date' | translate }}</p>
+        </div>
+      </div>
+      <div class="px-6 py-4">
+        <span class="block text-xl font-bold mb-2">{{ 'sherifSedky.days.day5.time' | translate }}</span>
+        <span class="text-black text-xl">{{ 'sherifSedky.days.day5.event' | translate }}</span>
       </div>
     </div>
   </div>
-  
-  <div class="p-8 text-justify ml-20 font-poppins">
-    <div class="flex items-center">
-      <p class="text-gray-700 text-lg">
-        Dr. Sherif Sedky est le Directeur Général de l'Agence Spatiale Égyptienne.
-         Il est responsable de la gestion de  l'agence, du développement de projets
-          spatiaux nationaux et de la promotion des collaborations  internationales dans 
-          le domaine de l'exploration spatiale et des technologies associées.
-      </p>
-      <div class="py-2 ml-40">
-        <img class="" src="../../../../assets/egsa-egyptian-space-agency.jpg" alt="">
-      </div>
-    </div>
-    <hr class="my-2 border-gray-300 mt-10" />
-    <h2 class="text-xl font-bold mb-4 font-poppins ">Jour d'intervention</h2>
-    <div class="flex items-center space-x-8">
-      <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
-        <div class="bg-customBlue text-white px-6 py-3 flex items-center">
-          <div>
-            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
-            </svg>
-            <h3 class="text-xl font-semibold">Jour 2 </h3>
-            <p class="ml-auto text-lg">03, Déc-2024</p>
-          </div>
-        </div>
-        
-        <div class="px-6 py-4">
-          <span class="block text-xl font-bold mb-2">10:00 - 12:00</span>
-          <span class="text-black text-xl">Discours</span>
-        </div>
-      </div>
-    
-      <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
-        <div class="bg-customBlue text-white px-6 py-3 flex items-center">
-          <div>
-            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
-            </svg>
-            <h3 class="text-xl font-semibold">Jour 5 </h3>
-            <p class="ml-auto text-lg">05, Déc-2024</p>
-          </div>
-        </div>
-        
-        <div class="px-6 py-4">
-          <span class="block text-xl font-bold mb-2">10:00 - 12:00</span>
-          <span class="text-black text-xl">Discours</span>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  
+</div>

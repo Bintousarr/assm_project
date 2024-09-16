@@ -1,19 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { EmailService } from '../../services/emailService/email.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, HttpClientModule ],
+  imports: [FormsModule, HttpClientModule, TranslateModule ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  constructor(private emailService: EmailService) { console.log('EmailService injected:', !!emailService); }
+  translate: TranslateService = inject(TranslateService)
 
+  constructor(private emailService: EmailService) { console.log('EmailService injected:', !!emailService); }
+  ngOnInit() {
+    this.translate.setDefaultLang('fr');
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
+  
     name: string = '';
   email: string = '';
   message: string = '';

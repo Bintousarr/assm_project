@@ -2,25 +2,26 @@
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RegisterService } from '../services/registerService/register.service';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { RegistrationSuccessDialogComponent } from '../registration-success-dialog/registration-success-dialog.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports:  [ReactiveFormsModule, CommonModule,MatDialogModule],
+  imports:  [TranslateModule, ReactiveFormsModule, CommonModule,MatDialogModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   loginForm: FormGroup;
  
+  translate: TranslateService = inject(TranslateService)
 
-
-
+ 
 constructor(private fb: FormBuilder, private registerService: RegisterService,    private dialog: MatDialog, private router:Router) {
   this.loginForm = this.fb.group({
    
@@ -29,6 +30,14 @@ constructor(private fb: FormBuilder, private registerService: RegisterService,  
   
   });
 }
+ ngOnInit() {
+    this.translate.setDefaultLang('fr');
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
+
 
 // onCountryInput() {
 //   const input = this.loginForm.get('country')?.value.toLowerCase();

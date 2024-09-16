@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-compte-a-rebours',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './compte-a-rebours.component.html',
   styleUrl: './compte-a-rebours.component.scss'
 })
@@ -14,13 +15,19 @@ export class CompteAReboursComponent {
   minutes: number | undefined;
   seconds: number | undefined;
   countdownMessage: string = '';
+  translate: TranslateService = inject(TranslateService)
 
   private eventDate: Date = new Date('2025-06-16T00:00:00'); // Date de l'événement
 
   ngOnInit(): void {
-
+    this.translate.setDefaultLang('fr');
     this.updateCountdown(); // Appel initial
     setInterval(() => this.updateCountdown(), 1000); // Actualisation chaque seconde
+  }
+
+  
+  translateText(lang: string) {
+    this.translate.use(lang);
   }
 
   private updateCountdown() {

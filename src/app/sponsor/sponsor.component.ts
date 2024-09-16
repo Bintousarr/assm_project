@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sponsor',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './sponsor.component.html',
   styleUrl: './sponsor.component.scss'
 })
@@ -16,10 +17,17 @@ export class SponsorComponent {
     '../../../assets/spon3.png'
   ];
 
+  translate: TranslateService = inject(TranslateService)
+
   constructor() { }
 
   ngOnInit(): void {
+    this.translate.setDefaultLang('fr');
     this.duplicateImages();
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
   }
 
   duplicateImages(): void {

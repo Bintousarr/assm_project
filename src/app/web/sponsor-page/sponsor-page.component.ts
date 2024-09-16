@@ -1,16 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sponsor-page',
   standalone: true,
-  imports: [CommonModule, CarouselModule],
+  imports: [TranslateModule, CommonModule, CarouselModule],
   templateUrl: './sponsor-page.component.html',
   styleUrl: './sponsor-page.component.scss'
 })
 export class SponsorPageComponent {
+  translate: TranslateService = inject(TranslateService)
 
+  ngOnInit() {
+    this.translate.setDefaultLang('fr');
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
   
   customOptions: OwlOptions = {
     loop: true,
@@ -30,5 +39,7 @@ export class SponsorPageComponent {
       }
     }
   }
+
+
 
 }

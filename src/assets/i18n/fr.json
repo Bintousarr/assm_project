@@ -1,206 +1,433 @@
 {
-    "accueil": {
-        "header-block": {
-            "lieu": "Abidjan, Côte d'Ivoire",
-            "contact": "Envoyez-nous un message",
-            "telephone": "Demande de rappel",
-            "inscription": "INSCRIVEZ-VOUS ICI"
-
-        },
-        "navbar-block": {
-            "titre1": "ACCUEIL",
-            "titre2": "PROGRAMME",
-            "titre3": "ASSM 2024",
-            "desc1": "Sponsors",
-            "desc2": "Orateurs",
-            "desc3": "Accomodation",
-            "desc4": "À propos",
-            "titre4": "CONTACT"
-        }, 
-      "banner-block": {
-        "date": "Du 02 décembre au 06 décembre 2024",
-        "lieu": "Abidjan, Côte d'Ivoire",
-        "theme": " GESTION DES RESSOURCES NATURELLES ET CATASTROPHES",
-        "desc1": "À propos",
-        "desc2": "INSCRIVEZ-VOUS",
-        "desc3":"L'espace n'est pas une option, mais une nécessité. La technologie spatiale est fondamentale pour les pays africains."
+  "accueil": {
+    "header-block": {
+      "lieu": "Abidjan, Côte d'Ivoire",
+      "contact": "Envoyez-nous un message",
+      "inscription": "S'INSCRIRE",
+      "connexion": "SE CONNECTER"
+    },
+    "navbar-block": {
+      "titre1": "ACCUEIL",
+      "t1": "Marché",
+      "t2": "A voir sur le marchét",
+      "t3": "Espace visiteurs",
+      "titre2": "AGENDA",
+      "titre3": "MASS ",
+      "m1": "Partenaires",
+      "m2": "Fournisseurs",
+      "m3": "Intervenants",
+      "desc1": "INFORMATION",
+      "desc2": "Informations de voyage",
+      "desc3": "Informations pratiques",
+      "desc4": "ACTUALITES",
+      "titre4": "CONTACT",
+      "menu": "Menu"
+    },
+    "banner-block": {
+      "conference": "Marché Africain des Solutions Spatiales (MASS)",
+      "date": "Du 16 au 20 Juin 2025",
+      "year": "2025",
+      "description": "Abidjan - Côte d’Ivoire,  Parc des Expositions'",
+      "about": "À propos",
+      "register": "INSCRIVEZ-VOUS",
+      "desc1": "L'espace n'est pas une option, mais une nécessité. La technologie spatiale est fondamentale pour les pays africains."
+    },
+    "event-block": {
+      "titre1":" Présentation de MASS",
+      "titre2": "OTIF SPACE AFRICA organise la première édition de son forum, intitulé MASS (Marché Africain des Solutions Spatiales),  qui se tiendra à Abidjan en Côte d’Ivoire, du 16 au 20 Juin 2025 au Parc des expositions. Le MASS est un marché unique et incontournable qui offre une plateforme de rencontre entre les acteurs du développement (secteurs public et privé), les organisations internationales, les organisations non gouvernementales, la société civile, le secteur académique et les fournisseurs de services spatiaux. Il s’agit de proposer des solutions spatiales concrètes pour résoudre les défis liés au développement socio-économique du continent africain.",
+      "details": "Objectifs du MASS"
+    },
+    "event-details": {
+        "titre1":"MASS",
+        "titre2": "L'objectif du MASS 2025 est de montrer des solutions pratiques afin de résoudre les problèmes connus dans divers domaines critiques pour le continent africain.",
+        "titre3": "Pourquoi participer à MASS ?",
+        "titre4":"Compréhension et sensibilisation à la cause du spatial",
+        "l1":"Comprendre les besoins, les défis et les enjeux auxquels sont confrontés les pays africains.",
+        "l2":"Vulgariser la science spatiale",
+        "titre5":"Promotion et réseautage",
+        "t1":"Faire connaître les acteurs du secteur spatial et le potentiel de l'observation de la terre pour relever ces défis.",
+        "t2":"Mettre en relation les entités à la recherche de solutions spatiales pour partager des informations sur ces questions.",
+        "enjeux":"Enjeux",
+        "objectif":"Objectifs",
+        "opp":"Opportunités & Bénéfices",
+        "titre6":"Plateforme d'échanges et d’opportunités",
+        "p1":"Créer une plateforme d'échange pour les entreprises privées afin qu'elles puissent présenter leurs produits.",
+        "p2":"Permettre aux gestionnaires de trouver un marché adéquat avec des solutions pratiques.",
+        "p3":"Commercialiser les produits basés sur le spatial."
+       
       },
-      "sponsor-block":{
-        "titre1":"Nos sponsors"
-      },
-      "compte-rebours":{
-        "titre1": "Compte A Rebours de l'Evénement",
-        "titre2":"Jours",
-        "titre3":"Heures",
-        "titre4":"Minutes",
-        "titre5":"Secondes",
-        "desc1": "Participants",
-        "desc2":"Conférenciers",
-        "desc3": "Jours de Sommet",
-        "desc4": "Ateliers"
-      },
-      "orateur-block":{
-        "titre1":"Orateurs principaux",
-        "titre2":"Dr TIDIANE OUATTARA",
-        "titre3":"Prof SHERIF SEDGY",
-        "titre4":"Mr ADAMA DIAWARA",
-        "titre5":"Mr IRIE Bi FABRICE",
-        "desc1":"Commission de l'Union Africaine, Agence Spatiale Africaine",
-        "desc2": "Agence Spatiale Égyptienne",
-        "desc3":"Ministère de l’Enseignement Supérieur et de la Recherche Scientifique",
-        "desc4":"OTIF Espace Afrique"
-      },
-      "footer-block":{
-        "titre1":"Liens utils",
-        "titre2":"Nous suivre",
-        "titre3":"Nous Contacter",
-        "desc1":"Accueil",
-        "desc2":"A propos",
-        "desc3":"Linkdin",
-        "desc4":"Contact",
-        "desc5":" Tous droits réservés"
+    "sponsor-block": {
+      "titre1": "Nos sponsors"
+    },
+    "compte-rebours": {
+      "titre1": "Compte A Rebours de l'Evénement",
+      "titre2": "Jours",
+      "titre3": "Heures",
+      "titre4": "Minutes",
+      "titre5": "Secondes",
+      "desc1": "Participants",
+      "desc2": "Conférenciers",
+      "desc3": "Jours de Sommet",
+      "desc4": "Ateliers"
+    },
+    "orateur-block": {
+      "titre1": "Orateurs principaux",
+      "titre2": "Dr TIDIANE OUATTARA",
+      "titre3": "Prof SHERIF SEDGY",
+      "titre4": "Mr ADAMA DIAWARA",
+      "titre5": "Mr IRIE Bi FABRICE",
+      "desc1": "Commission de l'Union Africaine, Agence Spatiale Africaine",
+      "desc2": "Agence Spatiale Égyptienne",
+      "desc3": "Ministère de l’Enseignement Supérieur et de la Recherche Scientifique",
+      "desc4": "OTIF Espace Afrique"
+    },
+    "footer-block": {
+      "titre1": "Liens utils",
+      "titre2": "Nous suivre",
+      "titre3": "Nous Contacter",
+      "desc1": "Accueil",
+      "desc2": "A propos",
+      "desc3": "Linkdin",
+      "desc4": "Contact",
+      "desc5": " Tous droits réservés"
+    }
+  },
+  "contact": {
+    "contact-block": {
+      "titre":"Contact",
+      "telephone": "Appelez au",
+      "mail": "Mail",
+      "lieu": "Abidjan, Côte d'Ivoire",
+      "titre1": "Prêt à commencer ",
+      "titre2": "Nous sommes à votre disponibilité pour toute question",
+      "titre3": "Nom",
+      "titre4": "Email",
+      "titre5": "Votre Message",
+      "titre6": "Envoyer"
+    }
+  },
+  "sponsor": {
+    "info-block": {
+      "desc": "Nos sponsors",
+      "titre1": " OTIF 2024 BROCHURE",
+      "titre2": "Pour plus d'informations, veuillez nous contactez"
+    }
+  },
+  "orateur": {
+    "block": {
+      "titr1": "Rencontrez nos Intervenants",
+      "titre2": "OTIF Space Africa",
+      "titre3": "Expert en Sciences Technologiques et Spatiales à la Commission de l'Union Africaine",
+      "titre4": "Ministre de l’Enseignement Supérieur et de la Recherche scientifique",
+      "titre5": "Directeur général de l'Agence spatiale égyptienne"
+    }
+  },
+  "partner-block":{
+    "block":{
+      "titre1":"Les Partenaires",
+      "titre2":"Présentation des partenaires",
+      "titre3":"Découvrez les partenaires qui soutiennent notre projet, et en savoir plus sur leur rôle et leur contribution.",
+      "titre4":"Président de la République",
+      "titre5":"Côte d'Ivoire",
+      "titre6":"Agence Spatiale Européenne",
+      "titre7":"National Aeronautics and Space Administration",
+      "titre8":"Centre National d’Études Spatiales",
+      "titre9":"Indian Space Research Organisation",
+      "titre10":"Directeur des activités spatiales et télécommunications",
+      "titre11":"Université Félix Houphouët-Boigny",
+      "titre12":"Devenir partenaire",
+      "titre13":"Rejoignez-nous en tant que partenaire et bénéficiez des nombreux avantages que nous offrons.",
+      "titre14":"Devenir"
+    }
+  },
+  "fournisseur-block":{
+      "block":{
+     "titre1":"Les Fournisseurs officiels",
+      "titre2":"Présentation des fournisseurs officiels",
+      "titre3":"Découvrez nos fournisseurs officiels et leurs produits et services.",
+      "titre4":"Président de la République",
+      "titre5":"Côte d'Ivoire",
+      "titre6":"Agence Spatiale Européenne",
+      "titre7":"National Aeronautics and Space Administration",
+      "titre8":"Centre National d’Études Spatiales",
+      "titre9":"Indian Space Research Organisation",
+      "titre10":"Directeur des activités spatiales et télécommunications",
+      "titre11":"Université Félix Houphouët-Boigny",
+      "titre12":"Devenir fournisseur officiel",
+      "titre13":" Vous souhaitez devenir fournisseur officiel? Découvrez les avantages et le processus pour rejoindre notre équipe.",
+      "titre14":"Devenir"
       }
     },
-    "contact":{
-        "contact-block":{
-            "telephone": "Appelez au",
-            "mail":"Mail",
-            "lieu": "Abidjan, Côte d'Ivoire",
-            "titre1":"Prêt à commencer ",
-            "titre2":"Nous sommes à votre disponibilité pour toute question",
-            "titre3":"Nom",
-            "titre4":"Email",
-            "titre5":"Votre Message",
-            "titre6":"Envoyer"
-        }
+    "login-block":{
+      "login":{
+        "titre1":"Connectez-vous pour accéder à votre espace personnel",
+        "titre2":"Email",
+        "t1":"Ce champ est requis.",
+        "t2":"Adresse email invalide.",
+        "titre3":"Mot de passe",
+        "titre4":"Se connecter"
+      },
+      "card-block":{
+        "titre1":"Appelez au ",
+        "titre2":"Mail",
+        "titre3":"Lieu",
+        "titre4":"Abidjan, Côte d'Ivoire"
+      }
     },
-    "sponsor":{
-        "info-block":{
-            "desc":"Nos sponsors",
-            "titre1":" OTIF 2024 BROCHURE",
-            "titre2":"Pour plus d'informations, veuillez nous contactez"
-            
-        }
-    },
-    "orateur":{
-        "block":{
-            "titr1":"Rencontrez nos intervenants",
-            "titre2":"Ingénieur en SIG et Topographe",
-            "titre3":"Expert en Sciences Technologiques et Spatiales à la Commission de l'Union Africaine",
-            "titre4":"Ministre de l’Enseignement Supérieur et de la Recherche scientifique",
-            "titre5":"Directeur général de l'Agence spatiale égyptienne"
-        }
-    },
-    "accomodation":{
-        "logistique-block":{
-            "desc":"INFORMATION LOGISTIQUE",
-            "titre1":"VENUE",
-            "titre2":"VOLS",
-            "titre3":"TRANSFERTS AÉROPORTUAIRES ET TRANSPORT",
-            "titre4":"VISA, PASSEPORTS ET FORMALITÉS D'ENTRÉE",
-            "titre5":"EXIGENCES EN MATIÈRE DE VACCINATION",
-            "titre6":"DSA ET HÉBERGEMENT",
-            "titre7":"KIT D'INFORMATION ET ACCRÉDITATION",
-            "titre8":"DEVISES ET SERVICES BANCAIRES",
-            "titre9":"ÉLECTRICITÉ",
-            "titre10":"INSTALLATIONS DE COMMUNICATION",
-            "titre11":"PRODUITS DE TOILETTE",
-            "titre12":"MÉTÉO",
-            "titre13":"LANGUE",
-            "titre14":"MALADIE OU ACCIDENT",
-            "titre15":"INFORMATIONS DE CONTACT:"
-        }
-    },
-    "program":{
-        "first-block":{
-            "desc":"Information de l'événement",
-            "day":"JOUR",
-            "titre1":" ÉVÉNEMENT SOCIAL",
-            "titre2":"DON SOCIAL",
-            "titre3":"CONFERENCE DANS UNE ECOLE",
-            "titre4":"REUNION POUR LE CLUB D'AFFAIRES",
-            "titre5":"Orateur",
-            "time1":"10:00 – 12:00",
-            "time2":"14:00 – 16:00",
-            "time3":"16:00 – 17:30"
-        },
-        "second-block":{
-            "titre1":" Cérémonie d'ouvertures et Ressources Naturelles",
-            "titre2":"Petit-déjeuner",
-            "titre3":"Prise de parole de quelques autorités et directeurs",
-            "titre4":"Déjeuner",
-            "titre5":"Session 1: Solution spatiale pour la gestion foncière",
-            "titre6":"Pause café et Visite de stand",
-            "titre7":"Session 2: Solution spatiale pour la gestion foncière",
-            "orateur":"Orateur",
-            "time":"09:00 - 10:00",
-            "time1":"10:00 – 12:00",
-            "time2":"12:15 - 14:00",
-            "time3":"14:00 - 15:30",
-            "time4":"15:30 - 16:30",
-            "time5":"16:30 - 17:30"
-        },
-        "third-block":{
-            "titre1":" Ressources Naturelles",
-            "titre2":"Petit-déjeuner",
-            "titre3":"Session 4: Solutions pour l'agriculture, l'eau et les fôrets",
-            "titre4":"Déjeuner",
-            "titre5":"Session 5: Solution spatiale pour les inondations",
-            "titre6":"Pause café et Visite de stand",
-            "titre7":"Dîner: Prix spatial annuel",
-            "orateur":"Orateur",
-            "time":"09:00 - 10:00",
-            "time1":"10:00 – 12:00",
-            "time2":"12:15 - 14:00",
-            "time3":"14:00 - 15:30",
-            "time4":"15:30 - 16:30",
-            "time5":"19:00 - 23:00"
-        },
-        "fourth-block":{
-            "titre1":" Sécurité & Défense",
-            "titre2":"Petit-déjeuner",
-            "titre3":"Session 7: Solutions pour la sécurité et la défense",
-            "titre4":"Déjeuner",
-            "titre5":"Session 8: Solution spatiale pour le maritime",
-            "titre6":"Pause café et Visite de stand",
-            "titre7":"Réservé au club d'affaires",
-            "orateur":"Orateur",
-            "time":"09:00 - 10:00",
-            "time1":"10:00 – 12:00",
-            "time2":"12:15 - 14:00",
-            "time3":"14:00 - 15:00",
-            "time4":"15:00 - 16:00",
-            "time5":"16:00 - 17:00"
-        },
-        "fifth-block":{
-            "titre1":"Clôture",
-            "titre2":"Petit-déjeuner",
-            "titre3":"Prise de parole de quelques autorités et directeurs",
-            "titre4":"Déjeuner",
-            "titre5":"Visite touristique",
-            "orateur":"Orateur",
-            "time":"09:00 - 10:00",
-            "time1":"10:00 – 12:00",
-            "time2":"12:15 - 14:00",
-            "time3":"14:00 - 17:00"
-          
-        }
-    },
-    "register":{
-        "block":{
-            "desc":"Remplissez le formulaire pour réserver votre place",
-            "titre1":"Sélectionnez votre titre",
-            "titre2":"Prénom et nom",
-            "titre3":"Genre",
-            "desc1":"Homme",
-            "desc2":"Femme",
-            "titre4":"Email",
-            "titre5":"Téléphone",
-            "titre6":"Pays",
-            "titre7":"Sélectionnez le type de participation",
-            "titre8":"S'inscrire"
+    "register-block":{
+      "register":{
+        "titre1":"Remplissez le formulaire pour vous inscrire.",
+        "titre2":"Sélectionnez votre titre",
+        "titre3":"Choisissez",
+        "opt1":"Prof.",
+        "opt2":"Dr.",
+        "opt3":"M.",
+        "opt4":"Mdme.",
+        "opt5":"Mlle.",
+        "prenom":"Prénom",
+        "nom":"Nom",
+        "genre":"Genre",
+        "H":"Homme",
+        "F":"Femme",
+        "profession":"Profession",
+        "ese":"Organisme",
+        "photo":"Insérez votre photo",
+        "p1":"Format de fichier non valide. Seuls les fichiers JPEG et PNG sont acceptés.",
+        "p2":"Le fichier est trop volumineux. La taille maximale est de 5 Mo.",
+        "call":"Téléphone",
+        "pays":"Pays",
+        "participation":"Sélectionnez le type de participation",
+        "part1":"Sponsor",
+        "part2":"Animateur(trice)",
+        "part3":"Intervenant",
+        "part4":"Présentation par affiche",
+        "part5":"Co-auteur",
+        "button":"S'inscrire"
 
-        }
+      }
+
+    },
+    "marche-block":{
+      "titre1":"MARCHE",
+      "titre2":"Le marché des solutions spatiales",
+      "titre3":"Cette rubrique décrit les objectifs et les missions du marché, et présente les types de solutions spatiales qui y sont exposées, ainsi que leurs buts et avantages.",
+      "titre4":"L’histoire du marché",
+      "titre5":" Une rétrospective sur la création et l’évolution du marché, avec des faits marquants et des changements significatifs au fil des années.",
+      "titre6":"Les prix et concours spatiaux",
+      "titre7":"Détails sur les prix décernés et les concours organisés pendant le marché, y compris les critères de participation et les récompenses.",
+      "titre8":"Pourquoi participer au marché ?",
+      "titre9":" Arguments et bénéfices pour les exposants et les visiteurs à participer, tels que les opportunités de réseautage, d’innovation, et de visibilité.",
+      "titre10":"FAQ spécifique au marché",
+      "titre11":"Réponses aux questions fréquemment posées par ceux qui souhaitent en savoir plus sur le marché, facilitant ainsi leur compréhension et leur préparation."
+    },
+    "voir-marche":{
+      "titre1":"À voir sur le marché",
+      "titre2":"Les différents marchés des solutions spatiales",
+      "solution-block":{
+        "desc1":"Observation de la Terre",
+        "desc2":"Satellites d’Observation : Fournissent des images et des données pour des applications comme la gestion des ressources naturelles, l’agriculture de précision, la surveillance des catastrophes et la planification urbaine.",
+        "desc3":" Services de Télédétection : Offrent des analyses de données pour des secteurs tels que l’environnement, les infrastructures, et la défense.",
+        "desc4":"Communications Spatiales",
+        "desc5":"Constellations de Satellites : Déploient des réseaux de satellites pour offrir des services de communication à haute vitesse, y compris Internet à haut débit, même dans les zones éloignées.",
+        "desc6":" Technologies de Communication : Comprennent les systèmes de communication par laser, les antennes à haute capacité et les protocoles de transmission avancés.",
+        "desc7":"Navigation et Positionnement",
+        "desc8":"Systèmes de Positionnement Global (GPS) : Offrent des services de localisation et de navigation pour divers secteurs, y compris le transport, l’agriculture et la logistique.",
+        "desc9":" Systèmes de Navigation Spatiale : Incluent des réseaux de satellites comme le Galileo de l’UE et le GLONASS de la Russie pour des applications de précision.",
+        "desc10":"Exploration Spatiale",
+        "desc11":"Missions Planétaires : Incluent des missions d'exploration de Mars, des astéroïdes, et des lunes, avec des objectifs scientifiques et commerciaux.",
+        "desc12":"Technologies de Propulsion : Développent des systèmes avancés pour explorer plus loin dans le système solaire et au-delà.",
+        "desc13":"Satellites Commerciaux et D'Observation",
+        "desc14":"Lancements Commercials : Services de lancement pour des satellites privés et des charges utiles scientifiques.",
+        "desc15":"Satellites à Usage Spécifique : Conçus pour des applications spécifiques comme les satellites météorologiques, les satellites de télécommunications, et les satellites d’observation de la Terre.",
+        "desc16":"Défense et Sécurité",
+        "desc17":"Systèmes de Surveillance : Utilisés pour la surveillance des frontières, le renseignement militaire et la sécurité nationale.",
+        "desc18":"Technologies de Détection : Incluent les radars à synthèse d'ouverture (SAR) et les systèmes d'alerte précoce.",
+        "desc19":"Tourisme Spatial",
+        "desc20":"Vols Suborbitaux : Offrent des expériences de tourisme spatial avec des vols de courte durée en dehors de l’atmosphère terrestre.",
+        "desc21":" Séjours en Orbite : Proposent des séjours dans des stations spatiales privées ou des hôtels en orbite.",
+        "desc22":"Industrie Spatiale Commerciale",
+        "desc23":"Fabrication en Orbite : Développe des capacités pour la production de matériaux et de produits dans l’espace.",
+        "desc24":"Ressources Extraterrestres : Explore l'exploitation minière des astéroïdes et la collecte de ressources sur la Lune.",
+        "desc25":"Recherche et Développement",
+        "desc26":" Laboratoires Spatiaux : Effectuent des recherches scientifiques en microgravité et testent de nouvelles technologies dans l’espace.",
+        "desc27":"Partenariats Public-Privé : Collaborent entre agences spatiales gouvernementales et entreprises privées pour le développement de nouvelles missions et technologies.",
+        "desc28":"Services et Applications Innovantes",
+        "desc29":"Applications de Smart Cities : Intègrent des données spatiales pour la gestion intelligente des villes, des transports et des infrastructures.",
+        "desc30":"Solutions de Gestion des Risques : Utilisent des données spatiales pour anticiper et gérer les catastrophes naturelles et les crises humanitaires."
+        
+      },
+      "titre3":"Liste des exposants et produits",
+      "titre4":"Un répertoire détaillé des exposants présents, classé par région ou pays, avec des descriptions de leurs produits et services.",
+      "exp1":"Exposant 1",
+      "ex1":"Pays/Région: Afrique de l'Ouest",
+      "ex2":"Produits et Services: Description des produits et services.",
+      "exp2":"Exposant 2",
+      "titre5":"Calendrier des événements",
+      "titre6":"Un programme des événements prévus, incluant les conférences, ateliers, et autres activités, pour aider les visiteurs à planifier leur visite.",
+      "button":"Voir le programme au complet",
+      "titre7":"Découvertes, innovations et solutions spatiales",
+      "titre8":" Présentation des dernières découvertes et innovations dans le domaine spatial exposées au marché.",
+      "titre9":"Détails des découvertes et innovations",
+      "titre10":"Secteurs",
+      "titre11":" Détail des différents secteurs représentés au marché, pour orienter les visiteurs vers leurs domaines d’intérêt.",
+      "titre12":"Secteur 1: Description",
+      "titre13":"Secteur 2: Description",
+      "titre14":"Témoignages et retours",
+      "titre15":"Avis et témoignages de participants précédents pour donner un aperçu des expériences vécues lors des éditions passées.",
+      "titre16":"Un événement inoubliable qui a changé notre perspective sur les solutions spatiales.",
+      "titre17":"Une organisation parfaite et des innovations fascinantes! " ,
+      "t1":"- Participant 1",
+      "t2":"- Participant 2",
+      "titre18":"Galerie",
+      "titre19":" Une collection de photos et vidéos des éditions antérieures du marché pour montrer l’événement dans son ensemble."
+    
+
+    },
+    "visiteur-block":{
+      "titre1":"Espace Visiteurs",
+      "titre2":"Visiteurs professionnels",
+      "titre3":" Informations adaptées aux professionnels du secteur, incluant des conseils pour tirer le meilleur parti de leur visite.",
+      "titre4":"Visiteurs grand public",
+      "titre5":"Informations pour le grand public, avec des conseils pour une visite agréable et utile.",
+      "titre6":"Visiteurs étrangers",
+      "titre7":"Conseils et informations pour les visiteurs venant de l'étranger, pour une visite enrichissante et sans tracas.",
+      "titre8":"Visiteurs handicapés",
+      "titre9":"Informations spécifiques pour les visiteurs handicapés, garantissant une visite accessible et agréable."
+    },
+    "about-block":{
+      "titre1":"Marché Africain des Solutions Spatiales ",
+      "titre2":" Du 16 au 20 Juin 2025 , Parc des Expositions",
+      "titre3":" Abidjan - Côte d'Ivoire",
+      "titre4":" Thème : Gestion des ressources naturelles et des catastrophes",
+      "titre5":" MASS   est   une   véritable   vitrine   de   solutions   éprouvées. Cette   première   édition   se concentrera sur la gestion optimale des ressources naturelles et des catastrophes et verra la participation de nombreuses entreprises et organisations dans ce domaine. ",
+      "titre6": "Insrivez-vous maintenant",
+      "titre7":"Visitez notre site"
+    },
+  "logistique": {
+    "desc":"MASS",
+    "titre": "INFORMATION LOGISTIQUE",
+    "titre1": "VENUE",
+    "titre2": "En décembre, la Côte d'Ivoire connaît un climat sec et chaud avec des températures entre 24°C et 32°C.",
+    "titre3": "VOLS",
+    "titre4": "Tous les participants sponsorisés par l'UA recevront un billet aller-retour (classe économique) conformément aux règles et règlements de l'UA.",
+    "titre5": "TRANSFERTS AÉROPORTUAIRES ET TRANSPORT",
+    "titre6": "Un comptoir d'assistance sera mis en place à l'aéroport pour répondre à toutes vos questions à votre arrivée.",
+    "titre7": "VISA, PASSEPORTS ET FORMALITÉS D'ENTRÉE",
+    "titre8": "Tous les participants doivent détenir un passeport valide ou un autre document de voyage acceptable.",
+    "titre9": "EXIGENCES EN MATIÈRE DE VACCINATION",
+    "titre10": "Tous les visiteurs de Sharm El Sheikh DOIVENT avoir un certificat de fièvre jaune valide.",
+    "titre11": "HÉBERGEMENT",
+    "titre12": "En décembre, la Côte d'Ivoire connaît un climat sec et chaud avec des températures entre 24°C et 32°C.",
+    "titre13": "KIT D'INFORMATION ET ACCRÉDITATION",
+    "titre14": "Des copies de la note conceptuelle et de l'agenda vous ont été fournies précédemment.",
+    "titre15": "DEVISES ET SERVICES BANCAIRES",
+    "titre16": "La monnaie de la Côte d'Ivoire est le franc CFA (XOF).",
+    "titre17": "ÉLECTRICITÉ",
+    "titre18": "En Côte d'Ivoire, les prises électriques sont de type C (Europlug) et E.",
+    "titre19": "INSTALLATIONS DE COMMUNICATION",
+    "titre20": "Les trois principaux fournisseurs de télécommunications en Côte d'Ivoire sont MTN, Orange et Moov.",
+    "titre21": "SERVICES MÉDICAUX",
+    "titre22": "Les trois principaux hôpitaux publics à Abidjan sont CHU de Yopougon, CHU de Treichville et CHU de Cocody."
+  },
+  "program": {
+    "first-block": {
+
+    },
+    "second-block": {
+ 
+    },
+    "third-block": {
+  
+    },
+    "fourth-block": {
+     
+    },
+    "fifth-block": {
+    
+    }
+  },
+  "actualite":{
+    "titre":"ACTUALITÉS",
+    "titre1":"Restez informé avec les dernières nouvelles et annonces importantes du marché.",
+    "titre2":"Mises à jour en temps réel",
+    "titre3":" Recevez les dernières informations liées au marché en temps réel, y compris les changements de programme et les annonces urgentes.",
+    "titre4":"Changement d'horaire pour la conférence de 14h",
+    "titre5":"Nouveau stand ajouté : Découvrez les dernières innovations!",
+    "titre6":"Mise à jour : Fermeture anticipée de l'exposition à 18h",
+    "titre7":"Alertes importantes",
+    "titre8":"Veuillez consulter ces notifications cruciales pour des informations urgentes, telles que des alertes de sécurité ou des modifications de dernière minute.",
+    "titre9":"Alerte de sécurité : Veuillez éviter la zone nord du site jusqu'à nouvel ordre",
+    "titre10":"Modification de l'emplacement du stand principal",
+    "titre11":"Évacuation d'urgence en cours dans le Hall 3"
+
+  },
+  "adama": {
+    "name": "ADAMA DIAWARA",
+    "title": "Ministre de l’Enseignement Supérieur et de la Recherche scientifique",
+    "description": "Il est chargé de superviser les politiques liées à l'éducation supérieure à la recherche scientifique, et au développement des institutions académiques dans le pays. Son rôle inclut également la promotion de la recherche et l'amélioration de la qualité de l'enseignement supérieur en Côte d'Ivoire.",
+    "speaking_days": "Jour d'intervention",
+    "day2": "Jour 2",
+    "day5": "Jour 5",
+    "date_day2": "17, Juin-2025",
+    "date_day5": "20, Juin-2025",
+    "time": "10:00 - 12:00",
+    "speech": "Discours"
+  },
+  "fabrice": {
+    "name": "IRIE BI FABRICE",
+    "title": "OTIF Space Africa",
+    "description": "Ingénieur en géodésie doublé d'un master en Système d’information géographique de l'Université de Caen en France. Il est un expert international en SIG. Durant la dizaine d’années où il a travaillé chez ESRI France, il est intervenu sur les projets pour de grands comptes : Total, Grdf, Edf, Sncf etc... Il est le fondateur du groupe Modelis constitué de sept entreprises dans quatre pays : la Côte d’Ivoire, la France, le Sénégal et le Mali.",
+    "speaking_days": "Jour d'intervention",
+    "day2": "Jour 2",
+    "day5": "Jour 5",
+    "date_day2": "17, Juin-2025",
+    "date_day5": "20, Juin-2025",
+    "time": "10:00 - 12:00",
+    "speech": "Discours"
+  },
+  "sherifSedky": {
+    "title": "Sherif Mohamed Sedky",
+    "position": "Directeur général de l'Agence spatiale égyptienne",
+    "description": "Dr. Sherif Sedky est le Directeur Général de l'Agence Spatiale Égyptienne. Il est responsable de la gestion de l'agence, du développement de projets spatiaux nationaux et de la promotion des collaborations internationales dans le domaine de l'exploration spatiale et des technologies associées.",
+    "interventionDays": "Jour d'intervention",
+    "days": {
+      "day2": {
+        "title": "Jour 2",
+        "date": "17, Juin-2025",
+        "time": "10:00 - 12:00",
+        "event": "Discours"
+      },
+      "day5": {
+        "title": "Jour 5",
+        "date": "20, Juin-2025",
+        "time": "10:00 - 12:00",
+        "event": "Discours"
+      }
+    }
+  },
+
+  "tidianeOuattara": {
+    "name": "Tidiane OUATTARA",
+    "position": "Expert en Sciences Technologiques et Spatiales à la Commission de l'Union Africaine",
+    "description": "Dr. Tidiane Ouattara est un universitaire et chercheur ivoirien spécialisé dans le domaine des sciences. Il est professeur et a contribué de manière significative à la recherche et au développement académique en Côte d'Ivoire. Ses travaux portent sur divers aspects de la science et de la technologie, et il joue un rôle important dans l'avancement de l'enseignement supérieur et de la recherche dans le pays.",
+    "institutionAlt": "Logo de la Commission de l'Union Africaine",
+    "interventionDays": "Jour d'intervention",
+    "days": {
+      "day2": {
+        "title": "Jour 2",
+        "date": "03, Déc-2024",
+        "time": "10:00 - 12:00",
+        "event": "Discours"
+      },
+      "day5": {
+        "title": "Jour 5",
+        "date": "05, Déc-2024",
+        "time": "10:00 - 12:00",
+        "event": "Discours"
+      }
     }
   }
+
+ 
   
+}
