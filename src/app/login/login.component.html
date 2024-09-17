@@ -1,38 +1,38 @@
-<div class="flex flex-col lg:flex-row p-10 mt-10 font-poppins">
+<div class="flex flex-col lg:flex-row p-10 mt-2 font-poppins">
   <!-- Formulaire de connexion -->
   <div class="w-full lg:w-1/2 bg-white flex flex-col justify-center items-center mb-10 lg:mb-0">
     <div class="w-full lg:w-2/3 px-6">
-      <h1 class="mt-2 mb-8 text-2xl font-bold animate-fade-in-up text-center lg:text-left">Connectez-vous à votre compte.</h1>
+      <h1 class="mt-2 mb-8 text-2xl font-bold animate-fade-in-up text-center lg:text-left">{{'login-block.login.titre1' | translate}}</h1>
       <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
         <!-- Email -->
         <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+          <label class="block mb-2 text-sm font-medium text-gray-700">{{'login-block.login.titre2' | translate}}</label>
           <div class="relative">
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
               <i class="fas fa-envelope text-gray-500"></i>
             </span>
             <input formControlName="email" type="email" id="email" placeholder="Email" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
             <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-red-500 text-sm">
-              <span *ngIf="loginForm.get('email')?.errors?.['required']">Ce champ est requis.</span>
-              <span *ngIf="loginForm.get('email')?.errors?.['email']">Adresse email invalide.</span>
+              <span *ngIf="loginForm.get('email')?.errors?.['required']">{{'login-block.login.t1' | translate}}</span>
+              <span *ngIf="loginForm.get('email')?.errors?.['email']">{{'login-block.login.t2' | translate}}</span>
             </div>
           </div>
         </div>
         
         <!-- Mot de passe -->
         <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">Mot de passe</label>
+          <label class="block mb-2 text-sm font-medium text-gray-700">{{'login-block.login.titre3' | translate}}</label>
           <div class="relative">
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
               <i class="fas fa-lock text-gray-500"></i>
             </span>
             <input formControlName="password" type="password" placeholder="Mot de passe" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-red-500 text-sm">Ce champ est requis.</div>
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
           </div>
         </div>
       
         <!-- Bouton de Soumission -->
-        <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-900" [disabled]="loginForm.invalid">Se connecter</button>
+        <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-900" [disabled]="loginForm.invalid">{{'login-block.login.titre4' | translate}}</button>
       </form>
     </div>
   </div>
@@ -46,7 +46,7 @@
           <img src="../../../assets/call-msg.svg" alt="icon">
         </span>
         <div class="txt">
-          <span class="font-light">Appelez au </span>
+          <span class="font-light">{{'login-block.card-block.titre1' | translate}} </span>
           <h4 class="font-semibold text-[24px]"><a href="tel:+208-555-0112">+336 78 55 85 45</a></h4>
         </div>
       </div>
@@ -57,7 +57,7 @@
           <img src="../../../assets/mail.svg" alt="icon">
         </span>
         <div class="txt">
-          <span class="font-light">Mail</span>
+          <span class="font-light">{{'login-block.card-block.titre2' | translate}}</span>
           <h4 class="font-semibold text-[24px]"><a href="mailto:contact@otif-africa-space.com">contact&#64;otif-africa-space.com</a></h4>
         </div>
       </div>
@@ -68,8 +68,8 @@
           <img src="../../../assets/location-dot-circle.svg" alt="icon">
         </span>
         <div class="txt">
-          <span class="font-light">Lieu</span>
-          <h4 class="font-semibold text-[24px]">Abidjan, Côte d'Ivoire</h4>
+          <span class="font-light">{{'login-block.card-block.titre3' | translate}}</span>
+          <h4 class="font-semibold text-[24px]">{{'login-block.card-block.titre4' | translate}}</h4>
         </div>
       </div>
     </div>
