@@ -2,12 +2,12 @@
     <!-- Aside Section -->
     <aside class="w-1/5 bg-red-900 text-white flex flex-col">
         <div class="p-8">
-            <p class="text-white text-xl font-semibold">Bonjour {{storedUser.first_name}} {{storedUser.last_name}}</p>
+            <p class="text-white text-xl font-semibold">{{ 'home-user.hello' | translate }} {{storedUser.first_name}} {{storedUser.last_name}}</p>
         </div>
         <ul class="px-4 flex-grow">
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-users mr-3"></i>
-                <button (click)="goToIntervenant()" class="w-full text-left">Les Intervenants</button>
+                <button (click)="goToIntervenant()" class="w-full text-left">{{ 'home-user.intervenants' | translate }}</button>
             </li>
             <!-- <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-bell mr-3"></i> Notification
@@ -15,43 +15,43 @@
             </li> -->
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-users mr-3"></i>
-                <button (click)="goToParticipants()" class="w-full text-left">Les Participants</button>
+                <button (click)="goToParticipants()" class="w-full text-left">{{ 'home-user.participants' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-calendar-alt mr-3"></i>
-                <button (click)="goToRdv()" class="w-full text-left">Mes Rendez-vous</button>
+                <button (click)="goToRdv()" class="w-full text-left">{{ 'home-user.my-appointments' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-database mr-3"></i>
-                <button routerLink="/dashboard/gestion-rv" class="w-full text-left">Gestion des rendez-vous</button>
+                <button routerLink="/dashboard/gestion-rv" class="w-full text-left">{{ 'home-user.appointment-management' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-database mr-3"></i>
-                <button (click)="goTocandar()" class="w-full text-left">Gestion du calandrier</button>
+                <button (click)="goTocandar()" class="w-full text-left">{{ 'home-user.calendar-management' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-sign-out-alt mr-3"></i>
-                <button (click)="logout()" class="w-full text-left">Déconnexion</button>
+                <button (click)="logout()" class="w-full text-left">{{ 'home-user.logout' | translate }}</button>
             </li>
         </ul>
     </aside>
 
     <!-- Main Content Section -->
     <main class="w-4/5 px-6 flex-grow">
-        <h1 class="text-3xl font-bold text-red-900 mb-8">MES RENDEZ-VOUS</h1>
+        <h1 class="text-3xl font-bold text-red-900 mb-8">{{ 'home-user.my-appointments' | translate }}</h1>
         <!-- <h2 class="text-xl font-semibold text-gray-700 mb-6">Mes Rendez-vous</h2> -->
 
         <div class="container mx-auto p-8 bg-gray-200 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-extrabold mb-8 text-center text-gray-800">Mes Rendez-vous</h2>
+            <h2 class="text-3xl font-extrabold mb-8 text-center text-gray-800">{{ 'home-user.my-appointments' | translate }}</h2>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
                     <thead class="bg-red-800 text-white">
                         <tr>
-                            <th class="py-3 px-4 text-center font-light">Date</th>
-                            <th class="py-3 px-4 text-center font-light">Horaire</th>
-                            <th class="py-3 px-4 text-center font-light">Intervenant</th>
-                            <th class="py-3 px-4 text-center font-light">Thème</th>
-                            <th class="py-3 px-4 text-center font-light">Statut</th>
+                            <th class="py-3 px-4 text-center font-light">{{'home-user.day' | translate}}</th>
+                            <th class="py-3 px-4 text-center font-light">{{'home-user.horaire' | translate}}</th>
+                            <th class="py-3 px-4 text-center font-light">{{'home-user.speak' | translate}}</th>
+                            <th class="py-3 px-4 text-center font-light">{{'home-user.theme' | translate}}</th>
+                            <th class="py-3 px-4 text-center font-light">{{'home-user.statut' | translate}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,6 +69,11 @@
                                 }" class="py-2 px-4 rounded-full text-sm font-semibold">
                                     {{ appointment.status }}
                                 </span>
+
+                                <span *ngIf="appointment.status === 'libre'">{{ 'intervenant-detail.availability.free' | translate }}</span>
+                                <span *ngIf="appointment.status === 'en attente'">{{ 'intervenant-detail.availability.pending' | translate }}</span>
+                                <span *ngIf="appointment.status === 'approuvé'">{{ 'intervenant-detail.availability.approved' | translate }}</span>
+                                <span *ngIf="appointment.status === 'décliné'">{{ 'intervenant-detail.availability.declined' | translate }}</span>
                             </td>
                         </tr>
                     </tbody>

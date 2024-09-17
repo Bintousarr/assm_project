@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { NotificationComponent } from "../notification/notification.component";
 import { ApppointmentService } from '../../../services/apppointment.service'
 import { DateFormatPipe } from '../../../date-format.pipe'; 
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 interface Item {
   id: number;
@@ -29,7 +30,7 @@ interface Item {
 @Component({
   selector: 'app-gestion-rv',
   standalone: true,
-  imports: [CommonModule, RouterLink, NotificationComponent,DateFormatPipe],
+  imports: [CommonModule, RouterLink, NotificationComponent,DateFormatPipe,TranslateModule],
   templateUrl: './gestion-rv.component.html',
   styleUrl: './gestion-rv.component.scss'
 })
@@ -39,9 +40,12 @@ export class GestionRvComponent implements OnInit {
   selectedItem: any;
   user: any;
   intervants: any;
+  translate: TranslateService = inject(TranslateService)
+
   constructor(private router: Router, private apppointmentService: ApppointmentService) { }
 
   ngOnInit() {
+    this.translate.setDefaultLang('fr');
 
     const storedUserString = localStorage.getItem('userToken');
 
@@ -66,6 +70,11 @@ export class GestionRvComponent implements OnInit {
   }
   selectedTab: string = 'initiator';
 
+  
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
+  
 
 
 

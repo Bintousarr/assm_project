@@ -13,15 +13,10 @@
     <nav class="hidden lg:flex items-center space-x-2 sm:space-x-4">
       <div class="relative group">
         <a [routerLink]="['']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre1' | translate}}</a>
-        <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+        <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
           <a [routerLink]="['marche']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t1' | translate}}</a>
           <a [routerLink]="['voir-marche']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t2' | translate}}</a>
-          <a [routerLink]="['espace-visiteur']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t3' | translate}} </a>
-        <a [routerLink]="['']" class="nav-item capitalize hover:text-red-600">Accueil</a>
-        <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
-          <a [routerLink]="['marche']" class="block px-4 py-2 hover:bg-gray-200">Marché</a>
-          <a [routerLink]="['voir-marche']" class="block px-4 py-2 hover:bg-gray-200">A voir sur le marché</a>
-          <a [routerLink]="['espace-visiteur']" class="block px-4 py-2 hover:bg-gray-200">Espace visiteurs</a>
+          <a [routerLink]="['espace-visiteur']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t3' | translate}}</a>
         </div>
       </div>
 
@@ -57,7 +52,6 @@
       <span class="text-white">|</span>
 
       <a [routerLink]="['contact']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre4' | translate}}</a>
-      
     </nav>
   </div>
 
@@ -68,7 +62,7 @@
     style="top: 14rem;"> <!-- Ajuster ici la valeur de `top` pour qu'elle corresponde à la position de l'icône -->
     
     <div class="flex justify-between items-center px-4 py-4">
-      <h2 class="text-xl font-bold">Menu</h2>
+      <h2 class="text-xl font-bold">{{'accueil.navbar-block.menu' | translate}}</h2>
       <!-- Icône de fermeture -->
       <button (click)="closeMenu()" class="focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -79,38 +73,38 @@
     <ul class="flex flex-col space-y-4 p-4">
       <!-- Menu avec sous-menus en dropdown -->
       <li class="relative group">
-        <button  (click)="toggleDropdownHome('accueil')" class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">{{'accueil.navbar-block.titre1' | translate}}
+        <button  (click)="toggleDropdownHome('accueil')" class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Accueil
           <span>&#x25BC;</span>
         </button>
         <ul *ngIf="activeDropdown === 'accueil'" class="bg-customBlue text-white mt-2 space-y-2 pl-4">
-          <li><a [routerLink]="['marche']" class="block hover:text-red-600">{{'accueil.navbar-block.t1' | translate}}</a></li>
-          <li><a [routerLink]="['voir-marche']" class="block hover:text-red-600">{{'accueil.navbar-block.t2' | translate}}</a></li>
-          <li><a [routerLink]="['espace-visiteur']" class="block hover:text-red-600">{{'accueil.navbar-block.t3' | translate}}</a></li>
+          <li><a [routerLink]="['marche']" class="block hover:text-red-600">Marché</a></li>
+          <li><a [routerLink]="['voir-marche']" class="block hover:text-red-600">A voir sur le marché</a></li>
+          <li><a [routerLink]="['espace-visiteur']" class="block hover:text-red-600">Espace visiteurs</a></li>
         </ul>
       </li>
-      <li><a [routerLink]="['program']" class="capitalize hover:text-red-600">{{'accueil.navbar-block.titre2' | translate}}</a></li>
+      <li><a [routerLink]="['program']" class="capitalize hover:text-red-600">Agenda</a></li>
       <li class="relative group">
-        <button (click)="toggleDropdown('mass-mobile')" class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">{{'accueil.navbar-block.titre3' | translate}}
+        <button (click)="toggleDropdown('mass-mobile')" class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Mass
           <span>&#x25BC;</span>
         </button>
         <ul *ngIf="activeDropdown === 'mass-mobile'" class="bg-customBlue text-white mt-2 space-y-2 pl-4">
-          <li><a [routerLink]="['sponsor-page']" class="block hover:text-red-600">{{'accueil.navbar-block.m1' | translate}}</a></li>
-          <li><a [routerLink]="['fournisseurs']" class="block hover:text-red-600">{{'accueil.navbar-block.m2' | translate}}</a></li>
-          <li><a [routerLink]="['orateur']" class="block hover:text-red-600">{{'accueil.navbar-block.m3' | translate}}</a></li>
+          <li><a [routerLink]="['sponsor-page']" class="block hover:text-red-600">Partenaires</a></li>
+          <li><a [routerLink]="['fournisseurs']" class="block hover:text-red-600">Fournisseurs</a></li>
+          <li><a [routerLink]="['orateur']" class="block hover:text-red-600">Intervenants</a></li>
         </ul>
       </li>
       <!-- <li><a [routerLink]="['information']" class="capitalize hover:text-red-600">Information</a></li> -->
       <li class="relative group">
-        <button (click)="toggleDropdown('information')" class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">{{'accueil.navbar-block.desc1' | translate}}
+        <button (click)="toggleDropdown('information')" class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Information
           <span>&#x25BC;</span>
         </button>
         <ul *ngIf="activeDropdown === 'information'" class="bg-customBlue text-white mt-2 space-y-2 pl-4">
-          <li><a [routerLink]="['accomodation']" class="block hover:text-red-600">{{'accueil.navbar-block.desc2' | translate}}</a></li>
-          <li><a [routerLink]="['accueil']" class="block hover:text-red-600">{{'accueil.navbar-block.desc3' | translate}}</a></li>
+          <li><a [routerLink]="['accomodation']" class="block hover:text-red-600">Informations de voyage</a></li>
+          <li><a [routerLink]="['accueil']" class="block hover:text-red-600">Informations pratiques</a></li>
         </ul>
       </li>
-      <li><a [routerLink]="['actualite']" class="capitalize hover:text-red-600">{{'accueil.navbar-block.desc4' | translate}}</a></li>
-      <li><a [routerLink]="['contact']" class="capitalize hover:text-red-600">{{'accueil.navbar-block.titre4' | translate}}</a></li>
+      <li><a [routerLink]="['actualite']" class="capitalize hover:text-red-600">Actualités</a></li>
+      <li><a [routerLink]="['contact']" class="capitalize hover:text-red-600">Contact</a></li>
     </ul>
   </div>
 </div>

@@ -330,23 +330,6 @@
       "titre21": "MEDICAL SERVICES",
       "titre22": "The three main public hospitals in Abidjan are CHU de Yopougon, CHU de Treichville, and CHU de Cocody."
   },
-    "program": {
-      "first-block": {
-        
-      },
-      "second-block": {
-       
-      },
-      "third-block": {
-        
-      },
-      "fourth-block": {
-       
-      },
-      "fifth-block": {
-       
-      }
-    },
    "actualite": {
       "titre": "NEWS",
       "titre1": "Stay informed with the latest news and important announcements from the market.",
@@ -425,9 +408,84 @@
         "event": "Speech"
       }
     }
+  },
+  "day": {
+    "Premier Jour": "First Day",
+    "Deuxième Jour": "Second Day",
+    "Troisième Jour": "Third Day",
+    "Quatrième Jour": "Fourth Day",
+    "Cinquième Jour": "Fifth Day"
+  },
+  "event": {
+    "type": "Type",
+    "speakerName": "Speaker Name",
+    "title": "Title",
+    "description": "Description",
+    "orateur": "Speaker"
+  },
+  "program": {
+    "openingCeremony": "Opening Ceremony Presentation of Space Funding Organizations & Presentation of Training Organizations.",
+    "satelliteTelecommunication": "Satellite telecommunication involves the use of artificial satellites to transmit communication signals such as telephone calls, Internet data, television and radio broadcasts, and other forms of digital communication. These satellites receive communication signals from a ground station, amplify them, and retransmit them to another ground station or multiple stations over long distances.",
+    "earthObservation": "Earth observation encompasses all methods and technologies used to collect information about the Earth's surface, atmosphere, and oceans from sensors on satellites, aircraft, drones, or ground stations. Earth observation data is used to monitor environmental changes, manage natural resources, track weather and climate phenomena, and support urban and agricultural planning activities.",
+    "dinnerGala": "The gala dinner aims at several objectives: Awareness and Promotion, Recognition and Rewards, Strengthening Relationships, Enhancing Image and Brand, Celebrating Achievements, and Education and Inspiration.",
+    "navigationPositioning": "Navigation is the process of planning, monitoring, and controlling the movement of an object or person from one point to another. This can include land, sea, air, and space vehicles. There are four types of navigation: terrestrial, maritime, aerial, and space navigation. Positioning is the precise determination of an object's or person's location in terms of geographical coordinates (latitude, longitude, and altitude). Navigation and positioning are interconnected technologies that play a crucial role in various industries and daily applications.",
+    "astronomyExperiments": "Astronomy is the science that studies celestial objects (such as stars, planets, comets, galaxies) and phenomena occurring beyond Earth's atmosphere (such as cosmic background radiation). It involves observing and analyzing light emissions, electromagnetic radiation, and other signals from these objects and phenomena.",
+    "socialActivities": "Example of social activities: introducing orphaned children to space activities. Visit to clergy and Muslim leaders."
+  },
+  "home-user": {
+    "hello": "Hello",
+    "intervenants": "Speakers",
+    "participants": "Participants",
+    "my-appointments": "My Appointments",
+    "appointment-management": "Appointment Management",
+    "calendar-management": "Calendar Management",
+    "logout": "Logout",
+    "speaker-list":"LISTS OF SPEAKERS  ",
+    "part-list":"PARTICIPANT LISTS",
+    "meet-part":"Meet Our Participants",
+    "list-rv":"LIST OF APPOINTMENT REQUESTS",
+    "filtre":"Filter",
+    "meet-our-speakers": "Meet Our Speakers",
+    "day":"Date",
+    "horaire":"Schedule",
+    "speak":"Speaker",
+    "theme":"Theme",
+    "statut":"Status",
+    "action":"Actions",
+    "detail":"Details of the request",
+    "valider":" Confirm appointment request",
+    "refus":"Refuse appointment request",
+    "motif":"Reason for the appointment",
+    "initiateur":"Initiator",
+    "traitement":"Treatment"
+
+
+
+  },
+  "intervenant-detail": {
+    "request-appointment": "REQUEST AN APPOINTMENT",
+    "interview-with": "Interview with",
+    "schedule-appointment": "SCHEDULE APPOINTMENT",
+    "availability": {
+      "free": "free",
+      "pending": "pending",
+      "approved": "approved",
+      "declined": "declined"
+    },
+    "enter-reason": "Enter the reason",
+    "enter-your-reason": "Enter your reason here...",
+    "validate": "Validate",
+    "cancel": "Cancel"
+  },
+  "mass-title": {
+    "mass": "ASSM",
+    "marche": "Market",
+    "africain": "African",
+    "des": "of",
+    "solutions": "Solutions",
+    "spatiales": "Spatial"
   }
-
-
+ 
   }
   
 

@@ -329,23 +329,6 @@
     "titre21": "SERVICES MÉDICAUX",
     "titre22": "Les trois principaux hôpitaux publics à Abidjan sont CHU de Yopougon, CHU de Treichville et CHU de Cocody."
   },
-  "program": {
-    "first-block": {
-
-    },
-    "second-block": {
- 
-    },
-    "third-block": {
-  
-    },
-    "fourth-block": {
-     
-    },
-    "fifth-block": {
-    
-    }
-  },
   "actualite":{
     "titre":"ACTUALITÉS",
     "titre1":"Restez informé avec les dernières nouvelles et annonces importantes du marché.",
@@ -426,6 +409,83 @@
         "event": "Discours"
       }
     }
+  },
+
+  "day": {
+    "Premier Jour": "Premier Jour",
+    "Deuxième Jour": "Deuxième Jour",
+    "Troisième Jour": "Troisième Jour",
+    "Quatrième Jour": "Quatrième Jour",
+    "Cinquième Jour": "Cinquième Jour"
+  },
+  "event": {
+    "type": "Type",
+    "speakerName": "Nom de l'Orateur",
+    "title": "Titre",
+    "description": "Description",
+    "orateur": "Orateur"
+  },
+  "program": {
+    "openingCeremony": "Cérémonie d’ouverture Présentation des organismes de Financement du spatial & Présentation des organismes de formation.",
+    "satelliteTelecommunication": "La télécommunication par satellite implique l'utilisation de satellites artificiels pour transmettre des signaux de communication tels que des appels téléphoniques, des données Internet, des émissions de télévision et de radio, et d'autres formes de communication numérique. Ces satellites reçoivent des signaux de communication d'une station terrestre, les amplifient, et les retransmettent à une autre station terrestre ou à plusieurs stations à travers de grandes distances.",
+    "earthObservation": "L’observation de la terre regroupe l’ensemble des méthodes et technologies utilisées pour collecter des informations sur la surface terrestre, l'atmosphère et les océans à partir de capteurs situés sur des satellites, des avions, des drones ou des stations terrestres. Les données d'observation de la Terre sont utilisées pour surveiller les changements environnementaux, gérer les ressources naturelles, suivre les phénomènes météorologiques et climatiques, et soutenir les activités de planification urbaine et agricole.",
+    "dinnerGala": "Le dîner gala vise plusieurs objectifs : Sensibilisation et Promotion, Reconnaissance et Récompenses, Renforcement des Relations, Renforcement de l'Image et de la Marque, Célébration des Réalisations et Éducation et Inspiration.",
+    "navigationPositioning": "La navigation est le processus de planification, de suivi et de contrôle du mouvement d'un objet ou d'une personne d'un point à un autre. Cela peut inclure des véhicules terrestres, maritimes, aériens et spatiaux. Il existe quatre types de navigation : la navigation Terrestre, la navigation maritime, la navigation aérienne, la navigation spatiale. Le positionnement est la détermination précise de la localisation d'un objet ou d'une personne en termes de coordonnées géographiques (latitude, longitude, et altitude). La navigation et le positionnement sont des technologies interconnectées qui jouent un rôle crucial dans diverses industries et applications quotidiennes.",
+    "astronomyExperiments": "L'astronomie est la science qui étudie les objets célestes (tels que les étoiles, les planètes, les comètes, les galaxies) et les phénomènes qui se produisent en dehors de l'atmosphère terrestre (comme le rayonnement cosmique de fond). Elle implique l'observation et l'analyse des émissions lumineuses, des radiations électromagnétiques et d'autres signaux provenant de ces objets et phénomènes.",
+    "socialActivities": "Exemple d’activités sociales : initiation des enfants des orphelinats aux activités spatiales. Visite au Clergé et aux responsables musulmans."
+  },
+  "home-user": {
+    "hello": "Bonjour",
+    "intervenants": "Les Intervenants",
+    "participants": "Les Participants",
+    "my-appointments": "Mes Rendez-vous",
+    "appointment-management": "Gestion des rendez-vous",
+    "calendar-management": "Gestion du calendrier",
+    "logout": "Déconnexion",
+    "speaker-list":"LISTES DES INTERVENANTS",
+    "part-list":"LISTES DES PARTICIPANTS",
+    "meet-part":"Rencontrez nos participants",
+    "list-rv":"LISTE DES DEMANDES DE RENDEZ-VOUS",
+    "filtre":"Filtrer",
+    "meet-our-speakers": "Rencontrez nos intervenants",
+    "day":"Date",
+    "horaire":"Horaire",
+    "speak":"Intervenant",
+    "theme":"Thème",
+    "statut":"Statut",
+    "action":"Actions",
+    "detail":"Détail de la demande",
+    "valider":"Valider la demande de rendez-vous",
+    "refus":"Refuser la demande de rendez-vous",
+    "motif":"Motif du RV",
+    "initiateur":"Initiateur",
+    "traitement":"Traitement"
+
+
+  },
+  "intervenant-detail": {
+    "request-appointment": "DEMANDE DE RENDEZ-VOUS",
+    "interview-with": "Entretien avec",
+    "schedule-appointment": "PRENDRE RENDEZ-VOUS",
+    "availability": {
+      "free": "libre",
+      "pending": "en attente",
+      "approved": "approuvé",
+      "declined": "décliné"
+    },
+    "enter-reason": "Renseignez le motif",
+    "enter-your-reason": "Entrez votre motif ici...",
+    "validate": "Valider",
+    "cancel": "Annuler"
+  },
+
+  "mass-title": {
+    "mass": "MASS",
+    "marche": "Marché",
+    "africain": "Africain",
+    "des": "des",
+    "solutions": "Solutions",
+    "spatiales": "Spatiales"
   }
 
  
