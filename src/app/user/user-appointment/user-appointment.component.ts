@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { SponsorComponent } from "../../sponsor/sponsor.component";
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 export interface User {
   id: string;
@@ -24,17 +25,21 @@ export interface User {
 @Component({
   selector: 'app-user-appointment',
   standalone: true,
-  imports: [SponsorComponent,CommonModule],
+  imports: [SponsorComponent,CommonModule,TranslateModule],
   templateUrl: './user-appointment.component.html',
   styleUrl: './user-appointment.component.scss'
 })
 export class UserAppointmentComponent {
   intervenants: any[] = [];
   user:any;
+  translate: TranslateService = inject(TranslateService)
+
   constructor( private router:Router,private userService: UserService) {
 
   }
   ngOnInit(): void {
+    this.translate.setDefaultLang('fr');
+
     // this.userService.getParticipants().subscribe(
     //   (data) => {
     //     this.intervenants = data;
@@ -71,6 +76,10 @@ export class UserAppointmentComponent {
       }
     );
 
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
   }
   logout() {
     // Vider le token du localStorage

@@ -16,31 +16,26 @@
     <!-- Menu normal en mode desktop -->
     <nav class="hidden lg:flex items-center space-x-2 sm:space-x-4">
       <div class="relative group">
-        <a [routerLink]="['']"
-          class="nav-item capitalize hover:text-red-600">Accueil</a>
-        <div
-          class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
-          <a [routerLink]="['marche']"
-            class="block px-4 py-2 hover:bg-gray-200">Marché</a>
-          <a [routerLink]="['voir-marche']"
-            class="block px-4 py-2 hover:bg-gray-200">A voir sur le marché</a>
-          <a [routerLink]="['espace-visiteur']"
-            class="block px-4 py-2 hover:bg-gray-200">Espace visiteurs</a>
+        <a [routerLink]="['']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre1' | translate}}</a>
+        <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
+          <a [routerLink]="['marche']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t1' | translate}}</a>
+          <a [routerLink]="['voir-marche']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t2' | translate}}</a>
+          <a [routerLink]="['espace-visiteur']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t3' | translate}}</a>
         </div>
       </div>
 
       <span class="text-white">|</span>
 
+      <a [routerLink]="['program']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre2' | translate}}</a>
+
+      <span class="text-white">|</span>
+
       <div class="relative group">
-        <a class="nav-item capitalize hover:text-red-600">Mass</a>
-        <div
-          class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 whitespace-nowrap">
-          <a [routerLink]="['sponsor-page']"
-            class="block px-4 py-2 hover:bg-gray-200">Partenaires</a>
-          <a [routerLink]="['fournisseurs']"
-            class="block px-4 py-2 hover:bg-gray-200">Fournisseurs</a>
-          <a [routerLink]="['orateur']"
-            class="block px-4 py-2 hover:bg-gray-200">Intervenants</a>
+        <a class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre3' | translate}}</a>
+        <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 whitespace-nowrap">
+          <a [routerLink]="['sponsor-page']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m1' | translate}}</a>
+          <a [routerLink]="['fournisseurs']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m2' | translate}}</a>
+          <a [routerLink]="['orateur']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m3' | translate}}</a>
         </div>
       </div>
 
@@ -52,30 +47,20 @@
       <span class="text-white">|</span>
 
       <div class="relative group">
-        <a class="nav-item capitalize hover:text-red-600">Information</a>
-        <div
-          class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
-          <a [routerLink]="['accomodation']"
-            class="block px-4 py-2 hover:bg-gray-200">Informations de voyage</a>
-          <a [routerLink]="['accueil']"
-            class="block px-4 py-2 hover:bg-gray-200">Informations pratiques</a>
+        <a class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.desc1' | translate}}</a>
+        <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
+          <a [routerLink]="['accomodation']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.desc2' | translate}}</a>
+          <a [routerLink]="['accueil']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.desc3' | translate}}</a>
         </div>
       </div>
 
       <span class="text-white">|</span>
 
-      <a [routerLink]="['actualite']"
-        class="nav-item capitalize hover:text-red-600">Participer</a>
+      <a [routerLink]="['actualite']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.desc4' | translate}}</a>
 
       <span class="text-white">|</span>
 
-      <a [routerLink]="['actualite']"
-        class="nav-item capitalize hover:text-red-600">Actualités</a>
-
-      <span class="text-white">|</span>
-
-      <a [routerLink]="['contact']"
-        class="nav-item capitalize hover:text-red-600">Contact</a>
+      <a [routerLink]="['contact']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre4' | translate}}</a>
     </nav>
   </div>
 
@@ -87,7 +72,7 @@
     <!-- Ajuster ici la valeur de `top` pour qu'elle corresponde à la position de l'icône -->
 
     <div class="flex justify-between items-center px-4 py-4">
-      <h2 class="text-xl font-bold">Menu</h2>
+      <h2 class="text-xl font-bold">{{'accueil.navbar-block.menu' | translate}}</h2>
       <!-- Icône de fermeture -->
       <button (click)="closeMenu()" class="focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"

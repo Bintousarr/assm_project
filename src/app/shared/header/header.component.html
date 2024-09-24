@@ -1,22 +1,12 @@
+
 <div class="header font-poppins">
   <!-- Top Bar -->
   <div class="top-bar flex justify-between items-center bg-customBlue text-white text-sm py-4 px-4 sm:px-16">
     <div class="top-bar-left flex items-center space-x-2">
       <i class="material-icons">location_on</i>
-      <span>Abidjan, Côte d'Ivoire</span>
+      <span>{{'accueil.header-block.lieu' | translate}}</span>
     </div>
-    <div class="top-bar-right flex items-center space-x-4">
-      <div class="language-switcher flex items-center space-x-2">
-        <button class="lang-btn flex items-center space-x-1">
-          <img src="../../../assets/fra.jpg" alt="FR" class="flag-icon w-4 h-4"> 
-          <span>FR</span>
-        </button>
-        <button class="lang-btn flex items-center space-x-1">
-          <img src="../../../assets/usa.png" alt="EN" class="flag-icon w-4 h-4"> 
-          <span>EN</span>
-        </button>
-      </div>
-    </div>
+   
   </div>
 
   <!-- Main Bar -->
@@ -44,7 +34,7 @@
         <i class="material-icons mr-2">email</i>
         <div class="text-center lg:text-left">
           <span class="font-bold block">contact&#64;otif-africa-space.com</span>
-          <span class="text-sm block">Envoyez-nous un message</span>
+          <span class="text-sm block">{{'accueil.header-block.contact' | translate}}</span>
         </div>
       </div>
       <div class="flex items-center">
@@ -63,8 +53,8 @@
 
       <!-- Action Buttons -->
       <div class="flex flex-col items-center space-y-2 lg:space-y-0 lg:space-x-4 lg:flex-row">
-        <a [routerLink]="['register']" class="bg-red-800 text-white py-2 px-4 rounded-lg" *ngIf="!isLoggedIn">S'INSCRIRE</a>
-        <a [routerLink]="['login']" class="bg-red-800 text-white py-2 px-4 rounded-lg" *ngIf="!isLoggedIn">SE CONNECTER</a>
+        <a [routerLink]="['register']" class="bg-red-800 text-white py-2 px-4 rounded-lg" *ngIf="!isLoggedIn">{{'accueil.header-block.inscription' | translate}}</a>
+        <a [routerLink]="['login']" class="bg-red-800 text-white py-2 px-4 rounded-lg" *ngIf="!isLoggedIn">{{'accueil.header-block.connexion' | translate}}</a>
       </div>
     </div>
   </div>

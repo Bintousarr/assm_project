@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
@@ -8,11 +8,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { DateFormatPipe } from '../../date-format.pipe'; 
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-intervenant-detail',
   standalone: true,
-  imports: [RouterLink, CommonModule, FormsModule,DateFormatPipe],
+  imports: [RouterLink, CommonModule, FormsModule,DateFormatPipe, TranslateModule],
   templateUrl: './intervenant-detail.component.html',
   styleUrls: ['./intervenant-detail.component.scss']
 })
@@ -52,12 +53,13 @@ intervant_id:any;
     ['—', '—']
   ];
 
+  translate: TranslateService = inject(TranslateService)
 
   constructor(private route: ActivatedRoute, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService,private router:Router, private apppointmentService:ApppointmentService) { }
 
   ngOnInit(): void {
 
-
+    this.translate.setDefaultLang('fr');
     // Récupérer la chaîne JSON depuis le localStorage
     const storedUserString = localStorage.getItem('userToken');
     console.log(localStorage.getItem('userToken'))
@@ -116,6 +118,11 @@ intervant_id:any;
 
         })
     }
+  }
+
+  
+  translateText(lang: string) {
+    this.translate.use(lang);
   }
 
   // Ouvrir le modal pour une heure spécifique

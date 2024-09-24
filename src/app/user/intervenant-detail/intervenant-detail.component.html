@@ -2,12 +2,12 @@
     <!-- Aside Section -->
     <aside class="w-1/5 bg-red-900 text-white flex flex-col">
         <div class="p-8">
-            <p class="text-white text-xl font-semibold">Bonjour {{storedUser.first_name}} {{storedUser.last_name}}</p>
+            <p class="text-white text-xl font-semibold">{{ 'home-user.hello' | translate }} {{storedUser.first_name}} {{storedUser.last_name}}</p>
         </div>
         <ul class="px-4 flex-grow">
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-users mr-3"></i>
-                <button (click)="goToIntervenant()" class="w-full text-left">Les Intervenants</button>
+                <button (click)="goToIntervenant()" class="w-full text-left">{{ 'home-user.intervenants' | translate }}</button>
             </li>
             <!-- <li class="flex items-center mt-6 p-2 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-bell mr-3"></i> Notification
@@ -15,79 +15,79 @@
             </li> -->
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-users mr-3"></i>
-                <button (click)="goToParticipants()" class="w-full text-left">Les Participants</button>
+                <button (click)="goToParticipants()" class="w-full text-left">{{ 'home-user.participants' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-calendar-alt mr-3"></i>
-                <button (click)="goToRdv()" class="w-full text-left">Mes Rendez-vous</button>
+                <button (click)="goToRdv()" class="w-full text-left">{{ 'home-user.my-appointments' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-database mr-3"></i>
-                <button routerLink="/dashboard/gestion-rv" class="w-full text-left">Gestion des rendez-vous</button>
+                <button routerLink="/dashboard/gestion-rv" class="w-full text-left">>{{ 'home-user.appointment-management' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-database mr-3"></i>
-                <button (click)="goTocandar()" class="w-full text-left">Gestion du calandrier</button>
+                <button (click)="goTocandar()" class="w-full text-left">{{ 'home-user.calendar-management' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-sign-out-alt mr-3"></i>
-                <button (click)="logout()" class="w-full text-left">Déconnexion</button>
+                <button (click)="logout()" class="w-full text-left">{{ 'home-user.logout' | translate }}</button>
             </li>
         </ul>
     </aside>
 
     <!-- Main Content Section -->
     <main class="w-4/5 px-6 flex-grow">
-        <h1 class="text-3xl font-bold text-red-900 mb-8">DEMANDE D'INTERVIEW</h1>
+        <h1 class="text-3xl font-bold text-red-900 mb-8">{{ 'intervenant-detail.request-appointment' | translate }}</h1>
         <div class="bg-red-900 font-poppins p-8 rounded-lg shadow-lg">
-            <div class="flex items-center space-x-6"><img [src]="intervenant?.image ? '../../../assets/' + intervenant.image : '../../../assets/user.jpg'"
-                class="w-60 h-60 rounded-full object-cover" />
-           
+            <div class="flex items-center space-x-6">
+                <img [src]="intervenant?.image ? '../../../assets/' + intervenant.image : '../../../assets/user.jpg'"
+                    class="w-60 h-60 rounded-full object-cover" />
                 <div>
                     <h1 class="text-white text-4xl font-bold">{{intervenant?.first_name }} {{intervenant?.last_name }}</h1>
                     <p class="text-white text-lg">{{intervenant?.poste }}</p>
                 </div>
             </div>
         </div>
-
+    
         <div class="p-8 text-justify font-poppins mt-6">
             <div class="flex items-center">
-                <p class="text-gray-700 text-lg flex-grow">
-                    {{intervenant?.description_parcours }}
-                </p>
+                <p class="text-gray-700 text-lg flex-grow">{{intervenant?.description_parcours }}</p>
                 <div class="py-6 w-80 ml-12">
                     <img [src]="'../../../assets/' + intervenant?.image_entreprise" alt class="rounded-lg shadow-md">
                 </div>
             </div>
-
+    
             <hr class="my-4 border-gray-300 mt-10" />
-
+    
             <div class="max-w-full mx-auto bg-gray-100 mt-10 p-6 shadow-lg rounded-lg">
                 <div class="flex items-center mb-4">
-                    <img [src]="intervenant?.image ? '../../../assets/' + intervenant.image : '../../../assets/user.jpg'" alt="Krys Logo" class="w-12 h-12 mr-4 rounded-full">
+                    <img [src]="intervenant?.image ? '../../../assets/' + intervenant.image : '../../../assets/user.jpg'" 
+                         alt="Krys Logo" 
+                         class="w-12 h-12 mr-4 rounded-full">
                     <div>
-                        <h2 class="text-lg font-semibold text-blue-700">Entretien avec {{intervenant?.title }} {{intervenant?.first_name }}</h2>
+                        <h2 class="text-lg font-semibold text-blue-700">{{ 'intervenant-detail.interview-with' | translate }} {{intervenant?.title }} {{intervenant?.first_name }}</h2>
                         <p class="text-gray-500"><i class="fas fa-map-marker-alt"></i> {{ intervenant?.country }}</p>
                     </div>
                 </div>
-
+    
                 <div class="px-4 pb-4">
-                    <button class="w-full bg-blue-500 text-white py-3 text-lg rounded hover:bg-blue-700">PRENDRE RENDEZ-VOUS</button>
+                    <button class="w-full bg-blue-500 text-white py-3 text-lg rounded hover:bg-blue-700">{{ 'intervenant-detail.schedule-appointment' | translate }}</button>
                 </div>
-
+    
                 <hr class="mt-4"/>
-
+    
                 <div class="px-4 pb-4 mt-5">
                     <div class="grid grid-cols-4 gap-4 text-center">
                         <div *ngFor="let disponibility of disponibilities" class="text-gray-500">
                             {{ disponibility.name }}<br>
-                            <span class="font-semibold">{{ disponibility.date |dateFormat  }}</span>
+                            <span class="font-semibold">{{ disponibility.date |dateFormat }}</span>
                         </div>
                     </div>
                     <div class="grid grid-cols-4 gap-4 text-center mt-2">
                         <div *ngFor="let disponibility of disponibilities">
                             <div *ngFor="let slot of disponibility.slots" class="mt-2">
-                                <button 
+                               <!--  <button 
                                     *ngIf="slot !== '—'" 
                                     (click)="openModal(disponibility, slot)"
                                     [ngClass]="{
@@ -100,24 +100,45 @@
                                     class="py-2 px-4 text-lg rounded mt-2 mb-6"
                                 >
                                     {{ slot.start_time }} - {{ slot.end_time }}
-                                </button>
+                                </button> -->
+
+                                <button *ngIf="slot !== '—'" (click)="openModal(disponibility, slot)"
+                                    [ngClass]="{
+                                        'bg-blue-300 text-blue-700 hover:bg-blue-700 hover:text-white': slot.status === 'libre',
+                                        'bg-yellow-100 text-yellow-700': slot.status === 'en attente',
+                                        'bg-green-100 text-green-700': slot.status === 'approuvé',
+                                        'bg-blue-100 text-blue-700': slot.status === 'décliné'
+                                    }"
+                                    [disabled]="slot.status === 'en attente' || slot.status === 'approuvé'"
+                                    class="py-2 px-4 text-lg rounded mt-2 mb-6"
+                                    >
+                                    {{ slot.start_time }} - {{ slot.end_time }}
+                                    <span *ngIf="slot.status === 'libre'">{{ 'intervenant-detail.availability.free' | translate }}</span>
+                                    <span *ngIf="slot.status === 'en attente'">{{ 'intervenant-detail.availability.pending' | translate }}</span>
+                                    <span *ngIf="slot.status === 'approuvé'">{{ 'intervenant-detail.availability.approved' | translate }}</span>
+                                    <span *ngIf="slot.status === 'décliné'">{{ 'intervenant-detail.availability.declined' | translate }}</span>
+                                 </button>
+
                                 <div *ngIf="slot === '—'" class="text-gray-400 py-2 mt-1 text-lg">—</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+    
             <div *ngIf="isModalOpen" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
                 <div class="bg-white p-8 rounded-lg shadow-lg w-96 relative z-10">
-                    <h2 class="text-xl font-semibold mb-4">Renseignez le motif</h2>
-                    <textarea [(ngModel)]="motif" rows="4" class="w-full p-3 border border-gray-300 rounded-md mb-4 text-lg" placeholder="Entrez votre motif ici..."></textarea>
+                    <h2 class="text-xl font-semibold mb-4">{{ 'intervenant-detail.enter-reason' | translate }}</h2>
+                    <textarea [(ngModel)]="motif" rows="4" class="w-full p-3 border border-gray-300 rounded-md mb-4 text-lg" 
+                              placeholder="{{ 'intervenant-detail.enter-your-reason' | translate }}"></textarea>
                     <div class="flex justify-end space-x-4">
-                        <button (click)="submitMotif()" class="bg-blue-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-600">Valider</button>
-                        <button (click)="closeModal()" class="bg-red-500 text-white px-6 py-3 rounded-md text-lg hover:bg-red-600">Annuler</button>
+                        <button (click)="submitMotif()" class="bg-blue-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-600">{{ 'intervenant-detail.validate' | translate }}</button>
+                        <button (click)="closeModal()" class="bg-red-500 text-white px-6 py-3 rounded-md text-lg hover:bg-red-600">{{ 'intervenant-detail.cancel' | translate }}</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 </div>
+
+    

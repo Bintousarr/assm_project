@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RegisterService } from '../../services/registerService/register.service';
 import { CommonModule } from '@angular/common';
@@ -7,11 +7,12 @@ import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { RegistrationSuccessDialogComponent } from '../../registration-success-dialog/registration-success-dialog.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, MatDialogModule],
+  imports: [TranslateModule,ReactiveFormsModule, CommonModule, MatDialogModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
@@ -23,6 +24,16 @@ export class RegisterComponent {
     this._registerService = value;
   }
 
+  translate: TranslateService = inject(TranslateService)
+
+  ngOnInit() {
+    this.translate.setDefaultLang('fr');
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
+  
   registrationForm: FormGroup;
   filteredCountries: string[] = [];
   countries: string[] = [

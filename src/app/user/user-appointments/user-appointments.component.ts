@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ApppointmentService } from '../../services/apppointment.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 
 import { DateFormatPipe } from '../../date-format.pipe'; 
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-user-appointments',
-  imports: [RouterLink, CommonModule,DateFormatPipe],
+  imports: [RouterLink, CommonModule,DateFormatPipe,TranslateModule],
   standalone: true,
   templateUrl: './user-appointments.component.html',
   styleUrls: ['./user-appointments.component.scss']
@@ -16,10 +17,13 @@ import { DateFormatPipe } from '../../date-format.pipe';
 export class UserAppointmentsComponent implements OnInit {
   appointments: any[] = [];
   storedUser:any;
+  translate: TranslateService = inject(TranslateService)
 
   constructor(private appointmentService: ApppointmentService, private router:Router,) {}
 
   ngOnInit(): void {
+    this.translate.setDefaultLang('fr');
+
     const storedUserString = localStorage.getItem('userToken');
     if (storedUserString) {
       // Convertir la chaîne JSON en objet JavaScript uniquement si elle n'est pas `null`
@@ -46,6 +50,10 @@ export class UserAppointmentsComponent implements OnInit {
     this.router.navigate(['/mes-rendez-vous']);
 
 
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
   }
 
   goToIntervenant(){

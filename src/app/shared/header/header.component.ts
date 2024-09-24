@@ -1,4 +1,4 @@
-import { Component,OnInit  } from '@angular/core';
+import { Component,inject,OnInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -13,15 +13,22 @@ import { AuthService } from '../../services/auth.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  translate: TranslateService = inject(TranslateService)
+ 
   constructor(private authService: AuthService) {}
   isLoggedIn: boolean = false;
 
   ngOnInit() {
+    this.translate.setDefaultLang('fr');
     this.authService.isLoggedIn.subscribe(loggedIn => {
       console.log("lelog:",loggedIn)
       this.isLoggedIn = loggedIn;
       console.log("ishh", this.isLoggedIn)
     });
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
   }
   
 }

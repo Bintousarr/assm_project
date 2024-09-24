@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { SponsorComponent } from "../../sponsor/sponsor.component";
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export interface User {
   id: string;
   title: string;
@@ -24,17 +25,20 @@ export interface User {
 @Component({
   selector: 'app-home-user',
   standalone: true,
-  imports: [SponsorComponent,CommonModule],
+  imports: [SponsorComponent,CommonModule, TranslateModule],
   templateUrl: './home-user.component.html',
   styleUrl: './home-user.component.scss'
 })
 export class HomeUserComponent {
   intervenants: any[] = [];
   user:any;
+  translate: TranslateService = inject(TranslateService)
+
   constructor( private router:Router,private userService: UserService) {
 
   }
   ngOnInit(): void {
+    this.translate.setDefaultLang('fr');
     this.userService.getIntervenants().subscribe(
       (data:User[]) => {
         this.intervenants = data.filter(user => user.role === 'Intervenant'&& user.id!=this.user.id);
@@ -60,6 +64,12 @@ export class HomeUserComponent {
     }
 
   }
+
+  
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
+
   logout() {
     // Vider le token du localStorage
     localStorage.removeItem('userToken');

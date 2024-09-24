@@ -3,26 +3,58 @@
       "header-block": {
         "lieu": "Abidjan, Ivory Coast",
         "contact": "Send us a message",
-        "telephone": "Request a call back",
-        "inscription": "REGISTER HERE"
+        "inscription": "REGISTER ",
+        "connexion": "LOGIN"
       },
       "navbar-block": {
         "titre1": "HOME",
-        "titre2": "PROGRAM",
-        "titre3": "ASSM 2024",
-        "desc1": "Sponsors",
-        "desc2": "Speakers",
-        "desc3": "Accommodation",
-        "desc4": "About",
-        "titre4": "CONTACT"
+        "t1":"Market",
+        "t2":"To see at the market",
+        "t3":"Visitor area ",
+        "titre2": "AGENDA",
+        "titre3": "ASSM",
+        "m1":"Partners",
+        "m2":"Suppliers",
+        "m3":"Speakers",
+        "desc1": "INFORMATION",
+        "desc2": "Travel information",
+        "desc3": "Practical information",
+        "desc4": "NEWS",
+        "titre4": "CONTACT",
+        "menu": "Menu"
       },
       "banner-block": {
-        "date": "From December 2 to December 6, 2024",
-        "lieu": "Abidjan, Ivory Coast",
-        "theme": "NATURAL RESOURCES AND DISASTER MANAGEMENT",
-        "desc1": "About",
-        "desc2": "REGISTER",
-        "desc3": "Space is not an option, but a necessity. Space technology is fundamental for African countries."
+        "conference":"African Space Solutions Market (ASSM)",
+        "date": "From 16 to 20 June 2025",
+        "year": "2025",
+        "description": "Abidjan - Ivory Coast, Exhibition Centre",
+        "about": "About",
+        "register": "REGISTER HERE",
+        "desc1":"Space is not an option, but a necessity. Space technology is fundamental for African countries."
+      },
+      "event-block": {
+        "titre1":"Presentation of ASSM",
+        "titre2": "OTIF SPACE AFRICA is organising the first edition of its forum, entitled ASSM (African Space Solutions Market ), to be held in Ivory Coast, from 16 to 20 June 2025 at the Exhibition Centre. ASSM is a unique and unmissable market that provides a platform for meetings between development players (public and private sectors), international organisations, non-governmental organisations, civil society, the academic sector and space service providers. The aim is to propose concrete space solutions to resolve the challenges linked to the socio-economic development of the African continent. ",
+        "details": "Objectives of the ASSM"
+      },
+      "event-details": {
+        "titre1":"ASSM",
+        "titre2": "The aim of ASSM 2025 is to show practical solutions to the problems identified in various fields that are critical to the African continent.",
+        "titre3": "Why take part in ASSM?",
+        "titre4":"Understanding and raising awareness of the space cause",
+        "l1":"Understand the needs, challenges and issues facing African countries.",
+        "l2":"Popularising space science",
+        "titre5":"Promotion and networks",
+        "t1":"To raise awareness of the players in the space sector and the potential of earth observation to meet these challenges.",
+        "t2":"Mettre en relation les entités à la recherche de solutions spatiales pour partager des informations sur ces questions.",
+        "enjeux":"Issues",
+        "objectif":"Objectives",
+        "opp":"Opportunities & Benefits",
+        "titre6":"A platform for exchanges and opportunities",
+        "p1":"Create a platform for private companies to showcase their products.",
+        "p2":"Enabling managers to find a suitable market with practical solutions.",
+        "p3":"Marketing space-based products."
+       
       },
       "sponsor-block": {
         "titre1": "Our sponsors"
@@ -62,6 +94,7 @@
     },
     "contact": {
       "contact-block": {
+        "titre":"Contact",
         "telephone": "Call at",
         "mail": "Mail",
         "lieu": "Abidjan, Ivory Coast",
@@ -83,120 +116,377 @@
     "orateur": {
       "block": {
         "titre1": "Meet our speakers",
-        "titre2": "GIS Engineer and Surveyor",
+        "titre2": "OTIF Space Africa",
         "titre3": "Expert in Technological and Space Sciences at the African Union Commission",
         "titre4": "Minister of Higher Education and Scientific Research",
         "titre5": "Director General of the Egyptian Space Agency"
       }
     },
-    "accomodation": {
-      "logistique-block": {
-        "desc": "LOGISTICAL INFORMATION",
-        "titre1": "VENUE",
-        "titre2": "FLIGHTS",
-        "titre3": "AIRPORT TRANSFERS AND TRANSPORT",
-        "titre4": "VISA, PASSPORTS AND ENTRY REQUIREMENTS",
-        "titre5": "VACCINATION REQUIREMENTS",
-        "titre6": "DSA AND ACCOMMODATION",
-        "titre7": "INFORMATION KIT AND ACCREDITATION",
-        "titre8": "CURRENCY AND BANKING SERVICES",
-        "titre9": "ELECTRICITY",
-        "titre10": "COMMUNICATION FACILITIES",
-        "titre11": "TOILETRIES",
-        "titre12": "WEATHER",
-        "titre13": "LANGUAGE",
-        "titre14": "ILLNESS OR ACCIDENT",
-        "titre15": "CONTACT INFORMATION:"
+    "partner-block":{
+      "block":{
+        "titre1":"Partners",
+      "titre2":"Presentation of the partners",
+      "titre3":"Discover the partners who support our project, and find out more about their role and their contribution.",
+      "titre4":"President of the Republic",
+      "titre5":"Ivory Coast",
+      "titre6":"European Space Agency",
+      "titre7":"National Aeronautics and Space Administration",
+      "titre8":"National Centre for Space Studies",
+      "titre9":"Indian Space Research Organization",
+      "titre10":"Director of Space and Telecommunications",
+      "titre11":"Félix Houphouët-Boigny University",
+      "titre12":"Become a partner",
+      "titre13":"Join us as a partner and benefit from the many advantages we offer.",
+      "titre14":"To become"
+
       }
     },
-    "program": {
-      "first-block": {
-        "desc": "Event Information",
-        "day": "DAY",
-        "titre1": "SOCIAL EVENT",
-        "titre2": "SOCIAL DONATION",
-        "titre3": "SCHOOL LECTURE",
-        "titre4": "BUSINESS CLUB MEETING",
-        "titre5": "Speaker",
-        "time1": "10:00 – 12:00",
-        "time2": "14:00 – 16:00",
-        "time3": "16:00 – 17:30"
-      },
-      "second-block": {
-        "titre1": "Opening Ceremony and Natural Resources",
-        "titre2": "Breakfast",
-        "titre3": "Speeches by some authorities and directors",
-        "titre4": "Lunch",
-        "titre5": "Session 1: Spatial solution for land management",
-        "titre6": "Coffee break and Exhibition visit",
-        "titre7": "Session 2: Spatial solution for land management",
-        "orateur": "Speaker",
-        "time": "09:00 - 10:00",
-        "time1": "10:00 – 12:00",
-        "time2": "12:15 - 14:00",
-        "time3": "14:00 - 15:30",
-        "time4": "15:30 - 16:30",
-        "time5": "16:30 - 17:30"
-      },
-      "third-block": {
-        "titre1": "Natural Resources",
-        "titre2": "Breakfast",
-        "titre3": "Session 4: Solutions for agriculture, water, and forests",
-        "titre4": "Lunch",
-        "titre5": "Session 5: Spatial solution for floods",
-        "titre6": "Coffee break and Exhibition visit",
-        "titre7": "Dinner: Annual Space Award",
-        "orateur": "Speaker",
-        "time": "09:00 - 10:00",
-        "time1": "10:00 – 12:00",
-        "time2": "12:15 - 14:00",
-        "time3": "14:00 - 15:30",
-        "time4": "15:30 - 16:30",
-        "time5": "19:00 - 23:00"
-      },
-      "fourth-block": {
-        "titre1": "Security & Defense",
-        "titre2": "Breakfast",
-        "titre3": "Session 7: Solutions for security and defense",
-        "titre4": "Lunch",
-        "titre5": "Session 8: Spatial solution for maritime",
-        "titre6": "Coffee break and Exhibition visit",
-        "titre7": "Reserved for business club",
-        "orateur": "Speaker",
-        "time": "09:00 - 10:00",
-        "time1": "10:00 – 12:00",
-        "time2": "12:15 - 14:00",
-        "time3": "14:00 - 15:00",
-        "time4": "15:00 - 16:00",
-        "time5": "16:00 - 17:00"
-      },
-      "fifth-block": {
-        "titre1": "Closing",
-        "titre2": "Breakfast",
-        "titre3": "Speeches by some authorities and directors",
-        "titre4": "Lunch",
-        "titre5": "Tourist visit",
-        "orateur": "Speaker",
-        "time": "09:00 - 10:00",
-        "time1": "10:00 – 12:00",
-        "time2": "12:15 - 14:00",
-        "time3": "14:00 - 17:00"
+    "fournisseur-block":{
+      "block":{
+      "titre1":"Official suppliers",
+      "titre2":"Official suppliers presentation",
+      "titre3":"Find out more about our official suppliers and their products and services.",
+      "titre4":"President of the Republic",
+      "titre5":"Ivory Coast",
+      "titre6":"European Space Agency",
+      "titre7":"National Aeronautics and Space Administration",
+      "titre8":"National Centre for Space Studies",
+      "titre9":"Indian Space Research Organization",
+      "titre10":"Director of Space and Telecommunications",
+      "titre11":"Félix Houphouët-Boigny University",
+      "titre12":"Become an official supplier",
+      "titre13":" Interested in becoming an official supplier? Find out about the benefits and the process of joining our team.",
+      "titre14":"To become"
+
       }
     },
-    "register": {
-      "block": {
-        "desc": "Fill out the form to reserve your spot",
-        "titre1": "Select your title",
-        "titre2": "First and Last Name",
-        "titre3": "Gender",
-        "desc1": "Male",
-        "desc2": "Female",
-        "titre4": "Email",
-        "titre5": "Phone",
-        "titre6": "Country",
-        "titre7": "Select participation type",
-        "titre8": "Register"
+    "login-block":{
+      "login":{
+        "titre1":"Log in to access your personal space",
+        "titre2":"E-mail",
+        "t1":"This field is required.",
+        "t2":"Invalid email address.",
+        "titre3":"Password",
+        "titre4":"Login"
+      },
+      "card-block":{
+        "titre1":"Call us on ",
+        "titre2":"E-mail",
+        "titre3":"Location",
+        "titre4":"Abidjan, Ivory Coast"
+      }
+    },
+    "register-block":{
+      "register":{
+        "titre1":"Fill in the form to register.",
+        "titre2":"Select your title",
+        "titre3":"Choose",
+        "opt1":"Prof.",
+        "opt2":"Dr.",
+        "opt3":"M.",
+        "opt4":"Mrs..",
+        "opt5":"Ms..",
+        "prenom":"First name",
+        "nom":"Name",
+        "genre":"Type",
+        "H":"Men",
+        "F":"Woman",
+        "profession":"Profession",
+        "ese":"Organism",
+        "photo":"Insert your picture",
+        "p1":"Invalid file format. Only JPEG and PNG files are accepted.",
+        "p2":"The file is too large. The maximum size is 5 MB.",
+        "call":"Phone",
+        "pays":"Country",
+        "participation":"Select the type of participation",
+        "part1":"Partner",
+        "part2":"Animator",
+        "part3":"Speaker",
+        "part4":"Poster presentation",
+        "part5":"Co-author",
+        "button":"Sign up"
+
+      }
+
+    },
+    "marche-block":{
+      "titre1":"MARKET",
+      "titre2":"The space solutions market",
+      "titre3":"This section describes the objectives and missions of the market, and presents the types of space solutions on offer, along with their aims and benefits.",
+      "titre4":"The history of the market",
+      "titre5":" A look back at the creation and development of the market, with highlights and significant changes over the years.",
+      "titre6":"Space prizes and competitions",
+      "titre7":"Details of prizes awarded and competitions organised during the market, including entry criteria and awards.",
+      "titre8":"Why take part in the market ?",
+      "titre9":" Arguments and benefits for exhibitors and visitors to participate, such as networking opportunities, innovation, and visibility.",
+      "titre10":"Market-specific FAQs",
+      "titre11":"Answers to questions frequently asked by those who want to know more about the market, making it easier to understand and prepare."
+    },
+    "voir-marche":{
+      "titre1":"What's on the market",
+      "titre2":"The different markets for space solutions",
+      "solution-block":{
+        "desc1":"Earth Observation",
+        "desc2":"Observation Satellites: Providing images and data for applications such as natural resource management, precision agriculture, disaster monitoring and urban planning.",
+        "desc3":" Remote Sensing Services: Provide data analysis for sectors such as the environment, infrastructure and defence.",
+        "desc4":"Spatial Communications",
+        "desc5":"Satellite Constellations : Deploy satellite networks to provide high-speed communications services, including broadband Internet, even in remote areas.",
+        "desc6":" Communication Technologies: Include laser communication systems, high-capacity antennas and advanced transmission protocols.",
+        "desc7":"Navigation and Positioning",
+        "desc8":"Global Positioning Systems (GPS): Provide location and navigation services for various sectors, including transport, agriculture and logistics.",
+        "desc9":" Space Navigation Systems: Include satellite networks such as the EU's Galileo and Russia's GLONASS for precision applications.",
+        "desc10":"Space Exploration",
+        "desc11":"Planetary Missions: Include missions to explore Mars, asteroids, and moons, with scientific and commercial objectives.",
+        "desc12":"Propulsion Technologies: Develop advanced systems to explore further into the solar system and beyond.",
+        "desc13":"Commercial and Observation Satellites",
+        "desc14":"Commercial Launches: Launch services for private satellites and scientific payloads.",
+        "desc15":"Special Purpose Satellites: Designed for specific applications such as meteorological satellites, telecommunications satellites and Earth observation satellites.",
+        "desc16":"Defence and Security",
+        "desc17":"Surveillance Systems: Used for border surveillance, military intelligence and national security.",
+        "desc18":"Detection Technologies: Including Synthetic Aperture Radar (SAR) and Early Warning Systems.",
+        "desc19":"Space Tourism",
+        "desc20":"Suborbital Flights: Offer space tourism experiences with short flights outside the earth's atmosphere.",
+        "desc21":" In-Orbit Stays: Offer stays in private space stations or hotels in orbit.",
+        "desc22":"Commercial Space Industry",
+        "desc23":"Manufacturing in Orbit: Develops capabilities for the production of materials and products in space.",
+        "desc24":"Extraterrestrial Resources: Explores asteroid mining and resource gathering on the Moon.",
+        "desc25":"Research and Development",
+        "desc26":" Space Laboratories: Carry out scientific research in microgravity and test new technologies in space.",
+        "desc27":"Public-Private Partnerships: Collaboration between government space agencies and private companies for the development of new missions and technologies.",
+        "desc28":"Innovative Services and Applications",
+        "desc29":"Smart Cities Applications: Integrating spatial data for the intelligent management of cities, transport and infrastructure.",
+        "desc30":"Risk Management Solutions: Using spatial data to anticipate and manage natural disasters and humanitarian crises."
+        
+      },
+      "titre3": "List of Exhibitors and Products",
+      "titre4": "A detailed directory of exhibitors, categorized by region or country, with descriptions of their products and services.",
+      "exp1": "Exhibitor 1",
+      "ex1": "Country/Region: West Africa",
+      "ex2": "Products and Services: Description of products and services.",
+      "exp2": "Exhibitor 2",
+      "titre5": "Event Schedule",
+      "titre6": "A program of planned events, including conferences, workshops, and other activities, to help visitors plan their visit.",
+      "button": "See the full schedule",
+      "titre7": "Discoveries, Innovations, and Space Solutions",
+      "titre8": "Presentation of the latest discoveries and innovations in the space sector showcased at the market.",
+      "titre9": "Details of Discoveries and Innovations",
+      "titre10": "Sectors",
+      "titre11": "Details of the different sectors represented at the market, guiding visitors towards their areas of interest.",
+      "titre12": "Sector 1: Description",
+      "titre13": "Sector 2: Description",
+      "titre14": "Testimonials and Feedback",
+      "titre15": "Reviews and testimonials from previous participants to provide insight into the experiences from past editions.",
+      "titre16": "An unforgettable event that changed our perspective on space solutions.",
+      "titre17": "Perfect organization and fascinating innovations!",
+      "t1": "- Participant 1",
+      "t2": "- Participant 2",
+      "titre18": "Gallery",
+      "titre19": "A collection of photos and videos from previous editions of the market to showcase the event in its entirety."
+
+    },
+    "visiteur-block": {
+      "titre1": "Visitor Area",
+      "titre2": "Professional Visitors",
+      "titre3": "Information tailored for industry professionals, including tips on how to make the most of their visit.",
+      "titre4": "General Public Visitors",
+      "titre5": "Information for the general public, with tips for an enjoyable and useful visit.",
+      "titre6": "Foreign Visitors",
+      "titre7": "Advice and information for visitors coming from abroad, ensuring a rewarding and hassle-free visit.",
+      "titre8": "Disabled Visitors",
+      "titre9": "Specific information for disabled visitors, ensuring an accessible and enjoyable experience."
+    },
+    "about-block": {
+      "titre1": "African Market for Space Solutions",
+      "titre2": "From June 16 to 20, 2025, Exhibition Center",
+      "titre3": "Abidjan - Ivory Coast",
+      "titre4": "Theme: Natural Resource and Disaster Management",
+      "titre5": "MASS is a true showcase of proven solutions. This first edition will focus on the optimal management of natural resources and disasters, with the participation of numerous companies and organizations in this field.",
+      "titre6": "Register now",
+      "titre7": "Visit our website"
+    },
+    "logistique": {
+      "desc":"ASSM",
+      "titre": "INFORMATION LOGISTIQUE",
+      "titre1": "VENUE",
+      "titre2": "In December, Ivory Coast experiences a dry and warm climate with temperatures ranging between 24°C and 32°C.",
+      "titre3": "FLIGHTS",
+      "titre4": "All participants sponsored by the AU will receive a round-trip ticket (economy class) according to AU rules and regulations.",
+      "titre5": "AIRPORT TRANSFERS AND TRANSPORT",
+      "titre6": "An assistance desk will be set up at the airport to answer all your questions upon arrival.",
+      "titre7": "VISA, PASSPORTS AND ENTRY REQUIREMENTS",
+      "titre8": "All participants must have a valid passport or other acceptable travel document.",
+      "titre9": "VACCINATION REQUIREMENTS",
+      "titre10": "All visitors to Sharm El Sheikh MUST have a valid yellow fever certificate.",
+      "titre11": "ACCOMMODATION",
+      "titre12": "In December, Ivory Coast experiences a dry and warm climate with temperatures ranging between 24°C and 32°C.",
+      "titre13": "INFORMATION KIT AND ACCREDITATION",
+      "titre14": "Copies of the concept note and agenda were previously provided.",
+      "titre15": "CURRENCY AND BANKING SERVICES",
+      "titre16": "The currency of Ivory Coast is the CFA franc (XOF).",
+      "titre17": "ELECTRICITY",
+      "titre18": "In Ivory Coast, electrical outlets are of type C (Europlug) and E.",
+      "titre19": "COMMUNICATION FACILITIES",
+      "titre20": "The three main telecommunication providers in Ivory Coast are MTN, Orange, and Moov.",
+      "titre21": "MEDICAL SERVICES",
+      "titre22": "The three main public hospitals in Abidjan are CHU de Yopougon, CHU de Treichville, and CHU de Cocody."
+  },
+   "actualite": {
+      "titre": "NEWS",
+      "titre1": "Stay informed with the latest news and important announcements from the market.",
+      "titre2": "Real-time updates",
+      "titre3": "Receive the latest market-related information in real time, including schedule changes and urgent announcements.",
+      "titre4": "Schedule change for the 2 PM conference",
+      "titre5": "New stand added: Discover the latest innovations!",
+      "titre6": "Update: Exhibition closing early at 6 PM",
+      "titre7": "Important alerts",
+      "titre8": "Please review these crucial notifications for urgent information, such as security alerts or last-minute changes.",
+      "titre9": "Security alert: Please avoid the northern area of the site until further notice.",
+      "titre10": "Main stand location changed",
+      "titre11": "Emergency evacuation in progress in Hall 3"
+    },
+    "adama": {
+      "name": "ADAMA DIAWARA",
+      "title": "Minister of Higher Education and Scientific Research",
+      "description": "He is responsible for overseeing policies related to higher education, scientific research, and the development of academic institutions in the country. His role also includes promoting research and improving the quality of higher education in Côte d'Ivoire.",
+      "speaking_days": "Speaking Days",
+      "day2": "Day 2",
+      "day5": "Day 5",
+      "date_day2": "17, June-2025",
+      "date_day5": "20, June-2025",
+      "time": "10:00 - 12:00",
+      "speech": "Speech"
+    },
+    "fabrice": {
+    "name": "IRIE BI FABRICE",
+    "title": "OTIF Space Africa",
+    "description": "Engineer in geodesy with a master’s degree in Geographic Information Systems from the University of Caen in France. He is an international GIS expert. During the decade he worked at ESRI France, he was involved in projects for major clients: Total, Grdf, Edf, Sncf, etc. He is the founder of the Modelis group, consisting of seven companies in four countries: Côte d’Ivoire, France, Senegal, and Mali.",
+    "speaking_days": "Speaking Days",
+    "day2": "Day 2",
+    "day5": "Day 5",
+    "date_day2": "17, June-2025",
+    "date_day5": "20, June-2025",
+    "time": "10:00 - 12:00",
+    "speech": "Speech"
+  },
+  "sherifSedky": {
+    "title": "Sherif Mohamed Sedky",
+    "position": "Director General of the Egyptian Space Agency",
+    "description": "Dr. Sherif Sedky is the Director General of the Egyptian Space Agency. He is responsible for managing the agency, developing national space projects, and promoting international collaborations in the field of space exploration and related technologies.",
+    "interventionDays": "Intervention Days",
+    "days": {
+      "day2": {
+        "title": "Day 2",
+        "date": "17, June-2025",
+        "time": "10:00 - 12:00",
+        "event": "Speech"
+      },
+      "day5": {
+        "title": "Day 5",
+        "date": "20, June-2025",
+        "time": "10:00 - 12:00",
+        "event": "Speech"
       }
     }
+  },
+  "tidianeOuattara": {
+    "name": "Tidiane OUATTARA",
+    "position": "Expert in Technological and Space Sciences at the African Union Commission",
+    "description": "Dr. Tidiane Ouattara is an Ivorian academic and researcher specializing in the field of sciences. He is a professor and has made significant contributions to research and academic development in Côte d'Ivoire. His work covers various aspects of science and technology, and he plays an important role in advancing higher education and research in the country.",
+    "institutionAlt": "African Union Commission Logo",
+    "interventionDays": "Intervention Days",
+    "days": {
+      "day2": {
+        "title": "Day 2",
+        "date": "17, June-2025",
+        "time": "10:00 - 12:00",
+        "event": "Speech"
+      },
+      "day5": {
+        "title": "Day 5",
+        "date": "20, June-2025",
+        "time": "10:00 - 12:00",
+        "event": "Speech"
+      }
+    }
+  },
+  "day": {
+    "Premier Jour": "First Day",
+    "Deuxième Jour": "Second Day",
+    "Troisième Jour": "Third Day",
+    "Quatrième Jour": "Fourth Day",
+    "Cinquième Jour": "Fifth Day"
+  },
+  "event": {
+    "type": "Type",
+    "speakerName": "Speaker Name",
+    "title": "Title",
+    "description": "Description",
+    "orateur": "Speaker"
+  },
+  "program": {
+    "openingCeremony": "Opening Ceremony Presentation of Space Funding Organizations & Presentation of Training Organizations.",
+    "satelliteTelecommunication": "Satellite telecommunication involves the use of artificial satellites to transmit communication signals such as telephone calls, Internet data, television and radio broadcasts, and other forms of digital communication. These satellites receive communication signals from a ground station, amplify them, and retransmit them to another ground station or multiple stations over long distances.",
+    "earthObservation": "Earth observation encompasses all methods and technologies used to collect information about the Earth's surface, atmosphere, and oceans from sensors on satellites, aircraft, drones, or ground stations. Earth observation data is used to monitor environmental changes, manage natural resources, track weather and climate phenomena, and support urban and agricultural planning activities.",
+    "dinnerGala": "The gala dinner aims at several objectives: Awareness and Promotion, Recognition and Rewards, Strengthening Relationships, Enhancing Image and Brand, Celebrating Achievements, and Education and Inspiration.",
+    "navigationPositioning": "Navigation is the process of planning, monitoring, and controlling the movement of an object or person from one point to another. This can include land, sea, air, and space vehicles. There are four types of navigation: terrestrial, maritime, aerial, and space navigation. Positioning is the precise determination of an object's or person's location in terms of geographical coordinates (latitude, longitude, and altitude). Navigation and positioning are interconnected technologies that play a crucial role in various industries and daily applications.",
+    "astronomyExperiments": "Astronomy is the science that studies celestial objects (such as stars, planets, comets, galaxies) and phenomena occurring beyond Earth's atmosphere (such as cosmic background radiation). It involves observing and analyzing light emissions, electromagnetic radiation, and other signals from these objects and phenomena.",
+    "socialActivities": "Example of social activities: introducing orphaned children to space activities. Visit to clergy and Muslim leaders."
+  },
+  "home-user": {
+    "hello": "Hello",
+    "intervenants": "Speakers",
+    "participants": "Participants",
+    "my-appointments": "My Appointments",
+    "appointment-management": "Appointment Management",
+    "calendar-management": "Calendar Management",
+    "logout": "Logout",
+    "speaker-list":"LISTS OF SPEAKERS  ",
+    "part-list":"PARTICIPANT LISTS",
+    "meet-part":"Meet Our Participants",
+    "list-rv":"LIST OF APPOINTMENT REQUESTS",
+    "filtre":"Filter",
+    "meet-our-speakers": "Meet Our Speakers",
+    "day":"Date",
+    "horaire":"Schedule",
+    "speak":"Speaker",
+    "theme":"Theme",
+    "statut":"Status",
+    "action":"Actions",
+    "detail":"Details of the request",
+    "valider":" Confirm appointment request",
+    "refus":"Refuse appointment request",
+    "motif":"Reason for the appointment",
+    "initiateur":"Initiator",
+    "traitement":"Treatment"
+
+
+
+  },
+  "intervenant-detail": {
+    "request-appointment": "REQUEST AN APPOINTMENT",
+    "interview-with": "Interview with",
+    "schedule-appointment": "SCHEDULE APPOINTMENT",
+    "availability": {
+      "free": "free",
+      "pending": "pending",
+      "approved": "approved",
+      "declined": "declined"
+    },
+    "enter-reason": "Enter the reason",
+    "enter-your-reason": "Enter your reason here...",
+    "validate": "Validate",
+    "cancel": "Cancel"
+  },
+  "mass-title": {
+    "mass": "ASSM",
+    "marche": "Market",
+    "africain": "African",
+    "des": "of",
+    "solutions": "Solutions",
+    "spatiales": "Spatial"
+  }
+ 
   }
   
+
+ 

@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [TranslateModule, RouterLink, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -14,6 +15,7 @@ export class NavbarComponent {
   isMenuOpen = false;
 
   activeDropdown: string | null = null;  // Pour savoir quel dropdown est ouvert
+  translate: TranslateService = inject(TranslateService)
 
   constructor(private router: Router) {
     // Ferme le menu automatiquement quand la route change
@@ -22,7 +24,14 @@ export class NavbarComponent {
       this.activeDropdown = null;  // Ferme tous les dropdowns
     });
   }
+  ngOnInit() {
+    this.translate.setDefaultLang('fr');
 
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
   // Fonction pour ouvrir/fermer le menu
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
