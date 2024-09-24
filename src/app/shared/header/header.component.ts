@@ -19,7 +19,7 @@ export class HeaderComponent {
   isLoggedIn: boolean = false;
 
   ngOnInit() {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
     this.authService.isLoggedIn.subscribe(loggedIn => {
       console.log("lelog:",loggedIn)
       this.isLoggedIn = loggedIn;

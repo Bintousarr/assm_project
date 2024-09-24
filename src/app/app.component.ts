@@ -21,12 +21,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'OtifProject';
 
-  langage: any = 'fr';
+  langage: any = 'en';
 
   constructor(protected translate: TranslateService) {
     translate.addLangs(['en', 'fr']);
-    translate.setDefaultLang('fr');
-    translate.use('fr');
+    translate.setDefaultLang('en');
+    translate.use('en');
     const browserLang = translate.getBrowserLang();
   }
 

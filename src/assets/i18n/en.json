@@ -13,10 +13,10 @@
         "t3":"Visitor area ",
         "titre2": "AGENDA",
         "titre3": "ASSM",
-        "m1":"Partners",
+        "m1":"Sponsors",
         "m2":"Suppliers",
         "m3":"Speakers",
-        "desc1": "INFORMATION",
+        "desc1": "PARTICIPATE",
         "desc2": "Travel information",
         "desc3": "Practical information",
         "desc4": "NEWS",
@@ -25,7 +25,7 @@
       },
       "banner-block": {
         "conference":"African Space Solutions Market (ASSM)",
-        "date": "From 16 to 20 June 2025",
+        "date": "From 09 to 13 June 2025",
         "year": "2025",
         "description": "Abidjan - Ivory Coast, Exhibition Centre",
         "about": "About",
@@ -109,7 +109,7 @@
     "sponsor": {
       "info-block": {
         "desc": "Our sponsors",
-        "titre1": "OTIF 2024 BROCHURE",
+        "titre1": "OTIF 2025 BROCHURE",
         "titre2": "For more information, please contact us"
       }
     },
@@ -122,24 +122,26 @@
         "titre5": "Director General of the Egyptian Space Agency"
       }
     },
-    "partner-block":{
-      "block":{
-        "titre1":"Partners",
-      "titre2":"Presentation of the partners",
-      "titre3":"Discover the partners who support our project, and find out more about their role and their contribution.",
-      "titre4":"President of the Republic",
-      "titre5":"Ivory Coast",
-      "titre6":"European Space Agency",
-      "titre7":"National Aeronautics and Space Administration",
-      "titre8":"National Centre for Space Studies",
-      "titre9":"Indian Space Research Organization",
-      "titre10":"Director of Space and Telecommunications",
-      "titre11":"Félix Houphouët-Boigny University",
-      "titre12":"Become a partner",
-      "titre13":"Join us as a partner and benefit from the many advantages we offer.",
-      "titre14":"To become"
-
-      }
+    "sponsor-block": {
+      "titre1": "The Sponsors",
+      "titre2": "Sponsor Presentation",
+      "titre3": "Discover the sponsors who support our project, and learn more about their role and contribution.",
+      "titre4": "REPUBLIC OF IVORY COAST",
+      "titre5": "IVORY COAST is a West African country known for its beach resorts, rainforests, and French colonial heritage.",
+      "titre6": "European Space Agency",
+      "agence": "The European Space Agency, often referred to by its acronym ESA, is an intergovernmental space agency founded in 1975.",
+      "titre7": "National Aeronautics and Space Administration",
+      "national": "NASA is the federal agency responsible for the majority of the United States' civil space program.",
+      "titre8": "National Centre for Space Studies",
+      "centre": "CNES is a public establishment responsible for developing and implementing France's space program.",
+      "titre9": "Indian Space Research Organisation",
+      "indian": "ISRO is India's space agency, responsible for the implementation of its space program.",
+      "titre10": "Orange",
+      "orange": "Orange is a telecommunications leader, with extensive 4G coverage and many FTTH customers across Europe.",
+      "titre11": "Félix Houphouët-Boigny University",
+      "uv": "Félix Houphouët-Boigny University is a renowned Ivorian institution in West Africa known for its various faculties.",
+      "titre12": "To become a sponsor",
+      "titre13": "Download this file"
     },
     "fournisseur-block":{
       "block":{
@@ -297,7 +299,7 @@
     },
     "about-block": {
       "titre1": "African Market for Space Solutions",
-      "titre2": "From June 16 to 20, 2025, Exhibition Center",
+      "titre2": "From June 03 to 13, 2025, Exhibition Center",
       "titre3": "Abidjan - Ivory Coast",
       "titre4": "Theme: Natural Resource and Disaster Management",
       "titre5": "MASS is a true showcase of proven solutions. This first edition will focus on the optimal management of natural resources and disasters, with the participation of numerous companies and organizations in this field.",
@@ -351,8 +353,8 @@
       "speaking_days": "Speaking Days",
       "day2": "Day 2",
       "day5": "Day 5",
-      "date_day2": "17, June-2025",
-      "date_day5": "20, June-2025",
+      "date_day2": "09, June-2025",
+      "date_day5": "13, June-2025",
       "time": "10:00 - 12:00",
       "speech": "Speech"
     },
@@ -363,8 +365,8 @@
     "speaking_days": "Speaking Days",
     "day2": "Day 2",
     "day5": "Day 5",
-    "date_day2": "17, June-2025",
-    "date_day5": "20, June-2025",
+    "date_day2": "09, June-2025",
+    "date_day5": "13, June-2025",
     "time": "10:00 - 12:00",
     "speech": "Speech"
   },
@@ -376,13 +378,13 @@
     "days": {
       "day2": {
         "title": "Day 2",
-        "date": "17, June-2025",
+        "date": "09, June-2025",
         "time": "10:00 - 12:00",
         "event": "Speech"
       },
       "day5": {
         "title": "Day 5",
-        "date": "20, June-2025",
+        "date": "13, June-2025",
         "time": "10:00 - 12:00",
         "event": "Speech"
       }
@@ -397,13 +399,13 @@
     "days": {
       "day2": {
         "title": "Day 2",
-        "date": "17, June-2025",
+        "date": "09, June-2025",
         "time": "10:00 - 12:00",
         "event": "Speech"
       },
       "day5": {
         "title": "Day 5",
-        "date": "20, June-2025",
+        "date": "13, June-2025",
         "time": "10:00 - 12:00",
         "event": "Speech"
       }
@@ -424,6 +426,12 @@
     "orateur": "Speaker"
   },
   "program": {
+    "theme1": "Theme: Satellite Telecommunications",
+    "theme2": "Theme: Earth Observation",
+    "theme3": "Evening: Gala Dinner and Space Awards Ceremony",
+    "theme4": "Theme: Navigation and Positioning",
+    "theme5": "Theme: Astronomy and Scientific Experiments in Space",
+    "theme6": "Theme: Social Activities and Conference within a School",
     "openingCeremony": "Opening Ceremony Presentation of Space Funding Organizations & Presentation of Training Organizations.",
     "satelliteTelecommunication": "Satellite telecommunication involves the use of artificial satellites to transmit communication signals such as telephone calls, Internet data, television and radio broadcasts, and other forms of digital communication. These satellites receive communication signals from a ground station, amplify them, and retransmit them to another ground station or multiple stations over long distances.",
     "earthObservation": "Earth observation encompasses all methods and technologies used to collect information about the Earth's surface, atmosphere, and oceans from sensors on satellites, aircraft, drones, or ground stations. Earth observation data is used to monitor environmental changes, manage natural resources, track weather and climate phenomena, and support urban and agricultural planning activities.",
@@ -477,15 +485,18 @@
     "validate": "Validate",
     "cancel": "Cancel"
   },
-  "mass-title": {
-    "mass": "ASSM",
-    "marche": "Market",
-    "africain": "African",
-    "des": "of",
-    "solutions": "Solutions",
-    "spatiales": "Spatial"
+ "mass-title": {
+    "titre1": "A",
+    "titre2":"SSM",
+    "titre3": "the",
+    "a": "A",
+    "d": "M",
+    "es":"es",
+    "s":"S",
+    "solutions": "olutions",
+    "spatiales": "arket"
   }
- 
+
   }
   
 

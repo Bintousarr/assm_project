@@ -25,7 +25,7 @@ export class NavbarComponent {
     });
   }
   ngOnInit() {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
 
   }
 

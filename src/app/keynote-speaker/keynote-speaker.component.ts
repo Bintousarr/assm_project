@@ -12,7 +12,7 @@ export class KeynoteSpeakerComponent {
   translate: TranslateService = inject(TranslateService)
 
   ngOnInit() {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
   }
 
   translateText(lang: string) {

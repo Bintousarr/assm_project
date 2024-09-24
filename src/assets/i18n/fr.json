@@ -9,14 +9,14 @@
     "navbar-block": {
       "titre1": "ACCUEIL",
       "t1": "Marché",
-      "t2": "A voir sur le marchét",
+      "t2": "A voir sur le marché",
       "t3": "Espace visiteurs",
       "titre2": "AGENDA",
       "titre3": "MASS ",
-      "m1": "Partenaires",
+      "m1": "Sponsors",
       "m2": "Fournisseurs",
       "m3": "Intervenants",
-      "desc1": "INFORMATION",
+      "desc1": "PARTICIPER",
       "desc2": "Informations de voyage",
       "desc3": "Informations pratiques",
       "desc4": "ACTUALITES",
@@ -25,7 +25,7 @@
     },
     "banner-block": {
       "conference": "Marché Africain des Solutions Spatiales (MASS)",
-      "date": "Du 16 au 20 Juin 2025",
+      "date": "Du 09 au 13 Juin 2025",
       "year": "2025",
       "description": "Abidjan - Côte d’Ivoire,  Parc des Expositions'",
       "about": "À propos",
@@ -122,23 +122,27 @@
       "titre5": "Directeur général de l'Agence spatiale égyptienne"
     }
   },
-  "partner-block":{
-    "block":{
-      "titre1":"Les Partenaires",
-      "titre2":"Présentation des partenaires",
-      "titre3":"Découvrez les partenaires qui soutiennent notre projet, et en savoir plus sur leur rôle et leur contribution.",
-      "titre4":"Président de la République",
-      "titre5":"Côte d'Ivoire",
+  "sponsor-block":{
+      "titre1":"Les Sponsors",
+      "titre2":"Présentation des Sponsors",
+      "titre3":"Découvrez les sponsors qui soutiennent notre projet, et en savoir plus sur leur rôle et leur contribution.",
+      "titre4":"REPUBLIQUE DE LA CÔTE D'IVOIRE",
+      "titre5":" La Côte d'Ivoire est un pays d'Afrique de l'Ouest doté de stations balnéaires, de forêts tropicales et d'un patrimoine colonial français. ",
       "titre6":"Agence Spatiale Européenne",
+      "agence":"L'Agence spatiale européenne, souvent désignée par son sigle ESA, est une agence spatiale intergouvernementale fondée en 1975.",
       "titre7":"National Aeronautics and Space Administration",
+      "national":"La NASA est l'agence fédérale responsable de la majeure partie du programme spatial civil des États-Unis.",
       "titre8":"Centre National d’Études Spatiales",
+      "centre":"Le CNES est un établissement public chargé d’élaborer et de mettre en œuvre le programme spatial français.",
       "titre9":"Indian Space Research Organisation",
-      "titre10":"Directeur des activités spatiales et télécommunications",
+      "indian":" L'ISRO est l'agence spatiale de l'Inde, responsable de la mise en œuvre de son programme spatial.",
+      "titre10":"Orange",
+      "orange":"Orange est un leader en télécommunications, avec une grande couverture 4G et de nombreux clients FTTH en Europe.",
       "titre11":"Université Félix Houphouët-Boigny",
-      "titre12":"Devenir partenaire",
-      "titre13":"Rejoignez-nous en tant que partenaire et bénéficiez des nombreux avantages que nous offrons.",
-      "titre14":"Devenir"
-    }
+      "uv":"L'université Félix-Houphouët-Boigny est une institution ivoirienne réputée en Afrique de l'Ouest pour ses nombreuses facultés.",
+      "titre12":"Pour devenir sponsor",
+      "titre13":"Téléchargez ce fichier "
+    
   },
   "fournisseur-block":{
       "block":{
@@ -296,7 +300,7 @@
     },
     "about-block":{
       "titre1":"Marché Africain des Solutions Spatiales ",
-      "titre2":" Du 16 au 20 Juin 2025 , Parc des Expositions",
+      "titre2":" Du 09 au 13 Juin 2025 , Parc des Expositions",
       "titre3":" Abidjan - Côte d'Ivoire",
       "titre4":" Thème : Gestion des ressources naturelles et des catastrophes",
       "titre5":" MASS   est   une   véritable   vitrine   de   solutions   éprouvées. Cette   première   édition   se concentrera sur la gestion optimale des ressources naturelles et des catastrophes et verra la participation de nombreuses entreprises et organisations dans ce domaine. ",
@@ -351,8 +355,8 @@
     "speaking_days": "Jour d'intervention",
     "day2": "Jour 2",
     "day5": "Jour 5",
-    "date_day2": "17, Juin-2025",
-    "date_day5": "20, Juin-2025",
+    "date_day2": "09, Juin-2025",
+    "date_day5": "13, Juin-2025",
     "time": "10:00 - 12:00",
     "speech": "Discours"
   },
@@ -363,8 +367,8 @@
     "speaking_days": "Jour d'intervention",
     "day2": "Jour 2",
     "day5": "Jour 5",
-    "date_day2": "17, Juin-2025",
-    "date_day5": "20, Juin-2025",
+    "date_day2": "09, Juin-2025",
+    "date_day5": "13, Juin-2025",
     "time": "10:00 - 12:00",
     "speech": "Discours"
   },
@@ -376,13 +380,13 @@
     "days": {
       "day2": {
         "title": "Jour 2",
-        "date": "17, Juin-2025",
+        "date": "09, Juin-2025",
         "time": "10:00 - 12:00",
         "event": "Discours"
       },
       "day5": {
         "title": "Jour 5",
-        "date": "20, Juin-2025",
+        "date": "13, Juin-2025",
         "time": "10:00 - 12:00",
         "event": "Discours"
       }
@@ -398,13 +402,13 @@
     "days": {
       "day2": {
         "title": "Jour 2",
-        "date": "03, Déc-2024",
+        "date": "09, Juin-2025",
         "time": "10:00 - 12:00",
         "event": "Discours"
       },
       "day5": {
         "title": "Jour 5",
-        "date": "05, Déc-2024",
+        "date": "13, Juin-2025",
         "time": "10:00 - 12:00",
         "event": "Discours"
       }
@@ -426,6 +430,12 @@
     "orateur": "Orateur"
   },
   "program": {
+    "theme1":"Thème : Télécommunication par satellite",
+    "theme2":"Thème :Observation de la terre",
+    "theme3":"Soirée: Dîner gala et récompense des Awards du spatial",
+    "theme4":"Thème : Navigation et le positionnement",
+    "theme5":"Thème : Astronomie et les expériences scientifiques dans l’espace",
+    "theme6":"Thème : Activités sociales et conférence au sein d’une école ",
     "openingCeremony": "Cérémonie d’ouverture Présentation des organismes de Financement du spatial & Présentation des organismes de formation.",
     "satelliteTelecommunication": "La télécommunication par satellite implique l'utilisation de satellites artificiels pour transmettre des signaux de communication tels que des appels téléphoniques, des données Internet, des émissions de télévision et de radio, et d'autres formes de communication numérique. Ces satellites reçoivent des signaux de communication d'une station terrestre, les amplifient, et les retransmettent à une autre station terrestre ou à plusieurs stations à travers de grandes distances.",
     "earthObservation": "L’observation de la terre regroupe l’ensemble des méthodes et technologies utilisées pour collecter des informations sur la surface terrestre, l'atmosphère et les océans à partir de capteurs situés sur des satellites, des avions, des drones ou des stations terrestres. Les données d'observation de la Terre sont utilisées pour surveiller les changements environnementaux, gérer les ressources naturelles, suivre les phénomènes météorologiques et climatiques, et soutenir les activités de planification urbaine et agricole.",
@@ -480,12 +490,15 @@
   },
 
   "mass-title": {
-    "mass": "MASS",
-    "marche": "Marché",
-    "africain": "Africain",
-    "des": "des",
-    "solutions": "Solutions",
-    "spatiales": "Spatiales"
+    "titre1": "M",
+    "titre2":"ASS",
+    "titre3": "arché",
+    "a": "A",
+    "d": "d",
+    "es":"es",
+    "s":"S",
+    "solutions": "olutions",
+    "spatiales": "patiales"
   }
 
  

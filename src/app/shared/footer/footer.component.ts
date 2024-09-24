@@ -13,7 +13,7 @@ export class FooterComponent {
   translate: TranslateService = inject(TranslateService)
 
   ngOnInit(){
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
     
   }
 

@@ -21,6 +21,44 @@ export class SponsorPageComponent {
     this.translate.use(lang);
   }
   
+   // Variables pour contrôler le déroulement
+   isTextExpanded: boolean = false;
+   isESAExpanded: boolean = false;
+   isNASAExpanded: boolean = false;
+   isCNESExpanded: boolean = false;
+   isISROExpanded: boolean = false;
+   isORANGEExpanded: boolean = false;
+   isUVExpanded: boolean = false;
+ 
+   // Méthodes pour toggle les divs
+   toggleText() {
+     this.isTextExpanded = !this.isTextExpanded;
+   }
+
+   toggleESA() {
+    this.isESAExpanded = !this.isESAExpanded;
+  }
+
+   toggleNASA() {
+     this.isNASAExpanded= !this.isNASAExpanded;
+   }
+
+   toggleCNES() {
+    this.isCNESExpanded = !this.isCNESExpanded;
+  }
+
+  toggleISRO() {
+    this.isISROExpanded= !this.isISROExpanded;
+  }
+
+   toggleORANGE() {
+    this.isORANGEExpanded = !this.isORANGEExpanded;
+  }
+
+  toggleUV() {
+    this.isUVExpanded = !this.isUVExpanded;
+  }
+  
   customOptions: OwlOptions = {
     loop: true,
     margin: 10,

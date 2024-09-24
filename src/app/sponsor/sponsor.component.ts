@@ -22,7 +22,7 @@ export class SponsorComponent {
   constructor() { }
 
   ngOnInit(): void {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
     this.duplicateImages();
   }
 

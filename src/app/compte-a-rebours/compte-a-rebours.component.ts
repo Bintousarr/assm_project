@@ -20,7 +20,7 @@ export class CompteAReboursComponent {
   private eventDate: Date = new Date('2025-06-16T00:00:00'); // Date de l'événement
 
   ngOnInit(): void {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
     this.updateCountdown(); // Appel initial
     setInterval(() => this.updateCountdown(), 1000); // Actualisation chaque seconde
   }

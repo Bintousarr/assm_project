@@ -92,6 +92,10 @@ export const routes: Routes = [
           import('../app/login/login.component').then((c) => c.LoginComponent)
       },  
       {
+        path: 'test', loadComponent: () => 
+          import('../app/inscription/inscription.component').then((c) => c.InscriptionComponent)
+      },  
+      {
         path: 'rendez-vous/intervenant/sherif', loadComponent: () => 
           import('./web/rendez-vous/intervenant/sherif/sherif.component').then((c) => c.SherifComponent)
       },

@@ -6,7 +6,7 @@ import { SponsorComponent } from '../sponsor/sponsor.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { EvenementComponent } from "../web/evenement/evenement.component";
 import { RouterLink } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-banner',
@@ -16,38 +16,64 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent implements OnInit, OnDestroy {
-   slides = [
-    {
-      conference: 'Marché Africain des Solutions Spatiales (MASS)',
-      date: 'Du 16 au 20 Juin 2025',
-      year: '2025',
-      description: 'Abidjan - Côte d’Ivoire,  Parc des Expositions',
-      aboutText: 'A PROPOS',
-      registerText: 'INSCRIVEZ-VOUS',
-      image: '../../../assets/slide.jpeg'
-    },
-    {
-      conference: 'L\'espace n\'est pas une option, mais une nécessité. La technologie spatiale est fondamentale pour les pays africains.',
-      year: '2025',
-      description: 'Abidjan - Côte d’Ivoire,  Parc des Expositions',
-      aboutText: 'A PROPOS',
-      registerText: 'INSCRIVEZ-VOUS',
-      image: '../../../assets/page_2_img_1.png'
-    }
-  ];
- 
- // slides: any[] = [];
+  slides: any[] = [];
   currentIndex = 0;
   slideInterval: Subscription | undefined;
   translate: TranslateService = inject(TranslateService)
 
+
+
   ngOnInit() {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
+    
+    // Utilise onLangChange pour s'assurer que les traductions sont chargées et initialisées
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.initializeSlides();
+    });
+
+
+    // Appel initial pour initialiser les slides à la première charge
+    this.initializeSlides();
+
+    // Commence le diaporama
     this.startSlideShow();
   }
 
+      
   translateText(lang: string) {
     this.translate.use(lang);
+  }
+  initializeSlides() {
+    this.translate.get([
+      'accueil.banner-block.conference',
+      'accueil.banner-block.date',
+      'accueil.banner-block.year',
+      'accueil.banner-block.description',
+      'accueil.banner-block.about',
+      'accueil.banner-block.register',
+      'accueil.banner-block.desc1'
+    ]).subscribe(translations => {
+      this.slides = [
+        {
+          conference: translations['accueil.banner-block.conference'],
+          date: translations['accueil.banner-block.date'],
+          year: translations['accueil.banner-block.year'],
+          description: translations['accueil.banner-block.description'],
+          aboutText: translations['accueil.banner-block.about'],
+          registerText: translations['accueil.banner-block.register'],
+          desc1: translations['accueil.banner-block.desc1'],
+          image: '../../../assets/slide.jpeg'
+        },
+        {
+          conference: translations['accueil.banner-block.desc1'],
+          year: translations['accueil.banner-block.year'],
+          description: translations['accueil.banner-block.description'],
+          aboutText: translations['accueil.banner-block.about'],
+          registerText: translations['accueil.banner-block.register'],
+          image: '../../../assets/page_2_img_1.png'
+        }
+      ];
+    });
   }
 
   ngOnDestroy() {
@@ -69,26 +95,4 @@ export class BannerComponent implements OnInit, OnDestroy {
   nextSlide() {
     this.currentIndex = (this.currentIndex === this.slides.length - 1) ? 0 : this.currentIndex + 1;
   }
-
- /*  initializeSlides() {
-    this.slides = [
-      {
-        conference: this.translate.instant('conference'),
-        date: this.translate.instant('date'),
-        year: this.translate.instant('year'),
-        description: this.translate.instant('description'),
-        aboutText: this.translate.instant('about'),
-        registerText: this.translate.instant('register'),
-        image: '../../../assets/slide.jpeg'
-      },
-      {
-        conference: this.translate.instant('desc1'),
-        year: this.translate.instant('year'),
-        description: this.translate.instant('description'),
-        aboutText: this.translate.instant('about'),
-        registerText: this.translate.instant('register'),
-        image: '../../../assets/page_2_img_1.png'
-      }
-    ];
-  } */
 }
