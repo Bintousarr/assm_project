@@ -1,28 +1,25 @@
-
 <div class="header font-poppins">
   <!-- Top Bar -->
-  <div class="top-bar flex justify-between items-center bg-customBlue text-white text-sm py-4 px-4 sm:px-16">
+  <div class="top-bar fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-customBlue text-white text-sm  px-4 sm:px-16">
     <div class="top-bar-left flex items-center space-x-2">
       <i class="material-icons">location_on</i>
-      <span class="text-lg">{{'accueil.header-block.lieu' | translate}}</span>
+      <span class="text-base">{{'accueil.header-block.lieu' | translate}}</span> <!-- Réduit la taille de la police -->
     </div>
-   
 
     <div class="top-bar-right flex items-center mr-32">
       <div class="language-switcher flex items-center ml-4">
         <button class="lang-btn" (click)="translateText('fr')">
-          <img src="../../../assets/fra.jpg" alt="FR" class="flag-icon w-8"> FR
+          <img src="../../../assets/fra.jpg" alt="FR" class="flag-icon w-6"> FR <!-- Réduit la taille de l'icône -->
         </button>
         <button class="lang-btn ml-2" (click)="translateText('en')">
-          <img src="../../../assets/usa.png" alt="EN" class="flag-icon w-8"> EN
+          <img src="../../../assets/usa.png" alt="EN" class="flag-icon w-6"> EN <!-- Réduit la taille de l'icône -->
         </button>
       </div>
     </div> 
   </div>
-  
 
   <!-- Main Bar -->
-  <div class="main-bar flex flex-col lg:flex-row items-center justify-between text-red-700 mt-4 py-4 px-4 sm:px-16">
+  <div class="main-bar flex flex-col lg:flex-row items-center justify-between text-red-700 mt-4 py-8 px-4 sm:px-16">
     <!-- Logo -->
     <div class="logo flex items-center mb-4 lg:mb-0">
       <img src="../../../assets/logo (2).png" alt="OTIFFF" class="h-16 w-48 object-contain" />

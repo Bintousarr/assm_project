@@ -81,40 +81,40 @@
       <!-- Menu avec sous-menus en dropdown -->
       <li class="relative group">
         <button (click)="toggleDropdownHome('accueil')"
-          class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Accueil
+          class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">{{'accueil.navbar-block.titre1' | translate}}
           <span>&#x25BC;</span>
         </button>
         <ul *ngIf="activeDropdown === 'accueil'"
           class="bg-customBlue text-white mt-2 space-y-2 pl-4">
           <li><a [routerLink]="['marche']"
-              class="block hover:text-red-600">Marché</a></li>
+              class="block hover:text-red-600">{{'accueil.navbar-block.t1' | translate}}</a></li>
           <li><a [routerLink]="['voir-marche']"
-              class="block hover:text-red-600">A voir sur le marché</a></li>
+              class="block hover:text-red-600">{{'accueil.navbar-block.t2' | translate}}</a></li>
           <li><a [routerLink]="['espace-visiteur']"
-              class="block hover:text-red-600">Espace visiteurs</a></li>
+              class="block hover:text-red-600">{{'accueil.navbar-block.t3' | translate}}</a></li>
         </ul>
       </li>
       <li class="relative group">
         <button (click)="toggleDropdown('mass-mobile')"
-          class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Mass
+          class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">{{'accueil.navbar-block.titre3' | translate}}
           <span>&#x25BC;</span>
         </button>
         <ul *ngIf="activeDropdown === 'mass-mobile'"
           class="bg-customBlue text-white mt-2 space-y-2 pl-4">
           <li><a [routerLink]="['sponsor-page']"
-              class="block hover:text-red-600">Partenaires</a></li>
+              class="block hover:text-red-600">{{'accueil.navbar-block.m1' | translate}}</a></li>
           <li><a [routerLink]="['fournisseurs']"
-              class="block hover:text-red-600">Fournisseurs</a></li>
+              class="block hover:text-red-600">{{'accueil.navbar-block.m2' | translate}}</a></li>
           <li><a [routerLink]="['orateur']"
-              class="block hover:text-red-600">Intervenants</a></li>
+              class="block hover:text-red-600">{{'accueil.navbar-block.m3' | translate}}</a></li>
         </ul>
       </li>
       
       <li><a [routerLink]="['program']"
-        class="capitalize hover:text-red-600">Agenda</a></li>
+        class="capitalize hover:text-red-600">{{'accueil.navbar-block.titre2' | translate}}</a></li>
         
       <li><a [routerLink]="['program']"
-        class="capitalize hover:text-red-600">Participer</a></li>
+        class="capitalize hover:text-red-600">{{'accueil.navbar-block.desc1' | translate}}</a></li>
       <!-- <li><a [routerLink]="['information']" class="capitalize hover:text-red-600">Information</a></li> -->
       <li class="relative group">
         <button (click)="toggleDropdown('information')"
@@ -124,15 +124,15 @@
         <ul *ngIf="activeDropdown === 'information'"
           class="bg-customBlue text-white mt-2 space-y-2 pl-4">
           <li><a [routerLink]="['accomodation']"
-              class="block hover:text-red-600">Informations de voyage</a></li>
+              class="block hover:text-red-600">{{'accueil.navbar-block.desc2' | translate}}</a></li>
           <li><a [routerLink]="['accueil']"
-              class="block hover:text-red-600">Informations pratiques</a></li>
+              class="block hover:text-red-600">{{'accueil.navbar-block.desc3' | translate}}</a></li>
         </ul>
       </li>
       <li><a [routerLink]="['actualite']"
-          class="capitalize hover:text-red-600">Actualités</a></li>
+          class="capitalize hover:text-red-600">{{'accueil.navbar-block.desc4' | translate}}</a></li>
       <li><a [routerLink]="['contact']"
-          class="capitalize hover:text-red-600">Contact</a></li>
+          class="capitalize hover:text-red-600">{{'accueil.navbar-block.titre4' | translate}}</a></li>
     </ul>
   </div>
 </div>
