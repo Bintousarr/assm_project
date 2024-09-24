@@ -1,11 +1,15 @@
 <div class="bg-customBlue font-poppins text-white w-full">
   <!-- Barre de navigation avec le bouton hamburger en mode mobile -->
-  <div class="container w-full mx-auto flex items-center justify-between py-4 relative">
+  <div
+    class="container w-full mx-auto flex items-center justify-between py-4 relative">
     <!-- Bouton hamburger en mode mobile -->
-    <button (click)="toggleMenu()" class="text-white lg:hidden focus:outline-none relative z-20">
+    <button (click)="toggleMenu()"
+      class="text-white lg:hidden focus:outline-none relative z-20">
       <!-- Icône hamburger -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7" />
       </svg>
     </button>
 
@@ -56,55 +60,79 @@
   </div>
 
   <!-- Menu mobile qui slide de la gauche et commence à l'icône du menu -->
-  <div 
-    [ngClass]="{'-translate-x-full': !isMenuOpen, 'translate-x-0': isMenuOpen}" 
+  <div
+    [ngClass]="{'-translate-x-full': !isMenuOpen, 'translate-x-0': isMenuOpen}"
     class="absolute left-0 bg-customBlue text-white w-3/4 transform transition-transform duration-300 z-40"
-    style="top: 14rem;"> <!-- Ajuster ici la valeur de `top` pour qu'elle corresponde à la position de l'icône -->
-    
+    style="top: 14rem;">
+    <!-- Ajuster ici la valeur de `top` pour qu'elle corresponde à la position de l'icône -->
+
     <div class="flex justify-between items-center px-4 py-4">
       <h2 class="text-xl font-bold">{{'accueil.navbar-block.menu' | translate}}</h2>
       <!-- Icône de fermeture -->
       <button (click)="closeMenu()" class="focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
     <ul class="flex flex-col space-y-4 p-4">
       <!-- Menu avec sous-menus en dropdown -->
       <li class="relative group">
-        <button  (click)="toggleDropdownHome('accueil')" class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Accueil
+        <button (click)="toggleDropdownHome('accueil')"
+          class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Accueil
           <span>&#x25BC;</span>
         </button>
-        <ul *ngIf="activeDropdown === 'accueil'" class="bg-customBlue text-white mt-2 space-y-2 pl-4">
-          <li><a [routerLink]="['marche']" class="block hover:text-red-600">Marché</a></li>
-          <li><a [routerLink]="['voir-marche']" class="block hover:text-red-600">A voir sur le marché</a></li>
-          <li><a [routerLink]="['espace-visiteur']" class="block hover:text-red-600">Espace visiteurs</a></li>
+        <ul *ngIf="activeDropdown === 'accueil'"
+          class="bg-customBlue text-white mt-2 space-y-2 pl-4">
+          <li><a [routerLink]="['marche']"
+              class="block hover:text-red-600">Marché</a></li>
+          <li><a [routerLink]="['voir-marche']"
+              class="block hover:text-red-600">A voir sur le marché</a></li>
+          <li><a [routerLink]="['espace-visiteur']"
+              class="block hover:text-red-600">Espace visiteurs</a></li>
         </ul>
       </li>
-      <li><a [routerLink]="['program']" class="capitalize hover:text-red-600">Agenda</a></li>
       <li class="relative group">
-        <button (click)="toggleDropdown('mass-mobile')" class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Mass
+        <button (click)="toggleDropdown('mass-mobile')"
+          class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Mass
           <span>&#x25BC;</span>
         </button>
-        <ul *ngIf="activeDropdown === 'mass-mobile'" class="bg-customBlue text-white mt-2 space-y-2 pl-4">
-          <li><a [routerLink]="['sponsor-page']" class="block hover:text-red-600">Partenaires</a></li>
-          <li><a [routerLink]="['fournisseurs']" class="block hover:text-red-600">Fournisseurs</a></li>
-          <li><a [routerLink]="['orateur']" class="block hover:text-red-600">Intervenants</a></li>
+        <ul *ngIf="activeDropdown === 'mass-mobile'"
+          class="bg-customBlue text-white mt-2 space-y-2 pl-4">
+          <li><a [routerLink]="['sponsor-page']"
+              class="block hover:text-red-600">Partenaires</a></li>
+          <li><a [routerLink]="['fournisseurs']"
+              class="block hover:text-red-600">Fournisseurs</a></li>
+          <li><a [routerLink]="['orateur']"
+              class="block hover:text-red-600">Intervenants</a></li>
         </ul>
       </li>
+      
+      <li><a [routerLink]="['program']"
+        class="capitalize hover:text-red-600">Agenda</a></li>
+        
+      <li><a [routerLink]="['program']"
+        class="capitalize hover:text-red-600">Participer</a></li>
       <!-- <li><a [routerLink]="['information']" class="capitalize hover:text-red-600">Information</a></li> -->
       <li class="relative group">
-        <button (click)="toggleDropdown('information')" class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Information
+        <button (click)="toggleDropdown('information')"
+          class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Information
           <span>&#x25BC;</span>
         </button>
-        <ul *ngIf="activeDropdown === 'information'" class="bg-customBlue text-white mt-2 space-y-2 pl-4">
-          <li><a [routerLink]="['accomodation']" class="block hover:text-red-600">Informations de voyage</a></li>
-          <li><a [routerLink]="['accueil']" class="block hover:text-red-600">Informations pratiques</a></li>
+        <ul *ngIf="activeDropdown === 'information'"
+          class="bg-customBlue text-white mt-2 space-y-2 pl-4">
+          <li><a [routerLink]="['accomodation']"
+              class="block hover:text-red-600">Informations de voyage</a></li>
+          <li><a [routerLink]="['accueil']"
+              class="block hover:text-red-600">Informations pratiques</a></li>
         </ul>
       </li>
-      <li><a [routerLink]="['actualite']" class="capitalize hover:text-red-600">Actualités</a></li>
-      <li><a [routerLink]="['contact']" class="capitalize hover:text-red-600">Contact</a></li>
+      <li><a [routerLink]="['actualite']"
+          class="capitalize hover:text-red-600">Actualités</a></li>
+      <li><a [routerLink]="['contact']"
+          class="capitalize hover:text-red-600">Contact</a></li>
     </ul>
   </div>
 </div>
