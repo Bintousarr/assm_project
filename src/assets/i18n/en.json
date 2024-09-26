@@ -25,7 +25,7 @@
       },
       "banner-block": {
         "conference":"African Space Solutions Market (ASSM)",
-        "date": "From 09 to 13 June 2025",
+        "date": "From 05 to 09 Mai 2025",
         "year": "2025",
         "description": "Abidjan - Ivory Coast, Exhibition Centre",
         "about": "About",
@@ -34,7 +34,7 @@
       },
       "event-block": {
         "titre1":"Presentation of ASSM",
-        "titre2": "OTIF SPACE AFRICA is organising the first edition of its forum, entitled ASSM (African Space Solutions Market ), to be held in Ivory Coast, from 16 to 20 June 2025 at the Exhibition Centre. ASSM is a unique and unmissable market that provides a platform for meetings between development players (public and private sectors), international organisations, non-governmental organisations, civil society, the academic sector and space service providers. The aim is to propose concrete space solutions to resolve the challenges linked to the socio-economic development of the African continent. ",
+        "titre2": "OTIF SPACE AFRICA is organising the first edition of its forum, entitled ASSM (African Space Solutions Market ), to be held in Ivory Coast, from 05 to 09 Mai 2025 at the Exhibition Centre. ASSM is a unique and unmissable market that provides a platform for meetings between development players (public and private sectors), international organisations, non-governmental organisations, civil society, the academic sector and space service providers. The aim is to propose concrete space solutions to resolve the challenges linked to the socio-economic development of the African continent. ",
         "details": "Objectives of the ASSM"
       },
       "event-details": {
@@ -299,7 +299,7 @@
     },
     "about-block": {
       "titre1": "African Market for Space Solutions",
-      "titre2": "From June 03 to 13, 2025, Exhibition Center",
+      "titre2": "From Mai 05 to 09, 2025, Exhibition Center",
       "titre3": "Abidjan - Ivory Coast",
       "titre4": "Theme: Natural Resource and Disaster Management",
       "titre5": "MASS is a true showcase of proven solutions. This first edition will focus on the optimal management of natural resources and disasters, with the participation of numerous companies and organizations in this field.",
@@ -313,7 +313,7 @@
       "desc":"ASSM",
       "titre": "INFORMATION LOGISTIQUE",
       "titre1": "VENUE",
-      "titre2": "In December, Ivory Coast experiences a dry and warm climate with temperatures ranging between 24°C and 32°C.",
+      "titre2": "You might be interested in reservations, flight schedules, airlines, or other specific details.",
       "titre3": "FLIGHTS",
       "titre4": "All participants sponsored by the AU will receive a round-trip ticket (economy class) according to AU rules and regulations.",
       "titre5": "AIRPORT TRANSFERS AND TRANSPORT",
@@ -329,7 +329,7 @@
       "titre15": "CURRENCY AND BANKING SERVICES",
       "titre16": "The currency of Ivory Coast is the CFA franc (XOF).",
       "titre17": "ELECTRICITY",
-      "titre18": "In Ivory Coast, electrical outlets are of type C (Europlug) and E.",
+      "titre18": "In  Ivory Coast, the power plug sockets are of type C (Euro plug). The standard voltage is 230 V, and the frequency is 50 Hz.",
       "titre19": "COMMUNICATION FACILITIES",
       "titre20": "The three main telecommunication providers in Ivory Coast are MTN, Orange, and Moov.",
       "titre21": "MEDICAL SERVICES",
@@ -356,8 +356,8 @@
       "speaking_days": "Speaking Days",
       "day2": "Day 2",
       "day5": "Day 5",
-      "date_day2": "09, June-2025",
-      "date_day5": "13, June-2025",
+      "date_day2": "05, Mai-2025",
+      "date_day5": "09, Mai-2025",
       "time": "10:00 - 12:00",
       "speech": "Speech"
     },
@@ -368,8 +368,8 @@
     "speaking_days": "Speaking Days",
     "day2": "Day 2",
     "day5": "Day 5",
-    "date_day2": "09, June-2025",
-    "date_day5": "13, June-2025",
+    "date_day2": "05, Mai-2025",
+    "date_day5": "09, Mai-2025",
     "time": "10:00 - 12:00",
     "speech": "Speech"
   },
@@ -381,13 +381,13 @@
     "days": {
       "day2": {
         "title": "Day 2",
-        "date": "09, June-2025",
+        "date": "05, Mai-2025",
         "time": "10:00 - 12:00",
         "event": "Speech"
       },
       "day5": {
         "title": "Day 5",
-        "date": "13, June-2025",
+        "date": "09, Mai-2025",
         "time": "10:00 - 12:00",
         "event": "Speech"
       }
@@ -402,13 +402,13 @@
     "days": {
       "day2": {
         "title": "Day 2",
-        "date": "09, June-2025",
+        "date": "05, Mai-2025",
         "time": "10:00 - 12:00",
         "event": "Speech"
       },
       "day5": {
         "title": "Day 5",
-        "date": "13, June-2025",
+        "date": "09, Mai-2025",
         "time": "10:00 - 12:00",
         "event": "Speech"
       }

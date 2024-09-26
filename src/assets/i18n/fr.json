@@ -25,7 +25,7 @@
     },
     "banner-block": {
       "conference": "Marché Africain des Solutions Spatiales (MASS)",
-      "date": "Du 09 au 13 Juin 2025",
+      "date": "Du 05 au 09 Mai 2025",
       "year": "2025",
       "description": "Abidjan - Côte d’Ivoire,  Parc des Expositions'",
       "about": "À propos",
@@ -34,7 +34,7 @@
     },
     "event-block": {
       "titre1":" Présentation de MASS",
-      "titre2": "OTIF SPACE AFRICA organise la première édition de son forum, intitulé MASS (Marché Africain des Solutions Spatiales),  qui se tiendra à Abidjan en Côte d’Ivoire, du 16 au 20 Juin 2025 au Parc des expositions. Le MASS est un marché unique et incontournable qui offre une plateforme de rencontre entre les acteurs du développement (secteurs public et privé), les organisations internationales, les organisations non gouvernementales, la société civile, le secteur académique et les fournisseurs de services spatiaux. Il s’agit de proposer des solutions spatiales concrètes pour résoudre les défis liés au développement socio-économique du continent africain.",
+      "titre2": "OTIF SPACE AFRICA organise la première édition de son forum, intitulé MASS (Marché Africain des Solutions Spatiales),  qui se tiendra à Abidjan en Côte d’Ivoire, du 05 au 09 Mai 2025 au Parc des expositions. Le MASS est un marché unique et incontournable qui offre une plateforme de rencontre entre les acteurs du développement (secteurs public et privé), les organisations internationales, les organisations non gouvernementales, la société civile, le secteur académique et les fournisseurs de services spatiaux. Il s’agit de proposer des solutions spatiales concrètes pour résoudre les défis liés au développement socio-économique du continent africain.",
       "details": "Objectifs du MASS"
     },
     "event-details": {
@@ -300,7 +300,7 @@
     },
     "about-block":{
       "titre1":"Marché Africain des Solutions Spatiales ",
-      "titre2":" Du 09 au 13 Juin 2025 , Parc des Expositions",
+      "titre2":" Du 05 au 09 Mai 2025 , Parc des Expositions",
       "titre3":" Abidjan - Côte d'Ivoire",
       "titre4":" Thème : Gestion des ressources naturelles et des catastrophes",
       "titre5":" MASS   est   une   véritable   vitrine   de   solutions   éprouvées. Cette   première   édition   se concentrera sur la gestion optimale des ressources naturelles et des catastrophes et verra la participation de nombreuses entreprises et organisations dans ce domaine. ",
@@ -313,7 +313,7 @@
     "desc":"MASS",
     "titre": "INFORMATION LOGISTIQUE",
     "titre1": "VENUE",
-    "titre2": "En décembre, la Côte d'Ivoire connaît un climat sec et chaud avec des températures entre 24°C et 32°C.",
+    "titre2": "Vous pourriez être intéressé par les réservations, les horaires de vol, les compagnies aériennes, ou d'autres détails spécifiques.",
     "titre3": "VOLS",
     "titre4": "Tous les participants sponsorisés par l'UA recevront un billet aller-retour (classe économique) conformément aux règles et règlements de l'UA.",
     "titre5": "TRANSFERTS AÉROPORTUAIRES ET TRANSPORT",
@@ -329,7 +329,7 @@
     "titre15": "DEVISES ET SERVICES BANCAIRES",
     "titre16": "La monnaie de la Côte d'Ivoire est le franc CFA (XOF).",
     "titre17": "ÉLECTRICITÉ",
-    "titre18": "En Côte d'Ivoire, les prises électriques sont de type C (Europlug) et E.",
+    "titre18": "En Côte d'Ivoire, les prises de courant sont de type C (prise Euro). La tension standard est de 230 V, et la fréquence est de 50 Hz.",
     "titre19": "INSTALLATIONS DE COMMUNICATION",
     "titre20": "Les trois principaux fournisseurs de télécommunications en Côte d'Ivoire sont MTN, Orange et Moov.",
     "titre21": "SERVICES MÉDICAUX",
@@ -357,8 +357,8 @@
     "speaking_days": "Jour d'intervention",
     "day2": "Jour 2",
     "day5": "Jour 5",
-    "date_day2": "09, Juin-2025",
-    "date_day5": "13, Juin-2025",
+    "date_day2": "05, Mai-2025",
+    "date_day5": "09, Mai-2025",
     "time": "10:00 - 12:00",
     "speech": "Discours"
   },
@@ -369,8 +369,8 @@
     "speaking_days": "Jour d'intervention",
     "day2": "Jour 2",
     "day5": "Jour 5",
-    "date_day2": "09, Juin-2025",
-    "date_day5": "13, Juin-2025",
+    "date_day2": "05, Mai-2025",
+    "date_day5": "09, Mai-2025",
     "time": "10:00 - 12:00",
     "speech": "Discours"
   },
@@ -382,13 +382,13 @@
     "days": {
       "day2": {
         "title": "Jour 2",
-        "date": "09, Juin-2025",
+        "date": "05, Mai-2025",
         "time": "10:00 - 12:00",
         "event": "Discours"
       },
       "day5": {
         "title": "Jour 5",
-        "date": "13, Juin-2025",
+        "date": "09, Mai-2025",
         "time": "10:00 - 12:00",
         "event": "Discours"
       }
@@ -404,13 +404,13 @@
     "days": {
       "day2": {
         "title": "Jour 2",
-        "date": "09, Juin-2025",
+        "date": "05, Mai-2025",
         "time": "10:00 - 12:00",
         "event": "Discours"
       },
       "day5": {
         "title": "Jour 5",
-        "date": "13, Juin-2025",
+        "date": "09, Mai-2025",
         "time": "10:00 - 12:00",
         "event": "Discours"
       }
