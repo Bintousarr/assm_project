@@ -58,6 +58,11 @@ export class ProgramComponent implements OnInit {
       'day.Troisième Jour',
       'day.Quatrième Jour',
       'day.Cinquième Jour',
+      'program.type1',
+      'program.type2',
+      'program.type3',
+      'program.type4',
+      'program.type5',
       'program.theme1',
       'program.theme2',
       'program.theme3',
@@ -77,7 +82,7 @@ export class ProgramComponent implements OnInit {
           day: translations['day.Premier Jour'],
           events: [
             {
-              type: 'Lundi 16 Juin 2025',
+              type: translations['program.type1'],
               speakerImg: '../../../assets/affaire.jpg',
               speakerName: '',
               title: 'Programme',
@@ -89,7 +94,7 @@ export class ProgramComponent implements OnInit {
           day: translations['day.Deuxième Jour'],
           events: [
             {
-              type: 'Mardi 17 Juin 2025',
+              type: translations['program.type2'],
               speakerImg: '../../../assets/propulsion.jpg',
               speakerName: '',
               title: translations['program.theme1'],
@@ -101,14 +106,14 @@ export class ProgramComponent implements OnInit {
           day:  translations['day.Troisième Jour'],
           events: [
             {
-              type: 'Mercredi 18 Juin 2025',
+              type: translations['program.type3'],
               speakerImg: '../../../assets/observ.jpg',
               speakerName: '',
               title: translations['program.theme2'],
               description: translations['program.earthObservation']
             },
             {
-              type: 'Mercredi 18 Juin 2025',
+              type: translations['program.type4'],
               speakerImg: '../../../assets/diner.jpeg',
               speakerName: '',
               title:  translations['program.theme3'],
@@ -120,7 +125,7 @@ export class ProgramComponent implements OnInit {
           day: translations['day.Quatrième Jour'], 
           events: [
             {
-              type: 'Jeudi 19 Juin 2025',
+              type: translations['program.type5'],
               speakerImg: '../../../assets/galileo-satellite.jpg',
               speakerName: '',
               title:  translations['program.theme4'],
