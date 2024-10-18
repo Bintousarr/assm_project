@@ -4,6 +4,7 @@ import { SponsorComponent } from "../../sponsor/sponsor.component";
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ApppointmentService } from '../../services/apppointment.service';
 
 export interface User {
   id: string;
@@ -34,7 +35,7 @@ export class UserAppointmentComponent {
   user:any;
   translate: TranslateService = inject(TranslateService)
 
-  constructor( private router:Router,private userService: UserService) {
+  constructor( private router:Router,private userService: UserService,private appointmentService: ApppointmentService) {
 
   }
   ngOnInit(): void {
@@ -113,6 +114,10 @@ export class UserAppointmentComponent {
     this.router.navigate(['/calandar']);
 
 
+  }
+  downloadPdf() {
+    const userId = '123'; // ID de l'utilisateur
+    this.appointmentService.downloadCalendar(this.user.id);
   }
 }
 

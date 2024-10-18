@@ -26,9 +26,16 @@
                 <button routerLink="/dashboard/gestion-rv" class="w-full text-left">{{ 'home-user.appointment-management' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
-                <i class="fas fa-database mr-3"></i>
+                <!-- <i class="fas fa-database mr-3"></i> -->
+                <i class="fas fa-calendar-check mr-3"></i>
                 <button (click)="goTocandar()" class="w-full text-left">{{ 'home-user.calendar-management' | translate }}</button>
-            </li>           
+            </li>
+            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+                <!-- <i class="fas fa-sign-out-alt mr-3"></i> -->
+                <i class="fa fa-arrow-circle-down mr-3"></i>
+
+                <button (click)="downloadPdf()" class="w-full text-left">{{ 'home-user.download' | translate }}</button>
+            </li>          
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-sign-out-alt mr-3"></i>
                 <button (click)="logout()" class="w-full text-left">{{ 'home-user.logout' | translate }}</button>
