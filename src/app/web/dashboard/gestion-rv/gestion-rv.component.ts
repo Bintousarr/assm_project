@@ -168,5 +168,10 @@ export class GestionRvComponent implements OnInit {
 
 
   }
+  downloadPdf() {
+    const userId = '123'; // ID de l'utilisateur
+    this.apppointmentService.downloadCalendar(this.user.id);
+    
+  }
 
 }

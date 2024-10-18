@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders  } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { saveAs } from 'file-saver';
 
 
 @Injectable({
@@ -35,6 +36,32 @@ export class ApppointmentService {
     const body = { id, status };
 
     return this.http.post<any>(url, body, { headers });
+  }
+
+  // getCalandar(userId: string): Observable<any[]> {
+  //   const url = `${this.apiUrl}?action=generatePdfCalendar&speaker_id=${userId}`;
+  //   return this.http.get<any[]>(url);
+  // }
+
+  // Méthode pour télécharger le calendrier au format PDF
+  getCalendar(userId: string): Observable<Blob> {
+    const url = `${this.apiUrl}?action=generatePdfCalendar&speaker_id=${userId}`;
+    const headers = new HttpHeaders({
+      'Accept': 'application/pdf', // Assure que l'API renvoie un PDF
+    });
+
+    return this.http.get(url, { headers, responseType: 'blob' });
+  }
+
+  // Méthode pour déclencher le téléchargement
+  downloadCalendar(userId: string) {
+    this.getCalendar(userId).subscribe((blob) => {
+      // Utilise FileSaver pour déclencher le téléchargement
+      const fileName = `calendar_${userId}.pdf`;
+      saveAs(blob, fileName);
+    }, error => {
+      console.error('Error downloading the PDF:', error);
+    });
   }
 
 }

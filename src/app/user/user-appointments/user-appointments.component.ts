@@ -78,5 +78,9 @@ export class UserAppointmentsComponent implements OnInit {
 
 
   }
-
+  downloadPdf() {
+    const userId = '123'; // ID de l'utilisateur
+    console.log(this.storedUser)
+    this.appointmentService.downloadCalendar(this.storedUser.id);
+  }
 }

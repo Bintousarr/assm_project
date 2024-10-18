@@ -26,8 +26,15 @@
                 <button routerLink="/dashboard/gestion-rv" class="w-full text-left">{{ 'home-user.appointment-management' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
-                <i class="fas fa-database mr-3"></i>
+                <!-- <i class="fas fa-database mr-3"></i> -->
+                <i class="fas fa-calendar-check mr-3"></i>
                 <button (click)="goTocandar()" class="w-full text-left">{{ 'home-user.calendar-management' | translate }}</button>
+            </li>
+            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
+                <!-- <i class="fas fa-sign-out-alt mr-3"></i> -->
+                <i class="fa fa-arrow-circle-down mr-3"></i>
+
+                <button (click)="downloadPdf()" class="w-full text-left">{{ 'home-user.download' | translate }}</button>
             </li>
             <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
                 <i class="fas fa-sign-out-alt mr-3"></i>
@@ -61,19 +68,39 @@
                             <td class="border px-4 py-4 text-center text-gray-700">{{ appointment.speaker_first_name }} {{ appointment.speaker_last_name }}</td>
                             <td class="border px-4 py-4 text-center text-gray-700">{{ appointment.theme }} </td>
                             <td class="border px-4 py-4 text-center">
-                                <span [ngClass]="{
+                                <!-- <span [ngClass]="{
                                     'bg-blue-100 text-blue-700': appointment.status === 'libre',
                                     'bg-yellow-100 text-yellow-700': appointment.status === 'en attente',
                                     'bg-green-100 text-green-700': appointment.status === 'approuvé',
                                     'bg-red-100 text-red-700': appointment.status === 'décliné'
                                 }" class="py-2 px-4 rounded-full text-sm font-semibold">
                                     {{ appointment.status }}
-                                </span>
+                                </span> -->
 
-                                <span *ngIf="appointment.status === 'libre'">{{ 'intervenant-detail.availability.free' | translate }}</span>
-                                <span *ngIf="appointment.status === 'en attente'">{{ 'intervenant-detail.availability.pending' | translate }}</span>
-                                <span *ngIf="appointment.status === 'approuvé'">{{ 'intervenant-detail.availability.approved' | translate }}</span>
-                                <span *ngIf="appointment.status === 'décliné'">{{ 'intervenant-detail.availability.declined' | translate }}</span>
+                                <span [ngClass]="{
+                                    'bg-blue-100 text-blue-700': appointment.status === 'libre',
+                                    'bg-yellow-100 text-yellow-700': appointment.status === 'en attente',
+                                    'bg-green-100 text-green-700': appointment.status === 'approuvé',
+                                    'bg-red-100 text-red-700': appointment.status === 'décliné'
+                                }" class="py-2 px-4 rounded-full text-sm font-semibold" *ngIf="appointment.status === 'libre'">{{ 'intervenant-detail.availability.free' | translate }}</span>
+                                <span [ngClass]="{
+                                    'bg-blue-100 text-blue-700': appointment.status === 'libre',
+                                    'bg-yellow-100 text-yellow-700': appointment.status === 'en attente',
+                                    'bg-green-100 text-green-700': appointment.status === 'approuvé',
+                                    'bg-red-100 text-red-700': appointment.status === 'décliné'
+                                }" class="py-2 px-4 rounded-full text-sm font-semibold" *ngIf="appointment.status === 'en attente'">{{ 'intervenant-detail.availability.pending' | translate }}</span>
+                                <span [ngClass]="{
+                                    'bg-blue-100 text-blue-700': appointment.status === 'libre',
+                                    'bg-yellow-100 text-yellow-700': appointment.status === 'en attente',
+                                    'bg-green-100 text-green-700': appointment.status === 'approuvé',
+                                    'bg-red-100 text-red-700': appointment.status === 'décliné'
+                                }" class="py-2 px-4 rounded-full text-sm font-semibold" *ngIf="appointment.status === 'approuvé'">{{ 'intervenant-detail.availability.approved' | translate }}</span>
+                                <span [ngClass]="{
+                                    'bg-blue-100 text-blue-700': appointment.status === 'libre',
+                                    'bg-yellow-100 text-yellow-700': appointment.status === 'en attente',
+                                    'bg-green-100 text-green-700': appointment.status === 'approuvé',
+                                    'bg-red-100 text-red-700': appointment.status === 'décliné'
+                                }" class="py-2 px-4 rounded-full text-sm font-semibold" *ngIf="appointment.status === 'décliné'">{{ 'intervenant-detail.availability.declined' | translate }}</span>
                             </td>
                         </tr>
                     </tbody>

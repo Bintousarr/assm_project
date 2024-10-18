@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { DateFormatPipe } from '../../date-format.pipe'; 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
+
 @Component({
   selector: 'app-intervenant-detail',
   standalone: true,
@@ -196,5 +197,9 @@ intervant_id:any;
     this.router.navigate(['/calandar']);
 
 
+  }
+  downloadPdf() {
+    const userId = '123'; // ID de l'utilisateur
+    this.apppointmentService.downloadCalendar(this.storedUser.id);
   }
 }

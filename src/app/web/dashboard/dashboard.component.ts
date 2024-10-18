@@ -98,10 +98,14 @@ app_wait: Appointment[] = [];
   goToRdv(){
     this.router.navigate(['/mes-rendez-vous']);
 
-
   }
   gestionRdv(){
     this.router.navigate(['/dashboard/gestion-rv']);
    
+  }
+  downloadPdf() {
+    const userId = '123'; // ID de l'utilisateur
+    this.apppointmentService.downloadCalendar(this.user.id);
+    
   }
 }
