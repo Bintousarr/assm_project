@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import saveAs from 'file-saver';
 
 @Component({
   selector: 'app-sponsor-page',
@@ -13,6 +14,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class SponsorPageComponent {
   translate: TranslateService = inject(TranslateService)
 
+  // Variables pour contrôler le déroulement
+  isTextExpanded: boolean = false;
+  isESAExpanded: boolean = false;
+  isNASAExpanded: boolean = false;
+  isCNESExpanded: boolean = false;
+  isISROExpanded: boolean = false;
+  isORANGEExpanded: boolean = false;
+  isUVExpanded: boolean = false;
+
   ngOnInit() {
     this.translate.setDefaultLang('fr');
   }
@@ -21,14 +31,31 @@ export class SponsorPageComponent {
     this.translate.use(lang);
   }
   
-   // Variables pour contrôler le déroulement
-   isTextExpanded: boolean = false;
-   isESAExpanded: boolean = false;
-   isNASAExpanded: boolean = false;
-   isCNESExpanded: boolean = false;
-   isISROExpanded: boolean = false;
-   isORANGEExpanded: boolean = false;
-   isUVExpanded: boolean = false;
+  downloadFile() {
+    // Obtenir la langue actuelle
+    const currentLang = this.translate.currentLang;
+
+    // Déterminer quel fichier télécharger en fonction de la langue
+    let fileUrl = '';
+    let fileName = '';
+
+    if (currentLang === 'fr') {
+      fileUrl = '/assets/Sponsoring_Mass_2025_FR.pdf';
+      fileName = 'Sponsoring_Mass_2025_FR.pdf';
+    } else {
+      fileUrl = '/assets/Sponsoring_Mass_2025_EN.pdf';
+      fileName = 'Sponsoring_Mass_2025_EN.pdf';
+    }
+
+    // Télécharger le fichier
+    fetch(fileUrl)
+      .then(response => response.blob())
+      .then(blob => {
+        saveAs(blob, fileName);
+      })
+      .catch(error => console.error('Error downloading the file:', error));
+  }
+ 
  
    // Méthodes pour toggle les divs
    toggleText() {
@@ -78,6 +105,5 @@ export class SponsorPageComponent {
     }
   }
 
-
-
+ 
 }
