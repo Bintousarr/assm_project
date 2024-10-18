@@ -27,7 +27,7 @@
         "conference":"African Space Solutions Market (ASSM)",
         "date": "From 05 to 09 Mai 2025",
         "year": "2025",
-        "description": "Abidjan - Ivory Coast, Exhibition Centre",
+        "description": "Abidjan - Ivory Coast, Exhibition Center",
         "about": "About",
         "register": "REGISTER HERE",
         "desc1":"Space is not an option, but a necessity. Space technology is fundamental for African countries."
@@ -455,7 +455,6 @@
     "my-appointments": "My Appointments",
     "appointment-management": "Appointment Management",
     "calendar-management": "Calendar Management",
-    "download": "Download my planning",
     "logout": "Logout",
     "speaker-list":"LISTS OF SPEAKERS  ",
     "part-list":"PARTICIPANT LISTS",

@@ -85,7 +85,7 @@ export class ProgramComponent implements OnInit {
               type: translations['program.type1'],
               speakerImg: '../../../assets/affaire.jpg',
               speakerName: '',
-              title: 'Programme',
+              title: 'Program',
               description: translations['program.openingCeremony']
             }
           ]
@@ -113,7 +113,7 @@ export class ProgramComponent implements OnInit {
               description: translations['program.earthObservation']
             },
             {
-              type: translations['program.type4'],
+              type: translations['program.type3'],
               speakerImg: '../../../assets/diner.jpeg',
               speakerName: '',
               title:  translations['program.theme3'],
@@ -125,7 +125,7 @@ export class ProgramComponent implements OnInit {
           day: translations['day.Quatrième Jour'], 
           events: [
             {
-              type: translations['program.type5'],
+              type: translations['program.type4'],
               speakerImg: '../../../assets/galileo-satellite.jpg',
               speakerName: '',
               title:  translations['program.theme4'],
@@ -137,14 +137,14 @@ export class ProgramComponent implements OnInit {
           day:  translations['day.Cinquième Jour'], 
           events: [
             {
-              type: 'Vendredi 20 Juin 2025',
+              type: translations['program.type5'],
               speakerImg: '../../../assets/agriculture.jpeg',
               speakerName: '',
               title:  translations['program.theme5'],
               description: translations['program.astronomyExperiments']
             },
             {
-              type: 'Vendredi 20 Juin 2025',
+              type: translations['program.type5'],
               speakerImg: '../../../assets/tourisme.png',
               speakerName: '',
               title:  translations['program.theme6'],
