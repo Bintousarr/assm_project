@@ -16,6 +16,7 @@ export class SponsorPageComponent {
 
   // Variables pour contrôler le déroulement
   isTextExpanded: boolean = false;
+  isUAExpanded: boolean = false;
   isESAExpanded: boolean = false;
   isNASAExpanded: boolean = false;
   isCNESExpanded: boolean = false;
@@ -65,6 +66,12 @@ export class SponsorPageComponent {
    toggleESA() {
     this.isESAExpanded = !this.isESAExpanded;
   }
+
+  
+  toggleUA() {
+    this.isUAExpanded = !this.isUAExpanded;
+  }
+
 
    toggleNASA() {
      this.isNASAExpanded= !this.isNASAExpanded;

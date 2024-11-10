@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EspaceVisiteurComponent } from './espace-visiteur.component';
+import { GrandPublicComponent } from './grand-public.component';
 
-describe('EspaceVisiteurComponent', () => {
-  let component: EspaceVisiteurComponent;
-  let fixture: ComponentFixture<EspaceVisiteurComponent>;
+describe('GrandPublicComponent', () => {
+  let component: GrandPublicComponent;
+  let fixture: ComponentFixture<GrandPublicComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EspaceVisiteurComponent]
+      imports: [GrandPublicComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EspaceVisiteurComponent);
+    fixture = TestBed.createComponent(GrandPublicComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

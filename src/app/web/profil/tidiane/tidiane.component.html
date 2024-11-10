@@ -1,58 +1,30 @@
-<div class="bg-red-900 font-poppins p-8">
-  <div class="flex ml-20 items-center space-x-6 font-poppins">
-    <img src="../../../assets/tidiane.jpg" class="w-60 h-60 rounded-full object-cover" />
-    <div>
-      <h1 class="text-white text-4xl font-bold">{{ 'tidianeOuattara.name' | translate }}</h1>
-      <p class="text-white text-lg">{{ 'tidianeOuattara.position' | translate }}</p>
-    </div>
+<div class="">
+  <div class="mt-10">
+    <h2 class="text-3xl ml-12 font-bold mb-4">{{'orateur.block.titre1' | translate}}
+      <span class="block w-12 h-1 bg-red-800 mt-1"></span>
+    </h2>
   </div>
-</div>
 
-<div class="text-justify ml-20 font-poppins">
-  <div class="flex items-center">
-    <p class="text-gray-700 text-lg">
-      {{ 'tidianeOuattara.description' | translate }}
-    </p>
-    <div class="ml-40 w-80">
-      <img src="../../../../assets/AFRICAN_UNION.png" />
+  <div class="bg-red-900 font-poppins p-8 mt-20">
+    <div class="flex items-center space-x-6 font-poppins">
+      <img src="../../../assets/tidiane.jpg" class="w-60 h-60 rounded-full object-cover" />
+      <div>
+        <h1 class="text-white text-4xl font-bold">{{ 'tidianeOuattara.name' | translate }}</h1>
+        <p class="text-white text-lg">{{ 'tidianeOuattara.position' | translate }}</p>
+      </div>
     </div>
   </div>
-  
+
+  <div class="mt-20 flex justify-between items-start ml-20 font-poppins">
+    <div class="w-1/2 pr-10">
+      <p class="text-gray-700 text-lg text-justify">
+        {{ 'tidianeOuattara.description' | translate }}
+      </p>
+    </div>
+    <div class="w-2/2">
+      <img src="../../../../assets/AFRICAN_UNION.png" class="w-full h-full -mt-40" />
+    </div>
+  </div>
+
   <hr class="my-2 border-gray-300" />
-  <h2 class="text-xl font-bold mb-4 font-poppins mt-10">{{ 'tidianeOuattara.interventionDays' | translate }}</h2>
-  <div class="flex items-center space-x-8">
-    <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
-      <div class="bg-customBlue text-white px-6 py-3 flex items-center">
-        <div>
-          <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
-          </svg>
-          <h3 class="text-xl font-semibold">{{ 'tidianeOuattara.days.day2.title' | translate }}</h3>
-          <p class="ml-auto text-lg">{{ 'tidianeOuattara.days.day2.date' | translate }}</p>
-        </div>
-      </div>
-      
-      <div class="px-6 py-4">
-        <span class="block text-xl font-bold mb-2">{{ 'tidianeOuattara.days.day2.time' | translate }}</span>
-        <span class="text-black text-xl">{{ 'tidianeOuattara.days.day2.event' | translate }}</span>
-      </div>
-    </div>
-
-    <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
-      <div class="bg-customBlue text-white px-6 py-3 flex items-center">
-        <div>
-          <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
-          </svg>
-          <h3 class="text-xl font-semibold">{{ 'tidianeOuattara.days.day5.title' | translate }}</h3>
-          <p class="ml-auto text-lg">{{ 'tidianeOuattara.days.day5.date' | translate }}</p>
-        </div>
-      </div>
-      
-      <div class="px-6 py-4">
-        <span class="block text-xl font-bold mb-2">{{ 'tidianeOuattara.days.day5.time' | translate }}</span>
-        <span class="text-black text-xl">{{ 'tidianeOuattara.days.day5.event' | translate }}</span>
-      </div>
-    </div>
-  </div>
 </div>

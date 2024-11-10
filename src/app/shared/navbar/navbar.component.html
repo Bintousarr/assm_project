@@ -20,7 +20,6 @@
         <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
           <a [routerLink]="['marche']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t1' | translate}}</a>
           <a [routerLink]="['voir-marche']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t2' | translate}}</a>
-          <a [routerLink]="['espace-visiteur']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.t3' | translate}}</a>
         </div>
       </div>
 
@@ -30,8 +29,8 @@
         <a class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre3' | translate}}</a>
         <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 whitespace-nowrap">
           <a [routerLink]="['sponsor-page']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m1' | translate}}</a>
-          <a [routerLink]="['fournisseurs']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m2' | translate}}</a>
-          <a [routerLink]="['orateur']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m3' | translate}}</a>
+          <a [routerLink]="['personnalite']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m2' | translate}}</a>
+          <!-- <a [routerLink]="['orateur']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m3' | translate}}</a> -->
         </div>
       </div>
 
@@ -41,6 +40,7 @@
 
       <span class="text-white">|</span>
 
+   
       <div class="relative group">
         <a class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.desc1' | translate}}</a>
         <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
@@ -49,9 +49,18 @@
         </div>
       </div>
 
+      <!-- <a [routerLink]="['actualite']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.desc4' | translate}}</a> -->
+
       <span class="text-white">|</span>
 
-      <a [routerLink]="['actualite']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.desc4' | translate}}</a>
+      <div class="relative group">
+       <a  class="nav-item capitalize hover:text-red-600">VISITEUR</a>
+       <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
+        <a [routerLink]="['profesional-visitor']"class="block px-4 py-2 hover:bg-gray-200">Profesionnal</a>
+        <a [routerLink]="['grand-public']" class="block px-4 py-2 hover:bg-gray-200">Grand pubic</a>
+       </div>
+       
+      </div>
 
       <span class="text-white">|</span>
 

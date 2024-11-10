@@ -24,6 +24,22 @@
             <p class="text-gray-600 mt-2 text-lg">  {{'sponsor-block.titre5' | translate}}      </p>
           </div>
         </div>
+
+         <!-- Union Africaine -->
+         <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
+          <div class="flex items-center h-36">
+            <img src="../../../assets/AFRICAN_UNION.png" class="max-h-60 object-contain">
+            <button 
+              (click)="toggleUA()" 
+              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
+              <span class="text-xl font-bold">+</span>
+            </button>
+          </div>
+          <div *ngIf="isUAExpanded" class="transition-all duration-300 mt-2">
+            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.tit1' | translate}}   </p>
+            <p class="text-gray-600 mt-2 text-lg">{{'sponsor-block.tit2' | translate}}        </p>
+          </div>
+        </div>
       
         <!-- Agence Spatiale Européenne -->
         <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
