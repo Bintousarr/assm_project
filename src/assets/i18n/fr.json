@@ -13,9 +13,8 @@
       "t3": "Espace visiteurs",
       "titre2": "AGENDA",
       "titre3": "MASS ",
-      "m1": "Sponsors",
-      "m2": "Fournisseurs",
-      "m3": "Intervenants",
+      "m1": "Partenaires",
+      "m2": "Personnalités présentes",
       "desc1": "PARTICIPER",
       "desc2": "Informations de voyage",
       "desc3": "Informations pratiques",
@@ -34,12 +33,12 @@
     },
     "event-block": {
       "titre1":" Présentation de MASS",
-      "titre2": "OTIF SPACE AFRICA organise la première édition de son forum, intitulé MASS (Marché Africain des Solutions Spatiales),  qui se tiendra à Abidjan en Côte d’Ivoire, du 05 au 09 Mai 2025 au Parc des expositions. Le MASS est un marché unique et incontournable qui offre une plateforme de rencontre entre les acteurs du développement (secteurs public et privé), les organisations internationales, les organisations non gouvernementales, la société civile, le secteur académique et les fournisseurs de services spatiaux. Il s’agit de proposer des solutions spatiales concrètes pour résoudre les défis liés au développement socio-économique du continent africain.",
+      "titre2": "OTIF SPACE AFRICA organise le Marché Africain des Solutions Spatiales (MASS) à Abidjan en Côte d’Ivoire, du 05 au 09 Mai 2025, au Parc des expositions. Le MASS est un marché unique et incontournable qui offre une plateforme de rencontre entre toutes les parties prenantes du spatial :  le secteur public et privé, les organisations internationales, les organisations non gouvernementales, la société civile, le secteur académique et les fournisseurs de services spatiaux. Il s’agit de proposer des solutions spatiales concrètes pour résoudre les défis liés au développement socio-économique du continent africain.",
       "details": "Objectifs du MASS"
     },
     "event-details": {
         "titre1":"MASS",
-        "titre2": "L'objectif du MASS 2025 est de montrer des solutions pratiques afin de résoudre les problèmes connus dans divers domaines critiques pour le continent africain.",
+        "titre2": "L'objectif principal de MASS est de promouvoir les avancées technologiques et de favoriser les collaborations entre les gouvernements, les entreprises privées, les universités, et les organisations internationales dans le domaine des technologies spatiales.",
         "titre3": "Pourquoi participer à MASS ?",
         "titre4":"Compréhension et sensibilisation à la cause du spatial",
         "l1":"Comprendre les besoins, les défis et les enjeux auxquels sont confrontés les pays africains.",
@@ -57,7 +56,7 @@
        
       },
     "sponsor-block": {
-      "titre1": "Nos sponsors"
+      "titre1": "Nos Partenaires"
     },
     "compte-rebours": {
       "titre1": "Compte A Rebours de l'Evénement",
@@ -71,7 +70,7 @@
       "desc4": "Ateliers"
     },
     "orateur-block": {
-      "titre1": "Orateurs principaux",
+      "titre1": "Personnalités présentes",
       "titre2": "Dr TIDIANE OUATTARA",
       "titre3": "Prof SHERIF SEDGY",
       "titre4": "Mr ADAMA DIAWARA",
@@ -108,14 +107,14 @@
   },
   "sponsor": {
     "info-block": {
-      "desc": "Nos sponsors",
+      "desc": "Nos partenaires",
       "titre1": " OTIF 2024 BROCHURE",
       "titre2": "Pour plus d'informations, veuillez nous contactez"
     }
   },
   "orateur": {
     "block": {
-      "titr1": "Rencontrez nos Intervenants",
+      "titre1": "Personnalités présentes",
       "titre2": "OTIF Space Africa",
       "titre3": "Expert en Sciences Technologiques et Spatiales à la Commission de l'Union Africaine",
       "titre4": "Ministre de l’Enseignement Supérieur et de la Recherche scientifique",
@@ -123,11 +122,13 @@
     }
   },
   "sponsor-block":{
-      "titre1":"Les Sponsors",
-      "titre2":"Présentation des Sponsors",
-      "titre3":"Découvrez les sponsors qui soutiennent notre projet, et en savoir plus sur leur rôle et leur contribution.",
+      "titre1":"Les Partenaires",
+      "titre2":"Présentation des Partenaires",
+      "titre3":"Découvrez les partenaires qui soutiennent notre projet, et en savoir plus sur leur rôle et leur contribution.",
       "titre4":"REPUBLIQUE DE LA CÔTE D'IVOIRE",
       "titre5":" La Côte d'Ivoire est un pays d'Afrique de l'Ouest doté de stations balnéaires, de forêts tropicales et d'un patrimoine colonial français. ",
+      "tit1":"UNION AFRICAINE",
+      "tit2":" L'Union africaine (UA) est une organisation regroupant 55 États africains, fondée en 2002, visant à promouvoir l'unité, le développement, la paix et la sécurité en Afrique. Elle œuvre pour la coopération économique, la défense des droits de l'homme et la résolution des conflits sur le continent.",
       "titre6":"Agence Spatiale Européenne",
       "agence":"L'Agence spatiale européenne, souvent désignée par son sigle ESA, est une agence spatiale intergouvernementale fondée en 1975.",
       "titre7":"National Aeronautics and Space Administration",
@@ -140,13 +141,13 @@
       "orange":"Orange est un leader en télécommunications, avec une grande couverture 4G et de nombreux clients FTTH en Europe.",
       "titre11":"Université Félix Houphouët-Boigny",
       "uv":"L'université Félix-Houphouët-Boigny est une institution ivoirienne réputée en Afrique de l'Ouest pour ses nombreuses facultés.",
-      "titre12":"Pour devenir sponsor",
+      "titre12":"Pour devenir partenaire",
       "titre13":"Téléchargez ce fichier "
     
   },
   "fournisseur-block":{
       "block":{
-     "titre1":"Les Fournisseurs officiels",
+     "titre1":"Les Personnalités Présentes",
       "titre2":"Présentation des fournisseurs officiels",
       "titre3":"Découvrez nos fournisseurs officiels et leurs produits et services.",
       "titre4":"Président de la République",
@@ -201,7 +202,7 @@
         "call":"Téléphone",
         "pays":"Pays",
         "participation":"Sélectionnez le type de participation",
-        "part1":"Sponsor",
+        "part1":"Partenaire",
         "part2":"Animateur(trice)",
         "part3":"Intervenant",
         "part4":"Présentation par affiche",
@@ -214,11 +215,13 @@
     "marche-block":{
       "titre1":"MARCHE",
       "titre2":"Le marché des solutions spatiales",
-      "titre3":"Cette rubrique décrit les objectifs et les missions du marché, et présente les types de solutions spatiales qui y sont exposées, ainsi que leurs buts et avantages.",
+      "titre3":"Le Marché Africain des Solutions Spatiales (MASS) réunira des acteurs internationaux et locaux pour échanger autour des solutions innovantes dans les domaines de l'observation de la Terre, de la télécommunication par satellite, de la navigation, le positionnement,l’astronomie et les expériences scientifiques dans l’espace.",
+      "tit":"Les objectifs du MASS",
+      "tit1":"L'objectif principal de MASS est de promouvoir les avancées technologiques et de favoriser les collaborations entre les gouvernements, les entreprises privées, les universités, et les organisations internationales dans le domaine des technologies spatiales. Ce marché unique et innovant offre une plateforme de rencontre entre les porteurs de solutions concrètes, les organismes et les Etats en quête de solutions. Toutes les parties prenantes peuvent ainsi se rencontrer pour échanger et trouver des voies de collaboration au bénéfice du continent.",
       "titre4":"L’histoire du marché",
-      "titre5":" Une rétrospective sur la création et l’évolution du marché, avec des faits marquants et des changements significatifs au fil des années.",
+      "titre5":" Le MASS a eu pour origine un constant : les Etats Africains rencontrent ont des défis auxquelles le spatial peut apporter des réponses. Les acteurs du spatial fournissent de nombreuses solutions qui ont fait leur preuves. Aucune plateforme n'est dédié à la mise en relation de ces différents acteurs avec pour ambition de soutenir le developpement du continent Africain.",
       "titre6":"Les prix et concours spatiaux",
-      "titre7":"Détails sur les prix décernés et les concours organisés pendant le marché, y compris les critères de participation et les récompenses.",
+      "titre7":"Plusieurs prix seront decernées durant la semaine du MASS pour des personnalités exceptionnelles seront distinguées durant la semaine du MASS à travers des prix. Des personnalités qui ont apporté une contribution significative à l'avancement du secteur spatial. Ces prix contribueront à renforcer la communauté spatiale et à encourager la jeune génération.",
       "titre8":"Pourquoi participer au marché ?",
       "titre9":" Arguments et bénéfices pour les exposants et les visiteurs à participer, tels que les opportunités de réseautage, d’innovation, et de visibilité.",
       "titre10":"FAQ spécifique au marché",
@@ -226,38 +229,21 @@
     },
     "voir-marche":{
       "titre1":"À voir sur le marché",
-      "titre2":"Les différents marchés des solutions spatiales",
+      "titre2":"Le marché des solutions spatiales est compartimenté en 4 zones pour montrer tout le potentiel du spatial en terme de solutions :",
       "solution-block":{
         "desc1":"Observation de la Terre",
         "desc2":"Satellites d’Observation : Fournissent des images et des données pour des applications comme la gestion des ressources naturelles, l’agriculture de précision, la surveillance des catastrophes et la planification urbaine.",
         "desc3":" Services de Télédétection : Offrent des analyses de données pour des secteurs tels que l’environnement, les infrastructures, et la défense.",
-        "desc4":"Communications Spatiales",
+        "desc4":"Communication par satelitte",
         "desc5":"Constellations de Satellites : Déploient des réseaux de satellites pour offrir des services de communication à haute vitesse, y compris Internet à haut débit, même dans les zones éloignées.",
         "desc6":" Technologies de Communication : Comprennent les systèmes de communication par laser, les antennes à haute capacité et les protocoles de transmission avancés.",
         "desc7":"Navigation et Positionnement",
         "desc8":"Systèmes de Positionnement Global (GPS) : Offrent des services de localisation et de navigation pour divers secteurs, y compris le transport, l’agriculture et la logistique.",
         "desc9":" Systèmes de Navigation Spatiale : Incluent des réseaux de satellites comme le Galileo de l’UE et le GLONASS de la Russie pour des applications de précision.",
-        "desc10":"Exploration Spatiale",
+        "desc10":"Astronomie et expérience scientifique",
         "desc11":"Missions Planétaires : Incluent des missions d'exploration de Mars, des astéroïdes, et des lunes, avec des objectifs scientifiques et commerciaux.",
-        "desc12":"Technologies de Propulsion : Développent des systèmes avancés pour explorer plus loin dans le système solaire et au-delà.",
-        "desc13":"Satellites Commerciaux et D'Observation",
-        "desc14":"Lancements Commercials : Services de lancement pour des satellites privés et des charges utiles scientifiques.",
-        "desc15":"Satellites à Usage Spécifique : Conçus pour des applications spécifiques comme les satellites météorologiques, les satellites de télécommunications, et les satellites d’observation de la Terre.",
-        "desc16":"Défense et Sécurité",
-        "desc17":"Systèmes de Surveillance : Utilisés pour la surveillance des frontières, le renseignement militaire et la sécurité nationale.",
-        "desc18":"Technologies de Détection : Incluent les radars à synthèse d'ouverture (SAR) et les systèmes d'alerte précoce.",
-        "desc19":"Tourisme Spatial",
-        "desc20":"Vols Suborbitaux : Offrent des expériences de tourisme spatial avec des vols de courte durée en dehors de l’atmosphère terrestre.",
-        "desc21":" Séjours en Orbite : Proposent des séjours dans des stations spatiales privées ou des hôtels en orbite.",
-        "desc22":"Industrie Spatiale Commerciale",
-        "desc23":"Fabrication en Orbite : Développe des capacités pour la production de matériaux et de produits dans l’espace.",
-        "desc24":"Ressources Extraterrestres : Explore l'exploitation minière des astéroïdes et la collecte de ressources sur la Lune.",
-        "desc25":"Recherche et Développement",
-        "desc26":" Laboratoires Spatiaux : Effectuent des recherches scientifiques en microgravité et testent de nouvelles technologies dans l’espace.",
-        "desc27":"Partenariats Public-Privé : Collaborent entre agences spatiales gouvernementales et entreprises privées pour le développement de nouvelles missions et technologies.",
-        "desc28":"Services et Applications Innovantes",
-        "desc29":"Applications de Smart Cities : Intègrent des données spatiales pour la gestion intelligente des villes, des transports et des infrastructures.",
-        "desc30":"Solutions de Gestion des Risques : Utilisent des données spatiales pour anticiper et gérer les catastrophes naturelles et les crises humanitaires."
+        "desc12":"Technologies de Propulsion : Développent des systèmes avancés pour explorer plus loin dans le système solaire et au-delà."
+       
         
       },
       "titre3":"Liste des exposants et produits",
@@ -298,17 +284,38 @@
       "titre8":"Visiteurs handicapés",
       "titre9":"Informations spécifiques pour les visiteurs handicapés, garantissant une visite accessible et agréable."
     },
-    "about-block":{
-      "titre1":"Marché Africain des Solutions Spatiales ",
-      "titre2":" Du 05 au 09 Mai 2025 , Parc des Expositions",
-      "titre3":" Abidjan - Côte d'Ivoire",
-      "titre4":" Thème : Gestion des ressources naturelles et des catastrophes",
-      "titre5":" MASS   est   une   véritable   vitrine   de   solutions   éprouvées. Cette   première   édition   se concentrera sur la gestion optimale des ressources naturelles et des catastrophes et verra la participation de nombreuses entreprises et organisations dans ce domaine. ",
-      "titre6": "Insrivez-vous maintenant",
-      "titre7":"Visitez notre site",
-      "titre8": "Intervenants"
+  "about-block": {
+  "titre1": "Marché Africain des Solutions Spatiales",
+  "titre2": "Du 05 au 09 Mai 2025, Parc des Expositions",
+  "titre3": "Abidjan - Côte d'Ivoire",
+  "titre4": "OTIF : Une entreprise clé dans le domaine spatial et géospatial en Afrique",
+  "titre5": "OTIF est engagée à propulser le continent africain vers un avenir technologique et économique prospère. En tant que catalyseur, OTIF harmonise les différences entre les pays africains et favorise le développement spatial à travers le continent.",
+  "titre6": "Inscrivez-vous maintenant",
+  "titre7": "Visitez notre site",
+  "titre8": "Intervenants",
+  "titre9": "OTIF offre une gamme complète de services aux entreprises et institutions africaines pour soutenir leurs initiatives spatiales et géospatiales.",
+  "strong1": "Consulting",
+  "desc1": "En politique et stratégie spatiale",
+  "strong2": "Suivi et évaluation",
+  "desc2": "Assurance qualité",
+  "strong3": "Ingénierie",
+  "desc3": "Conception et ingénierie spatiale",
+  "strong4": "Mobilisation de ressources",
+  "desc4": "Recherche de financement",
+  "strong5": "Management",
+  "desc5": "Gestion de programmes et projets spatiaux",
+  "strong6": "Mise en réseau",
+  "desc6": "Établissement de connexions stratégiques",
+  "strong7": "Formation",
+  "desc7": "Montée en compétence",
+  "strong8": "Développement commercial",
+  "desc8": "Accompagnement personnalisé",
+  "strong9": "Lobbying",
+  "desc9": "Représentation des intérêts",
+  "strong10": "Veille",
+  "desc10": "Veille technologique et réglementaire"
+},
 
-    },
   "logistique": {
     "desc":"MASS",
     "titre": "INFORMATION LOGISTIQUE",
@@ -397,24 +404,11 @@
 
   "tidianeOuattara": {
     "name": "Tidiane OUATTARA",
-    "position": "Expert en Sciences Technologiques et Spatiales à la Commission de l'Union Africaine",
-    "description": "Dr. Tidiane Ouattara est un universitaire et chercheur ivoirien spécialisé dans le domaine des sciences. Il est professeur et a contribué de manière significative à la recherche et au développement académique en Côte d'Ivoire. Ses travaux portent sur divers aspects de la science et de la technologie, et il joue un rôle important dans l'avancement de l'enseignement supérieur et de la recherche dans le pays.",
-    "institutionAlt": "Logo de la Commission de l'Union Africaine",
-    "interventionDays": "Jour d'intervention",
-    "days": {
-      "day2": {
-        "title": "Jour 2",
-        "date": "05, Mai-2025",
-        "time": "10:00 - 12:00",
-        "event": "Discours"
-      },
-      "day5": {
-        "title": "Jour 5",
-        "date": "09, Mai-2025",
-        "time": "10:00 - 12:00",
-        "event": "Discours"
-      }
-    }
+    "position": " Président du Conseil spatial Africain",
+    "description": "Le Dr Tidiane Ouattara a obtenu un doctorat et un master en télédétection et systèmes d'information géographique (SIG) de l'Université de Sherbrooke (Canada) en 2001 et 1996, respectivement. Il détient également un master en géographie physique de l'Université de Cocody-Abidjan (Côte d'Ivoire). Le Dr Ouattara a suivi une formation en leadership pour les cadres de la fonction publique fédérale canadienne. Actuellement, il dirige la Division des sciences, de la technologie et de l'espace au Département de l'éducation, des sciences, de la technologie et de l'innovation de la Commission de l'Union africaine et a récemment été nommé président du Conseil spatial africain. Il a acquis une vaste expérience en relations internationales et développement des affaires, recherche et développement (R&D), élaboration de politiques stratégiques et gestion de programmes liés à l'environnement, aux ressources naturelles, aux sciences et à la technologie. Il est actuellement président du Conseil spatial africain et de l'Agence spatiale africaine.",
+    "institutionAlt": "Logo de la Commission de l'Union Africaine"
+    
+   
   },
 
   "day": {

@@ -56,8 +56,16 @@ export const routes: Routes = [
           import('./web/voir-marche/voir-marche.component').then((c) => c.VoirMarcheComponent)
       },
       {
-        path: 'espace-visiteur', loadComponent: () => 
-          import('./web/espace-visiteur/espace-visiteur.component').then((c) => c.EspaceVisiteurComponent)
+        path: 'exposant', loadComponent: () => 
+          import('./web/exposant/exposant.component').then((c) => c.ExposantComponent)
+      },
+      {
+        path: 'profesional-visitor', loadComponent: () => 
+          import('./web/profesional-visitor/profesional-visitor.component').then((c) => c.ProfesionalVisitorComponent)
+      },
+      {
+        path: 'grand-public', loadComponent: () => 
+          import('./web/grand-public/grand-public.component').then((c) => c.GrandPublicComponent)
       },
       {
         path: 'profil/fabrice', loadComponent: () => 
@@ -80,7 +88,7 @@ export const routes: Routes = [
           import('./web/actualite/actualite.component').then((c) => c.ActualiteComponent)
       },
       {
-        path: 'fournisseurs', loadComponent: () => 
+        path: 'personnalite', loadComponent: () => 
           import('./web/fournisseurs/fournisseurs.component').then((c) => c.FournisseursComponent)
       }, 
       {
@@ -92,7 +100,7 @@ export const routes: Routes = [
           import('../app/login/login.component').then((c) => c.LoginComponent)
       },  
       {
-        path: 'test', loadComponent: () => 
+        path: 'reservation', loadComponent: () => 
           import('../app/inscription/inscription.component').then((c) => c.InscriptionComponent)
       },  
       {
