@@ -10,7 +10,8 @@ import 'jspdf-autotable';
 })
 export class ApppointmentService {
 
-  private apiUrl = 'https://mass.otif-africa-space.com/api/public/api.php'; // URL de l'API; // URL de votre fichier PHP
+  //private apiUrl = 'https://mass.otif-africa-space.com/api/public/api.php'; // URL de l'API; // URL de votre fichier PHP
+  private apiUrl = 'https://mass.ci/api/public/api.php'; // URL de l'API; // URL de votre fichier PHP
   //private apiUrl = 'http://localhost:8000/api.php'; // URL de l'API; // URL de votre fichier PHP
 
   constructor(private http: HttpClient) { }
