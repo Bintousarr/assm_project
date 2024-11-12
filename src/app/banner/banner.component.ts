@@ -62,7 +62,7 @@ export class BannerComponent implements OnInit, OnDestroy {
           aboutText: translations['accueil.banner-block.about'],
           registerText: translations['accueil.banner-block.register'],
           desc1: translations['accueil.banner-block.desc1'],
-          image: '../../../assets/slide.jpeg'
+          image: '../../../assets/Slider1.jpg'
         },
         {
           conference: translations['accueil.banner-block.desc1'],

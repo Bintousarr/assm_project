@@ -1,236 +1,213 @@
-<div class=" bg-red-800 mt-10 font-poppins p-8 max-w-full mx-auto">
-    <h1 class="text-center font-bold text-2xl mb-8 animate-pulse text-customBlue">Réservation</h1>
-    <div class="w-20 h-1 bg-white mx-auto mb-12"></div>
+<div class="bg-red-800 mt-10 font-poppins p-8 max-w-full mx-auto">
+  <h1 class="text-center font-bold text-2xl mb-8 animate-pulse text-customBlue">
+    {{ 'reservation.reservation' | translate }}
+  </h1>
+  <div class="w-20 h-1 bg-white mx-auto mb-12"></div>
 
-  
-    <form class="bg-white max-w-5xl mx-auto p-10 rounded-lg">
-      <fieldset class="border p-4 mb-4">
-        <legend class="font-semibold text-customBlue">VOS COORDONNÉES :</legend>
-        <div class="grid grid-cols-2 gap-4 text-lg">
-          <div>
-            <label for="titre">Titre</label>
-            <select id="titre" class="w-full border rounded-md p-2">
-              <option value="" disabled>Sélectionner</option>
-              <option value="Mr">Mr</option>
-              <option value="Mme">Mme</option>
-            </select>
-          </div>
-          <div>
-            <label for="nom">Nom du participant</label>
-            <input id="nom" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="prenom">Prénom du participant</label>
-            <input id="prenom" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="courriel">Courriel</label>
-            <input id="courriel" type="email" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="typeOrganisation">Type d'organisation</label>
-            <input id="typeOrganisation" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="organisation">Organisation ou société</label>
-            <input id="organisation" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="telephone1">Téléphone</label>
-            <input id="telephone1" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="telephone2">Téléphone 2</label>
-            <input id="telephone2" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="adresse">Adresse</label>
-            <input id="adresse" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="adresseComplement">Adresse complémentaire</label>
-            <input id="adresseComplement" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="codePostal">Code postal</label>
-            <input id="codePostal" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="ville">Ville</label>
-            <input id="ville" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-          <div>
-            <label for="region">Sélectionner région ou ville</label>
-            <select id="region" class="w-full border rounded-md p-2">
-              <option value="" disabled>Sélectionner</option>
-              <option value="region1">Région 1</option>
-              <option value="region2">Région 2</option>
-            </select>
-          </div>
-        </div>
-      </fieldset>
-  
-      <fieldset class="border p-4 mb-4">
-        <legend class="font-semibold text-customBlue">FORMULE CHOISIE ET PARTICIPATION :</legend>
-  
-        <div class="grid grid-cols-2 gap-4 text-lg">
-          <div>
-            <label for="formule">Formule choisie</label>
-            <select id="formule" class="w-full border rounded-md p-2">
-              <option value="" disabled>Sélectionner</option>
-              <option value="1">1 jour plein tarif</option>
-              <option value="2">2 jours plein tarif</option>
-            </select>
-          </div>
-  
-          <div>
-            <label for="participationDate">Participation le</label>
-            <input id="participationDate" type="date" class="w-full border rounded-md p-2"/>
-          </div>
-  
-          <div>
-            <label for="dejeuner">Déjeuner inclus ?</label>
-            <select id="dejeuner" class="w-full border rounded-md p-2">
-              <option value="oui">Oui</option>
-              <option value="non">Non</option>
-            </select>
-          </div>
-        </div>
-      </fieldset>
-  
-      <fieldset class="border p-4 mb-4">
-        <legend class="font-semibold text-customBlue">OPTION DE PAIEMENT :</legend>
-  
-        <div class="text-lg"> 
-          <label for="paiementOption">Option de paiement :</label>
-          <select id="paiementOption" class="w-full border rounded-md p-2">
-            <option value="" disabled>Sélectionner</option>
-            <option value="carte">Carte de crédit</option>
-            <option value="virement">Virement bancaire</option>
-            <option value="virement">Wave </option>
-
+  <form class="bg-white max-w-5xl mx-auto p-10 rounded-lg">
+    <fieldset class="border p-4 mb-4">
+      <legend class="font-semibold text-customBlue">{{ 'reservation.your_details' | translate }}</legend>
+      <div class="grid grid-cols-2 gap-4 text-lg">
+        <div>
+          <label for="titre">{{ 'reservation.title' | translate }}</label>
+          <select id="titre" class="w-full border rounded-md p-2">
+            <option value="" disabled>{{ 'reservation.select_title' | translate }}</option>
+            <option value="Mr">{{ 'reservation.mr' | translate }}</option>
+            <option value="Mme">{{ 'reservation.mme' | translate }}</option>
           </select>
         </div>
-      </fieldset>
-  
-      <fieldset class="border p-4 mb-4">
-        <legend class="font-semibold text-customBlue">INFORMATIONS COMPLÉMENTAIRES :</legend>
-  
-        <div class="grid grid-cols-2 gap-4 text-lg">
-          <div>
-            <label for="facturationAdresse">Adresse pour la facturation</label>
-            <input id="facturationAdresse" type="text" class="w-full border rounded-md p-2"/>
-          </div>
-  
-          <div>
-            <label for="courrielAdministratif">Courriel d'édition administratif</label>
-            <input id="courrielAdministratif" type="email" class="w-full border rounded-md p-2"/>
-          </div>
-  
-          <div class="col-span-2">
-            <label for="autresInfos">Autres informations pertinentes</label>
-            <textarea id="autresInfos" class="w-full border rounded-md p-2"></textarea>
-          </div>
+        <div>
+          <label for="nom">{{ 'reservation.name' | translate }}</label>
+          <input id="nom" type="text" class="w-full border rounded-md p-2"/>
         </div>
-      </fieldset>
-  
-      <div class="mb-4 text-lg">
-        <label>
-          <input type="checkbox"/>
-          J'accepte les Conditions générales 
-        </label>
+        <div>
+          <label for="prenom">{{ 'reservation.firstname' | translate }}</label>
+          <input id="prenom" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="courriel">{{ 'reservation.email' | translate }}</label>
+          <input id="courriel" type="email" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="typeOrganisation">{{ 'reservation.organization_type' | translate }}</label>
+          <input id="typeOrganisation" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="organisation">{{ 'reservation.organization' | translate }}</label>
+          <input id="organisation" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="telephone1">{{ 'reservation.phone' | translate }}</label>
+          <input id="telephone1" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="telephone2">{{ 'reservation.phone2' | translate }}</label>
+          <input id="telephone2" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="adresse">{{ 'reservation.address' | translate }}</label>
+          <input id="adresse" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="adresseComplement">{{ 'reservation.address_complement' | translate }}</label>
+          <input id="adresseComplement" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="codePostal">{{ 'reservation.postal_code' | translate }}</label>
+          <input id="codePostal" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="ville">{{ 'reservation.city' | translate }}</label>
+          <input id="ville" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="region">{{ 'reservation.select_region' | translate }}</label>
+          <select id="region" class="w-full border rounded-md p-2">
+            <option value="" disabled>{{ 'reservation.select_region' | translate }}</option>
+            <option value="region1">Région 1</option>
+            <option value="region2">Région 2</option>
+          </select>
+        </div>
       </div>
-  
-      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 rounded-md">
-        JE VALIDE
-      </button>
-    </form>
+    </fieldset>
+
+    <fieldset class="border p-4 mb-4">
+      <legend class="font-semibold text-customBlue">{{ 'reservation.chosen_plan_participation' | translate }}</legend>
+      <div class="grid grid-cols-2 gap-4 text-lg">
+        <div>
+          <label for="formule">{{ 'reservation.chosen_plan' | translate }}</label>
+          <select id="formule" class="w-full border rounded-md p-2">
+            <option value="" disabled>{{ 'reservation.select_title' | translate }}</option>
+            <option value="1">{{ 'reservation.full_day' | translate }}</option>
+            <option value="2">{{ 'reservation.two_days' | translate }}</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="participationDate">{{ 'reservation.participation_date' | translate }}</label>
+          <input id="participationDate" type="date" class="w-full border rounded-md p-2"/>
+        </div>
+
+        <div>
+          <label for="dejeuner">{{ 'reservation.lunch_included' | translate }}</label>
+          <select id="dejeuner" class="w-full border rounded-md p-2">
+            <option value="oui">Oui</option>
+            <option value="non">Non</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="border p-4 mb-4">
+      <legend class="font-semibold text-customBlue">{{ 'reservation.payment_option' | translate }}</legend>
+      <div class="text-lg">
+        <label for="paiementOption">{{ 'reservation.payment_option' | translate }}:</label>
+        <select id="paiementOption" class="w-full border rounded-md p-2">
+          <option value="" disabled>{{ 'reservation.select_title' | translate }}</option>
+          <option value="credit_card">{{ 'reservation.credit_card' | translate }}</option>
+          <option value="bank_transfer">{{ 'reservation.bank_transfer' | translate }}</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset class="border p-4 mb-4">
+      <legend class="font-semibold text-customBlue">{{ 'reservation.additional_info' | translate }}</legend>
+      <div class="grid grid-cols-2 gap-4 text-lg">
+        <div>
+          <label for="adresseFacturation">{{ 'reservation.billing_address' | translate }}</label>
+          <input id="adresseFacturation" type="text" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="emailEdition">{{ 'reservation.administrative_email' | translate }}</label>
+          <input id="emailEdition" type="email" class="w-full border rounded-md p-2"/>
+        </div>
+        <div>
+          <label for="autresInformations">{{ 'reservation.other_info' | translate }}</label>
+          <textarea id="autresInformations" class="w-full border rounded-md p-2"></textarea>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="flex justify-between items-center text-lg mt-4">
+      <label class="flex items-center">
+        <input type="checkbox" id="acceptTerms" class="mr-2" />
+        {{ 'reservation.accept_terms' | translate }}
+      </label>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">{{ 'reservation.submit' | translate }}</button>
+    </div>
+  </form>
 </div>
 
 <div class="container mx-auto p-8 mt-10 font-popins">
-    <div class="ml-10">
-      <h3 class="text-blue-500 text-3xl font-bold border-b-2 border-blue-300 pb-2 text-center">TARIFS</h3>
-    </div>
-  
-    <div class="flex justify-center items-start font-poppins space-x-4 mt-10">
-      <div class="relative p-20 bg-blue-700 text-white text-center rounded-md w-80 h-auto shadow-lg group">
-        <h2 class="text-4xl font-bold font-poppins">1 Jour</h2>
-  
-        <div class="absolute inset-0 bg-white text-red-700  bg-opacity-90 p-4 text-left opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-            <ul class="list-none text-sm mt-6">
-              <li class="flex items-center mb-2">
-                <span class=" mr-2">✔️</span> Étudiant : 49,50€ TTC
-              </li>
-              <li class="flex items-center mb-2">
-                <span class=" mr-2">✔️</span> Sponsor : 121,00€ TTC
-              </li>
-              <li class="flex items-center mb-2">
-                <span class=" mr-2">✔️</span> Membre Afigéo : 154,00€ TTC
-              </li>
-              <li class="flex items-center">
-                <span class=" mr-2">✔️</span> Plein Tarif : 192,50€ TTC
-              </li>
-            </ul>
-          </div>
-      </div>
-  
-      <div class="relative p-20 bg-blue-700 text-white text-center rounded-md w-80 h-auto shadow-lg group">
-        <h2 class="text-4xl font-bold">2 Jours</h2>
-  
-        <div class="absolute inset-0 bg-white text-red-700  bg-opacity-90 p-4 text-left opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-          <ul class="list-none text-sm mt-6">
-            <li class="flex items-center mb-2">
-              <span class=" mr-2">✔️</span> Étudiant : 49,50€ TTC
-            </li>
-            <li class="flex items-center mb-2">
-              <span class=" mr-2">✔️</span> Sponsor : 121,00€ TTC
-            </li>
-            <li class="flex items-center mb-2">
-              <span class=" mr-2">✔️</span> Membre Afigéo : 154,00€ TTC
-            </li>
-            <li class="flex items-center">
-              <span class=" mr-2">✔️</span> Plein Tarif : 192,50€ TTC
-            </li>
-          </ul>
-        </div>
+  <div class="ml-10">
+    <h3 class="text-blue-500 text-3xl font-bold border-b-2 border-blue-300 pb-2 text-center">{{ 'tarif.title' | translate }}</h3>
+  </div>
+
+  <div class="flex justify-center items-start font-poppins space-x-4 mt-10">
+    <div class="relative p-20 bg-blue-700 text-white text-center rounded-md w-80 h-auto shadow-lg group">
+      <h2 class="text-4xl font-bold font-poppins">{{ 'tarif.day_1' | translate }}</h2>
+      <div class="absolute inset-0 bg-white text-red-700  bg-opacity-90 p-4 text-left opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
+        <ul class="list-none text-sm mt-6">
+          <li class="flex items-center mb-2">
+            <span class="mr-2">✔️</span> {{ 'tarif.student_price' | translate }}
+          </li>
+          <li class="flex items-center mb-2">
+            <span class="mr-2">✔️</span> {{ 'tarif.sponsor_price' | translate }}
+          </li>
+          <li class="flex items-center mb-2">
+            <span class="mr-2">✔️</span> {{ 'tarif.member_price' | translate }}
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2">✔️</span> {{ 'tarif.full_price' | translate }}
+          </li>
+        </ul>
       </div>
     </div>
 
-    <div class="mt-16 font-poppins">
-        <h4 class="text-xl font-bold text-blue-700">Ces tarifs comprennent :</h4>
-        <ul class="list-disc pl-5 mt-4 leading-relaxed text-lg">
-          <li>L'accès à l'espace exposants et à l'ensemble des sessions plénières et ateliers</li>
-          <li>
-            La prise en charge des collations et déjeuners pour le(s) jour(s) choisi(s) ainsi que le cocktail dinatoire du 19/09 au soir 
-            <span class="text-red-600 font-bold">(COMPLET)</span>, seul le tarif "Étudiant" n'inclut pas la prise en charge du cocktail
+    <div class="relative p-20 bg-blue-700 text-white text-center rounded-md w-80 h-auto shadow-lg group">
+      <h2 class="text-4xl font-bold">{{ 'tarif.day_2' | translate }}</h2>
+      <div class="absolute inset-0 bg-white text-red-700 bg-opacity-90 p-4 text-left opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
+        <ul class="list-none text-sm mt-6">
+          <li class="flex items-center mb-2">
+            <span class="mr-2">✔️</span> {{ 'tarif.student_price' | translate }}
           </li>
-          <li>
-            Un tarif réduit pour les <span class="font-bold text-blue-700">membres de l'Afigéo</span>
+          <li class="flex items-center mb-2">
+            <span class="mr-2">✔️</span> {{ 'tarif.sponsor_price' | translate }}
           </li>
-          <li>Une TVA applicable de 10%</li>
-        </ul>
-        <p class="mt-4 leading-relaxed text-lg">
-          Votre inscription à MASS ne sera effective qu'une fois validée par l'équipe d'organisation de l'événement.
-        </p>
-      </div>
-    
-      <div class="mt-10 flex flex-col items-center justify-center font-poppins">
-        <h4 class="text-xl font-bold text-blue-700 text-center">CONDITIONS D'ANNULATION</h4>
-        <div class="w-16">
-          <hr class="border-t-2 border-blue-500 my-1">
-        </div>
-        <p class=" text-lg mt-2 ">
-          En cas d'annulation, votre billet peut être remboursé à hauteur de :
-        </p>
-        <ul class="list-disc pl-5 mt-2 leading-relaxed text-lg">
-          <li>100 % à 1 mois et demi de l’événement (01/08)</li>
-          <li>50 % à 2 semaines de l’événement (05/09)</li>
-          <li>
-            Passé ce délai, aucune demande de remboursement n’est acceptée (sauf cas de force majeure obligeant l’organisateur à annuler ou reporter l’événement).
+          <li class="flex items-center mb-2">
+            <span class="mr-2">✔️</span> {{ 'tarif.member_price' | translate }}
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2">✔️</span> {{ 'tarif.full_price' | translate }}
           </li>
         </ul>
       </div>
-      
+    </div>
   </div>
-  
+
+  <div class="mt-16 font-poppins">
+    <h4 class="text-xl font-bold text-blue-700">{{ 'tarif.includes' | translate }}</h4>
+    <ul class="list-disc pl-5 mt-4 leading-relaxed text-lg">
+      <li>{{ 'tarif.exhibitor_access' | translate }}</li>
+      <li>{{ 'tarif.catering' | translate }}</li>
+      <li>{{ 'tarif.discounted_rate' | translate }}</li>
+      <li>{{ 'tarif.vat' | translate }}</li>
+    </ul>
+    <p class="mt-4 leading-relaxed text-lg">{{ 'tarif.effective_registration' | translate }}</p>
+  </div>
+
+  <div class="mt-10 flex flex-col items-center justify-center font-poppins">
+    <h4 class="text-xl font-bold text-blue-700 text-center">{{ 'tarif.cancellation_policy' | translate }}</h4>
+    <div class="w-16">
+      <hr class="border-t-2 border-blue-500 my-1">
+    </div>
+    <p class="text-lg mt-2">{{ 'tarif.refund_100' | translate }}</p>
+    <ul class="list-disc pl-5 mt-2 leading-relaxed text-lg">
+      <li>{{ 'tarif.refund_100' | translate }}</li>
+      <li>{{ 'tarif.refund_50' | translate }}</li>
+      <li>{{ 'tarif.no_refund' | translate }}</li>
+    </ul>
+  </div>
+</div>
+
 

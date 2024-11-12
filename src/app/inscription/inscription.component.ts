@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-inscription',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule, TranslateModule],
   templateUrl: './inscription.component.html',
   styleUrl: './inscription.component.scss'
 })
@@ -47,4 +48,15 @@ export class InscriptionComponent {
       console.log('Formulaire non valide');
     }
   }
+
+  translate: TranslateService = inject(TranslateService)
+
+  ngOnInit() {
+    this.translate.setDefaultLang('en');
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
+  
 }

@@ -19,7 +19,7 @@
   </div>
 
   <!-- Main Bar -->
-  <div class="main-bar flex flex-col lg:flex-row items-center justify-between text-red-700 mt-4 py-8 px-4 sm:px-16">
+  <div class="main-bar flex flex-col lg:flex-row items-center justify-between text-red-700 mt-4 py-8 px-2 sm:px-10">
     <!-- Logo -->
     <div class="logo flex items-center mb-4 lg:mb-0">
       <img src="../../../assets/Logo_mass.png" alt="OTIFFF" class="h-20 w-40" />
@@ -38,7 +38,7 @@
         </ng-container>
     
         <ng-template #englishTitle>
-          <span class="text-red-700">A</span><span class="text-black">SSM</span> -
+          <span class="text-red-700">M</span><span class="text-black">ASS</span> -
 
           <span class="text-red-700">A</span><span class="text-black">frican</span>
           <span class="text-red-700"> S</span><span class="text-black">pace</span>
@@ -50,15 +50,15 @@
     
 
     <!-- Contact Info -->
-    <div class="hidden contact-info sm:flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6">
+    <div class="hidden contact-info sm:flex flex-col lg:flex-row items-center space-y-1 lg:space-y-0 lg:space-x-10">
       <div class="flex items-center">
         <i class="material-icons mr-2">email</i>
-        <div class="text-center lg:text-left">
-          <span class="font-bold block">contact&#64;otif-africa-space.com</span>
+        <div class="text-center ">
+          <span class="font-bold block">contact&#64;mass.ci</span>
           <span class="text-sm block">{{'accueil.header-block.contact' | translate}}</span>
         </div>
       </div>
-      <div class="flex items-center">
+      <!-- <div class="flex items-center">
         <i class="material-icons mr-2">phone</i>
         <div class="text-center lg:text-left">
           <span class="font-bold block">
@@ -71,11 +71,11 @@
           <i class="fab fa-whatsapp mr-2 text-green-400 text-2xl"></i> WhatsApp
         </button>
       </div>
-
+ -->
       <!-- Action Buttons -->
       <div class="flex flex-col items-center space-y-2 lg:space-y-0 lg:space-x-4 lg:flex-col">
-        <a [routerLink]="['register']" class="bg-red-800 text-white py-2 px-4 rounded-lg m-2" *ngIf="!isLoggedIn">{{'accueil.header-block.inscription' | translate}}</a>
-        <a [routerLink]="['login']" class="bg-red-800 text-white py-2 px-4 rounded-lg " *ngIf="!isLoggedIn">{{'accueil.header-block.connexion' | translate}}</a>
+        <!-- <a [routerLink]="['register']" class="bg-red-800 text-white py-2 px-4 rounded-lg m-2" *ngIf="!isLoggedIn">{{'accueil.header-block.inscription' | translate}}</a> -->
+        <a [routerLink]="['login']" class="bg-red-800 text-white py-2 px-10 rounded-lg " *ngIf="!isLoggedIn">{{'accueil.header-block.connexion' | translate}}</a>
       </div>
     </div>
   </div>

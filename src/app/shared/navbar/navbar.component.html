@@ -1,11 +1,8 @@
 <div class="bg-customBlue font-poppins text-white w-full">
-  <!-- Barre de navigation avec le bouton hamburger en mode mobile -->
   <div
     class="container w-full mx-auto flex items-center justify-between py-4 relative">
-    <!-- Bouton hamburger en mode mobile -->
     <button (click)="toggleMenu()"
       class="text-white lg:hidden focus:outline-none relative z-20">
-      <!-- Icône hamburger -->
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
         viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -13,7 +10,6 @@
       </svg>
     </button>
 
-    <!-- Menu normal en mode desktop -->
     <nav class="hidden lg:flex items-center space-x-2 sm:space-x-4">
       <div class="relative group">
         <a [routerLink]="['']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre1' | translate}}</a>
@@ -28,43 +24,29 @@
       <div class="relative group">
         <a class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre3' | translate}}</a>
         <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 whitespace-nowrap">
+          <a [routerLink]="['program']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.titre2' | translate}}</a>
           <a [routerLink]="['sponsor-page']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m1' | translate}}</a>
           <a [routerLink]="['personnalite']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m2' | translate}}</a>
-          <!-- <a [routerLink]="['orateur']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m3' | translate}}</a> -->
-        </div>
-      </div>
-
-      <span class="text-white">|</span>
-
-      <a [routerLink]="['program']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre2' | translate}}</a>
-
-      <span class="text-white">|</span>
-
-   
-      <div class="relative group">
-        <a class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.desc1' | translate}}</a>
-        <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
           <a [routerLink]="['accomodation']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.desc2' | translate}}</a>
-          <a [routerLink]="['accueil']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.desc3' | translate}}</a>
+
         </div>
       </div>
-
-      <!-- <a [routerLink]="['actualite']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.desc4' | translate}}</a> -->
 
       <span class="text-white">|</span>
 
       <div class="relative group">
-       <a  class="nav-item capitalize hover:text-red-600">VISITEUR</a>
-       <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20  whitespace-nowrap">
-        <a [routerLink]="['profesional-visitor']"class="block px-4 py-2 hover:bg-gray-200">Profesionnal</a>
-        <a [routerLink]="['grand-public']" class="block px-4 py-2 hover:bg-gray-200">Grand pubic</a>
-       </div>
-       
+        <a [routerLink]="['exposant']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.desc4' | translate}}</a>
       </div>
 
       <span class="text-white">|</span>
 
+      <div class="relative group">
+       <a [routerLink]="['profesional-visitor']"  class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.t3' | translate}}</a>
+      </div>
+
+      <span class="text-white">|</span>
       <a [routerLink]="['contact']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre4' | translate}}</a>
+
     </nav>
   </div>
 
@@ -99,8 +81,7 @@
               class="block hover:text-red-600">{{'accueil.navbar-block.t1' | translate}}</a></li>
           <li><a [routerLink]="['voir-marche']"
               class="block hover:text-red-600">{{'accueil.navbar-block.t2' | translate}}</a></li>
-          <li><a [routerLink]="['espace-visiteur']"
-              class="block hover:text-red-600">{{'accueil.navbar-block.t3' | translate}}</a></li>
+                    
         </ul>
       </li>
       <li class="relative group">
@@ -110,36 +91,23 @@
         </button>
         <ul *ngIf="activeDropdown === 'mass-mobile'"
           class="bg-customBlue text-white mt-2 space-y-2 pl-4">
-          <li><a [routerLink]="['sponsor-page']"
+          <li><a [routerLink]="['program']"
+            class="capitalize hover:text-red-600">{{'accueil.navbar-block.titre2' | translate}}</a></li>
+                 <li><a [routerLink]="['sponsor-page']"
               class="block hover:text-red-600">{{'accueil.navbar-block.m1' | translate}}</a></li>
           <li><a [routerLink]="['fournisseurs']"
               class="block hover:text-red-600">{{'accueil.navbar-block.m2' | translate}}</a></li>
-          <li><a [routerLink]="['orateur']"
-              class="block hover:text-red-600">{{'accueil.navbar-block.m3' | translate}}</a></li>
+          <li><a [routerLink]="['accomodation']"
+              class="block hover:text-red-600">{{'accueil.navbar-block.desc2' | translate}}</a></li>
         </ul>
       </li>
       
-      <li><a [routerLink]="['program']"
-        class="capitalize hover:text-red-600">{{'accueil.navbar-block.titre2' | translate}}</a></li>
-        
-      <li><a [routerLink]="['program']"
-        class="capitalize hover:text-red-600">{{'accueil.navbar-block.desc1' | translate}}</a></li>
+      <li><a [routerLink]="['exposant']"
+        class="capitalize hover:text-red-600">{{'accueil.navbar-block.desc4' | translate}}</a></li>
       <!-- <li><a [routerLink]="['information']" class="capitalize hover:text-red-600">Information</a></li> -->
-      <li class="relative group">
-        <button (click)="toggleDropdown('information')"
-          class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">Information
-          <span>&#x25BC;</span>
-        </button>
-        <ul *ngIf="activeDropdown === 'information'"
-          class="bg-customBlue text-white mt-2 space-y-2 pl-4">
-          <li><a [routerLink]="['accomodation']"
-              class="block hover:text-red-600">{{'accueil.navbar-block.desc2' | translate}}</a></li>
-          <li><a [routerLink]="['accueil']"
-              class="block hover:text-red-600">{{'accueil.navbar-block.desc3' | translate}}</a></li>
-        </ul>
-      </li>
-      <li><a [routerLink]="['actualite']"
-          class="capitalize hover:text-red-600">{{'accueil.navbar-block.desc4' | translate}}</a></li>
+      <li><a [routerLink]="['profesional-visitor']" 
+        class="capitalize hover:text-red-600">{{'accueil.navbar-block.t3' | translate}}</a></li>
+
       <li><a [routerLink]="['contact']"
           class="capitalize hover:text-red-600">{{'accueil.navbar-block.titre4' | translate}}</a></li>
     </ul>
