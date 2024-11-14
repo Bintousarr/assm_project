@@ -14,7 +14,7 @@
         "titre2": "Agenda",
         "titre3": "MASS",
         "m1":"Partners",
-        "m2":"Present personalities",
+        "m2":"Key Personalities at MASS",
         "m3":"Speakers",
         "desc1": "PARTICIPATE",
         "desc2": "Travel information",
@@ -25,7 +25,7 @@
       },
       "banner-block": {
         "conference":"African Space Solutions Market (MASS)",
-        "date": "From 05 to 09 Mai 2025",
+        "date": "From 05 to 09 May 2025",
         "year": "2025",
         "description": "Abidjan - Ivory Coast, Exhibition Center",
         "about": "About",
@@ -35,7 +35,7 @@
       "event-block": {
         "titre1":"Presentation of MASS",
         "titre2": "OTIF SPACE AFRICA is organizing the African Space Solutions Market (MASS) in Abidjan, Ivory Coast, from May 5 to May 9, 2025, at the Exhibition Park. MASS is a unique and essential market offering a meeting platform for all space sector stakeholders: the public and private sectors, international organizations, non-governmental organizations, civil society, the academic sector, and space service providers. The aim is to present concrete space solutions to address the challenges related to Africa’s socio-economic development. ",
-        "details": "Objectives of the MASS"
+        "details": "Goals of MASS"
       },
       "event-details": {
         "titre1":"MASS",
@@ -57,7 +57,7 @@
        
       },
       "sponsor-block": {
-        "titre1": "Our sponsors"
+        "titre1": "Our Partners"
       },
       "compte-rebours": {
         "titre1": "Event Countdown",
@@ -71,7 +71,7 @@
         "desc4": "Workshops"
       },
       "orateur-block": {
-        "titre1": "Present personalities",
+        "titre1": "Key Personalities at MASS",
         "titre2": "Dr. TIDIANE OUATTARA",
         "titre3": "Prof. SHERIF SEDGY",
         "titre4": "Mr. ADAMA DIAWARA",
@@ -115,7 +115,7 @@
     },
     "orateur": {
       "block": {
-        "titre1": "Present personalities",
+        "titre1": "Key Personalities at MASS",
         "titre2": "OTIF Space Africa",
         "titre3": "Expert in Technological and Space Sciences at the African Union Commission",
         "titre4": "Minister of Higher Education and Scientific Research",
@@ -203,7 +203,7 @@
         "call":"Phone",
         "pays":"Country",
         "participation":"Select the type of participation",
-        "part1":"Partner",
+        "part1":"Our Partners",
         "part2":"Animator",
         "part3":"Speaker",
         "part4":"Poster presentation",
@@ -215,11 +215,11 @@
     },
     "marche-block":{
       "titre1":"MARKET",
-      "titre2":"The space solutions market",
+      "titre2":" Introducing the Space Solutions Markett",
       "titre3":"The African Space Solutions Market (MASS) will bring together international and local stakeholders to discuss innovative solutions in the fields of Earth observation, satellite telecommunications, navigation, positioning, astronomy, and scientific experiments in space.",
-      "tit":"The objectives of MASS",
+      "tit":"MASS’s Core Objectives",
       "tit1":"The main objective of MASS is to promote technological advancements and foster collaborations between governments, private companies, universities, and international organizations in the field of space technologies. This unique and innovative market offers a platform for solution providers, organizations, and countries seeking solutions. All stakeholders can come together to exchange ideas and find avenues for collaboration that will benefit the continent.",
-      "titre4":"The history of the market",
+      "titre4":" Origins of the Space Solutions Markett",
       "titre5":"The origin of MASS stems from a clear observation: African countries face challenges that space technology can help address. Space sector actors provide numerous proven solutions, yet no platform is dedicated to connecting these various stakeholders with the ambition of supporting the development of the African continent.",
       "titre6":"Space prizes and competitions",
       "titre7":"Several awards will be presented during MASS week. Outstanding individuals who have made significant contributions to advancing the space sector will be recognized. These awards will help strengthen the space community and inspire the younger generation.",
@@ -232,11 +232,11 @@
       "titre1":"What's on the market",
       "titre2":"The market for space solutions is divided into four zones to showcase the full potential of space in terms of solutions:",
       "solution-block":{
-        "desc1":"Earth Observation",
+        "desc1":" Earth Observation and Its Impact",
         "desc2":"Observation Satellites: Providing images and data for applications such as natural resource management, precision agriculture, disaster monitoring and urban planning.",
-        "desc3":" Remote Sensing Services: Provide data analysis for sectors such as the environment, infrastructure and defence.",
-        "desc4":"Satellite communication",
-        "desc5":"Satellite Constellations : Deploy satellite networks to provide high-speed communications services, including broadband Internet, even in remote areas.",
+        "desc3":" Remote Sensing Services: Provide data analysis for sectors such as the environment, infrastructure and defense.",
+        "desc4":"Advancements in Satellite Communication",
+        "desc5":"Satellite Constellations: Deploy satellite networks to provide high-speed communications services, including broadband Internet, even in remote areas.",
         "desc6":" Communication Technologies: Include laser communication systems, high-capacity antennas and advanced transmission protocols.",
         "desc7":"Navigation and Positioning",
         "desc8":"Global Positioning Systems (GPS): Provide location and navigation services for various sectors, including transport, agriculture and logistics.",
@@ -401,8 +401,8 @@
   },
   "tidianeOuattara": {
     "name": "Tidiane OUATTARA",
-    "position": "President of the African Space Council",
-    "description": "Dr Tidiane Ouattara received a PhD and a master’s degree in Remote Sensing and Geographical Information Systems (GIS) from Sherbrooke University (Canada) in 2001 and 1996, respectively. He also holds a master’s degree in physical geography from Université de Cocody-Abidjan (Côte-d’Ivoire). Dr Ouattara graduated in Leadership for Canadian federal government public service executives. Presently, Dr Ouattara heads the Science, Technology and Space Division at the Department of Education, Science, Technology and Innovation at the African Union Commission and was recently appointed the President of the African Space Council. He has gained tremendous experience in international relations and business development, research and development (R&D), strategic policy development and program management issues related to the environment, natural resources, and sciences and technology. He is actual President of the African Space Council, African Space Agency .",
+    "position": "President of the African Space Agency",
+    "description": "Dr Tidiane Ouattara received a PhD and a master’s degree in Remote Sensing and Geographical Information Systems (GIS) from Sherbrooke University (Canada) in 2001 and 1996, respectively. He also holds a master’s degree in physical geography from Université de Cocody-Abidjan (Côte-d’Ivoire). Dr. Ouattara graduated in Leadership for Canadian federal government public service executives. Currently, Dr. Ouattara heads the Science, Technology and Space Division at the Department of Education, Science, Technology and Innovation at the African Union Commission and was recently appointed the President of the African Space Council. He has gained tremendous experience in international relations and business development, research and development (R&D), strategic policy development and program management issues related to the environment, natural resources, and sciences and technology. He is actual President of the African Space Council, African Space Agency .",
     "institutionAlt": "African Union Commission Logo"    
   },
   "day": {

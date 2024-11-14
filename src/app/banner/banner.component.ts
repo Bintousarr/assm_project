@@ -15,7 +15,7 @@ import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-transla
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss'],
 })
-export class BannerComponent implements OnInit, OnDestroy {
+export class BannerComponent implements OnInit {
   slides: any[] = [];
   currentIndex = 0;
   slideInterval: Subscription | undefined;
@@ -36,7 +36,7 @@ export class BannerComponent implements OnInit, OnDestroy {
     this.initializeSlides();
 
     // Commence le diaporama
-    this.startSlideShow();
+    //this.startSlideShow();
   }
 
       
@@ -63,20 +63,20 @@ export class BannerComponent implements OnInit, OnDestroy {
           registerText: translations['accueil.banner-block.register'],
           desc1: translations['accueil.banner-block.desc1'],
           image: '../../../assets/Slider1.jpg'
-        },
+        }/* ,
         {
           conference: translations['accueil.banner-block.desc1'],
           year: translations['accueil.banner-block.year'],
           description: translations['accueil.banner-block.description'],
           aboutText: translations['accueil.banner-block.about'],
           registerText: translations['accueil.banner-block.register'],
-          image: '../../../assets/page_2_img_1.png'
-        }
+          image: '../../../assets/IMG_2388.png'
+        } */
       ];
     });
   }
 
-  ngOnDestroy() {
+ /*  ngOnDestroy() {
     if (this.slideInterval) {
       this.slideInterval.unsubscribe();
     }
@@ -94,5 +94,5 @@ export class BannerComponent implements OnInit, OnDestroy {
 
   nextSlide() {
     this.currentIndex = (this.currentIndex === this.slides.length - 1) ? 0 : this.currentIndex + 1;
-  }
+  } */
 }
