@@ -1,8 +1,38 @@
-<div class="relative flex flex-row items-center text-white justify-center mb-4 text-center py-16 w-full h-2/3 bg-cover font-poppins bg-center" [style.backgroundImage]="'url(' + slides[currentIndex].image + ')'">
+<section
+  class="relative h-5/6 bg-cover bg-center"
+  style="background-image: url('../../../assets/head.png');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <!-- Content -->
+  <div
+    class="relative flex flex-col items-start justify-end text-left text-white h-full container mx-auto px-8 pb-16"
+  >
+    <h1 class="text-4xl md:text-5xl lg:text-6xl  font-extralight">
+      Un rendez-vous incontournable
+    </h1>
+    <p class="mt-4 text-4xl md:text-5xl lg:text-6xl  font-extralight">
+      pour explorer les
+      <span class="text-red-500 font-bold">innovations spatiales</span>
+    </p>
+
+    <!-- Button -->
+    <a
+      href="#inscription"
+      class="mt-6 bg-blue-500 hover:bg-red-600 text-white py-3 px-16 rounded-full text-2xl"
+    >
+      Inscrivez-vous
+    </a>
+  </div>
+</section>
+
+
+<!-- <div class="relative flex flex-row items-center text-white justify-center mb-4 text-center py-16 w-full h-2/3 bg-cover font-poppins bg-center" [style.backgroundImage]="'url(' + slides[currentIndex].image + ')'"> -->
   <!-- Superposition avec opacité -->
 
   <!-- Contenu du slide -->
-  <div class="relative z-10 max-w-6xl mx-auto px-4">
+  <!-- <div class="relative z-10 max-w-6xl mx-auto px-4">
     <h3 class="text-2xl lg:text-3xl text-red-800 font-bold">{{ slides[currentIndex].conference }}</h3>
     <h4 class="text-xl lg:text-2xl text-red-800  font-bold mt-2">{{ slides[currentIndex].date }}</h4>
     
@@ -12,12 +42,12 @@
       <p class="text-lg lg:text-xl text-red-800 ">{{ slides[currentIndex].description }}</p>
     </div>
 
-    <!-- Boutons -->
+   
     <div class="flex justify-center gap-4 mt-8">
       <button class="border-2 border-red-900 text-lg text-white py-2 px-4 rounded" [routerLink]="['/about']">{{ slides[currentIndex].aboutText }}</button>
       <button class="border-2 border-red-900 bg-red-900 text-lg text-white py-2 px-4 rounded" [routerLink]="['/register']">{{ slides[currentIndex].registerText }}</button>
     </div>
-  </div>
+  </div> -->
 
   <!-- Boutons de navigation -->
  <!--  <button (click)="prevSlide()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 p-2 rounded-full">
@@ -31,7 +61,7 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
     </svg>
   </button> -->
-</div>
+<!-- </div> -->
 
 <app-evenement></app-evenement>
 <app-sponsor></app-sponsor>

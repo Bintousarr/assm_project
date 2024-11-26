@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         customBlue: 'rgb(1, 153, 202)',
+        newRED:'#9B1D21'
       }
       
     },
