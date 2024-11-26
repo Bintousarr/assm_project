@@ -4,12 +4,16 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./banner/banner.component').then((x) => x.BannerComponent),
+      import('./home/home.component').then((x) => x.HomeComponent),
     children: [
 
 
 
     ],
+      },
+      {
+        path: 'banner', loadComponent: () => 
+          import('./banner/banner.component').then((x) => x.BannerComponent),
       },
       {
         path: 'program', loadComponent: () => 
