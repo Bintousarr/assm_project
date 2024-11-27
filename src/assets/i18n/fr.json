@@ -620,7 +620,9 @@
     "refund_100": "100 % à 1 mois et demi de l’événement (01/08)",
     "refund_50": "50 % à 2 semaines de l’événement (05/09)",
     "no_refund": "Passé ce délai, aucune demande de remboursement n’est acceptée (sauf cas de force majeure obligeant l’organisateur à annuler ou reporter l’événement)"
-  }
+  },
+
+  "newsletter_info":"Recevez toutes les informations et actualités du MASS."
 
  
   

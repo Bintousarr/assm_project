@@ -1,146 +1,99 @@
-<div class="header font-poppins ">
+<div class="header font-poppins">
   <!-- Top Bar -->
-  <div class="top-bar fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-newRED  text-white text-sm py-2 sm:px-10 ">
-    <div class="top-bar-left flex items-center space-x-2">
-      <img src="../../../assets/mail.png" alt="FR" class=" w-6">  <!-- Réduit la taille de l'icône -->
-      <span class="text-base">{{ 'contact@mass.ci' }}</span>
-
-      <!-- Réduit la taille de la police -->
-    </div>
-    <div class="top-bar-left flex items-center space-x-2">
-      <img src="../../../assets/location.png" alt="FR" class=" w-6">  <!-- Réduit la taille de l'icône -->
-      <span class="text-base">{{'accueil.header-block.lieu' | translate}}</span> <!-- Réduit la taille de la police -->
-    </div>
-
-    <div class="top-bar-right flex items-center">
-      <div class=" flex items-center ml-4">
-        <a  href="#" class="lang-btn">
-          <img src="../../../assets/facebook.png" alt="FR" class="flag-icon w-6">  <!-- Réduit la taille de l'icône -->
-        </a>
-        <a  href="#" class="lang-btn ml-2">
-          <img src="../../../assets/instagram.png" alt="EN" class="flag-icon w-6"> <!-- Réduit la taille de l'icône -->
-        </a>
-        <a  href="https://www.linkedin.com/company/otif-space-africa/" class="lang-btn ml-2">
-          <img src="../../../assets/linkdn.png" alt="EN" class="flag-icon w-6"> <!-- Réduit la taille de l'icône -->
-        </a>
-        <a  href="#" class="lang-btn ml-2">
-          <img src="../../../assets/twitter.png" alt="EN" class="flag-icon w-6"> <!-- Réduit la taille de l'icône -->
-        </a>
+  <div class="top-bar fixed top-0 left-0 right-0 z-50 flex flex-wrap justify-between items-center bg-newRED text-white text-sm py-2 px-4 sm:px-10">
+    <!-- Left Section -->
+    <div class="flex flex-col sm:flex-row items-center space-x-2 sm:space-x-4">
+      <div class="flex items-center space-x-2">
+        <img src="../../../assets/mail.png" alt="Mail" class="w-5 sm:w-6">
+        <span class="text-sm sm:text-base">{{ 'contact@mass.ci' }}</span>
       </div>
-    </div> 
+      <div class="flex items-center space-x-2 mt-2 sm:mt-0">
+        <img src="../../../assets/location.png" alt="Location" class="w-5 sm:w-6">
+        <span class="text-sm sm:text-base">{{ 'accueil.header-block.lieu' | translate }}</span>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="flex items-center space-x-2 mt-2 sm:mt-0">
+      <a href="#" class="lang-btn">
+        <img src="../../../assets/facebook.png" alt="Facebook" class="w-5 sm:w-6">
+      </a>
+      <a href="#" class="lang-btn">
+        <img src="../../../assets/instagram.png" alt="Instagram" class="w-5 sm:w-6">
+      </a>
+      <a href="https://www.linkedin.com/company/otif-space-africa/" class="lang-btn">
+        <img src="../../../assets/linkdn.png" alt="LinkedIn" class="w-5 sm:w-6">
+      </a>
+      <a href="#" class="lang-btn">
+        <img src="../../../assets/twitter.png" alt="Twitter" class="w-5 sm:w-6">
+      </a>
+    </div>
   </div>
 
-
-  <header class="flex flex-col lg:flex-row items-center justify-between text-red-700 pt-10 sm:px-10">
+  <!-- Main Header -->
+  <header class="flex flex-col lg:flex-row items-center justify-between text-red-700 pt-20 pb-4 px-4 sm:px-10">
     <!-- Logo Section -->
-    <div class="flex items-center">
-      <img src="assets/logo.png" alt="Logo MASS"  class="h-20 w-auto mr-4" />
-  
+    <div class="flex items-center mb-4 lg:mb-0">
+      <img src="../../../assets/logo.png" alt="Logo MASS" class="h-14 sm:h-20 w-auto mr-4">
     </div>
-  
+
     <!-- Navigation Links -->
-    <nav class="hidden text-black lg:flex items-center space-x-6">
+    <nav class="hidden lg:flex items-center space-x-6 text-sm sm:text-base text-black">
       <!-- Accueil Dropdown -->
       <div class="relative group">
-        <a [routerLink]="['']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre1' | translate}}</a>
-        <div class="absolute left-0 mt-2 bg-white border border-gray-200 text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 whitespace-nowrap">
-          <a [routerLink]="['marche']" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg">{{'accueil.navbar-block.t1' | translate}}</a>
-          <a [routerLink]="['voir-marche']" class="block px-4 py-2 hover:bg-gray-200 hover:rounded-lg">{{'accueil.navbar-block.t2' | translate}}</a>
+        <a [routerLink]="['']" class="nav-item capitalize hover:text-red-600">{{ 'accueil.navbar-block.titre1' | translate }}</a>
+        <div class="absolute w-60 left-0 mt-2 bg-white border border-gray-200 text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+          <a [routerLink]="['marche']" class="block px-4 py-2 hover:bg-gray-200">{{ 'accueil.navbar-block.t1' | translate }}</a>
+          <a [routerLink]="['voir-marche']" class="block px-4 py-2 hover:bg-gray-200">{{ 'accueil.navbar-block.t2' | translate }}</a>
         </div>
       </div>
-  
-      
-  
+
       <!-- MASS Dropdown -->
       <div class="relative group">
-        <a class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre3' | translate}}</a>
-        <div class="absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 whitespace-nowrap">
-          <a [routerLink]="['program']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.titre2' | translate}}</a>
-          <a [routerLink]="['sponsor-page']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m1' | translate}}</a>
-          <a [routerLink]="['personnalite']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.m2' | translate}}</a>
-          <a [routerLink]="['accomodation']" class="block px-4 py-2 hover:bg-gray-200">{{'accueil.navbar-block.desc2' | translate}}</a>
+        <a class="nav-item capitalize hover:text-red-600">{{ 'accueil.navbar-block.titre3' | translate }}</a>
+        <div class="absolute w-60 left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+          <a [routerLink]="['program']" class="block px-4 py-2 hover:bg-gray-200">{{ 'accueil.navbar-block.titre2' | translate }}</a>
+          <a [routerLink]="['sponsor-page']" class="block px-4 py-2 hover:bg-gray-200">{{ 'accueil.navbar-block.m1' | translate }}</a>
+          <a [routerLink]="['personnalite']" class="block px-4 py-2 hover:bg-gray-200">{{ 'accueil.navbar-block.m2' | translate }}</a>
+          <a [routerLink]="['accomodation']" class="block px-4 py-2 hover:bg-gray-200">{{ 'accueil.navbar-block.desc2' | translate }}</a>
         </div>
       </div>
-  
-      
-  
+
       <!-- Exposants -->
-      <div class="relative group">
-        <a [routerLink]="['exposant']" class="nav-item capitalize">{{'accueil.navbar-block.desc4' | translate}}</a>
-      </div>
-  
-      
-  
+      <a [routerLink]="['exposant']" class="nav-item capitalize hover:text-red-600">{{ 'accueil.navbar-block.desc4' | translate }}</a>
+
       <!-- Visiteurs -->
-      <div class="relative group">
-        <a [routerLink]="['profesional-visitor']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.t3' | translate}}</a>
-      </div>
-  
-      
-  
+      <a [routerLink]="['profesional-visitor']" class="nav-item capitalize hover:text-red-600">{{ 'accueil.navbar-block.t3' | translate }}</a>
+
       <!-- Contact -->
-      <a [routerLink]="['contact']" class="nav-item capitalize hover:text-red-600">{{'accueil.navbar-block.titre4' | translate}}</a>
+      <a [routerLink]="['contact']" class="nav-item capitalize hover:text-red-600">{{ 'accueil.navbar-block.titre4' | translate }}</a>
     </nav>
-  
+
     <!-- Language Selector and Login Button -->
-    <div class="flex items-center space-x-4">
+    <div class="flex items-center space-x-4 mt-4 lg:mt-0">
       <!-- Language Selector -->
       <div class="relative">
-        <!-- Dropdown Button -->
-        <button
-          class="flex items-center border rounded-full px-3 py-2 bg-white text-gray-700 focus:outline-none"
-          (click)="toggleDropdown()"
-        >
-          <img
-            [src]="currentFlag"
-            [alt]="currentLanguage"
-            class="h-4 w-4 mr-2"
-          />
+        <button class="flex items-center border rounded-full px-3 py-2 bg-white text-gray-700 focus:outline-none" (click)="toggleDropdown()">
+          <img [src]="currentFlag" [alt]="currentLanguage" class="h-4 w-4 mr-2">
           <span>{{ currentLanguage }}</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 ml-2 text-gray-500"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
           </svg>
         </button>
-      
-        <!-- Dropdown Menu -->
-        <ul
-          *ngIf="isDropdownOpen"
-          class="absolute left-0 mt-2 bg-white border rounded-lg shadow-lg text-gray-700 w-40 z-50"
-        >
-          <li
-            class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            (click)="selectLanguage('fr')"
-          >
-            <img src="../../../assets/fra.jpg" alt="Français" class="h-4 w-4 mr-2" />
-            Français
+        <ul *ngIf="isDropdownOpen" class="absolute left-0 mt-2 bg-white border rounded-lg shadow-lg text-gray-700 w-40 z-50">
+          <li class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" (click)="selectLanguage('fr')">
+            <img src="../../../assets/fra.jpg" alt="Français" class="h-4 w-4 mr-2"> Français
           </li>
-          <li
-            class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            (click)="selectLanguage('en')"
-          >
-            <img src="../../../assets/usa.png" alt="English" class="h-4 w-4 mr-2" />
-            English
+          <li class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer" (click)="selectLanguage('en')">
+            <img src="../../../assets/usa.png" alt="English" class="h-4 w-4 mr-2"> English
           </li>
         </ul>
       </div>
-      
-  
+
       <!-- Login Button -->
-      <button
-        class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600"
-      >
+      <button class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">
         Se connecter
       </button>
     </div>
   </header>
-  
 </div>

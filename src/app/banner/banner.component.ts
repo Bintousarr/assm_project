@@ -6,7 +6,9 @@ import { SponsorComponent } from '../sponsor/sponsor.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { EvenementComponent } from "../web/evenement/evenement.component";
 import { RouterLink } from '@angular/router';
-import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
+//import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-banner',
@@ -24,16 +26,18 @@ export class BannerComponent implements OnInit {
 
 
   ngOnInit() {
+    // this.translate.setDefaultLang('en');
     this.translate.setDefaultLang('en');
+
     
     // Utilise onLangChange pour s'assurer que les traductions sont chargées et initialisées
-    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.initializeSlides();
-    });
+    // this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+    //   this.initializeSlides();
+    // });
 
 
     // Appel initial pour initialiser les slides à la première charge
-    this.initializeSlides();
+    // this.initializeSlides();
 
     // Commence le diaporama
     //this.startSlideShow();
@@ -43,6 +47,7 @@ export class BannerComponent implements OnInit {
   translateText(lang: string) {
     this.translate.use(lang);
   }
+
   initializeSlides() {
     this.translate.get([
       'accueil.banner-block.conference',

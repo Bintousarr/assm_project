@@ -14,8 +14,10 @@ import { AuthService } from '../../services/auth.service';
 })
 export class HeaderComponent {
   translate: TranslateService = inject(TranslateService)
+  
  
   constructor(private authService: AuthService) {}
+  
   isLoggedIn: boolean = false;
   isDropdownOpen = false; // State for the dropdown
   currentLanguage = 'EN'; // Default language
