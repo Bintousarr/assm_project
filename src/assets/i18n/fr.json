@@ -11,6 +11,7 @@
       "t1": "Marché",
       "t2": "A voir sur le marché",
       "t3": "VISITEUR",
+      "t":"Visiteurs ",
       "titre2": "Agenda",
       "titre3": "MASS ",
       "m1": "Partenaires",
@@ -19,6 +20,8 @@
       "desc2": "Informations de voyage",
       "desc3": "Informations pratiques",
       "desc4": "EXPOSANT",
+      "desc": "Exposants",
+
       "titre4": "CONTACT",
       "menu": "Menu"
     },
@@ -29,7 +32,10 @@
       "description": "Abidjan - Côte d’Ivoire,  Parc des Expositions",
       "about": "À propos",
       "register": "INSCRIVEZ-VOUS",
-      "desc1": "L'espace n'est pas une option, mais une nécessité. La technologie spatiale est fondamentale pour les pays africains."
+      "desc1": "L'espace n'est pas une option, mais une nécessité. La technologie spatiale est fondamentale pour les pays africains.",
+      "desc2": "Un rendez-vous incontournable",
+      "desc3":"pour explorer les",
+      "desc4":"innovations spatiales"
     },
     "event-block": {
       "titre1":" Présentation de MASS",
@@ -52,11 +58,20 @@
         "titre6":"Plateforme d'échanges et d’opportunités",
         "p1":"Créer une plateforme d'échange pour les entreprises privées afin qu'elles puissent présenter leurs produits.",
         "p2":"Permettre aux gestionnaires de trouver un marché adéquat avec des solutions pratiques.",
-        "p3":"Commercialiser les produits basés sur le spatial."
+        "p3":"Commercialiser les produits basés sur le spatial.",
+        "p4": "Recevez toutes les informations et actualités du MASS directement dans votre boîte mail.",
+        "p5":"Je m'inscris"
        
       },
     "sponsor-block": {
-      "titre1": "Nos Partenaires"
+      "titre1": "Nos Partenaires",
+      "t":"Sponsors",
+      "t1":" Associez votre image à un événement international de haut niveau.",
+      "t3":"Devenez sponsor",
+      "t4":" Venez vivre une expérience passionnante et explorer de nouvelles opportunités.",
+        "t5":"Professionnel",
+        "t6":"Grand public"
+
     },
     "compte-rebours": {
       "titre1": "Compte A Rebours de l'Evénement",
@@ -286,7 +301,7 @@
     },
   "about-block": {
   "titre1": "Marché Africain des Solutions Spatiales",
-  "titre2": "Du 05 au 09 Mai 2025, Parc des Expositions",
+  "titre2": "Du 06 au 08 Mai 2025, Parc des Expositions",
   "titre3": "Abidjan - Côte d'Ivoire",
   "titre4": "OTIF : Une entreprise clé dans le domaine spatial et géospatial en Afrique",
   "titre5": "OTIF est engagée à propulser le continent africain vers un avenir technologique et économique prospère. En tant que catalyseur, OTIF harmonise les différences entre les pays africains et favorise le développement spatial à travers le continent.",
@@ -364,8 +379,8 @@
     "speaking_days": "Jour d'intervention",
     "day2": "Jour 2",
     "day5": "Jour 5",
-    "date_day2": "05, Mai-2025",
-    "date_day5": "09, Mai-2025",
+    "date_day2": "06, Mai-2025",
+    "date_day5": "08, Mai-2025",
     "time": "10:00 - 12:00",
     "speech": "Discours"
   },
@@ -376,8 +391,8 @@
     "speaking_days": "Jour d'intervention",
     "day2": "Jour 2",
     "day5": "Jour 5",
-    "date_day2": "05, Mai-2025",
-    "date_day5": "09, Mai-2025",
+    "date_day2": "06, Mai-2025",
+    "date_day5": "08, Mai-2025",
     "time": "10:00 - 12:00",
     "speech": "Discours"
   },
@@ -389,7 +404,7 @@
     "days": {
       "day2": {
         "title": "Jour 2",
-        "date": "05, Mai-2025",
+        "date": "06, Mai-2025",
         "time": "10:00 - 12:00",
         "event": "Discours"
       },
@@ -540,7 +555,10 @@
     "enseigne": "Enseigne : nom de votre société et numéro de votre stand",
     "raccordement": "Raccordement électrique",
     "desk": "Desk d'accueil",
-    "reserve": "Réserver"
+    "reserve": "Réserver",
+    "reservez": "Réservez votre stand ",
+    "position": "Positionnez-vous sur la première édition du MASS."
+
   },
   "visiteur": {
     "titre1": "Marché Africain des Solutions Spatiales",
