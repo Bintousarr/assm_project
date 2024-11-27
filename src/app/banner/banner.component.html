@@ -1,8 +1,39 @@
-<div class="relative flex flex-row items-center text-white justify-center mb-4 text-center py-16 w-full h-2/3 bg-cover font-poppins bg-center" [style.backgroundImage]="'url(' + slides[currentIndex].image + ')'">
+<section
+  class="relative h-screen bg-cover bg-center"
+  style="background-image: url('../../../assets/parc.png');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <!-- Content -->
+  <div
+    class="relative flex flex-col items-center md:items-start justify-center md:justify-end text-center md:text-left text-white h-full container mx-auto px-6 md:px-8 lg:px-16 pb-10 md:pb-16"
+  >
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight">
+      Un rendez-vous incontournable
+    </h1>
+    <p class="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extralight leading-tight">
+      pour explorer les
+      <span class="text-red-500 font-bold">innovations spatiales</span>
+    </p>
+
+    <!-- Button -->
+    <a
+      href="#inscription"
+      class="mt-6 bg-blue-500 hover:bg-red-600 text-white py-3 px-10 md:px-16 rounded-full text-lg md:text-xl lg:text-2xl"
+    >
+      Inscrivez-vous
+    </a>
+  </div>
+</section>
+
+
+
+<!-- <div class="relative flex flex-row items-center text-white justify-center mb-4 text-center py-16 w-full h-2/3 bg-cover font-poppins bg-center" [style.backgroundImage]="'url(' + slides[currentIndex].image + ')'"> -->
   <!-- Superposition avec opacité -->
 
   <!-- Contenu du slide -->
-  <div class="relative z-10 max-w-6xl mx-auto px-4">
+  <!-- <div class="relative z-10 max-w-6xl mx-auto px-4">
     <h3 class="text-2xl lg:text-3xl text-red-800 font-bold">{{ slides[currentIndex].conference }}</h3>
     <h4 class="text-xl lg:text-2xl text-red-800  font-bold mt-2">{{ slides[currentIndex].date }}</h4>
     
@@ -12,12 +43,12 @@
       <p class="text-lg lg:text-xl text-red-800 ">{{ slides[currentIndex].description }}</p>
     </div>
 
-    <!-- Boutons -->
+   
     <div class="flex justify-center gap-4 mt-8">
       <button class="border-2 border-red-900 text-lg text-white py-2 px-4 rounded" [routerLink]="['/about']">{{ slides[currentIndex].aboutText }}</button>
       <button class="border-2 border-red-900 bg-red-900 text-lg text-white py-2 px-4 rounded" [routerLink]="['/register']">{{ slides[currentIndex].registerText }}</button>
     </div>
-  </div>
+  </div> -->
 
   <!-- Boutons de navigation -->
  <!--  <button (click)="prevSlide()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 p-2 rounded-full">
@@ -31,9 +62,51 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
     </svg>
   </button> -->
-</div>
+<!-- </div> -->
 
 <app-evenement></app-evenement>
-<app-sponsor></app-sponsor>
-<app-compte-a-rebours></app-compte-a-rebours>
+<!-- <app-compte-a-rebours></app-compte-a-rebours> -->
 <app-keynote-speaker></app-keynote-speaker>
+<!-- <app-sponsor></app-sponsor> -->
+<div class="bg-blue-100 text-cabinet p-4 mt-4 mb-8">
+  <h1 class="text-3xl sm:text-4xl lg:text-5xl text-center mt-10 font-bold">
+    NOS PARTENAIRES
+  </h1>
+  <div class="flex flex-wrap items-center justify-center gap-8 p-4">
+    <img
+      src="assets/AFRICAN_UNION.png"
+      class="w-36 sm:w-48 lg:w-60"
+      alt="African Union"
+    />
+    <img src="assets/orange.png" class="w-16 sm:w-20 lg:w-24" alt="Orange" />
+    <img src="assets/kirene.png" class="w-36 sm:w-48 lg:w-60" alt="Kirene" />
+    <img
+      src="assets/AFRICAN_UNION.png"
+      class="w-36 sm:w-48 lg:w-60"
+      alt="African Union"
+    />
+  </div>
+</div>
+
+<div class="bg-white text-cabinet py-8">
+  <div class="flex flex-col items-center p-6">
+    <h1 class="font-bold text-3xl sm:text-4xl lg:text-6xl text-center">
+      Newsletter
+    </h1>
+    <p class="text-lg sm:text-xl lg:text-2xl mt-6 text-center mb-4">
+      Recevez nos actualités directement dans votre boîte mail.
+    </p>
+    <input
+      class="border border-gray-300 p-3 px-4 mt-4 rounded-lg w-full max-w-lg text-base sm:text-lg"
+      type="text"
+      placeholder="exemple@gmail.com"
+    />
+    <button
+      class="bg-blue-500 p-3 px-6 mt-6 rounded-lg w-full text-white max-w-lg text-base sm:text-lg hover:bg-blue-600"
+    >
+      Je m'inscris
+    </button>
+  </div>
+</div>
+
+

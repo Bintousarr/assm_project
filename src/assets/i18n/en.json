@@ -613,7 +613,10 @@
     "refund_100": "100% refund up to 1.5 months before the event (01/08)",
     "refund_50": "50% refund up to 2 weeks before the event (05/09)",
     "no_refund": "No refund after this period (unless force majeure requires the organizer to cancel or postpone the event)"
-  }
+  },
+
+  "newsletter_info":"Receive all MASS news and information news and information directly to your mailbox."
+
   
 
   }

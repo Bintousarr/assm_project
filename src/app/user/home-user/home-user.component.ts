@@ -78,6 +78,8 @@ export class HomeUserComponent {
     
     // Rediriger vers la page de login
     window.location.href = '/login';
+   // this.router.navigate(['/homeuser']);
+
 
     //this.router.navigate(['/login']);
   }

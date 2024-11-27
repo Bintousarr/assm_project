@@ -14,9 +14,16 @@ import { AuthService } from '../../services/auth.service';
 })
 export class HeaderComponent {
   translate: TranslateService = inject(TranslateService)
+  
  
   constructor(private authService: AuthService) {}
+  
   isLoggedIn: boolean = false;
+  isDropdownOpen = false; // State for the dropdown
+  currentLanguage = 'EN'; // Default language
+  currentFlag = '../../../assets/usa.png'; // Default flag
+
+  
 
   ngOnInit() {
     this.translate.setDefaultLang('en');
@@ -26,7 +33,22 @@ export class HeaderComponent {
       console.log("ishh", this.isLoggedIn)
     });
   }
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
 
+  selectLanguage(language: string): void {
+    if (language === 'fr') {
+      this.currentLanguage = 'FR';
+      this.translateText('fr')
+      this.currentFlag = '../../../assets/fra.jpg';
+    } else if (language === 'en') {
+      this.currentLanguage = 'EN';
+      this.translateText('en')
+      this.currentFlag = '../../../assets/usa.png';
+    }
+    this.isDropdownOpen = false; // Close dropdown after selection
+  }
   translateText(lang: string) {
     this.translate.use(lang);
   }
