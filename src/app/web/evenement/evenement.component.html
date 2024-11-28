@@ -69,9 +69,31 @@
 
 <div class="flex flex-col items-center justify-center text-center p-8 md:p-16  bg-gray-100">
   <!-- Titre MASS 2025 -->
-  <div class="w-full md:w-1/2 flex justify-center">
+  <!-- <div class="w-full md:w-1/2 flex justify-center">
     <h1 class=" text-6xl font-bold text-blue-500 ">{{ 'accueil.event-block.t' | translate }}</h1>
-  </div>
+  </div> -->
+    <!-- MASS Title -->
+    <div class="mass-title text-center lg:text-left lg:mb-0">
+      <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
+        <ng-container *ngIf="translate.currentLang === 'fr'; else englishTitle">
+          <!-- <span class="text-red-700">M</span><span class="text-black">ASS</span> - -->
+          <span class="text-newRED">M</span><span class="text-black">arché</span>
+          <span class="text-newRED"> A</span><span class="text-black">fricain</span>
+          <span class="text-black"> d</span><span class="text-black">es</span>
+          <span class="text-newRED"> S</span><span class="text-black">olutions</span>
+          <span class="text-newRED"> S</span><span class="text-black">patiales</span>
+        </ng-container>
+    
+        <ng-template #englishTitle>
+          <!-- <span class="text-newRED">M</span><span class="text-black">ASS</span> - -->
+          <span class="text-newRED">A</span><span class="text-black">frican</span>
+          <span class="text-newRED"> S</span><span class="text-black">pace</span>
+          <span class="text-newRED"> S</span><span class="text-black">olutions</span>
+          <span class="text-newRED"> M</span><span class="text-black">arket</span>
+
+        </ng-template>
+      </h1>
+    </div>
   <div class="w-full md:w-1/2">
     <!-- Sous-titre -->
     <p class="mt-8 md:mt-14 text-lg font-light md:text-2xl text-black">
@@ -95,28 +117,12 @@
     <div class="flex items-center space-x-4">
       <img src="../../../assets/calandar.png" alt="Calendrier" class="w-12 h-12 md:w-14 md:h-14">
       <div>
-        <p class="text-black font-extrabold text-xl md:text-2xl mt-2">5</p>
+        <p class="text-black font-extrabold text-xl md:text-2xl mt-2">3</p>
         <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc3' | translate }}</p>
       </div>
     </div>
 
-    <!-- Ateliers -->
-    <div class="flex items-center space-x-4">
-      <img src="../../../assets/newAtelier.png" alt="Ateliers" class="w-12 h-12 md:w-14 md:h-14">
-      <div>
-        <p class="text-black font-extrabold text-xl md:text-2xl mt-2">15</p>
-        <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc4' | translate }}</p>
-      </div>
-    </div>
 
-    <!-- Conférenciers -->
-    <div class="flex items-center space-x-4">
-      <img src="../../../assets/mic.png" alt="Conférenciers" class="w-12 h-12 md:w-14 md:h-14">
-      <div>
-        <p class="text-black font-extrabold text-xl md:text-2xl mt-2">+25</p>
-        <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc2' | translate }}</p>
-      </div>
-    </div>
   </div>
 </div>
 
