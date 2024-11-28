@@ -21,7 +21,7 @@
             {{ slide.subtitle ?? '' | translate }}
             <span class="text-red-500 font-bold">{{ slide.highlight ?? '' | translate }}</span>
           </p>
-          <button
+          <button routerLink="/register"
             class="mt-6 bg-blue-500 hover:bg-red-800 text-white py-3 px-10 md:px-16 rounded-full text-lg md:text-xl lg:text-2xl"
           >
             {{ 'accueil.banner-block.register' | translate }}
