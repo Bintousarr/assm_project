@@ -65,11 +65,36 @@
   </div>
 </div> -->
 
-<div class="flex flex-col items-center justify-center text-center p-8 md:p-16  bg-gray-100">
+
+
+<div class="flex flex-col items-center justify-center text-center p-8 md:p-16 mt-20 bg-gray-100">
+
+      <!-- MASS Title -->
+      <div class="mass-title text-center lg:text-left lg:mb-0">
+        <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
+          <ng-container *ngIf="translate.currentLang === 'fr'; else englishTitle">
+            <!-- <span class="text-red-700">M</span><span class="text-black">ASS</span> - -->
+            <span class="text-red-700">M</span><span class="text-black">arché</span>
+            <span class="text-red-700"> A</span><span class="text-black">fricain</span>
+            <span class="text-black"> d</span><span class="text-black">es</span>
+            <span class="text-red-700"> S</span><span class="text-black">olutions</span>
+            <span class="text-red-700"> S</span><span class="text-black">patiales</span>
+          </ng-container>
+      
+          <ng-template #englishTitle>
+            <!-- <span class="text-red-700">M</span><span class="text-black">ASS</span> - -->
+            <span class="text-red-700">M</span><span class="text-black">arché</span>
+            <span class="text-red-700"> A</span><span class="text-black">fricain</span>
+            <span class="text-black"> d</span><span class="text-black">es</span>
+            <span class="text-red-700"> S</span><span class="text-black">olutions</span>
+            <span class="text-red-700"> S</span><span class="text-black">patiales</span>
+          </ng-template>
+        </h1>
+      </div>
   <!-- Titre MASS 2025 -->
-  <div class="w-full md:w-1/2 flex justify-center">
+  <!-- <div class="w-full md:w-1/2 flex justify-center">
     <img src="../../../assets/mass_text.png" alt="MASS 2025" class="w-2/3 md:w-1/2">
-  </div>
+  </div> -->
   <div class="w-full md:w-1/2">
     <!-- Sous-titre -->
     <p class="mt-8 md:mt-14 text-lg font-light md:text-2xl text-black">
