@@ -14,9 +14,10 @@ import { CommonModule } from '@angular/common';
 })
 export class BannerComponent implements OnInit, OnDestroy {
   slides = [
-    { image: '../../../assets/head.png', title: 'accueil.banner-block.desc2', subtitle: 'accueil.banner-block.desc3', highlight: 'accueil.banner-block.desc4' },
-    { image: '../../../assets/slider.png', title: 'accueil.banner-block.desc2', subtitle: 'accueil.banner-block.desc3', highlight: 'accueil.banner-block.desc4' },
+    { image: '../../../assets/head.png', title: 'accueil.banner-block.desc2', subtitle: 'accueil.banner-block.desc3', highlight: 'accueil.banner-block.desc4', hasText: true },
+    { image: '../../../assets/slider.png', hasText: false },
   ];
+  
   currentIndex = 0;
   slideInterval: Subscription | undefined;
   translate: TranslateService = inject(TranslateService);
