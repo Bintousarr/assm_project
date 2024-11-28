@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-evenement',
   standalone: true,
-  imports: [TranslateModule, RouterLink,CommonModule],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './evenement.component.html',
   styleUrl: './evenement.component.scss'
 })
