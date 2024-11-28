@@ -48,39 +48,47 @@
       </div>
     </div>
 </div> -->
-
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 my-20 ">
-  <div
-    *ngFor="let speaker of speakers"
-    class="border border-blue-400 rounded-xl p-4 flex flex-col items-center shadow-md">
-    <!-- Image -->
-    <div class="relative">
-      <img
-        [src]="speaker.image"
-        alt="Photo of {{ speaker.name }}"
-        class="w-full h-full rounded-lg object-cover" />
-    </div>
-
-    <!-- Name -->
-    <h3 class="mt-4 text-center text-lg font-semibold text-black">{{
-      speaker.name | translate}}</h3>
-
-    <div class="flex justify-between items-center w-full ">
-      <!-- Organization -->
-      <p class="w-full h-20 text-center justify-center text-xl text-gray-500 mt-1 leading-relaxed">
-        {{ speaker.organization | translate }}
-      </p>
-
-      <!-- LinkedIn Icon -->
-      
-    </div>
-    <a 
-        [href]="speaker.linkedin"
-        target="_blank"
-        class="w-full flex justify-end text-end">
-        <img src="../../assets/linkdnbleu.png" alt="LinkedIn Icon"
-          class="w-8 h-8">
-      </a>
+<div class=" my-20">
+  <div class="mb-10 text-center">
+    <h2 class="text-5xl font-bold mb-4">
+      {{'accueil.orateur-block.titre1' | translate}}
+      <!-- <span class="block w-12 h-1 bg-red-800 mt-1"></span> -->
+    </h2>
   </div>
+  
+  <div class=" flex justify-center p-6 ">
+    <div
+      *ngFor="let speaker of speakers"
+      class="border w-full sm:w-1/4 border-blue-400 rounded-xl p-4 flex flex-col items-center shadow-md">
+      <!-- Image -->
+      <div class="relative">
+        <img
+          [src]="speaker.image"
+          alt="Photo of {{ speaker.name }}"
+          class="w-full h-full rounded-lg object-cover" />
+      </div>
+  
+      <!-- Name -->
+      <h3 class="mt-4 text-center text-lg font-semibold text-black">{{
+        speaker.name | translate}}</h3>
+  
+      <div class="flex justify-between items-center w-full ">
+        <!-- Organization -->
+        <p class="w-full h-20 text-center justify-center text-xl text-gray-500 mt-1 leading-relaxed">
+          {{ speaker.organization | translate }}
+        </p>
+  
+        <!-- LinkedIn Icon -->
+        
+      </div>
+      <a 
+          [href]="speaker.linkedin"
+          target="_blank"
+          class="w-full flex justify-end text-end">
+          <img src="../../assets/linkdnbleu.png" alt="LinkedIn Icon"
+            class="w-8 h-8">
+        </a>
+    </div>
+  </div>
+  
 </div>

@@ -50,24 +50,24 @@ export class KeynoteSpeakerComponent {
       image: '../../assets/tidiane.png',
       linkedin: 'https://www.linkedin.com/in/tidiane-ouattara/',
     },
-    {
-      name: 'accueil.orateur-block.titre3',
-      organization: 'accueil.orateur-block.desc2',
-      image: '../../assets/sherif.png',
-      linkedin: 'https://www.linkedin.com/in/sherif-sedgy'
-    },
-    {
-      name: 'accueil.orateur-block.titre4',
-      organization: 'accueil.orateur-block.desc3',
-      image: '../../assets/tidiane2.png',
-      linkedin: 'https://www.linkedin.com/in/tidiane-ouattara'
-    },
-    {
-      name: 'accueil.orateur-block.titre5',
-      organization: 'accueil.orateur-block.desc4',
-      image: '../../assets/tidiane.png',
-      linkedin: 'https://www.linkedin.com/in/tidiane-ouattara/',
-    },
+    // {
+    //   name: 'accueil.orateur-block.titre3',
+    //   organization: 'accueil.orateur-block.desc2',
+    //   image: '../../assets/sherif.png',
+    //   linkedin: 'https://www.linkedin.com/in/sherif-sedgy'
+    // },
+    // {
+    //   name: 'accueil.orateur-block.titre4',
+    //   organization: 'accueil.orateur-block.desc3',
+    //   image: '../../assets/tidiane2.png',
+    //   linkedin: 'https://www.linkedin.com/in/tidiane-ouattara'
+    // },
+    // {
+    //   name: 'accueil.orateur-block.titre5',
+    //   organization: 'accueil.orateur-block.desc4',
+    //   image: '../../assets/tidiane.png',
+    //   linkedin: 'https://www.linkedin.com/in/tidiane-ouattara/',
+    // },
     // Add other speakers here
   ];
 
