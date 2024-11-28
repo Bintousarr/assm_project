@@ -1,7 +1,7 @@
 ;
 import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 
@@ -23,6 +23,8 @@ export class EvenementComponent {
   minutes: number | undefined;
   seconds: number | undefined;
   countdownMessage: string = '';
+
+  constructor(private router:Router,){ }
   ngOnInit(): void {
     this.translate.setDefaultLang('en');
     this.updateCountdown(); // Appel initial
@@ -56,6 +58,22 @@ export class EvenementComponent {
   }
 
   translate: TranslateService = inject(TranslateService)
- 
+ gotoReservation(){
+  window.location.href = '/reservation';
+  
+   //this.router.navigate(['/reservation']);
 
+ }
+ gotoSponsor(){
+  window.location.href = '/sponsor-page';
+
+ // this.router.navigate(['/sponsor-page']);
+
+}
+gotoVisiteur(){
+  window.location.href = '/profesional-visitor';
+  
+  //this.router.navigate(['/profesional-visitor']);
+
+}
 }

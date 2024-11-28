@@ -72,13 +72,13 @@
   </div>
   <div class="w-full md:w-1/2">
     <!-- Sous-titre -->
-    <p class="mt-8 md:mt-14 text-xl md:text-2xl text-black new-font">
+    <p class="mt-8 md:mt-14 text-lg font-light md:text-2xl text-black">
       {{ 'accueil.event-block.titre2' | translate }}
     </p>
   </div>
 </div>
 
-<div class="bg-gray-200 py-2">
+<div class="bg-gray-200 py-2 my-20">
   <div class="container mx-auto flex flex-wrap justify-around items-center gap-8">
     <!-- Participants -->
     <div class="flex items-center space-x-4">
@@ -118,7 +118,7 @@
   </div>
 </div>
 
-<div class="py-16 pt-18 px-2 bg-gray-100">
+<div class="py-16 pt-18 px-2 bg-gray-100  my-20">
   <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     <!-- Bloc Exposants -->
     <div class="bg-customBlue bg-opacity-10 h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
@@ -127,7 +127,7 @@
         {{'exposant.position' | translate}}    
 
       </p>
-      <button class="mt-6 bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+      <button (click)="gotoReservation()" class="mt-6 bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
         {{'exposant.reservez' | translate}}    
         </button>
     </div>
@@ -138,7 +138,7 @@
       <p class="mt-4 text-lg md:text-xl text-black">
         {{ 'accueil.sponsor-block.t1' | translate }}
       </p>
-      <button class="mt-6 bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+      <button (click)="gotoSponsor()" class="mt-6 bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
         {{ 'accueil.sponsor-block.t3' | translate }}
       </button>
     </div>
@@ -150,10 +150,10 @@
         {{'accueil.sponsor-block.t4' | translate}}
       </p>
       <div class="mt-6 flex flex-wrap gap-4">
-        <button class="border border-red-800 text-red-500 py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-500 hover:text-white">
+        <button (click)="gotoVisiteur()"  class="border border-red-800 text-red-500 py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-500 hover:text-white">
           {{'accueil.sponsor-block.t5' | translate}}
         </button>
-        <button class="bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+        <button (click)="gotoVisiteur()"  class="bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
           {{'accueil.sponsor-block.t6' | translate}}
         </button>
       </div>
