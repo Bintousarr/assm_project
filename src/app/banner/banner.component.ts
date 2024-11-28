@@ -4,11 +4,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { EvenementComponent } from "../web/evenement/evenement.component";
 import { KeynoteSpeakerComponent } from "../keynote-speaker/keynote-speaker.component";
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-banner',
   standalone: true,
-  imports: [TranslateModule, EvenementComponent, KeynoteSpeakerComponent, CommonModule],
+  imports: [TranslateModule, EvenementComponent, KeynoteSpeakerComponent, CommonModule, RouterLink],
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss'],
 })
