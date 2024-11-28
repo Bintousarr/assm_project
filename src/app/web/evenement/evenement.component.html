@@ -65,7 +65,7 @@
   </div>
 </div> -->
 
-<div class="flex flex-col items-center justify-center text-center p-8 md:p-16 mt-3 bg-white">
+<div class="flex flex-col items-center justify-center text-center p-8 md:p-16  bg-gray-100">
   <!-- Titre MASS 2025 -->
   <div class="w-full md:w-1/2 flex justify-center">
     <img src="../../../assets/mass_text.png" alt="MASS 2025" class="w-2/3 md:w-1/2">
@@ -78,14 +78,14 @@
   </div>
 </div>
 
-<div class="bg-gray-300 py-8">
+<div class="bg-gray-200 py-2">
   <div class="container mx-auto flex flex-wrap justify-around items-center gap-8">
     <!-- Participants -->
     <div class="flex items-center space-x-4">
       <img src="../../../assets/participants.png" alt="Participants" class="w-12 h-12 md:w-14 md:h-14">
       <div>
         <p class="text-black font-extrabold text-xl md:text-2xl mt-2">+1000</p>
-        <p class="text-gray-700 text-sm md:text-base">Participants</p>
+        <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc1' | translate }}</p>
       </div>
     </div>
 
@@ -94,16 +94,16 @@
       <img src="../../../assets/calandar.png" alt="Calendrier" class="w-12 h-12 md:w-14 md:h-14">
       <div>
         <p class="text-black font-extrabold text-xl md:text-2xl mt-2">5</p>
-        <p class="text-gray-700 text-sm md:text-base">Jours de Sommet</p>
+        <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc3' | translate }}</p>
       </div>
     </div>
 
     <!-- Ateliers -->
     <div class="flex items-center space-x-4">
-      <img src="../../../assets/atelier.png" alt="Ateliers" class="w-12 h-12 md:w-14 md:h-14">
+      <img src="../../../assets/atelier.jpg" alt="Ateliers" class="w-12 h-12 md:w-14 md:h-14">
       <div>
         <p class="text-black font-extrabold text-xl md:text-2xl mt-2">15</p>
-        <p class="text-gray-700 text-sm md:text-base">Ateliers</p>
+        <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc4' | translate }}</p>
       </div>
     </div>
 
@@ -112,74 +112,75 @@
       <img src="../../../assets/mic.png" alt="Conférenciers" class="w-12 h-12 md:w-14 md:h-14">
       <div>
         <p class="text-black font-extrabold text-xl md:text-2xl mt-2">+25</p>
-        <p class="text-gray-700 text-sm md:text-base">Conférenciers</p>
+        <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc2' | translate }}</p>
       </div>
     </div>
   </div>
 </div>
 
-<div class="py-16 mt-10 px-2">
+<div class="py-16 pt-18 px-2 bg-gray-100">
   <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     <!-- Bloc Exposants -->
     <div class="bg-customBlue bg-opacity-10 h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
-      <h2 class="text-3xl md:text-5xl font-bold text-black">Exposants</h2>
+      <h2 class="text-3xl md:text-5xl font-bold text-black">{{'accueil.navbar-block.desc' | translate}}</h2>
       <p class="mt-4 text-lg md:text-xl text-black">
-        Positionnez-vous sur la première édition du MASS.
+        {{'exposant.position' | translate}}    
+
       </p>
-      <button class="mt-6 bg-red-500 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
-        Réservez votre stand
-      </button>
+      <button class="mt-6 bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+        {{'exposant.reservez' | translate}}    
+        </button>
     </div>
 
     <!-- Bloc Sponsors -->
     <div class="bg-customBlue bg-opacity-10 h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
-      <h2 class="text-3xl md:text-5xl font-bold text-black">Sponsors</h2>
+      <h2 class="text-3xl md:text-5xl font-bold text-black">{{ 'accueil.sponsor-block.t' | translate }}</h2>
       <p class="mt-4 text-lg md:text-xl text-black">
-        Associez votre image à un événement international de haut niveau.
+        {{ 'accueil.sponsor-block.t1' | translate }}
       </p>
-      <button class="mt-6 bg-red-500 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
-        Devenez sponsor
+      <button class="mt-6 bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+        {{ 'accueil.sponsor-block.t3' | translate }}
       </button>
     </div>
 
     <!-- Bloc Visiteurs -->
     <div class="bg-customBlue bg-opacity-10 h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
-      <h2 class="text-3xl md:text-5xl font-bold text-black">Visiteurs</h2>
+      <h2 class="text-3xl md:text-5xl font-bold text-black">{{'accueil.navbar-block.desc' | translate}}</h2>
       <p class="mt-4 text-lg md:text-xl text-black">
-        Venez vivre une expérience passionnante et explorez de nouvelles opportunités.
+        {{'accueil.sponsor-block.t4' | translate}}
       </p>
       <div class="mt-6 flex flex-wrap gap-4">
-        <button class="border border-red-500 text-red-500 py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-500 hover:text-white">
-          Professionnel
+        <button class="border border-red-800 text-red-500 py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-500 hover:text-white">
+          {{'accueil.sponsor-block.t5' | translate}}
         </button>
-        <button class="bg-red-500 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
-          Grand public
+        <button class="bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+          {{'accueil.sponsor-block.t6' | translate}}
         </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="flex flex-wrap justify-center gap-8 p-4 mt-10 bg-gray-100 text-center rounded-lg">
+<div class="flex flex-wrap justify-center gap-8 p-2  bg-gray-200 text-center rounded-lg">
   <div class="text-red-600">
     <img src="../../../assets/loader.png" class="h-20" alt="Loader">
   </div>
   <div class="flex items-center gap-6">
     <div>
       <p class="text-3xl font-bold">{{ days }}</p>
-      <p class="text-sm text-gray-600">Jours</p>
+      <p class="text-sm text-gray-600">{{ 'accueil.compte-rebours.titre2' | translate }}</p>
     </div>
     <div>
       <p class="text-3xl font-bold">{{ hours }}</p>
-      <p class="text-sm text-gray-600">Heures</p>
+      <p class="text-sm text-gray-600">{{ 'accueil.compte-rebours.titre3' | translate }}</p>
     </div>
     <div>
       <p class="text-3xl font-bold">{{ minutes }}</p>
-      <p class="text-sm text-gray-600">Minutes</p>
+      <p class="text-sm text-gray-600">{{ 'accueil.compte-rebours.titre4' | translate }}</p>
     </div>
     <div>
       <p class="text-3xl font-bold">{{ seconds }}</p>
-      <p class="text-sm text-gray-600">Secondes</p>
+      <p class="text-sm text-gray-600">{{ 'accueil.compte-rebours.titre5' | translate }}</p>
     </div>
   </div>
 </div>

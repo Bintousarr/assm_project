@@ -11,6 +11,7 @@
         "t1":"Market",
         "t2":"To see at the market",
         "t3":"VISITOR ",
+        "t":"Visitors ",
         "titre2": "Agenda",
         "titre3": "MASS",
         "m1":"Partners",
@@ -20,21 +21,25 @@
         "desc2": "Travel information",
         "desc3": "Practical information",
         "desc4": "EXHIBITOR",
+        "desc": "Exhibitors",
         "titre4": "CONTACT",
         "menu": "Menu"
       },
       "banner-block": {
         "conference":"African Space Solutions Market (MASS)",
-        "date": "From 05 to 09 May 2025",
+        "date": "From 6 to 8 May 2025",
         "year": "2025",
         "description": "Abidjan - Ivory Coast, Exhibition Park",
         "about": "About",
         "register": "REGISTER HERE",
-        "desc1":"Space is not an option, but a necessity. Space technology is fundamental for African countries."
+        "desc1":"Space is not an option, but a necessity. Space technology is fundamental for African countries.",
+        "desc2": "An unmissable event",
+      "desc3":"to explore the",
+      "desc4":"space innovations"
       },
       "event-block": {
         "titre1":"Presentation of MASS",
-        "titre2": "OTIF SPACE AFRICA is organizing the African Space Solutions Market (MASS) in Abidjan, Ivory Coast, from May 5 to May 9, 2025, at the Exhibition Park. MASS is a unique and essential market offering a meeting platform for all space sector stakeholders: the public and private sectors, international organizations, non-governmental organizations, civil society, the academic sector, and space service providers. The aim is to present concrete space solutions to address the challenges related to Africa’s socio-economic development. ",
+        "titre2": "OTIF SPACE AFRICA is organizing the African Space Solutions Market (MASS) in Abidjan, Ivory Coast, from May 6 to May 8, 2025, at the Exhibition Park. MASS is a unique and essential market offering a meeting platform for all space sector stakeholders: the public and private sectors, international organizations, non-governmental organizations, civil society, the academic sector, and space service providers. The aim is to present concrete space solutions to address the challenges related to Africa’s socio-economic development. ",
         "details": "Goals of MASS"
       },
       "event-details": {
@@ -53,11 +58,20 @@
         "titre6":"A platform for exchanges and opportunities",
         "p1":"Create a platform for private companies to showcase their products.",
         "p2":"Enabling managers to find a suitable market with practical solutions.",
-        "p3":"Marketing space-based products."
+        "p3":"Marketing space-based products.",
+        "p4": "Receive all MASS news and information directly in your mailbox.",
+        "p5":"I'd like to subscribe"
        
       },
       "sponsor-block": {
-        "titre1": "Our Partners"
+        "titre1": "Our Partners",
+        "t":"Sponsors",
+        "t1":" Associate your image with a top-level international event.",
+        "t3":"Become a sponsor",
+        "t4":" Come and live an exciting experience and explore new opportunities.",
+        "t5":"Professional",
+        "t6":"General public"
+
       },
       "compte-rebours": {
         "titre1": "Event Countdown",
@@ -285,7 +299,7 @@
 
    "about-block": {
     "titre1": "African Market for Space Solutions",
-    "titre2": "From May 05 to 09, 2025, Exhibition Park",
+    "titre2": "From May 06 to 08, 2025, Exhibition Park",
     "titre3": "Abidjan - Ivory Coast",
     "titre4": "OTIF: A key company in the space and geospatial field in Africa",
     "titre5": "OTIF is committed to driving the African continent toward a prosperous technological and economic future. As a catalyst, OTIF harmonizes the differences between African countries and promotes space development across the continent.",
@@ -500,7 +514,7 @@
     "tit1":" Space Solutions",
     "tit2":"Exhibition Park",
     "tit3":"Abidjan - Ivory Coast",
-    "Date": "  From May 5 to 9, 2025",
+    "Date": "  From May 6 to 8, 2025",
     "titre2": "5 GOOD REASONS TO ATTEND MASS",
     "sousTitre1": "Privileged access to strategic meetings",
     "description1": "As a MASS participant, you will have the opportunity to engage in exclusive B-to-B meetings with industry experts...",
@@ -532,12 +546,17 @@
     "enseigne": "Sign: your company's name and booth number",
     "raccordement": "Electrical connection",
     "desk": "Reception desk",
-    "reserve": "Reserve"
+    "reserve": "Reserve",
+    "reservez": "Book your stand ",
+    "position": "Position yourself on the first MASS edition."
+
+
+
   },
   "visiteur": {
     "titre1": "African Space Solutions Market",
     "texte1": "OTIF presents its first edition of the Spatial Event, the African Space Solutions Market (MASS), which will take place from ",
-    "t":"May 5 to 9, 2025",
+    "t":"May 6 to 8, 2025",
     "texte2": "Are you passionate about Space? Then, this is an event not to be missed!",
     "texte3": "Join MASS to meet key players in the space industry, create sustainable alliances, strengthen your skills, and discover technologies that will shape the future.",
     "reservation_titre": "Reservation & Payment",
