@@ -16,7 +16,8 @@ import { CommonModule } from '@angular/common';
 export class EvenementComponent {
   private eventDate: Date = new Date('2025-06-16T00:00:00'); // Date de l'événement
 
-  
+  counter: number = 0;
+
   slides: any[] = [];
   currentIndex = 0;
   slideInterval: Subscription | undefined;
@@ -31,9 +32,29 @@ export class EvenementComponent {
     this.translate.setDefaultLang('en');
     this.updateCountdown(); // Appel initial
     setInterval(() => this.updateCountdown(), 1000); // Actualisation chaque seconde
-  }
+    this.startCounter();
 
-  
+  }
+  startCounter() {
+    const interval = 20; 
+    const increment = 1; 
+
+    setInterval(() => {
+      if (this.counter < 1000) {
+        this.counter += increment;
+      } else {
+        this.counter = 0; 
+      }
+    }, interval); 
+
+    setInterval(() => {
+      if (this.counter < 300) {
+        this.counter += increment;
+      } else {
+        this.counter = 0; // Recommence à 0 lorsque le compteur atteint 300
+      }
+    }, interval); 
+  }
   translateText(lang: string) {
     this.translate.use(lang);
   }

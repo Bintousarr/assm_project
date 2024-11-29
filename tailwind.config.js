@@ -22,13 +22,24 @@ module.exports = {
       },
       keyframes: {
         'slide-in': {
-          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '0%': { opacity: '0', transform: 'translateX(10px)' },
           '50%': { opacity: '1', transform: 'translateX(0)' },
-          '100%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '0', transform: 'translateX(-10px)' },
+        },
+       'slide-up': {
+          '0%': { transform: 'translateY(-100%)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+        'bounceCustom': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
       animation: {
         'slide-in': 'slide-in 1s ease-out infinite',
+        'slide-up': 'slide-up 0.5s ease-out forwards',
+        'bounceCustom': 'bounceCustom 1s ease-in-out infinite',
+
       },
     },
     

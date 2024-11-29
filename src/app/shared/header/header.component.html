@@ -32,13 +32,11 @@
     </div>
   </div>
 
-  <!-- Main Header -->
-  <header
-    class="flex flex-col lg:flex-row items-center justify-between text-red-700 pt-20 pb-4 sm:pt-14 px-4 sm:px-10">
-    <!-- Logo Section -->
-    <div class="flex items-center mb-4 lg:mb-0">
+  <header    class="flex flex-col lg:flex-row items-center justify-between text-red-700 p-2 pt-4">
+
+    <div class="flex items-center mt-4 lg:mb-0">
       <img src="../../../assets/newlogo.png" alt="Logo MASS"
-        class="h-14 sm:h-24 w-auto mr-4">
+        class="h-12 sm:h-24 w-auto mr-4">
     </div>
 
     <!-- Hamburger Menu for Mobile -->
@@ -77,9 +75,9 @@
           'accueil.navbar-block.titre3' | translate }}</a>
         <div
           class="absolute w-60 left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-          <a [routerLink]="['program']"
+          <!-- <a [routerLink]="['program']"
             class="block px-4 py-2 hover:bg-gray-200">{{
-            'accueil.navbar-block.titre2' | translate }}</a>
+            'accueil.navbar-block.titre2' | translate }}</a> -->
           <a [routerLink]="['sponsor-page']"
             class="block px-4 py-2 hover:bg-gray-200">{{
             'accueil.navbar-block.m1' | translate }}</a>
@@ -142,7 +140,7 @@
         </div>
 
         <!-- Login Button -->
-        <button routerLink="/login"     class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">
+        <button routerLink="/login" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">
           {{'accueil.header-block.connexion' | translate}}
         </button>
       </div>
@@ -190,11 +188,11 @@
             </button>
             <ul *ngIf="activeDropdown === 'mass-mobile'"
               class=" text-black mt-2 space-y-2 pl-4"> 
-              <li><a [routerLink]="['program']"
+             <!--  <li><a [routerLink]="['program']"
                   class="block px-4 py-2 hover:bg-gray-200">{{
                   'accueil.navbar-block.titre2' | translate }}</a>
   
-              </li>
+              </li> -->
               <li> <a [routerLink]="['sponsor-page']"
                   class="block px-4 py-2 hover:bg-gray-200">{{
                   'accueil.navbar-block.m1' | translate }}</a></li>
