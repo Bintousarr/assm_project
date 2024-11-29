@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 export class EvenementComponent {
   private eventDate: Date = new Date('2025-06-16T00:00:00'); // Date de l'événement
 
+  
   slides: any[] = [];
   currentIndex = 0;
   slideInterval: Subscription | undefined;
@@ -77,6 +78,7 @@ gotoVisiteur(){
   //this.router.navigate(['/profesional-visitor']);
 
 }
+
 
 
 }
