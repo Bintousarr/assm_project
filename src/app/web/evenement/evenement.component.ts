@@ -17,6 +17,8 @@ export class EvenementComponent {
   private eventDate: Date = new Date('2025-06-16T00:00:00'); // Date de l'événement
 
   counter: number = 0;
+  counterTwo: number = 0;
+
 
   slides: any[] = [];
   currentIndex = 0;
@@ -36,9 +38,13 @@ export class EvenementComponent {
 
   }
   startCounter() {
-    const interval = 20; 
-    const increment = 1; 
-
+    const interval = 20; // Intervalle pour le premier compteur
+    const increment = 1; // Incrémentation pour le premier compteur
+    
+    const intervalTwo = 50; // Intervalle pour le second compteur
+    const incrementTwo = 1; // Incrémentation pour le second compteur
+  
+    // Premier compteur : de 0 à 1000
     setInterval(() => {
       if (this.counter < 1000) {
         this.counter += increment;
@@ -46,15 +52,17 @@ export class EvenementComponent {
         this.counter = 0; 
       }
     }, interval); 
-
+  
+    // Deuxième compteur : de 0 à 300
     setInterval(() => {
-      if (this.counter < 300) {
-        this.counter += increment;
+      if (this.counterTwo < 300) {
+        this.counterTwo += incrementTwo;
       } else {
-        this.counter = 0; // Recommence à 0 lorsque le compteur atteint 300
+        this.counterTwo = 0; 
       }
-    }, interval); 
+    }, intervalTwo); 
   }
+  
   translateText(lang: string) {
     this.translate.use(lang);
   }
