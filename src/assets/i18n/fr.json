@@ -33,8 +33,8 @@
       "about": "À propos",
       "register": "INSCRIVEZ-VOUS",
       "desc1": "L'espace n'est pas une option, mais une nécessité. La technologie spatiale est fondamentale pour les pays africains.",
-      "desc2": "LES SOLUTIONS SPATIALES",
-      "desc3":"POUR LE DEVELOPPEMENT",
+      "desc2": "THEME : \" LES SOLUTIONS SPATIALES",
+      "desc3":"POUR LE DEVELOPPEMENT SOCIO-ECONOMIQUE DE L’  AFRIQUE \" ",
       "desc4":"SOCIO-ECONOMIQUE DE L’  AFRIQUE"
     },
     "event-block": {
@@ -71,7 +71,8 @@
       "t3":"Devenez sponsor",
       "t4":" Venez vivre une expérience passionnante et explorer de nouvelles opportunités.",
         "t5":"Professionnel",
-        "t6":"Grand public"
+        "t6":"Grand public",
+        "t7": "Visiteurs"
 
     },
     "compte-rebours": {
