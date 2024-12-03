@@ -12,7 +12,8 @@ import saveAs from 'file-saver';
   styleUrl: './sponsor-page.component.scss'
 })
 export class SponsorPageComponent {
-  translate: TranslateService = inject(TranslateService)
+  translate: TranslateService = inject(TranslateService);
+
 
   // Variables pour contrôler le déroulement
   isTextExpanded: boolean = false;
@@ -25,8 +26,16 @@ export class SponsorPageComponent {
   isORANGEExpanded: boolean = false;
   isUVExpanded: boolean = false;
 
+  currentLang: string = 'en'; // Initialize language to 'en'
+
   ngOnInit() {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
+    this.currentLang = this.translate.currentLang; // Get the initial language
+
+    // Listen for language changes if needed
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLang = event.lang;
+    });
   }
 
   translateText(lang: string) {

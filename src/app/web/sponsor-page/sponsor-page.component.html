@@ -28,7 +28,10 @@
          <!-- Union Africaine -->
          <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
           <div class="flex items-center h-36">
-            <img src="../../../assets/AFRICAN_UNION.png" class="max-h-60 object-contain">
+            <img *ngIf="currentLang === 'en'" src="../../assets/AFRICAN_UNION.png" class="max-h-60 object-contain" alt="Union Africaine" />
+            <img *ngIf="currentLang === 'fr'" src="../../assets/UA.jpg" class="max-h-60 object-contain" alt="African Union" />
+           
+            <!-- <img src="../../../assets/AFRICAN_UNION.png" class="max-h-60 object-contain"> -->
             <button 
               (click)="toggleUA()" 
               class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
