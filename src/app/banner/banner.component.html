@@ -1,20 +1,19 @@
 <section class="relative h-[680px] overflow-hidden">
   <div class="slider-wrapper h-full">
     <div class="slider flex h-full transition-transform duration-700" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
-      <div *ngFor="let slide of slides; let i = index" class="slide flex-shrink-0 w-full bg-cover bg-center relative" [style.background-image]="'url(' + slide.image + ')'">
+      <div *ngFor="let slide of slides"   class="slide flex-shrink-0 w-full bg-cover bg-center relative" [style.background-image]="'url(' + slide.image + ')'">
         <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div class="relative flex flex-col items-center justify-center text-center md:text-center text-white h-full container mx-auto px-5 md:px-7 lg:px-12 pb-10 md:pb-16">
-          <h1 class="text-xl text-center justify-center font-bold sm:text-xl md:text-2xl lg:text-3xl">
-            {{ slide.title | translate }} {{ slide.subtitle | translate }} {{ slide.highlight | translate }}
+        <div  class="relative flex flex-col items-center justify-center text-center md:text-center text-white h-full container mx-auto px-5 md:px-7 lg:px-12 pb-10 md:pb-16" >
+          <h1 class="text-xl text-center justify-center  font-bold   sm:text-xl md:text-2xl lg:text-3xl ">
+            {{ slide.title| translate }} {{ slide.subtitle | translate }}  {{ slide.highlight | translate }}
           </h1>
-          
-          <!-- Only show the Register button for the first slide -->
-          <button *ngIf="i === 0" routerLink="/register" class="mt-6 bg-blue-500 hover:bg-red-800 text-white py-3 px-6 md:px-8 rounded-full text-sm md:text-sm lg:text-lg">
+        
+          <button routerLink="/register"  class="mt-6 bg-blue-500 hover:bg-red-800 text-white py-3  px-6 md:px-8 rounded-full text-sm md:text-sm  lg:text-lg">
             {{ 'accueil.banner-block.register' | translate }}
           </button>
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 
   <button (click)="prevSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full">
@@ -22,9 +21,8 @@
   </button>
   <button (click)="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full">
     ›
-  </button>
+  </button>  
 </section>
-
 
 
 <!-- <div class="relative flex flex-row items-center text-white justify-center mb-4 text-center py-16 w-full h-2/3 bg-cover font-poppins bg-center" [style.backgroundImage]="'url(' + slides[currentIndex].image + ')'"> -->
