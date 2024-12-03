@@ -95,7 +95,7 @@ export class HeaderComponent {
     } else if (language === 'en') {
       this.currentLanguage = 'EN';
       this.translateText('en')
-      this.currentFlag = '../../../assets/usa.png';
+      this.currentFlag = '../../../assets/ru.png';
     }
     this.isDropdownOpen = false; // Close dropdown after selection
   }
