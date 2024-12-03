@@ -24,7 +24,7 @@ export class HeaderComponent {
   isLoggedIn: boolean = false;
   isDropdownOpen = false; // State for the dropdown
   currentLanguage = 'EN'; // Default language
-  currentFlag = '../../../assets/usa.png'; // Default flag
+  currentFlag = '../../../assets/ru.png' ; // Default flag
 
   isMenuOpen: boolean = false; // Variable pour contrôler l'ouverture du menu mobile
   openSubMenus: Set<string> = new Set();

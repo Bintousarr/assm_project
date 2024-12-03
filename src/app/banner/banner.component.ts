@@ -16,7 +16,7 @@ import { RouterLink } from '@angular/router';
 export class BannerComponent implements OnInit, OnDestroy {
   slides = [
     { image: '../../../assets/head.png', title: 'accueil.banner-block.desc2', subtitle: 'accueil.banner-block.desc3', highlight: 'accueil.banner-block.desc4', hasText: true },
-    { image: '../../../assets/slider.png', hasText: false },
+    { image: '../../../assets/Cover.png', hasText: false },
   ];
   
   currentIndex = 0;
