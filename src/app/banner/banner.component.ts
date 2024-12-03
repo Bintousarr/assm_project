@@ -15,16 +15,24 @@ import { RouterLink } from '@angular/router';
 })
 export class BannerComponent implements OnInit, OnDestroy {
   slides = [
-    { image: '../../../assets/head.png', title: 'accueil.banner-block.desc2', subtitle: 'accueil.banner-block.desc3', highlight: 'accueil.banner-block.desc4', hasText: true },
-    { image: '../../../assets/Cover.png', hasText: false },
+    { image: '../../../assets/head.png', title: 'accueil.banner-block.desc2', subtitle: 'accueil.banner-block.desc3', highlight: 'accueil.banner-block.desc4' },
+    { image: '../../../assets/Cover.png', title: 'accueil.banner-block.desc5', subtitle: 'accueil.banner-block.desc6', highlight: 'accueil.banner-block.desc7' },
   ];
   
   currentIndex = 0;
   slideInterval: Subscription | undefined;
+  currentLang: string = 'en'; // Initialize language to 'en'
+
   translate: TranslateService = inject(TranslateService);
 
   ngOnInit() {
     this.translate.setDefaultLang('en');
+    this.currentLang = this.translate.currentLang; // Get the initial language
+
+    // Listen for language changes if needed
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLang = event.lang;
+    });
 
     this.startSlideShow();
   }

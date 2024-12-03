@@ -18,13 +18,13 @@ export class HeaderComponent {
   activeDropdown: string | null = null;  // Pour savoir quel dropdown est ouvert
   constructor(private authService: AuthService,private router: Router) { this.router.events.subscribe(() => {
     this.isMenuOpen = false;
-    this.activeDropdown = null;  // Ferme tous les dropdowns
+    this.activeDropdown = null;  
   });}
   
   isLoggedIn: boolean = false;
-  isDropdownOpen = false; // State for the dropdown
-  currentLanguage = 'EN'; // Default language
-  currentFlag = '../../../assets/ru.png' ; // Default flag
+  isDropdownOpen = false; 
+  currentLanguage = 'EN'; 
+  currentFlag = '../../../assets/ru.png' ; 
 
   isMenuOpen: boolean = false; // Variable pour contrôler l'ouverture du menu mobile
   openSubMenus: Set<string> = new Set();
@@ -43,15 +43,15 @@ export class HeaderComponent {
   toggleDropdownHome(menu: string) {
     if (menu === 'accueil') {
       if (this.router.url === '/') {
-        // Si on est déjà sur la page d'accueil, ouvrir le sous-menu
+
         this.activeDropdown = this.activeDropdown === menu ? null : menu;
       } else {
-        // Sinon, naviguer vers la page d'accueil
+
         this.router.navigate(['/']);
-        this.closeMenu();  // Fermer le menu mobile après la navigation
+        this.closeMenu();  
       }
     } else {
-      // Pour les autres menus, basculer l'affichage des sous-menus
+
       this.activeDropdown = this.activeDropdown === menu ? null : menu;
     }
   }
