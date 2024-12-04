@@ -1,8 +1,8 @@
-<div class="bg-red-800 mt-10 font-poppins p-8 max-w-full mx-auto">
-  <h1 class="text-center font-bold text-2xl mb-8 animate-pulse text-customBlue">
+<div class="flex flex-col items-center  bg-gradient-to-r from-blue-300 to-red-900 mt-10 font-poppins p-8 max-w-full mx-auto">
+  <h1 class="text-center font-bold text-3xl mb-8 animate-pulse ">
     {{ 'reservation.reservation' | translate }}
   </h1>
-  <div class="w-20 h-1 bg-white mx-auto mb-12"></div>
+  <div class="w-20 h-1 bg-red-800 mx-auto mb-12"></div>
 
   <form class="bg-white max-w-5xl mx-auto p-10 rounded-lg">
     <fieldset class="border p-4 mb-4">
@@ -16,9 +16,10 @@
             <option value="Mme">{{ 'reservation.mme' | translate }}</option>
           </select>
         </div>
+       
         <div>
-          <label for="nom">{{ 'reservation.name' | translate }}</label>
-          <input id="nom" type="text" class="w-full border rounded-md p-2"/>
+          <label for="telephone1">{{ 'reservation.phone' | translate }}</label>
+          <input id="telephone1" type="text" class="w-full border rounded-md p-2"/>
         </div>
         <div>
           <label for="prenom">{{ 'reservation.firstname' | translate }}</label>
@@ -28,75 +29,20 @@
           <label for="courriel">{{ 'reservation.email' | translate }}</label>
           <input id="courriel" type="email" class="w-full border rounded-md p-2"/>
         </div>
-       <!--  <div>
-          <label for="typeOrganisation">{{ 'reservation.organization_type' | translate }}</label>
-          <input id="typeOrganisation" type="text" class="w-full border rounded-md p-2"/>
-        </div>
+      
         <div>
-          <label for="organisation">{{ 'reservation.organization' | translate }}</label>
-          <input id="organisation" type="text" class="w-full border rounded-md p-2"/>
-        </div> -->
-        <div>
-          <label for="telephone1">{{ 'reservation.phone' | translate }}</label>
-          <input id="telephone1" type="text" class="w-full border rounded-md p-2"/>
+          <label for="nom">{{ 'reservation.name' | translate }}</label>
+          <input id="nom" type="text" class="w-full border rounded-md p-2"/>
         </div>
-       <!--  <div>
-          <label for="telephone2">{{ 'reservation.phone2' | translate }}</label>
-          <input id="telephone2" type="text" class="w-full border rounded-md p-2"/>
-        </div> -->
+       
         <div>
           <label for="adresse">{{ 'reservation.address' | translate }}</label>
           <input id="adresse" type="text" class="w-full border rounded-md p-2"/>
         </div>
-       <!--  <div>
-          <label for="adresseComplement">{{ 'reservation.address_complement' | translate }}</label>
-          <input id="adresseComplement" type="text" class="w-full border rounded-md p-2"/>
-        </div>
-        <div>
-          <label for="codePostal">{{ 'reservation.postal_code' | translate }}</label>
-          <input id="codePostal" type="text" class="w-full border rounded-md p-2"/>
-        </div>
-        <div>
-          <label for="ville">{{ 'reservation.city' | translate }}</label>
-          <input id="ville" type="text" class="w-full border rounded-md p-2"/>
-        </div> -->
-        <div>
-          <label for="region">{{ 'reservation.select_region' | translate }}</label>
-          <select id="region" class="w-full border rounded-md p-2">
-            <option value="" disabled>{{ 'reservation.select_region' | translate }}</option>
-            <option value="region1">Région 1</option>
-            <option value="region2">Région 2</option>
-          </select>
-        </div>
+     
+       
       </div>
     </fieldset>
-
- <!--    <fieldset class="border p-4 mb-4">
-      <legend class="font-semibold text-customBlue">{{ 'reservation.chosen_plan_participation' | translate }}</legend>
-      <div class="grid grid-cols-2 gap-4 text-lg">
-        <div>
-          <label for="formule">{{ 'reservation.chosen_plan' | translate }}</label>
-          <select id="formule" class="w-full border rounded-md p-2">
-            <option value="" disabled>{{ 'reservation.select_title' | translate }}</option>
-            <option value="1">{{ 'reservation.full_day' | translate }}</option>
-            <option value="2">{{ 'reservation.two_days' | translate }}</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="participationDate">{{ 'reservation.participation_date' | translate }}</label>
-          <input id="participationDate" type="date" class="w-full border rounded-md p-2"/>
-        </div>
-
-        <div>
-          <label for="dejeuner">{{ 'reservation.lunch_included' | translate }}</label>
-          <select id="dejeuner" class="w-full border rounded-md p-2">
-            <option value="oui">Oui</option>
-            <option value="non">Non</option>
-          </select>
-        </div>
-      </div>
-    </fieldset> -->
 
     <fieldset class="border p-4 mb-4">
       <legend class="font-semibold text-customBlue">{{ 'reservation.payment_option' | translate }}</legend>
@@ -110,104 +56,64 @@
       </div>
     </fieldset>
 
-   <!--  <fieldset class="border p-4 mb-4">
-      <legend class="font-semibold text-customBlue">{{ 'reservation.additional_info' | translate }}</legend>
-      <div class="grid grid-cols-2 gap-4 text-lg">
-        <div>
-          <label for="adresseFacturation">{{ 'reservation.billing_address' | translate }}</label>
-          <input id="adresseFacturation" type="text" class="w-full border rounded-md p-2"/>
-        </div>
-        <div>
-          <label for="emailEdition">{{ 'reservation.administrative_email' | translate }}</label>
-          <input id="emailEdition" type="email" class="w-full border rounded-md p-2"/>
-        </div>
-        <div>
-          <label for="autresInformations">{{ 'reservation.other_info' | translate }}</label>
-          <textarea id="autresInformations" class="w-full border rounded-md p-2"></textarea>
-        </div>
-      </div>
-    </fieldset> -->
-
-    <div class="flex justify-between items-center text-lg mt-4">
-      <label class="flex items-center">
-        <input type="checkbox" id="acceptTerms" class="mr-2" />
-        {{ 'reservation.accept_terms' | translate }}
-      </label>
-      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">{{ 'reservation.submit' | translate }}</button>
-    </div>
   </form>
+
+  <div class="p-10">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 animate-pulse ">{{ 'exposant.exposition1' | translate }}</h2>
+    <div class="flex justify-center mb-4 md:mb-8">
+        <div class="h-1 w-16 md:w-20 bg-red-800"></div>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-6 md:gap-8 p-6 md:p-8">    
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full lg:w-3/3">
+          
+          <div class="bg-white shadow-lg p-4 md:p-6 rounded-lg">
+            <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standStandard' | translate }}</h2>
+            <p class="text-blue-500 font-semibold">{{ 'exposant.standStandardDetails' | translate }}</p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.moquette' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.chaises3' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table1' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.eclairage' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.corbeille1' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.spots' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white shadow-lg p-4 md:p-6 rounded-lg">
+            <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standPremium' | translate }}</h2>
+            <p class="text-blue-500 font-semibold">{{ 'exposant.standPremiumDetails' | translate }}</p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.moquette' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.chaises6' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table2' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.eclairage' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.raccordement' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.corbeille2' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.spots' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white shadow-lg p-4 md:p-6 rounded-lg">
+            <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standConfort' | translate }}</h2>
+            <p class="text-blue-500 font-semibold">{{ 'exposant.standConfortDetails' | translate }}</p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.moquette' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.chaises6' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table2' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.eclairage' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.raccordement' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.corbeille2' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.spots' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.desk' | translate }}</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
+            </ul>
+          </div>
+        </div>
+        
+    </div>
 </div>
 
-<!-- <div class="container mx-auto p-8 mt-10 font-popins">
-  <div class="ml-10">
-    <h3 class="text-blue-500 text-3xl font-bold border-b-2 border-blue-300 pb-2 text-center">{{ 'tarif.title' | translate }}</h3>
-  </div>
-
-  <div class="flex justify-center items-start font-poppins space-x-4 mt-10">
-    <div class="relative p-20 bg-blue-700 text-white text-center rounded-md w-80 h-auto shadow-lg group">
-      <h2 class="text-4xl font-bold font-poppins">{{ 'tarif.day_1' | translate }}</h2>
-      <div class="absolute inset-0 bg-white text-red-700  bg-opacity-90 p-4 text-left opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-        <ul class="list-none text-sm mt-6">
-          <li class="flex items-center mb-2">
-            <span class="mr-2">✔️</span> {{ 'tarif.student_price' | translate }}
-          </li>
-          <li class="flex items-center mb-2">
-            <span class="mr-2">✔️</span> {{ 'tarif.sponsor_price' | translate }}
-          </li>
-          <li class="flex items-center mb-2">
-            <span class="mr-2">✔️</span> {{ 'tarif.member_price' | translate }}
-          </li>
-          <li class="flex items-center">
-            <span class="mr-2">✔️</span> {{ 'tarif.full_price' | translate }}
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="relative p-20 bg-blue-700 text-white text-center rounded-md w-80 h-auto shadow-lg group">
-      <h2 class="text-4xl font-bold">{{ 'tarif.day_2' | translate }}</h2>
-      <div class="absolute inset-0 bg-white text-red-700 bg-opacity-90 p-4 text-left opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-        <ul class="list-none text-sm mt-6">
-          <li class="flex items-center mb-2">
-            <span class="mr-2">✔️</span> {{ 'tarif.student_price' | translate }}
-          </li>
-          <li class="flex items-center mb-2">
-            <span class="mr-2">✔️</span> {{ 'tarif.sponsor_price' | translate }}
-          </li>
-          <li class="flex items-center mb-2">
-            <span class="mr-2">✔️</span> {{ 'tarif.member_price' | translate }}
-          </li>
-          <li class="flex items-center">
-            <span class="mr-2">✔️</span> {{ 'tarif.full_price' | translate }}
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="mt-16 font-poppins">
-    <h4 class="text-xl font-bold text-blue-700">{{ 'tarif.includes' | translate }}</h4>
-    <ul class="list-disc pl-5 mt-4 leading-relaxed text-lg">
-      <li>{{ 'tarif.exhibitor_access' | translate }}</li>
-      <li>{{ 'tarif.catering' | translate }}</li>
-      <li>{{ 'tarif.discounted_rate' | translate }}</li>
-      <li>{{ 'tarif.vat' | translate }}</li>
-    </ul>
-    <p class="mt-4 leading-relaxed text-lg">{{ 'tarif.effective_registration' | translate }}</p>
-  </div>
-
-  <div class="mt-10 flex flex-col items-center justify-center font-poppins">
-    <h4 class="text-xl font-bold text-blue-700 text-center">{{ 'tarif.cancellation_policy' | translate }}</h4>
-    <div class="w-16">
-      <hr class="border-t-2 border-blue-500 my-1">
-    </div>
-    <p class="text-lg mt-2">{{ 'tarif.refund_100' | translate }}</p>
-    <ul class="list-disc pl-5 mt-2 leading-relaxed text-lg">
-      <li>{{ 'tarif.refund_100' | translate }}</li>
-      <li>{{ 'tarif.refund_50' | translate }}</li>
-      <li>{{ 'tarif.no_refund' | translate }}</li>
-    </ul>
-  </div>
-</div> -->
-
+</div>
 

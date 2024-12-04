@@ -42,7 +42,7 @@
     },
     "event-block": {
       "titre1":" Présentation de MASS",
-      "titre2": "OTIF SPACE AFRICA organise le Marché Africain des Solutions Spatiales (MASS) à Abidjan en Côte d’Ivoire, du 06 au 08 Mai 2025, au Parc des expositions. Le MASS est un marché unique et incontournable qui offre une plateforme de rencontre entre toutes les parties prenantes du spatial:  le secteur public et privé, les organisations internationales, les organisations non gouvernementales, la société civile, le secteur académique et les fournisseurs de services spatiaux. Il s’agit de proposer des solutions spatiales concrètes pour résoudre les défis liés au développement socio-économique du continent africain.",
+      "titre2": "Le Marché Africain des Solutions Spatiales (MASS), organisé par OTIF SPACE AFRICA, se tiendra du 6 au 8 mai 2025 au Parc des expositions d'Abidjan, en Côte d'Ivoire. Le MASS sert de plateforme vitale pour encourager la collaboration entre les diverses parties prenantes du secteur spatial, notamment : les secteurs public et privé, les organisations internationales, les organisations non gouvernementales (ONG), la société civile, les institutions académiques, les fournisseurs de services spatiaux. L'objectif principal du MASS est de présenter des solutions spatiales concrètes conçues pour relever les défis socio-économiques les plus pressants en Afrique. La MASS s'articulera autour d'innovations dans des domaines tels que les télécommunications, la surveillance de l'environnement, la gestion des catastrophes, l'agriculture, la planification urbaine et l'éducation. En réunissant les principaux acteurs de l'écosystème spatial, la MASS mettra l'accent sur le rôle croissant de l'Afrique dans l'exploitation des technologies spatiales pour favoriser le développement durable et la croissance économique.",
       "details": "Objectifs du MASS",
       "t":"MARCHE AFRICAIN DES SOLUTIONS SPATIALES"
     },
@@ -352,7 +352,7 @@
     "titre7": "VISA, PASSEPORTS ET FORMALITÉS D'ENTRÉE",
     "titre8": "Tous les participants doivent détenir un passeport valide ou un autre document de voyage acceptable.",
     "titre9": "EXIGENCES EN MATIÈRE DE VACCINATION",
-    "titre10": "Tous les visiteurs de Sharm El Sheikh DOIVENT avoir un certificat de fièvre jaune valide.",
+    "titre10": "Tous les visiteurs de MASS doivent avoir déja effectué un vaccin contre la covid-19.",
     "titre11": "HÉBERGEMENT",
     "titre12": "En décembre, la Côte d'Ivoire connaît un climat sec et chaud avec des températures entre 24°C et 32°C.",
     "titre13": "KIT D'INFORMATION ET ACCRÉDITATION",
@@ -594,7 +594,7 @@
     "bouton_reserver": "Passez votre réservation"
   },
   "reservation": {
-    "reservation": "Réservation",
+    "reservation": "RESERVATION",
     "your_details": "VOS COORDONNÉES :",
     "title": "Titre",
     "select_title": "Sélectionner",

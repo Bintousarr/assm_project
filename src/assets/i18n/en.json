@@ -43,7 +43,7 @@
       },
       "event-block": {
         "titre1":"Presentation of MASS",
-        "titre2": "OTIF SPACE AFRICA is organizing the African Space Solutions Market (MASS) in Abidjan, Ivory Coast, from May 6 to May 8, 2025, at the Exhibition Park. MASS is a unique and essential market offering a meeting platform for all space sector stakeholders: the public and private sectors, international organizations, non-governmental organizations, civil society, the academic sector, and space service providers. The aim is to present concrete space solutions to address the challenges related to Africa’s socio-economic development. ",
+        "titre2": "The African Space Solutions Market (MASS), organized by OTIF SPACE AFRICA, is set to take place from May 6 to May 8, 2025, at the Exhibition Park in Abidjan, Ivory Coast. MASS  serves as a vital platform for fostering collaboration among diverse stakeholders in the space sector, including:Public and private sectors, International organizations, Non-governmental organizations (NGOs), Civil society, Academic institutions, Space service providers The primary objective of MASS is to showcase concrete space-based solutions tailored to tackle the pressing socio-economic challenges across Africa. Mass will exposed around innovations in areas such as telecommunication, environmental monitoring, disaster management, agriculture, urban planning, and education. By convening key players in the space ecosystem, MASS will emphasize Africa’s growing role in leveraging space technologies to drive sustainable development and economic growth. ",
         "details": "Goals of MASS",
         "t":"AFRICAN SPACE SOLUTIONS MARKET "
       },
@@ -349,7 +349,7 @@
       "titre7": "VISA, PASSPORTS AND ENTRY REQUIREMENTS",
       "titre8": "All participants must have a valid passport or other acceptable travel document.",
       "titre9": "VACCINATION REQUIREMENTS",
-      "titre10": "All visitors to Sharm El Sheikh MUST have a valid yellow fever certificate.",
+      "titre10": "All MASS visitors must have already had a vaccination against covid-19.",
       "titre11": "ACCOMMODATION",
       "titre12": "In December, Ivory Coast experiences a dry and warm climate with temperatures ranging between 24°C and 32°C.",
       "titre13": "INFORMATION KIT AND ACCREDITATION",
@@ -587,7 +587,7 @@
   },
 
   "reservation": {
-    "reservation": "Reservation",
+    "reservation": "RESERVATION",
     "your_details": "YOUR DETAILS:",
     "title": "Title",
     "select_title": "Select",
