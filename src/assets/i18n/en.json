@@ -43,7 +43,10 @@
       },
       "event-block": {
         "titre1":"Presentation of MASS",
-        "titre2": "The African Space Solutions Market (MASS), organized by OTIF SPACE AFRICA, is set to take place from May 6 to May 8, 2025, at the Exhibition Park in Abidjan, Ivory Coast. MASS  serves as a vital platform for fostering collaboration among diverse stakeholders in the space sector, including:Public and private sectors, International organizations, Non-governmental organizations (NGOs), Civil society, Academic institutions, Space service providers The primary objective of MASS is to showcase concrete space-based solutions tailored to tackle the pressing socio-economic challenges across Africa. Mass will exposed around innovations in areas such as telecommunication, environmental monitoring, disaster management, agriculture, urban planning, and education. By convening key players in the space ecosystem, MASS will emphasize Africa’s growing role in leveraging space technologies to drive sustainable development and economic growth. ",
+        "titre2": "MASS is organized by OTIF SPACE AFRICA, from May 6 to May 8, 2025, at the Exhibition Park in Abidjan, Ivory Coast. MASS will showcase concrete space-based solutions tailored to tackle the pressing socio-economic challenges across Africa.",
+        "t2":"MASS serves as a vital platform for fostering collaboration among diverse stakeholders in the space sector: Public and private sectors, International supplier, NGOs, Civil society, Academic institutions, Space service providers.",
+        "titre3":"MASS is a unique and innovative market that provides a meeting platform in areas such as telecommunication, environmental monitoring, disaster management, agriculture, urban planning, and education. ",
+        "t3":"MASS will emphasize Africa’s growing role in leveraging space technologies to drive sustainable development and economic growth. ",
         "details": "Goals of MASS",
         "t":"AFRICAN SPACE SOLUTIONS MARKET "
       },
@@ -71,9 +74,9 @@
       "sponsor-block": {
         "titre1": "Our Partners",
         "t":"Sponsors",
-        "t1":" Associate your image with a top-level international event.",
+        "t1":" Associate your image to this unique event",
         "t3":"Become a sponsor",
-        "t4":" Come and live an exciting experience and explore new opportunities.",
+        "t4":"Take part in this exciting experience and explore new opportunities",
         "t5":"Professional",
         "t6":"General public",
         "t7":"Visitors"
@@ -556,7 +559,7 @@
     "desk": "Reception desk",
     "reserve": "Reserve",
     "reservez": "Book your stand ",
-    "position": "Position yourself for the 2025 edition of MASS."
+    "position": "Meet the continent's decision-makers and showcase your solutions"
 
 
 
