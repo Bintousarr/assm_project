@@ -7,167 +7,169 @@ import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
-interface Event {
-  type: string;
-  speakerImg: string;
-  speakerName: string;
-  title: string;
-  description: string;
-}
+// interface Event {
+//   type: string;
+//   speakerImg: string;
+//   speakerName: string;
+//   title: string;
+//   description: string;
+// }
 
-interface Day {
-  day: string;
-  events: Event[];
-}
+// interface Day {
+//   day: string;
+//   events: Event[];
+// }
 
 @Component({
   selector: 'app-program',
   standalone: true,
-  imports: [HeaderComponent, NavbarComponent, BannerComponent, FooterComponent, RouterLink, CommonModule],
+  imports: [CommonModule],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.scss']
 })
-export class ProgramComponent implements OnInit {
+export class ProgramComponent  {
 
-  days: Day[] = [];
-  translate: TranslateService = inject(TranslateService)
+  
+  }
+
+//   getBackgroundColor(day: string) {
+//     switch(day) {
+//       case 'Premier Jour':
+//         return 'bg-gray-200'; 
+//       case 'Deuxième Jour':
+//       case 'Quatrième Jour':
+//         return 'bg-white'; 
+//       case 'Troisième Jour':
+//       case 'Cinquième Jour':
+//         return 'bg-gray-200'; 
+//       default:
+//         return '';
+//     }
+//   }
+// }
+
+//days: Day[] = [];
+  // translate: TranslateService = inject(TranslateService)
 
  
 
-  ngOnInit() {
-    this.translate.setDefaultLang('fr');
+  // ngOnInit() {
+  //   this.translate.setDefaultLang('fr');
     
-    // Charger les traductions à chaque changement de langue
-    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.initializeProgram();
-    });
+  //   // Charger les traductions à chaque changement de langue
+  //   this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+  //     this.initializeProgram();
+  //   });
 
-    // Initialiser le programme avec les traductions actuelles
-    this.initializeProgram();
-  }
+  //   // Initialiser le programme avec les traductions actuelles
+  //   this.initializeProgram();
+  // }
 
       
-  translateText(lang: string) {
-    this.translate.use(lang);
-  }
+  // translateText(lang: string) {
+  //   this.translate.use(lang);
+  // }
 
-  initializeProgram() {
-    this.translate.get([
-      'day.Premier Jour',
-      'day.Deuxième Jour',
-      'day.Troisième Jour',
-      'day.Quatrième Jour',
-      'day.Cinquième Jour',
-      'program.type1',
-      'program.type2',
-      'program.type3',
-      'program.type4',
-      'program.type5',
-      'program.theme1',
-      'program.theme2',
-      'program.theme3',
-      'program.theme4',
-      'program.theme5',
-      'program.theme6',
-      'program.openingCeremony',
-      'program.satelliteTelecommunication',
-      'program.earthObservation',
-      'program.dinnerGala',
-      'program.navigationPositioning',
-      'program.astronomyExperiments',
-      'program.socialActivities'
-    ]).subscribe(translations => {
-      this.days = [
-        {
-          day: translations['day.Premier Jour'],
-          events: [
-            {
-              type: translations['program.type1'],
-              speakerImg: '../../../assets/affaire.jpg',
-              speakerName: '',
-              title: 'Program',
-              description: translations['program.openingCeremony']
-            }
-          ]
-        },
-        {
-          day: translations['day.Deuxième Jour'],
-          events: [
-            {
-              type: translations['program.type2'],
-              speakerImg: '../../../assets/propulsion.jpg',
-              speakerName: '',
-              title: translations['program.theme1'],
-              description: translations['program.satelliteTelecommunication']
-            }
-          ]
-        },
-        {
-          day:  translations['day.Troisième Jour'],
-          events: [
-            {
-              type: translations['program.type3'],
-              speakerImg: '../../../assets/observ.jpg',
-              speakerName: '',
-              title: translations['program.theme2'],
-              description: translations['program.earthObservation']
-            },
-            {
-              type: translations['program.type3'],
-              speakerImg: '../../../assets/diner.jpeg',
-              speakerName: '',
-              title:  translations['program.theme3'],
-              description: translations['program.dinnerGala']
-            }
-          ]
-        },
-        {
-          day: translations['day.Quatrième Jour'], 
-          events: [
-            {
-              type: translations['program.type4'],
-              speakerImg: '../../../assets/galileo-satellite.jpg',
-              speakerName: '',
-              title:  translations['program.theme4'],
-              description: translations['program.navigationPositioning']
-            }
-          ]
-        },
-        {
-          day:  translations['day.Cinquième Jour'], 
-          events: [
-            {
-              type: translations['program.type5'],
-              speakerImg: '../../../assets/agriculture.jpeg',
-              speakerName: '',
-              title:  translations['program.theme5'],
-              description: translations['program.astronomyExperiments']
-            },
-            {
-              type: translations['program.type5'],
-              speakerImg: '../../../assets/tourisme.png',
-              speakerName: '',
-              title:  translations['program.theme6'],
-              description: translations['program.socialActivities']
-            }
-          ]
-        }
-      ];
-    });
-  }
-
-  getBackgroundColor(day: string) {
-    switch(day) {
-      case 'Premier Jour':
-        return 'bg-gray-200'; 
-      case 'Deuxième Jour':
-      case 'Quatrième Jour':
-        return 'bg-white'; 
-      case 'Troisième Jour':
-      case 'Cinquième Jour':
-        return 'bg-gray-200'; 
-      default:
-        return '';
-    }
-  }
-}
+  // initializeProgram() {
+  //   this.translate.get([
+  //     'day.Premier Jour',
+  //     'day.Deuxième Jour',
+  //     'day.Troisième Jour',
+  //     'day.Quatrième Jour',
+  //     'day.Cinquième Jour',
+  //     'program.type1',
+  //     'program.type2',
+  //     'program.type3',
+  //     'program.type4',
+  //     'program.type5',
+  //     'program.theme1',
+  //     'program.theme2',
+  //     'program.theme3',
+  //     'program.theme4',
+  //     'program.theme5',
+  //     'program.theme6',
+  //     'program.openingCeremony',
+  //     'program.satelliteTelecommunication',
+  //     'program.earthObservation',
+  //     'program.dinnerGala',
+  //     'program.navigationPositioning',
+  //     'program.astronomyExperiments',
+  //     'program.socialActivities'
+  //   ]).subscribe(translations => {
+  //     this.days = [
+  //       {
+  //         day: translations['day.Premier Jour'],
+  //         events: [
+  //           {
+  //             type: translations['program.type1'],
+  //             speakerImg: '../../../assets/affaire.jpg',
+  //             speakerName: '',
+  //             title: 'Program',
+  //             description: translations['program.openingCeremony']
+  //           }
+  //         ]
+  //       },
+  //       {
+  //         day: translations['day.Deuxième Jour'],
+  //         events: [
+  //           {
+  //             type: translations['program.type2'],
+  //             speakerImg: '../../../assets/propulsion.jpg',
+  //             speakerName: '',
+  //             title: translations['program.theme1'],
+  //             description: translations['program.satelliteTelecommunication']
+  //           }
+  //         ]
+  //       },
+  //       {
+  //         day:  translations['day.Troisième Jour'],
+  //         events: [
+  //           {
+  //             type: translations['program.type3'],
+  //             speakerImg: '../../../assets/observ.jpg',
+  //             speakerName: '',
+  //             title: translations['program.theme2'],
+  //             description: translations['program.earthObservation']
+  //           },
+  //           {
+  //             type: translations['program.type3'],
+  //             speakerImg: '../../../assets/diner.jpeg',
+  //             speakerName: '',
+  //             title:  translations['program.theme3'],
+  //             description: translations['program.dinnerGala']
+  //           }
+  //         ]
+  //       },
+  //       {
+  //         day: translations['day.Quatrième Jour'], 
+  //         events: [
+  //           {
+  //             type: translations['program.type4'],
+  //             speakerImg: '../../../assets/galileo-satellite.jpg',
+  //             speakerName: '',
+  //             title:  translations['program.theme4'],
+  //             description: translations['program.navigationPositioning']
+  //           }
+  //         ]
+  //       },
+  //       {
+  //         day:  translations['day.Cinquième Jour'], 
+  //         events: [
+  //           {
+  //             type: translations['program.type5'],
+  //             speakerImg: '../../../assets/agriculture.jpeg',
+  //             speakerName: '',
+  //             title:  translations['program.theme5'],
+  //             description: translations['program.astronomyExperiments']
+  //           },
+  //           {
+  //             type: translations['program.type5'],
+  //             speakerImg: '../../../assets/tourisme.png',
+  //             speakerName: '',
+  //             title:  translations['program.theme6'],
+  //             description: translations['program.socialActivities']
+  //           }
+  //         ]
+  //       }
+  //     ];
+  //   });
