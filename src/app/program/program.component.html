@@ -1,24 +1,169 @@
-<div class="container mx-auto p-4 font-poppins rounded-lg mt-10" *ngFor="let day of days">
+<div class="flex items-center gap-12 p-8 bg-gray-100">
+  <div class="flex-shrink-0">
+    <img
+      src="../../assets/termine.jpg"
+      alt="Expositions et démonstrations"
+      class="rounded-lg shadow-2xl w-90"
+    />
+  </div>
+
+  <div>
+    <h2 class="text-3xl font-extrabold text-red-600 mb-6">
+      EXPOSITIONS ET DÉMONSTRATIONS
+    </h2>
+    <ul class="list-disc pl-6 space-y-4 text-gray-700 text-2xl">
+      <li>
+        <span class="font-semibold">Expositions :</span> Le MASS 2025 offrira
+        une plateforme prestigieuse pour les entreprises, institutions et
+        startups du secteur spatial, permettant de présenter leurs dernières
+        innovations et solutions.
+      </li>
+      <li>
+        <span class="font-semibold">Démonstrations :</span> Présentations
+        pratiques et démonstrations en direct de solutions spatiales
+        innovantes, permettant aux participants de voir les technologies en
+        action et de comprendre leur application concrète.
+      </li>
+    </ul>
+  </div>
+  
+</div>
+
+
+<div class="flex items-center gap-12 p-10 bg-gray-100 ">
+  <div>
+    <h2 class="text-3xl font-extrabold text-red-600 mb-6">
+      RENCONTRES B2B ET RENDEZ-VOUS PERSONNALISÉS 
+    </h2>
+    <ul class="list-disc pl-6 space-y-4 text-gray-700 text-2xl">
+      <li>
+        <span class="font-semibold">Sessions de Rencontres B2B : </span>Facilitation de rencontres entre
+        entreprises, investisseurs, et autres parties prenantes pour explorer des
+        opportunités de partenariat et de collaboration.
+      </li>
+      <li>
+        <span class="font-semibold">Rendez-vous  Personnalisés  : </span>  Organisation  de  réceptions  et  de  cocktails  en  
+        soirée  pour  offrir  aux  participants  des  opportunités  informelles  de  réseautage
+      </li>
+    </ul>
+  </div>
+  
+  <div class="flex-shrink-0">
+    <img
+    src="../../assets/b2b.jpg"
+      alt="Expositions et démonstrations"
+      class="rounded-lg shadow-2xl"
+    />
+  </div>
+</div>
+
+<div class="flex items-center gap-12 p-12 bg-gray-100">
+  <div class="flex-shrink-0">
+    <img
+    src="../../assets/Ceremonie.jpg"
+      alt="Expositions et démonstrations"
+      class="rounded-lg shadow-2xl"
+    />
+  </div>
+
+  <div>
+    <h2 class="text-3xl font-extrabold text-red-600 mb-6">
+      CÉRÉMONIE DES AWARDS ET HACKATHON
+    </h2>
+    <ul class="list-disc pl-6 space-y-4 text-gray-700 text-2xl">
+      <li>
+        <span class="font-semibold">Reconnaissance des Personnalités Remarquables :</span> Organisation d'une
+        cérémonie de remise de prix pour honorer les personnalités et initiatives qui
+        ont contribué de manière significative au développement et à l'avancement
+        du secteur spatial en Afrique.
+      </li>
+     
+    </ul>
+  </div>
+  
+</div>
+
+<div class="flex items-center gap-12 p-12 bg-gray-100">
+
+  <div>
+    <h2 class="text-3xl font-extrabold text-red-600 mb-6">
+      ÉVÉNEMENT SOCIAL POUR PROMOUVOIR LES SCIENCES SPATIALES AUPRÈS DES JEUNES
+    </h2>
+    <ul class="list-disc pl-6 space-y-4 text-gray-700 text-2xl">
+      <li>
+        <span class="font-semibold">Ateliers Éducatifs :</span> Organisation d'ateliers interactifs pour les jeunes, visant à 
+        les  sensibiliser  aux  sciences  spatiales  et  à  les  inspirer  à  poursuivre  des  carrières  
+        dans ce domaine. Ces ateliers comprendront des activités pratiques, des
+        démonstrations, et des discussions avec des experts
+      </li>
+      <li>
+        <span class="font-semibold">Sessions de Mentorat :</span> Rencontres entre les jeunes participants et des
+        professionnels  du  secteur  spatial,  offrant  des  conseils  de  carrière,  des  partages
+        d'expériences, et des encouragements pour susciter des vocations.
+      </li>
+      <li>
+        <span class="font-semibold">Activités Ludiques et Éducatives :</span> Jeux, concours, et autres activités ludiques 
+        pour rendre l'apprentissage des sciences spatiales attractif et engageant pour les 
+        jeunes.  Ces  activités  viseront  à  éveiller  la  curiosité  et  à  stimuler  l'intérêt  pour  les
+        technologies spatiales.
+      </li>
+      <li>
+        <span class="font-semibold">Activités Touristiques  :</span> Excursion culturelle et touristique.
+      
+      </li>
+    </ul>
+  </div>
+
+  <div class="flex-shrink-0">
+    <img
+    src="../../assets/exposant.jpg"
+      alt="Expositions et démonstrations"
+      class="rounded-lg shadow-2xl"
+    />
+  </div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container mx-auto p-4 font-poppins rounded-lg mt-10" *ngFor="let day of days">
   <h2 class="text-center text-xl sm:text-2xl font-bold my-4">{{ day.day }}</h2>
   <div class="border-t-4 border-red-500 w-16 mx-auto my-2"></div>
   <div class="mt-4 space-y-4" [ngClass]="getBackgroundColor(day.day)">
     
-    <!-- Grille des événements responsive -->
     <div *ngFor="let event of day.events" class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center p-4 border border-b">
       
-      <!-- Type de l'événement -->
       <div class="col-span-1 bg-red-900 text-white p-2 text-center sm:col-span-1">
         <div>
           <i class="far fa-calendar-alt mr-2"></i>{{ event.type }}
         </div>
       </div>
 
-      <!-- Image de l'orateur -->
       <div class="col-span-1 flex justify-center sm:justify-start md:col-span-1">
         <img class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg object-cover" [src]="event.speakerImg" alt="Speaker Image">
       </div>
 
-      <!-- Détails de l'événement -->
       <div class="col-span-3 grid grid-cols-1 sm:grid-cols-4 items-center md:col-span-3">
         <div class="col-span-3">
           <div class="font-bold">{{ event.speakerName }}</div>
@@ -26,7 +171,6 @@
           <div class="mt-4">{{ event.description }}</div>
         </div>
 
-        <!-- Bouton Orateur pour les conditions spécifiques -->
         <div class="col-span-1 flex flex-col items-center">
           <div class="border-l-2 h-full border-gray-300 ml-4"></div>
           <div class="mt-4" *ngIf="(day.day === 'Deuxième Jour' || day.day === 'Cinquième Jour') && event.description.startsWith('Prise de parole')">
@@ -37,4 +181,7 @@
       
     </div>
   </div>
-</div>
+</div> -->
+
+
+
