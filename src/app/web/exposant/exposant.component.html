@@ -1,4 +1,181 @@
-<div class="font-poppins">
+<div class=" font-poppins">
+    <div class="relative w-full">
+      <div class="relative h-[476px] overflow-hidden lg:h-[600px]">
+        <img src="../../../assets/ouverture.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/2" alt="...">
+        <div class="absolute inset-0  flex flex-col items-center justify-center gap-10 p-5 lg:p-20 lg:px-96">
+          <h2 class="text-5xl font-black text-white text-center">EXPOSITIONS ET DÉMONSTRATIONS</h2>
+          <p class="text-xl text-white text-center font-light">
+            Vous voulez exposer vos solutions, Vous êtes au bon endroit!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-10 w-full flex flex-col lg:flex-row gap-10 justify-center">
+      <div class="lg:w-1/2 w-full">
+        <img src="../../../assets/Capture.png" alt="">
+      </div>
+   </div>
+
+    <div class="w-full h-auto py-10 flex flex-col lg:flex-row justify-center p-10 lg:px-40 gap-10">
+        <div class="lg:w-1/2 w-full mt-20">
+          <h1 class="text-3xl font-bold">5 BONNES RAISONS DE PARTICIPER AU MASS</h1>
+          <ul class="mt-7 text-xl font-light mb-6">
+            <li class=" flex items-start gap-3 mb-5">
+              <span  class="rounded-full bg-red-800 w-4 h-4 absolute"></span>
+              <p class="text-xl ml-6 -mt-1">
+                Accès privilégié à des rencontres stratégiques
+              </p>
+            </li>
+            <li class=" flex items-start gap-3 mb-5">
+              <span  class="rounded-full bg-red-800  w-4 h-4 absolute"></span>
+              <p class="text-xl  ml-6 -mt-1">
+                Visibilité renforcée sur un marché en pleine croissance
+              </p>
+            </li>
+            <li class="flex items-start gap-3 mb-5">
+              <span class="rounded-full bg-red-800  w-4 h-4 absolute"></span>
+              <p class="text-xl  ml-6 -mt-1">
+                Contribution au développement technologique africain
+              </p>
+            </li>
+            <li class=" flex items-start gap-3 mb-5">
+              <span  class="rounded-full bg-red-800  w-4 h-4 absolute"></span>
+              <p class="text-xl  ml-6 -mt-1">
+                Opportunités de collaboration et de partenariats stratégiques
+              </p>
+            </li>
+            <li class=" flex items-start gap-3 mb-5">
+              <span class="rounded-full bg-red-800  w-4 h-4 absolute"></span>
+              <p class="text-xl  ml-6 -mt-1">
+                Des solutions sur mesure pour vos défis
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="md:grid md:grid-rows-3 md:grid-flow-col gap-4 lg:w-1/2 w-full relative">
+          <a href="https://mass.ci/docs/DOSSIER_SPONSORING%20_MASS_2025_EN_Compress_Version.pdf" 
+             class="md:w-80 w-full h-40 p-10 bg-red-800 text-2xl rounded md:row-span-2 z-10 md:absolute md:top-10 md:left-80 text-white font-bold flex justify-center items-center space-x-3"
+             target="_blank">
+            <i class="fas fa-file-pdf"></i> 
+            <span>Dossier de Sponsoring de MASS 2025</span>
+          </a>
+        
+          <div style="width: 150%;" class="md:row-span-3">
+            <img class="rounded h-full ml-40 mt-20" src="../../../assets/stand1.jpg" alt="">
+          </div>
+        
+          <button href="javascript:void(0)" (click)="downloadFile()" class="md:w-80 w-full h-40 p-10 bg-red-800 text-2xl rounded md:row-span-2 z-10 md:absolute md:bottom-1 md:left-4 text-white font-bold flex justify-center items-center space-x-3">
+            <i class="fas fa-download"></i> 
+            <span>Télécharger le Dossier de Sponsoring de MASS 2025</span>
+          </button>
+        </div>
+          
+    </div>
+
+
+    <div class="py-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mt-20 mb-4 md:mb-6">{{ 'exposant.titre3' | translate }}</h2>
+        <div class="flex justify-center mb-4 md:mb-8">
+            <div class="h-1 w-16 md:w-20 bg-red-800"></div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-6 md:gap-8 p-6 md:p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full text-center lg:w-3/3">
+              
+              <div class="bg-gray-300 shadow-2xl p-4 md:p-6 rounded-lg">
+                <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standStandard' | translate }}</h2>
+                <p class="text-blue-500 font-semibold">{{ 'exposant.standStandardDetails' | translate }}</p>
+                <ul class="mt-4 space-y-2 text-lg">
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.moquette' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.chaises3' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table1' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.eclairage' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.corbeille1' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.spots' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
+                </ul>
+                <button class="mt-6 w-80 md:mt-10 px-4 py-2 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
+              </div>
+              
+              <div class="bg-gray-300 shadow-2xl p-4 md:p-6 rounded-lg">
+                <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standPremium' | translate }}</h2>
+                <p class="text-blue-500 font-semibold">{{ 'exposant.standPremiumDetails' | translate }}</p>
+                <ul class="mt-4 space-y-2 text-lg">
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.moquette' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.chaises6' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table2' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.eclairage' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.raccordement' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.corbeille2' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.spots' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
+                </ul>
+                <button class="mt-6 w-80 md:mt-10 px-4 py-2 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
+              </div>
+              
+               <div class="bg-gray-300 shadow-2xl p-4 md:p-6 rounded-lg">
+                <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standConfort' | translate }}</h2>
+                <p class="text-blue-500 font-semibold">{{ 'exposant.standConfortDetails' | translate }}</p>
+                <ul class="mt-4 space-y-2 text-lg">
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.moquette' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.chaises6' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table2' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.eclairage' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.raccordement' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.corbeille2' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.spots' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.desk' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
+                </ul>
+                <button class="mt-6 w-80 md:mt-10 px-4 py-2 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="font-poppins">
     <div class="flex flex-col lg:flex-row w-full items-center mb-10">
         <div class="flex items-center justify-center p-6 sm:p-10 w-full lg:w-1/2">
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center lg:text-left">
@@ -73,8 +250,8 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full lg:w-2/3">
               
-              <!-- Stand Standard -->
-              <div class="bg-white shadow-lg p-4 md:p-6 rounded-lg">
+              Stand Standard -->
+              <!-- <div class="bg-white shadow-lg p-4 md:p-6 rounded-lg">
                 <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standStandard' | translate }}</h2>
                 <p class="text-blue-500 font-semibold">{{ 'exposant.standStandardDetails' | translate }}</p>
                 <ul class="mt-4 space-y-2">
@@ -87,9 +264,9 @@
                   <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
                 </ul>
                 <button class="mt-6 md:mt-10 px-4 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
-              </div>
+              </div> -->
               
-              <!-- Stand Premium -->
+              <!-- Stand Premium 
               <div class="bg-white shadow-lg p-4 md:p-6 rounded-lg">
                 <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standPremium' | translate }}</h2>
                 <p class="text-blue-500 font-semibold">{{ 'exposant.standPremiumDetails' | translate }}</p>
@@ -104,10 +281,10 @@
                   <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
                 </ul>
                 <button class="mt-6 md:mt-10 px-4 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
-              </div>
+              </div> -->
               
               <!-- Stand Confort -->
-              <div class="bg-white shadow-lg p-4 md:p-6 rounded-lg">
+              <!-- <div class="bg-white shadow-lg p-4 md:p-6 rounded-lg">
                 <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standConfort' | translate }}</h2>
                 <p class="text-blue-500 font-semibold">{{ 'exposant.standConfortDetails' | translate }}</p>
                 <ul class="mt-4 space-y-2">
@@ -127,4 +304,5 @@
             
         </div>
     </div>
-</div>
+</div> --> 
+
