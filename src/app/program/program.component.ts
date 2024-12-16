@@ -6,6 +6,7 @@ import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import saveAs from 'file-saver';
 
 // interface Event {
 //   type: string;
@@ -28,7 +29,38 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
   styleUrls: ['./program.component.scss']
 })
 export class ProgramComponent  {
-
+  translate: TranslateService = inject(TranslateService)
+  ngOnInit() {
+    this.translate.setDefaultLang('fr');
+    
+  }
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
+  
+     downloadFile() {
+        // Obtenir la langue actuelle
+        const currentLang = this.translate.currentLang;
+    
+        let fileUrl = '';
+        let fileName = '';
+    
+        if (currentLang === 'fr') {
+          fileUrl = '/assets/TDR_MASS_2025_FR_Compress_Version.pdf';
+          fileName = 'TDR_MASS_2025_FR_Compress_Version.pdf';
+        } else {
+          fileUrl = '/assets/TDR_MASS_2025_FR_Compress_Version.pdf';
+          fileName = 'TDR_MASS_2025_FR_Compress_Version.pdf';
+        }
+    
+        // Télécharger le fichier
+        fetch(fileUrl)
+          .then(response => response.blob())
+          .then(blob => {
+            saveAs(blob, fileName);
+          })
+          .catch(error => console.error('Error downloading the file:', error));
+      }
   
   }
 
