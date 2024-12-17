@@ -151,11 +151,14 @@
           <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.participation' | translate}}</label>
           <select formControlName="role" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
             <option value>{{'register-block.register.titre3' | translate}}...</option>
-            <option>{{'register-block.register.part1' | translate}}</option>
+            <!-- <option>{{'register-block.register.part1' | translate}}</option>
             <option>{{'register-block.register.part2' | translate}}</option>
             <option>{{'register-block.register.part3' | translate}}</option>
             <option>{{'register-block.register.part4' | translate}}</option>
-            <option>{{'register-block.register.part5' | translate}}</option>
+            <option>{{'register-block.register.part5' | translate}}</option> -->
+            <option>Sponsor</option>
+            <option>Visiteur</option>
+            <option>Participant</option>
           </select>
           <div *ngIf="registrationForm.get('role')?.invalid && registrationForm.get('role')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
         </div>

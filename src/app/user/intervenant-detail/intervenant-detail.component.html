@@ -120,10 +120,10 @@
                                     class="py-2 px-4 text-lg rounded mt-2 mb-6"
                                     >
                                     {{ slot.start_time }} - {{ slot.end_time }}
-                                    <span *ngIf="slot.status === 'libre'">{{ 'intervenant-detail.availability.free' | translate }}</span>
+                                    <!-- <span *ngIf="slot.status === 'libre'">{{ 'intervenant-detail.availability.free' | translate }}</span>
                                     <span *ngIf="slot.status === 'en attente'">{{ 'intervenant-detail.availability.pending' | translate }}</span>
                                     <span *ngIf="slot.status === 'approuvé'">{{ 'intervenant-detail.availability.approved' | translate }}</span>
-                                    <span *ngIf="slot.status === 'décliné'">{{ 'intervenant-detail.availability.declined' | translate }}</span>
+                                    <span *ngIf="slot.status === 'décliné'">{{ 'intervenant-detail.availability.declined' | translate }}</span> -->
                                  </button>
 
                                 <div *ngIf="slot === '—'" class="text-gray-400 py-2 mt-1 text-lg">—</div>
