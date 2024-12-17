@@ -76,64 +76,120 @@
 
 
     <div class="py-12">
-        <h2 class="text-2xl md:text-3xl font-bold text-center mt-20 mb-4 md:mb-6">{{ 'exposant.titre3' | translate }}</h2>
-        <div class="flex justify-center mb-4 md:mb-8">
-            <div class="h-1 w-16 md:w-20 bg-red-800"></div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-6 md:gap-8 p-6 md:p-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full text-center lg:w-3/3">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mt-20 mb-4 md:mb-6">{{ 'exposant.titre3' | translate }}</h2>
+      <div class="flex justify-center items-center mb-4 md:mb-8">
+          <div class="h-1 w-16 md:w-20 bg-red-800"></div>
+      </div>
+            <div class="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-2 gap-6 p-6 md:p-8">
               
               <div class="bg-gray-300 shadow-2xl p-4 md:p-6 rounded-lg">
-                <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standStandard' | translate }}</h2>
-                <p class="text-blue-500 font-semibold">{{ 'exposant.standStandardDetails' | translate }}</p>
+                <h2 class="text-lg md:text-2xl font-bold text-center ">{{ 'exposant.standStandard' | translate }}</h2>
+                <p class="text-blue-500 font-semibold text-center ">{{ 'exposant.standStandardDetails' | translate }}</p>
                 <ul class="mt-4 space-y-2 text-lg">
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.moquette' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.chaises3' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table1' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>Profil d'entreprise, logo, lien web de l'entreprise sur le site de l'évènement</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>Publicité en ligne dans le guide de  l'évènement et de l'exposition</li>
+                  <!-- <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table1' | translate }}</li>
                   <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.eclairage' | translate }}</li>
                   <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.corbeille1' | translate }}</li>
                   <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.spots' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li> -->
                 </ul>
                 <button class="mt-6 w-80 md:mt-10 px-4 py-2 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
               </div>
               
               <div class="bg-gray-300 shadow-2xl p-4 md:p-6 rounded-lg">
-                <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standPremium' | translate }}</h2>
-                <p class="text-blue-500 font-semibold">{{ 'exposant.standPremiumDetails' | translate }}</p>
+                <h2 class="text-lg md:text-2xl font-bold text-center">{{ 'exposant.standPremium' | translate }}</h2>
+                <p class="text-blue-500 font-semibold text-center">{{ 'exposant.standPremiumDetails' | translate }}</p>
                 <ul class="mt-4 space-y-2 text-lg">
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.moquette' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.chaises6' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table2' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Profil d'entreprise, logo, lien web de l'entreprise sur le site de l'évènement</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>Publicité en ligne dans le guide de  l'évènement et de l'exposition</li>
+                  <!-- <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table2' | translate }}</li>
                   <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.eclairage' | translate }}</li>
                   <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.raccordement' | translate }}</li>
                   <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.corbeille2' | translate }}</li>
                   <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.spots' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li> -->
                 </ul>
                 <button class="mt-6 w-80 md:mt-10 px-4 py-2 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
               </div>
               
-               <div class="bg-gray-300 shadow-2xl p-4 md:p-6 rounded-lg">
-                <h2 class="text-lg md:text-xl font-bold">{{ 'exposant.standConfort' | translate }}</h2>
-                <p class="text-blue-500 font-semibold">{{ 'exposant.standConfortDetails' | translate }}</p>
-                <ul class="mt-4 space-y-2 text-lg">
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.moquette' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.chaises6' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.table2' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.eclairage' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.raccordement' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.corbeille2' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.spots' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.desk' | translate }}</li>
-                  <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> {{ 'exposant.enseigne' | translate }}</li>
-                </ul>
-                <button class="mt-6 w-80 md:mt-10 px-4 py-2 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
-              </div>
-            </div>
+               
+   
+             </div>
+                 
+            
+      </div>   
+      <div class="py-12 p-20 ">
+        <div class="bg-gray-300 shadow-2xl p-4 md:p-6 rounded-lg">
+          <h2 class="text-lg md:text-2xl font-bold text-center">{{ 'exposant.standConfort' | translate }}</h2>
+          <p class="text-blue-500 font-semibold text-center">{{ 'exposant.stand' | translate }}</p>
+          <ul class="mt-4 space-y-2 text-lg">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur les publications liées à l'évènement et à l'exposition.</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>Logo sur les bannières ou fonds d'écran de l'évènement</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur le flyer publicitaire de l'évènement (mises à jour reçues)</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Profil d'entreprise, logo, lien web de l'entreprise sur le site de l'évènement</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Publicité en ligne dans le guide de  l'évènement et de l'exposition</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>  Profil d'entreprise, logo, lien web de l'entreprise et coordonnées dans le guide en ligne de l'évènement et de l'exposition/li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Article(s) promotionnel(s) dans le sac de l'évènement</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>Reconnaissance lors des sessions d'ouverture et de clôture</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Facilitation des réunions bilatérales </li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>Conservation du profil d'entreprise, du logo et du lien hypertexte dans l'archive à long terme de MASS </li>
+
+          </ul>
+          <button class="mt-6 w-80 md:mt-10 px-4 py-2 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
         </div>
+
+        <div class="bg-gray-300 shadow-2xl p-4 md:p-6 mt-20 rounded-lg">
+          <h2 class="text-lg md:text-2xl font-bold text-center">{{ 'exposant.stand1' | translate }}</h2>
+          <p class="text-blue-500 font-semibold text-center">{{ 'exposant.stand2' | translate }}</p>
+          <ul class="mt-4 space-y-2 text-lg">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur le sac</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur les publications liées à l'évènement et à l'exposition.</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur les bannières ou fonds d'écran de l'évènement</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur le flyer publicitaire de l'évènement (mises à jour reçues)</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo dans l'email de confirmation d'inscription envoyé aux participants</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>Profil d'entreprise, logo, lien web de l'entreprise sur le site de l'évènement</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Publicité en ligne dans le guide de  l'évènement et de l'exposition</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>  Profil d'entreprise, logo, lien web de l'entreprise et coordonnées dans le guide en ligne de l'évènement et de l'exposition</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Affichage de la bannière de l'entreprise lors des sessions plénières sélectionnées et/ou des pauses</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Article(s) promotionnel(s) dans le sac de l'évènement</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Reconnaissance lors des sessions d'ouverture et de clôture</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Organisation d'un atelier (30 minutes)</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Facilitation des réunions bilatérales </li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Conservation du profil d'entreprise, du logo et du lien hypertexte dans l'archive à long terme de MASS</li>
+
+
+          </ul>
+          <button class="mt-6 w-80 md:mt-10 px-4 py-2 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
+        </div>
+
+        <div class="bg-gray-300 shadow-2xl p-4 md:p-6 mt-20 rounded-lg">
+          <h2 class="text-lg md:text-2xl font-bold text-center">{{ 'exposant.stand3' | translate }}</h2>
+          <p class="text-blue-500 font-semibold text-center">{{ 'exposant.stand4' | translate }}</p>
+          <ul class="mt-4 space-y-2 text-lg">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur le sac</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur les publications liées à l'évènement et à l'exposition.</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur les bannières ou fonds d'écran de l'évènement</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo sur le flyer publicitaire de l'évènement (mises à jour reçues)</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Logo dans l'email de confirmation d'inscription envoyé aux participants</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Communication par email sur le   partenaire via les canaux médiatiques</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Profil d'entreprise, logo, lien web de l'entreprise sur le site de l'évènement</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>Interview exclusive en vedette sur le site web du MASS</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Publicité en ligne dans le guide de  l'évènement et de l'exposition</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Profil d'entreprise, logo, lien web de l'entreprise et coordonnées dans le guide en ligne de l'évènement et de l'exposition</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Affichage de la bannière de l'entreprise lors des sessions plénières sélectionnées et/ou des pauses</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span>Article(s) promotionnel(s) dans le sac de l'évènement</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Reconnaissance lors des sessions d'ouverture et de clôture</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Organisation d'un atelier (30 minutes)</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✔️</span> Conservation du profil d'entreprise, du logo et du lien hypertexte dans l'archive à long terme de MASS</li>
+
+
+          </ul>
+          <button class="mt-6 w-80 md:mt-10 px-4 py-2 bg-blue-500 text-white text-xl font-bold rounded-lg hover:bg-blue-800" routerLink="/reservation">{{ 'exposant.reserve' | translate }}</button>
     </div>
-</div>
+
+      </div>
+    </div>
 
 
 
