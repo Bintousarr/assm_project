@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'sable-bg': "url('/assets/fond.jpg')",
+      },
       fontFamily: {
         poppins: ['Poppins'],
         cabinet: ['Cabinet Grotesk', 'sans-serif'],
