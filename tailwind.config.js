@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'sable-bg': "url('/assets/fond.jpg')",
+        'sable-bg': "url('/assets/fond2.jpg')",
+        'rouge': "url('/assets/fond-rouge.jpg')",
       },
       fontFamily: {
         poppins: ['Poppins'],

@@ -4,39 +4,54 @@
       class="absolute inset-0 flex transition-transform duration-700 ease-linear"
       [style.transform]="'translateX(-' + currentSlide * 100 + '%)'"
     >
-      <div  class="flex flex-col md:flex-row items-center w-full bg-[#d9d1c4] h-[680px] flex-shrink-0 bg-sable-bg ">
-        <div class="w-full md:w-1/3 p-8 md:p-16 text-center md:text-left space-y-4 ">
+      <!-- Premier Slide -->
+      <div class="flex flex-col md:flex-row items-center w-full bg-[#d9d1c4] h-[680px] flex-shrink-0 bg-sable-bg ">
+        <div class="w-full md:w-1/3 p-8 md:p-16 text-center md:text-left space-y-4">
           <h1 class="text-4xl md:text-6xl ml-10 font-bold text-black leading-relaxed">
             <span class="block">LE MARCHE AFRICAIN</span>
             <span class="text-red-800">DES SOLUTIONS SPATIALES</span>
           </h1>
         </div>
-
         <div class="w-full md:w-2/3 flex justify-center md:justify-end h-full">
-          <img src="../../assets/Cover-SLIDE.jpg" alt="Merci" class="w-[400%] h-full " />
+          <img src="../../assets/Cover-SLIDE.jpg" alt="Merci" class="w-[400%] h-full" />
         </div>
       </div>
 
+      <!-- Deuxième Slide -->
       <div class="flex flex-col md:flex-row items-center w-full bg-red-900 h-[680px] flex-shrink-0">
         <div class="w-full md:w-1/3 p-8 md:p-16 text-center md:text-left space-y-4">
           <h1 class="text-4xl md:text-6xl font-bold text-white leading-relaxed">
-            <span class="block ">Du 06 au 08 MAI 2025</span>
+            <span class="block">Du 06 au 08 MAI 2025</span>
             <span class="text-blue-500">EN CÔTE D'IVOIRE</span>
           </h1>
           <p class="text-white text-2xl font-bold leading-relaxed">
             AU PARC DES EXPOSITIONS
           </p>
         </div>
-
         <div class="w-full md:w-2/3 flex justify-center md:justify-end h-full">
-          <img src="../../assets/Parc des expositions.jpg" alt="Rendez-vous" class="w-full h-full object-cover" />
+          <img src="../../assets/Parc des expositions.jpg" alt="Rendez-vous" class="w-full h-full " />
         </div>
       </div>
 
-      
+      <div class="flex flex-col md:flex-row items-center w-full bg-rouge h-[680px] flex-shrink-0">
+        <div class="w-full md:w-1/3 p-8 md:p-16 text-center  md:text-left space-y-4">
+          <h1 class="text-4xl md:text-6xl font-bold text-white leading-relaxed">
+            <span class="block">Le MASS ouvre </span>
+            <span class="text-red-700">ses portes à tout le monde</span>
+          </h1>
+          <p class="text-white text-2xl font-bold leading-relaxed">
+            INSCRIVEZ-VOUS DÈS MAINTENANT
+          </p>
+        </div>
+        <div class="w-full md:w-2/3 flex justify-center md:justify-end h-full">
+          <img src="../../assets/Cover-SLIDE1.jpg" alt="Inscription" class="w-full h-full " />
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <app-evenement></app-evenement>
 <app-keynote-speaker></app-keynote-speaker>

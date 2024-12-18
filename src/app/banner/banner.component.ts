@@ -23,14 +23,14 @@ export class BannerComponent implements OnInit, OnDestroy {
   translate: TranslateService = inject(TranslateService);
 
   currentSlide: number = 0;
-  slides: number = 2; // Nombre total de slides
+  slides: number = 3; // Nombre total de slides
 
  
 
   startAutoSlide(): void {
     setInterval(() => {
       this.currentSlide = (this.currentSlide + 1) % this.slides;
-    }, 5000); // Change toutes les 5 secondes
+    }, 3000); 
   }
 
   ngOnInit() {
