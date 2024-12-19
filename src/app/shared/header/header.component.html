@@ -1,8 +1,8 @@
 
-<div class="header font-poppins">
+<div class="header font-poppins ">
   <!-- Top Bar -->
   <div
-    class="top-bar fixed top-0 left-0 right-0 z-50 flex flex-wrap justify-between items-center bg-newRED text-white text-sm py-2 px-4 sm:px-10">
+    class="top-bar  fixed top-0 left-0 right-0 z-50 flex flex-wrap justify-between items-center bg-newRED text-white text-sm py-2 px-4 sm:px-10">
     <!-- Left Section -->
     <div
       class="w-4/5 flex flex-col sm:flex-row items-center space-x-2 sm:space-x-4 ml-4 sm:ml-10">
@@ -43,7 +43,7 @@
     </div>
 
     <!-- Hamburger Menu for Mobile -->
-    <div class="lg:hidden flex items- justify-start space-x-2"
+    <div class="lg:hidden flex items- justify-start space-x-2"  *ngIf="!isLoggedIn" 
       (click)="toggleMenu()">
       <button class="text-newRED focus:outline-none">
         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -55,7 +55,7 @@
     </div>
 
     <!-- Navigation Links (Desktop) -->
-    <nav
+    <nav *ngIf="!isLoggedIn"
       class="hidden lg:flex items-center justify-center space-x-6 text-sm sm:text-base text-black w-full">
       <!-- Accueil Dropdown -->
       <div class="relative group">
@@ -73,7 +73,7 @@
       </div>
 
       <!-- MASS Dropdown -->
-       <div class="relative group">
+         <div class="relative group">
         <a class="nav-item capitalize hover:text-red-600">{{
           'accueil.navbar-block.titre3' | translate }}</a>
         <div
@@ -81,7 +81,7 @@
           <a [routerLink]="['program']"
             class="block px-4 py-2 hover:bg-gray-200">{{
             'accueil.navbar-block.titre2' | translate }}</a>
-          <!-- <a [routerLink]="['sponsor-page']"
+       <!--  <a [routerLink]="['sponsor-page']"
             class="block px-4 py-2 hover:bg-gray-200">{{
             'accueil.navbar-block.m1' | translate }}</a>
           <a [routerLink]="['personnalite']"
@@ -153,7 +153,7 @@
     </nav>
 
     <!-- Mobile Menu (Hidden by default, toggled via click on Hamburger) -->
-    <div *ngIf="isMenuOpen"
+    <div *ngIf="isMenuOpen &&!isLoggedIn"
       class="lg:hidden absolute top-16 left-0 right-0 bg-white text-black shadow-lg z-50">
   
       <nav class="flex flex-col items-center space-y-4 py-4">
@@ -280,6 +280,38 @@
           </button>
         </div>
       </nav>
+    </div>
+
+    <div class="relative" *ngIf="isLoggedIn" >
+      <button
+        class="flex items-center border rounded-full sm:mr-20 px-3 py-2 bg-white text-gray-700 focus:outline-none"
+        (click)="toggleDropdown2()">
+        <img [src]="currentFlag" [alt]="currentLanguage"
+          class="h-4 w-4 mr-2 rounded-full">
+        <span >{{ currentLanguage }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 ml-2 text-gray-500" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+      <ul *ngIf="isDropdownOpen"
+        class="absolute left-0 mt-2 bg-white border rounded-lg shadow-lg text-gray-700 w-40 z-50">
+        <li
+          class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+          (click)="selectLanguage('fr')">
+          <img src="../../../assets/fra.jpg" alt="Français"
+            class="h-4 w-4 mr-2"> Français
+        </li>
+        <li
+          class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
+          (click)="selectLanguage('en')">
+          <img src="../../../assets/ru.png" alt="English"
+            class="h-4 w-4 mr-2 rounded-full"> English
+        </li>
+      </ul>
     </div>
   </header>
 </div>

@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy, inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject ,AfterViewInit  } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { EvenementComponent } from "../web/evenement/evenement.component";
 import { KeynoteSpeakerComponent } from "../keynote-speaker/keynote-speaker.component";
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-
+declare var $: any; // Déclarer jQuery
 @Component({
   selector: 'app-banner',
   standalone: true,

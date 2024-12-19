@@ -25,7 +25,7 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-           "assets": [
+            "assets": [
               "src/assets",
               {
                 "glob": "**/*",
@@ -34,9 +34,14 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/slick-carousel/slick/slick.css",
+              "node_modules/slick-carousel/slick/slick-theme.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -86,7 +91,7 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-           "assets": [
+            "assets": [
               "src/assets",
               {
                 "glob": "**/*",
@@ -107,5 +112,4 @@
   "cli": {
     "analytics": "aa182e24-f212-4f9b-8b5b-0e8d7921e514"
   }
-   
 }

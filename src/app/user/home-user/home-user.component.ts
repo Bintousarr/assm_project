@@ -35,6 +35,18 @@ export class HomeUserComponent {
   intervenants: any[] = [];
   user:any;
   translate: TranslateService = inject(TranslateService)
+  isCollapsed: boolean = false; // État pour basculer entre le menu réduit et complet
+  activeRoute: string = ''; // Gère l'élément de menu actif
+
+  menuItems = [
+    { label: 'home-user.intervenants', route: 'homeuser', icon: 'fas fa-users' },
+    { label: 'home-user.participants', route: 'participants', icon: 'fas fa-users' },
+    { label: 'home-user.my-appointments', route: 'mes-rendez-vous', icon: 'fas fa-calendar-alt' },
+    { label: 'home-user.appointment-management', route: '/dashboard/gestion-rv', icon: 'fas fa-database' },
+    { label: 'home-user.calendar-management', route: 'calandar', icon: 'fas fa-calendar-check' },
+    { label: 'home-user.download', route: 'download', icon: 'fa fa-arrow-circle-down' },
+    // { label: 'home-user.logout', route: 'logout', icon: 'fas fa-sign-out-alt' },
+  ];
 
   constructor( private router:Router,private userService: UserService,private appointmentService: ApppointmentService) {
 
@@ -115,4 +127,16 @@ export class HomeUserComponent {
     const userId = '123'; // ID de l'utilisateur
     this.appointmentService.downloadCalendar(this.user.id);
   }
+
+  goto(route: string): void {
+  //  this.activeRoute = route;
+    this.router.navigate([route]);
+    //console.log(`Navigating to: ${route}`);
+    // Ajouter ici la logique pour naviguer, exemple avec Angular Router :
+    // this.router.navigate([route]);
+  }
+  toggleSidebar(): void {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
 }
