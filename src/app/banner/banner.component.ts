@@ -9,15 +9,12 @@ declare var $: any; // Déclarer jQuery
 @Component({
   selector: 'app-banner',
   standalone: true,
-  imports: [TranslateModule, EvenementComponent, KeynoteSpeakerComponent, CommonModule, RouterLink],
+  imports: [TranslateModule, EvenementComponent, KeynoteSpeakerComponent, CommonModule],
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss'],
 })
-export class BannerComponent implements AfterViewInit,OnInit, OnDestroy {
-  slides = [
-    { image: '../../../assets/head.png', title: 'accueil.banner-block.desc2', subtitle: 'accueil.banner-block.desc3', highlight: 'accueil.banner-block.desc4' },
-    { image: '../../../assets/Cover.png', title: 'accueil.banner-block.desc5', subtitle: 'accueil.banner-block.desc6', highlight: 'accueil.banner-block.desc7' },
-  ];
+export class BannerComponent implements OnInit, OnDestroy {
+  
   
   currentIndex = 0;
   slideInterval: Subscription | undefined;
@@ -25,18 +22,17 @@ export class BannerComponent implements AfterViewInit,OnInit, OnDestroy {
 
   translate: TranslateService = inject(TranslateService);
 
-  
-  ngAfterViewInit(): void {
-    $('.slick-slider').slick({
-      autoplay: true,
-      dots: true,
-      arrows: true,
-      infinite: true,
-      speed: 800,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    });
+  currentSlide: number = 0;
+  slides: number = 3; // Nombre total de slides
+
+ 
+
+  startAutoSlide(): void {
+    setInterval(() => {
+      this.currentSlide = (this.currentSlide + 1) % this.slides;
+    }, 3000); 
   }
+
   ngOnInit() {
     this.translate.setDefaultLang('en');
     this.currentLang = this.translate.currentLang; // Get the initial language
@@ -46,30 +42,20 @@ export class BannerComponent implements AfterViewInit,OnInit, OnDestroy {
       this.currentLang = event.lang;
     });
 
-    this.startSlideShow();
+    this.startAutoSlide();
   }
 
   ngOnDestroy() {
     this.stopSlideShow();
   }
 
-  startSlideShow() {
-    this.slideInterval = interval(5000).subscribe(() => {
-      this.nextSlide();
-    });
-  }
+  
 
   stopSlideShow() {
     this.slideInterval?.unsubscribe();
   }
 
-  nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-  }
-
-  prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
-  }
+ 
 
   translateText(lang: string) {
     this.translate.use(lang);
