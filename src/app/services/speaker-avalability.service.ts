@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders  } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../services/environnements/environement.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,17 +16,17 @@ export class SpeakerAvalabilityService {
   constructor(private http: HttpClient) { }
 
   getSpeakerAvailabilityWithDetails(speakerId: number): Observable<any> {
-    const url = `${this.apiUrl}?action=getSpeakerAvailabilityWithDetails&speaker_id=${speakerId}`;
+    const url = `${environment.apiUrl}?action=getSpeakerAvailabilityWithDetails&speaker_id=${speakerId}`;
     return this.http.get<any>(url);
   }
 
   getUserCalendar(speakerId: number): Observable<any> {
-    const url = `${this.apiUrl}?action=getUserCalendar&speaker_id=${speakerId}`;
+    const url = `${environment.apiUrl}?action=getUserCalendar&speaker_id=${speakerId}`;
     return this.http.get<any>(url);
   }
   
   updateAvailability(availabilityId: number): Observable<any> {
-    const url = `${this.apiUrl}?action=updateAvailability`;
+    const url = `${environment.apiUrl}?action=updateAvailability`;
     
     // Le payload que vous envoyez dans la requête POST
     const payload = {

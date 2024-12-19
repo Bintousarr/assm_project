@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
@@ -7,6 +7,7 @@ import { ApppointmentService } from '../../services/apppointment.service'
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DateFormatPipe } from '../../date-format.pipe'; 
 export interface User {
   id: string;
@@ -27,16 +28,31 @@ export interface User {
 @Component({
   selector: 'app-user-calendar',
   standalone: true,
-  imports: [DateFormatPipe,CommonModule],
+  imports: [DateFormatPipe,CommonModule,TranslateModule],
   templateUrl: './user-calendar.component.html',
   styleUrl: './user-calendar.component.scss'
 })
 export class UserCalendarComponent {
   intervenants: any[] = [];
   user:any;
+  translate: TranslateService = inject(TranslateService)
+
   appointments:any
-  constructor(private route: ActivatedRoute, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService,private router:Router, private apppointmentService:ApppointmentService) { }
+  isCollapsed: boolean = false; // État pour basculer entre le menu réduit et complet
+  activeRoute: string = ''; // Gère l'élément de menu actif
+  menuItems = [
+    { label: 'home-user.intervenants', route: 'homeuser', icon: 'fas fa-users' },
+    { label: 'home-user.participants', route: 'participants', icon: 'fas fa-users' },
+    { label: 'home-user.my-appointments', route: 'mes-rendez-vous', icon: 'fas fa-calendar-alt' },
+    { label: 'home-user.appointment-management', route: '/dashboard/gestion-rv', icon: 'fas fa-database' },
+    { label: 'home-user.calendar-management', route: 'calandar', icon: 'fas fa-calendar-check' },
+    { label: 'home-user.download', route: 'download', icon: 'fa fa-arrow-circle-down' },
+    // { label: 'home-user.logout', route: 'logout', icon: 'fas fa-sign-out-alt' },
+  ];
+  constructor(private route: ActivatedRoute, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService,private router:Router,private appointmentService: ApppointmentService, private apppointmentService:ApppointmentService) { }
   ngOnInit(): void {
+    this.translate.setDefaultLang('fr');
+
     // this.userService.getIntervenants().subscribe(
     //   (data:User[]) => {
     //     this.intervenants = data.filter(user => user.role === 'Intervenant'&& user.id!=this.user.id);
@@ -71,7 +87,9 @@ export class UserCalendarComponent {
     }
 
   }
-  
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
   logout() {
     // Vider le token du localStorage
     localStorage.removeItem('userToken');
@@ -121,4 +139,19 @@ export class UserCalendarComponent {
 
   }
 
+  downloadPdf() {
+    const userId = '123'; // ID de l'utilisateur
+    this.appointmentService.downloadCalendar(this.user.id);
+  }
+
+  goto(route: string): void {
+    //  this.activeRoute = route;
+      this.router.navigate([route]);
+      //console.log(`Navigating to: ${route}`);
+      // Ajouter ici la logique pour naviguer, exemple avec Angular Router :
+      // this.router.navigate([route]);
+    }
+    toggleSidebar(): void {
+      this.isCollapsed = !this.isCollapsed;
+    }
 }

@@ -4,36 +4,38 @@ import { Observable } from 'rxjs';
 import { saveAs } from 'file-saver';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import { environment } from '../services/environnements/environement.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApppointmentService {
 
-  //private apiUrl = 'https://mass.otif-africa-space.com/api/public/api.php'; // URL de l'API; // URL de votre fichier PHP
- private apiUrl = 'https://mass.ci/api/public/api.php'; // URL de l'API; // URL de votre fichier PHP
-  //private apiUrl = 'http://localhost:8000/api.php'; // URL de l'API; // URL de votre fichier PHP
+  //prienvironment.apiUrl = 'https://mass.otif-africa-space.com/api/public/api.php'; // URL de l'API; // URL de votre fichier PHP
+ //private environment.a = 'https://mass.ci/api/public/api.php'; // URL de l'API; // URL de votre fichier PHP
+  //prienvironment.apiUrl = 'http://localhost:8000/api.php'; // URL de l'API; // URL de votre fichier PHP
 
   constructor(private http: HttpClient) { }
 
   register(userData: any): Observable<any> {
-    const url = `${this.apiUrl}?action=appointment`;
+    const url = `${environment.apiUrl}?action=appointment`;
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     return this.http.post(url, userData, { headers });
   }
 
   getAppointmentsByUser(userId: string): Observable<any[]> {
-    const url = `${this.apiUrl}?action=getParticipantAppointments&participant_id=${userId}`;
+    const url = `${environment.apiUrl}?action=getParticipantAppointments&participant_id=${userId}`;
     return this.http.get<any[]>(url);
   }
   getBySpeaker(userId: string): Observable<any[]> {
-    const url = `${this.apiUrl}?action=appointments&speaker_id=${userId}`;
+    const url = `${environment.apiUrl}?action=appointments&speaker_id=${userId}`;
     return this.http.get<any[]>(url);
   }
 
   updateAppointmentStatus(id: number, status: string): Observable<any> {
-    const url = `${this.apiUrl}?action=updateAppointmentStatus`;
+    const url = `${environment.apiUrl}?action=updateAppointmentStatus`;
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const body = { id, status };
 
@@ -41,13 +43,13 @@ export class ApppointmentService {
   }
 
   // getCalandar(userId: string): Observable<any[]> {
-  //   const url = `${this.apiUrl}?action=generatePdfCalendar&speaker_id=${userId}`;
+  //   const url = `${environment.apiUrl}?action=generatePdfCalendar&speaker_id=${userId}`;
   //   return this.http.get<any[]>(url);
   // }
 
   // Méthode pour télécharger le calendrier au format PDF
   getCalendar(userId: string): Observable<any> {
-    const url = `${this.apiUrl}?action=generatePdfCalendar&speaker_id=${userId}`;
+    const url = `${environment.apiUrl}?action=generatePdfCalendar&speaker_id=${userId}`;
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     // const headers = new HttpHeaders({

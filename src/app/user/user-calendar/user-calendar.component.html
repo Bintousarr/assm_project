@@ -1,37 +1,44 @@
 <div class="flex font-poppins min-h-screen">
     <!-- Aside Section -->
-    <aside class="w-1/5 bg-red-900 text-white flex flex-col">
-        <div class="p-8">
-            <p class="text-white text-xl font-semibold">Bonjour {{user.first_name}} {{user.last_name}}</p>
+    <!-- Aside Section -->
+    <aside [ngClass]="{'w-96 space-y-8': !isCollapsed, 'w-22 space-y-24': isCollapsed}"
+    class="bg-red-900 text-white rounded-xl flex flex-col py-4 h-full mx-2 mt-4 mb-4 ">
+        <!-- Bouton pour basculer le menu -->
+        <div class="px-4">
+            <button (click)="toggleSidebar()" class="focus:outline-none pl-2">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <ul class="px-4 flex-grow">
-            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
-                <i class="fas fa-users mr-3"></i>
-                <button (click)="goToIntervenant()" class="w-full text-left">Les Intervenants</button>
-            </li>
-            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
-                <i class="fas fa-users mr-3"></i>
-                <button (click)="goToParticipants()" class="w-full text-left">Les Participants</button>
-            </li>
-            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
-                <i class="fas fa-calendar-alt mr-3"></i>
-                <button (click)="goToRdv()" class="w-full text-left">Mes Rendez-vous</button>
-            </li>
-            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
-                <i class="fas fa-database mr-3"></i>
-                <button (click)="goToRv()" routerLink="/dashboard/gestion-rv" class="w-full text-left">Gestion des rendez-vous</button>
-            </li>
-            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
-                <i class="fas fa-database mr-3"></i>
-                <button (click)="goTocandar()" class="w-full text-left">Gestion du calandrier</button>
-            </li>
-            <li class="flex items-center p-2 mt-6 text-gray-200 hover:bg-red-700">
-                <i class="fas fa-sign-out-alt mr-3"></i>
-                <button (click)="logout()" class="w-full text-left">Déconnexion</button>
+
+        <!-- Section d'accueil avec message personnalisé -->
+        <div [ngClass]="{'block': !isCollapsed, 'hidden': isCollapsed}" class="p-4 text-center">
+            <p class="text-xl font-semibold">
+                {{ 'home-user.hello' | translate }} {{ user.first_name }} {{ user.last_name }}
+            </p>
+        </div>
+
+        <!-- Liste des éléments du menu -->
+        <ul class="flex-1 ml-4 space-y-4 overflow-auto">
+            <li *ngFor="let item of menuItems"
+                [ngClass]="{'bg-red-700': activeRoute === item.route, 'text-white': activeRoute === item.route, 'w-82': !isCollapsed, 'w-11': isCollapsed}"
+                (click)="goto(item.route)" class="h-12 p-2 flex items-center cursor-pointer hover:bg-red-700">
+                <!-- Icône du menu -->
+                <i [class]="item.icon" class="mr-2"></i>
+                <!-- Label du menu (visible uniquement si le menu n'est pas réduit) -->
+                <span class="text-lg font-light" *ngIf="!isCollapsed">{{ item.label | translate }}</span>
             </li>
         </ul>
-    </aside>
 
+        <!-- Bouton de déconnexion -->
+        <button class="bg-white text-red-900 p-2 rounded mt-auto mx-4 flex items-center justify-center" (click)="logout()">
+            <ng-container *ngIf="!isCollapsed">
+                <i class="fas fa-sign-out-alt mr-2"></i> {{ 'home-user.logout' | translate }}
+            </ng-container>
+            <ng-container *ngIf="isCollapsed">
+                <i class="fas fa-sign-out-alt"></i>
+            </ng-container>
+        </button>
+    </aside>
     <!-- Main Content Section -->
     <main class="w-4/5 px-6 flex-grow">
         <h1 class="text-3xl font-bold text-red-900 mb-8">MES RENDEZ-VOUS</h1>
