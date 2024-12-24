@@ -196,7 +196,9 @@
         "t1":"This field is required.",
         "t2":"Invalid email address.",
         "titre3":"Password",
-        "titre4":"Login"
+        "titre4":"Login",
+          "registerText": "Don't have an account?",
+    "registerLink": "Click here to register"
       },
       "card-block":{
         "titre1":"Call us on ",
