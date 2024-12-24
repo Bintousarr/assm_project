@@ -34,8 +34,17 @@
         <!-- Bouton de Soumission -->
         <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-900" [disabled]="loginForm.invalid">{{'login-block.login.titre4' | translate}}</button>
       </form>
+  
+      <!-- Texte avec lien vers l'inscription -->
+      <p class="mt-4 text-sm text-gray-600 text-center">
+        {{'login-block.login.registerText' | translate}} 
+        <a href="/register" class="text-blue-500 hover:underline">
+          {{'login-block.login.registerLink' | translate}}
+        </a>
+      </p>
     </div>
   </div>
+  
 
   <!-- Infos de contact -->
   <div class="w-full lg:w-1/3 lg:ml-10 bg-blue-500 rounded-lg flex flex-col justify-center items-center px-6 py-10">

@@ -197,7 +197,9 @@
         "t1":"Ce champ est requis.",
         "t2":"Adresse email invalide.",
         "titre3":"Mot de passe",
-        "titre4":"Se connecter"
+        "titre4":"Se connecter",
+        "registerText": "Vous n'avez pas de compte ?",
+        "registerLink": "Cliquez ici pour vous inscrire"
       },
       "card-block":{
         "titre1":"Appelez au ",

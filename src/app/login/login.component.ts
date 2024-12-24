@@ -64,8 +64,8 @@ onLogin() {
          // this.router.navigate(['/homeuser']);
           //this.router.navigate(['/homeuser']);
         } else {
-          console.error('Unexpected response format', response);
-          this.openDialog('Unexpected response format. Please try again.', false);
+          console.error('test', response);
+          this.openDialog(response.message, false);
         }
       },
       error => {
