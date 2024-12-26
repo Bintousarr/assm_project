@@ -8,7 +8,7 @@
       <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()" >
         
         <div class="mb-8">
-          <label class="block text-xl font-medium text-gray-800 mb-3">Prix Package</label>
+          <label class="block text-2xl font-bold text-gray-800 mb-3">Prix Package</label>
           <div *ngFor="let product of products; let i = index" class="flex items-center mb-4">
             <input type="checkbox" [formControlName]="'product' + i" class="mr-4 h-5 w-5 accent-blue-500"/>
             <label class="text-lg">{{ product.name }} - <strong>{{ product.price }} $</strong></label>
@@ -16,12 +16,12 @@
         </div>
   
         <div class="flex justify-between items-center mb-8">
-          <label class="text-xl font-medium text-gray-700">Total</label>
-          <span class="text-xl font-semibold text-blue-600"> {{ total | currency:'USD':'symbol' }}</span>
+          <label class="text-2xl font-bold text-gray-700">Total</label>
+          <span class="text-2xl font-semibold text-customBlue"> {{ total | currency:'USD':'symbol' }}</span>
         </div>
   
         <div class="mb-8">
-          <label class="block text-xl font-medium text-gray-800 mb-3">Méthode de Paiement</label>
+          <label class="block text-2xl font-bold text-gray-800 mb-3">Méthode de Paiement</label>
           <div class="flex items-center space-x-6">
             <input type="radio" name="paymentMethod" value="visa" formControlName="paymentMethod" class="mr-3 h-5 w-5" />
             <img src="../../assets/visa1.png" alt="Visa" class="w-40 h-20 rounded-lg" />
@@ -35,7 +35,7 @@
         </div>
   
         <div class="mb-8">
-          <label class="block text-xl font-medium text-gray-800 mb-3">Nom de l'acheteur</label>
+          <label class="block text-2xl font-bold text-gray-800 mb-3">Nom de l'acheteur</label>
           <div class="flex space-x-6">
             <input type="text" formControlName="firstName" placeholder="Prénom" class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
             <input type="text" formControlName="lastName" placeholder="Nom de famille" class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
@@ -43,13 +43,13 @@
         </div>
   
         <div class="mb-8">
-          <label class="block text-xl font-medium text-gray-800 mb-3">E-mail de l'acheteur</label>
+          <label class="block text-2xl font-bold text-gray-800 mb-3">E-mail de l'acheteur</label>
           <input type="email" formControlName="email" placeholder="prenom@gmail.com" class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
         </div>
   
         
         <div class="text-center mt-8">
-          <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg text-xl hover:bg-blue-700 transition duration-300">
+          <button type="submit" class="bg-customBlue text-white py-3 px-6 rounded-lg text-2xl hover:bg-blue-700 transition duration-300">
             Soumettre
           </button>
         </div>
@@ -58,7 +58,7 @@
     </div>
 
     <div class="p-6 rounded-lg" >
-      <img src="../../assets/3ea0029d8c.jpeg" class="rounded-full p-6" alt="">
+      <img src="../../assets/3ea0029d8c.jpeg" class="rounded-full p-10 w-[900px]" alt="">
     </div>
    
   </div>
