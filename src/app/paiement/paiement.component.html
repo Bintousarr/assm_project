@@ -1,0 +1,54 @@
+<div class="bg-gradient-to-r from-blue-400 to-indigo-600 font-sans leading-normal tracking-normal">
+
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-6">
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-bold uppercase">Paiement sécurisé</h1>
+        <p class="text-lg mt-2 font-medium">Effectuez votre paiement rapidement et en toute sécurité.</p>
+      </div>
+    </header>
+  
+    <main class="container mx-auto mt-12 p-8 w-full">
+      <div class="bg-white shadow-lg rounded-lg p-8">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Montant à payer</h2>
+        
+        <!-- Montant Display -->
+        <div class="text-center mb-6">
+          <p id="montant" class="text-4xl font-bold text-indigo-600"></p>
+        </div>
+  
+        <!-- Form -->
+        <form>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="col-span-1">
+              <label for="card-number" class="block text-lg font-medium text-gray-800">Numéro de Carte</label>
+              <input type="text" id="card-number" class="mt-1 p-4 block w-full border border-gray-300 rounded-md shadow-md focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            <div class="col-span-1">
+              <label for="expiration-date" class="block text-lg font-medium text-gray-800">Date d’expiration</label>
+              <input type="text" id="expiration-date" class="mt-1 p-4 block w-full border border-gray-300 rounded-md shadow-md focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+          </div>
+  
+          <div class="my-6">
+            <label for="cvv" class="block text-lg font-medium text-gray-800">Code de sécurité (CVV)</label>
+            <input type="text" id="cvv" class="mt-1 p-4 block w-full border border-gray-300 rounded-md shadow-md focus:ring-indigo-500 focus:border-indigo-500">
+          </div>
+  
+          <div class="mt-8 text-center">
+            <button type="submit" class="px-8 py-3 bg-gradient-to-r from-green-400 to-green-600 text-white font-semibold rounded-md shadow-lg hover:from-green-500 hover:to-green-700 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+              Payer maintenant
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  
+  </div>
+  
+  <script>
+    // Extract montant from URL
+    const params = new URLSearchParams(window.location.search);
+    const montant = params.get('montant');
+    document.getElementById('montant').innerText = `${montant} €`;
+  </script>
+  
