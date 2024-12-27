@@ -58,22 +58,23 @@ export class RegisterComponent {
     'Viêt Nam', 'Yémen', 'Zambie', 'Zimbabwe'
   ];
 
-  selectedFile: File | null = null;
+  selectedFile: File = new File([], 'user.jpg');
+
 
   constructor(private fb: FormBuilder, private _registerService: RegisterService, private dialog: MatDialog) {
     this.registrationForm = this.fb.group({
       title: ['', Validators.required],
-      first_name: ['', Validators.required],
-      last_name: ['', Validators.required],
+      first_name: ['', [Validators.required, Validators.minLength(2)]],
+      last_name: ['', [Validators.required, Validators.minLength(2)]],
       gender: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
-      phone: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      phone: ['', [Validators.required, Validators.pattern('^[0-9]{10,15}$')]], // Doit contenir entre 10 et 15 chiffres
       country: ['', Validators.required],
       role: ['', Validators.required],
-      poste: ['', Validators.required],  // Champ ajouté pour la profession
-      organisme: ['', Validators.required],  // Champ ajouté pour l'organisme
-      photo: [null, [fileTypeValidator(['image/jpeg', 'image/png']), fileSizeValidator(5 * 1024 * 1024)]]  // Valideur de type et taille   
+      poste: ['', [Validators.required, Validators.minLength(2)]],
+      organisme: ['', [Validators.required, Validators.minLength(2)]],
+      photo: [null, [fileTypeValidator(['image/jpeg', 'image/png']), fileSizeValidator(5 * 1024 * 1024)]], // Valideurs pour la photo
     });
   }
 
@@ -135,31 +136,33 @@ export class RegisterComponent {
 
 
   onSubmit() {
-    console.log(this.registrationForm.value);
-    if (this.registrationForm.valid) {
-      const formData = new FormData();
-
-      // Ajouter tous les autres champs du formulaire
-      Object.keys(this.registrationForm.controls).forEach(key => {
-        formData.append(key, this.registrationForm.get(key)?.value);
-      });
-
-      // Ajouter la photo si elle est sélectionnée
-      if (this.selectedFile) {
-        formData.append('photo', this.selectedFile, this.selectedFile.name); // Ajouter le fichier photo
-      }
-
-      this._registerService.register(formData).subscribe(
-        response => {
-          console.log('User registered successfully', response);
-          this.openDialog(response.message, true); // isSuccess = true pour succès
-        },
-        error => {
-          //console.error('Error registering user', error);
-          this.openDialog(error.error.message, false); // isSuccess = false pour erreur
-        }
-      );
+    if (this.registrationForm.invalid) {
+      this.markAllFieldsAsTouched(); // Marque tous les champs comme "touchés" pour afficher les erreurs
+      return;
     }
+    const formData = new FormData();
+
+    console.log(this.registrationForm.value);
+  // Ajouter tous les champs du formulaire
+  Object.keys(this.registrationForm.controls).forEach(key => {
+    const value = this.registrationForm.get(key)?.value;
+    if (key === 'photo' && value) {
+      formData.append('photo', this.selectedFile, this.selectedFile.name); // Ajouter la photo si elle est sélectionnée
+    } else {
+      formData.append(key, value);
+    }
+  });
+
+  this._registerService.register(formData).subscribe(
+    response => {
+      console.log('User registered successfully', response);
+      this.openDialog(response.message, true); // Affiche un message de succès
+    },
+    error => {
+      console.error('Error registering user', error);
+      this.openDialog(error.error.message || 'Une erreur est survenue.', false); // Affiche un message d'erreur
+    }
+  );
   }
 
   onFileSelected(event: any) {
@@ -176,7 +179,12 @@ export class RegisterComponent {
       this.registrationForm.get('photo')?.updateValueAndValidity();  // Met à jour la validation
     }
   }
-
+  private markAllFieldsAsTouched() {
+    Object.keys(this.registrationForm.controls).forEach(field => {
+      const control = this.registrationForm.get(field);
+      control?.markAsTouched({ onlySelf: true });
+    });
+  }
 }
 function fileTypeValidator(allowedTypes: string[]): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -207,3 +215,4 @@ function fileSizeValidator(maxSize: number): ValidatorFn {
     return null;
   };
 }
+// Marquer tous les champs comme "touchés"

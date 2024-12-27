@@ -1,18 +1,19 @@
 <div class=" font-poppins">
   <div class="relative w-full">
     <div class="relative h-[476px] lg:h-[600px]">
-      <img src="../../../assets/ouverture.jpg" class="absolute block w-full h-full object-cover" >
-      <div
-        class="absolute inset-0 flex flex-col items-center justify-center text-center p-5 gap-5">
+      <img src="../../../assets/ouverture.jpg" class="absolute block w-full h-full object-cover">
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-5 gap-5">
         <h2
-          class="text-3xl md:text-4xl lg:text-5xl font-black text-white">EXPOSITIONS
-          ET DÉMONSTRATIONS</h2>
+          class="text-3xl md:text-4xl lg:text-5xl font-black text-white">
+          {{ 'EXHIBITIONS_DEMOS_TITLE' | translate }}
+        </h2>
         <p class="text-base md:text-lg lg:text-xl text-white font-light">
-          Vous voulez exposer vos solutions, Vous êtes au bon endroit!
+          {{ 'EXHIBITIONS_DEMOS_DESC' | translate }}
         </p>
       </div>
     </div>
   </div>
+  
 
   <div class="pt-10 w-full flex flex-col lg:flex-row gap-10 justify-center">
     <div class="lg:w-1/2 w-full">
@@ -24,261 +25,250 @@
 
 
 
-
   <div
-    class="w-full h-auto sm:py-10 flex flex-col lg:flex-row justify-center p-10 lg:px-40 gap-10">
-    <div class="lg:w-1/2 w-full sm:mt-20">
-      <h1 class="text-xl sm:text-3xl font-bold">5 BONNES RAISONS DE PARTICIPER
-        AU MASS</h1>
-      <ul class="mt-7 text-lg sm:text-xl font-light mb-6">
-        <li class=" flex  gap-3 mb-5 items-center">
-          <span class="rounded-full bg-red-800 w-2 h-2 absolute"></span>
-          <p class="text-lg sm:text-xl ml-6">
-            Accès privilégié à des rencontres stratégiques
-          </p>
-        </li>
-        <li class=" flex  gap-3 mb-5 items-center">
-          <span class="rounded-full bg-red-800  w-2 h-2 absolute"></span>
-          <p class="text-lg sm:text-xl  ml-6">
-            Visibilité renforcée sur un marché en pleine croissance
-          </p>
-        </li>
-        <li class="flex  gap-3 mb-5 items-center">
-          <span class="rounded-full bg-red-800  w-2 h-2 absolute"></span>
-          <p class="text-lg sm:text-xl  ml-6">
-            Contribution au développement technologique africain
-          </p>
-        </li>
-        <li class=" flex  gap-3 mb-5 items-center">
-          <span class="rounded-full bg-red-800  w-2 h-2 absolute"></span>
-          <p class="text-lg sm:text-xl  ml-6">
-            Opportunités de collaboration et de partenariats stratégiques
-          </p>
-        </li>
-        <li class=" flex  gap-3 mb-5 items-center">
-          <span class="rounded-full bg-red-800  w-2 h-2 absolute"></span>
-          <p class="text-lg sm:text-xl  ml-6">
-            Des solutions sur mesure pour vos défis
-          </p>
-        </li>
-      </ul>
-    </div>
-
-    <div
-      class="md:grid md:grid-rows-3 md:grid-flow-col gap-4 lg:w-1/2 w-full relative">
-     
-      <div style="width: 100%;" class="md:row-span-3">
-        <img class="rounded w-full my-4 sm:my-0 ml-0  sm:ml-40 sm:mt-20"
-          src="../../../assets/stand1.jpg" alt>
-      </div>
-
-      <button href="javascript:void(0)" (click)="downloadFile()"
-        class="md:w-80 w-full p-2 sm:h-40 sm:p-10 sm:mb-32 bg-red-800 text-2xl rounded md:row-span-2 z-10 md:absolute md:bottom-1 md:left-4 text-white font-bold flex justify-center items-center space-x-3">
-        <i class="fas fa-download"></i>
-        <span class="text-sm sm:text-lg">Télécharger le Dossier de Sponsoring de
-          MASS 2025</span>
-      </button>
-    </div>
-
+  class="w-full h-auto sm:py-10 flex flex-col lg:flex-row justify-center p-10 lg:px-40 gap-10">
+  <div class="lg:w-1/2 w-full sm:mt-20">
+    <h1 class="text-xl sm:text-3xl font-bold">
+      {{ 'REASONS_TITLE' | translate }}
+    </h1>
+    <ul class="mt-7 text-lg sm:text-xl font-light mb-6">
+      <li class="flex gap-3 mb-5 items-center">
+        <span class="rounded-full bg-red-800 w-2 h-2 absolute"></span>
+        <p class="text-lg sm:text-xl ml-6">
+          {{ 'REASON_1' | translate }}
+        </p>
+      </li>
+      <li class="flex gap-3 mb-5 items-center">
+        <span class="rounded-full bg-red-800 w-2 h-2 absolute"></span>
+        <p class="text-lg sm:text-xl ml-6">
+          {{ 'REASON_2' | translate }}
+        </p>
+      </li>
+      <li class="flex gap-3 mb-5 items-center">
+        <span class="rounded-full bg-red-800 w-2 h-2 absolute"></span>
+        <p class="text-lg sm:text-xl ml-6">
+          {{ 'REASON_3' | translate }}
+        </p>
+      </li>
+      <li class="flex gap-3 mb-5 items-center">
+        <span class="rounded-full bg-red-800 w-2 h-2 absolute"></span>
+        <p class="text-lg sm:text-xl ml-6">
+          {{ 'REASON_4' | translate }}
+        </p>
+      </li>
+      <li class="flex gap-3 mb-5 items-center">
+        <span class="rounded-full bg-red-800 w-2 h-2 absolute"></span>
+        <p class="text-lg sm:text-xl ml-6">
+          {{ 'REASON_5' | translate }}
+        </p>
+      </li>
+    </ul>
   </div>
 
-  <div class="container mx-auto my-10">
-    <h2 class="text-3xl font-bold text-center mb-6 ">
-      Options de Sponsoring pour le MASS
-    </h2>
-    <div class="flex justify-center mb-4 md:mb-8">
-      <div class="h-1 w-16 md:w-20 bg-red-800"></div>
+  <div
+    class="md:grid md:grid-rows-3 md:grid-flow-col gap-4 lg:w-1/2 w-full relative">
+    <div style="width: 100%;" class="md:row-span-3">
+      <img class="rounded w-full my-4 sm:my-0 ml-0 sm:ml-40 sm:mt-20"
+        src="../../../assets/stand1.jpg" alt>
     </div>
-  
-    <div class="overflow-x-auto">
-      <table class="w-full border-collapse border border-gray-300">
-        <thead>
-          <tr class="bg-blue-600 text-white">
-            <th class="p-4 text-left border">Package</th>
-            <th class="p-4 text-center border">Start UP <br> 1 000 $</th>
-            <th class="p-4 text-center border">ARGENT <br> 6 000$ </th>
-            <th class="p-4 text-center border">GOLD <br> 12 000 $ </th>
-            <th class="p-4 text-center border">PLATINIUM <br>  23 000 $</th>
-            <th class="p-4 text-center border">SPONSOR OFFICIEL <br> 50 000 $</th>
-          </tr>
-        </thead>
-        <tbody class="text-gray-700">
-          <tr class="bg-gray-100">
-            <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
-              PROMOTION / MARKETING
-            </td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Logo sur le sac</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center text-red-500 font-bold ">✔️</td>
-            <td class="p-4 border text-center text-red-500 font-bold ">✔️</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Logo sur les publications liées à l'événement</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center text-red-500 font-bold ">✔️</td>
-            <td class="p-4 border text-center text-red-500 font-bold ">✔️</td>
-            <td class="p-4 border text-center text-red-500 font-bold ">✔️</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Logo sur les bannières ou écrans</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center text-red-500 font-bold ">✔️</td>
-            <td class="p-4 border text-center text-red-500 font-bold ">✔️</td>
-          </tr>
-          <tr class="bg-gray-100">
-            <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
-              PUBLICITÉ AVANT L'ÉVÉNEMENT
-            </td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Communication par email sur le partenaire via les canaux médiatiques</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center text-red-500 font-bold "></td>
-            <td class="p-4 border text-center font-bold">1</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Profil d'entreprise, logo, lien web de l'entreprise sur le site de l'évènement</td>
-            <td class="p-4 border text-center font-bold">Logo</td>
-            <td class="p-4 border text-center font-bold">Logo</td>
-            <td class="p-4 border text-center font-bold ">100 mots</td>
-            <td class="p-4 border text-center  font-bold ">150 mots</td>
-            <td class="p-4 border text-center font-bold ">200 mots</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Interview exclusive en vedette sur le site web du MASS</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center text-red-500 font-bold "></td>
-            <td class="p-4 border text-center">✔️</td>
-          </tr>
-          <tr class="bg-gray-100">
-            <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
-              VISIBILITÉ PENDANT L'ÉVÉNEMENT
-            </td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Publicité en ligne dans le guide de l'événement et de l'exposition</td>
-            <td class="p-4 border text-center  font-bold">Logo</td>
-            <td class="p-4 border text-center  font-bold">Logo</td>
-            <td class="p-4 border text-center  font-bold">Quart de page</td>
-            <td class="p-4 border text-center  font-bold">Demi page</td>
-            <td class="p-4 border text-center  font-bold">Page entière</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Profil d'entreprise avec détails et coordonnées</td>
-            <td class="p-4 border text-center "></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center  font-bold">100 mots</td>
-            <td class="p-4 border text-center  font-bold">150 mots</td>
-            <td class="p-4 border text-center  font-bold">200 mots</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Bannière de l'entreprise lors des sessions plénières</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center  font-bold">1</td>
-            <td class="p-4 border text-center  font-bold">2</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Article(s) promotionnel(s) dans le sac de l'événement</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center  font-bold">Flyer d'une page</td>
-            <td class="p-4 border text-center  font-bold">1 article</td>
-            <td class="p-4 border text-center  font-bold">2 articles</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Reconnaissance durant les sessions d'ouverture et clôture</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center">✔️</td>
-            <td class="p-4 border text-center">✔️</td>
-          </tr>
-          
-          <tr class="bg-gray-100">
-            <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
-              PARTICIPATION À L'ÉVÉNEMENT
-            </td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Sélection d'espace d'exposition prioritaire</td>
-            <td class="p-4 border text-center  font-bold">9 m² & 1 inscription gratuite</td>
-            <td class="p-4 border text-center  font-bold">9 m² & 1 inscription gratuite</td>
-            <td class="p-4 border text-center  font-bold">9 m² & 1 inscription gratuite</td>
-            <td class="p-4 border text-center  font-bold">27 m² & 4 inscriptions gratuites</td>
-            <td class="p-4 border text-center  font-bold">36 m² & 6 inscriptions gratuites</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Organisation d'un atelier (30 minutes)</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center  font-bold">1</td>
-            <td class="p-4 border text-center  font-bold">2</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Facilitation des réunions bilatérales</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center">✔️</td>
-            <td class="p-4 border text-center">✔️</td>
-          </tr>
-          
-          <tr class="bg-gray-100">
-            <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
-              AVANTAGES APRÈS L'ÉVÉNEMENT
-            </td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Conservation du profil d'entreprise</td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center"></td>
-            <td class="p-4 border text-center">✔️</td>
-            <td class="p-4 border text-center">✔️</td>
-            <td class="p-4 border text-center">✔️</td>
-          </tr>
-    
-          <tr class="bg-gray-100">
-            <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
-              STANDS D'EXPOSITION
-            </td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Stand d'exposition</td>
-            <td class="p-4 border text-center  font-bold">9 m²</td>
-            <td class="p-4 border text-center  font-bold">9 m²</td>
-            <td class="p-4 border text-center  font-bold">18 m²</td>
-            <td class="p-4 border text-center  font-bold">27 m²</td>
-            <td class="p-4 border text-center  font-bold">36 m²</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-            <td class="p-4 border">Réservation</td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(0)" >Réserver</button></td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(1)">Réserver</button></td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(2)">Réserver</button></td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(3)">Réserver</button></td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(4)">Réserver</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-          
-  
-  
+
+    <button href="javascript:void(0)" (click)="downloadFile()"
+      class="md:w-80 w-full p-2 sm:h-40 sm:p-10 sm:mb-32 bg-red-800 text-2xl rounded md:row-span-2 z-10 md:absolute md:bottom-1 md:left-4 text-white font-bold flex justify-center items-center space-x-3">
+      <i class="fas fa-download"></i>
+      <span class="text-sm sm:text-lg">
+        {{ 'DOWNLOAD_SPONSOR_FILE' | translate }}
+      </span>
+    </button>
+  </div>
 </div>
+
+
+<div class="container mx-auto my-10">
+  <h2 class="text-3xl font-bold text-center mb-6">
+    {{ 'SPONSOR_OPTIONS_TITLE' | translate }}
+  </h2>
+  <div class="flex justify-center mb-4 md:mb-8">
+    <div class="h-1 w-16 md:w-20 bg-red-800"></div>
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse border border-gray-300">
+      <thead>
+        <tr class="bg-blue-600 text-white">
+          <th class="p-4 text-left border">{{ 'PACKAGE' | translate }}</th>
+          <th class="p-4 text-center border">{{ 'START_UP' | translate }}</th>
+          <th class="p-4 text-center border">{{ 'SILVER' | translate }}</th>
+          <th class="p-4 text-center border">{{ 'GOLD' | translate }}</th>
+          <th class="p-4 text-center border">{{ 'PLATINUM' | translate }}</th>
+          <th class="p-4 text-center border">{{ 'OFFICIAL_SPONSOR' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-700">
+        <tr class="bg-gray-100">
+          <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
+            {{ 'PROMOTION_MARKETING' | translate }}
+          </td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'LOGO_ON_BAG' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+          <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'LOGO_ON_PUBLICATIONS' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+          <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+          <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'LOGO_ON_BANNERS' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+          <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+        </tr>
+        <tr class="bg-gray-100">
+          <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
+            {{ 'PRE_EVENT_ADVERTISING' | translate }}
+          </td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'EMAIL_COMMUNICATION' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center font-bold">1</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'WEBSITE_PROFILE' | translate }}</td>
+          <td class="p-4 border text-center font-bold">{{ 'LOGO' | translate }}</td>
+          <td class="p-4 border text-center font-bold">{{ 'LOGO' | translate }}</td>
+          <td class="p-4 border text-center font-bold">100 {{ 'WORDS' | translate }}</td>
+          <td class="p-4 border text-center font-bold">150 {{ 'WORDS' | translate }}</td>
+          <td class="p-4 border text-center font-bold">200 {{ 'WORDS' | translate }}</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'EXCLUSIVE_INTERVIEW' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center">✔️</td>
+        </tr>
+        <tr class="bg-gray-100">
+          <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
+            {{ 'EVENT_VISIBILITY' | translate }}
+          </td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'EVENT_GUIDE_AD' | translate }}</td>
+          <td class="p-4 border text-center font-bold">{{ 'LOGO' | translate }}</td>
+          <td class="p-4 border text-center font-bold">{{ 'LOGO' | translate }}</td>
+          <td class="p-4 border text-center font-bold">{{ 'QUARTER_PAGE' | translate }}</td>
+          <td class="p-4 border text-center font-bold">{{ 'HALF_PAGE' | translate }}</td>
+          <td class="p-4 border text-center font-bold">{{ 'FULL_PAGE' | translate }}</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'COMPANY_PROFILE' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center font-bold">100 {{ 'WORDS' | translate }}</td>
+          <td class="p-4 border text-center font-bold">150 {{ 'WORDS' | translate }}</td>
+          <td class="p-4 border text-center font-bold">200 {{ 'WORDS' | translate }}</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'BANNER_DISPLAY' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center font-bold">1</td>
+          <td class="p-4 border text-center font-bold">2</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'PROMOTIONAL_ITEMS' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center font-bold">{{ 'FLYER' | translate }}</td>
+          <td class="p-4 border text-center font-bold">1 {{ 'ITEM' | translate }}</td>
+          <td class="p-4 border text-center font-bold">2 {{ 'ITEMS' | translate }}</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'SESSION_RECOGNITION' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center">✔️</td>
+          <td class="p-4 border text-center">✔️</td>
+        </tr>
+        <tr class="bg-gray-100">
+          <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
+            {{ 'PARTICIPATION_BENEFITS' | translate }}
+          </td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'EXHIBITION_SPACE' | translate }}</td>
+          <td class="p-4 border text-center font-bold">9 m² & 1 {{ 'REGISTRATION' | translate }}</td>
+          <td class="p-4 border text-center font-bold">9 m² & 1 {{ 'REGISTRATION' | translate }}</td>
+          <td class="p-4 border text-center font-bold">9 m² & 1 {{ 'REGISTRATION' | translate }}</td>
+          <td class="p-4 border text-center font-bold">27 m² & 4 {{ 'REGISTRATIONS' | translate }}</td>
+          <td class="p-4 border text-center font-bold">36 m² & 6 {{ 'REGISTRATIONS' | translate }}</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'WORKSHOP_ORGANIZATION' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center font-bold">1</td>
+          <td class="p-4 border text-center font-bold">2</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'FACILITATION' | translate }}</td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center"></td>
+          <td class="p-4 border text-center">✔️</td>
+          <td class="p-4 border text-center">✔️</td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4 border">{{ 'RESERVATION' | translate }}</td>
+          <td class="p-4 border text-center">
+            <button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(0)">
+              {{ 'BOOK' | translate }}
+            </button>
+          </td>
+          <td class="p-4 border text-center">
+            <button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(1)">
+              {{ 'BOOK' | translate }}
+            </button>
+          </td>
+          <td class="p-4 border text-center">
+            <button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(2)">
+              {{ 'BOOK' | translate }}
+            </button>
+          </td>
+          <td class="p-4 border text-center">
+            <button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(3)">
+              {{ 'BOOK' | translate }}
+            </button>
+          </td>
+          <td class="p-4 border text-center">
+            <button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(4)">
+              {{ 'BOOK' | translate }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
 <!-- Section du formulaire pour personnaliser l'invitation -->
 <!-- <div class="flex flex-col items-center pt-10">

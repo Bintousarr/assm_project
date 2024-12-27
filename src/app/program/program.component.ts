@@ -5,7 +5,9 @@ import { HeaderComponent } from "../shared/header/header.component";
 import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
+//import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 import saveAs from 'file-saver';
 
 // interface Event {
@@ -24,16 +26,18 @@ import saveAs from 'file-saver';
 @Component({
   selector: 'app-program',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.scss']
 })
 export class ProgramComponent  {
   translate: TranslateService = inject(TranslateService)
+
   ngOnInit() {
     this.translate.setDefaultLang('fr');
     
   }
+
   translateText(lang: string) {
     this.translate.use(lang);
   }
