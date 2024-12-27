@@ -276,11 +276,11 @@
           </tr>
           <tr class="hover:bg-gray-50">
             <td class="p-4 border">Réservation</td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" routerLink="/reservation">Réserver</button></td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" routerLink="/reservation">Réserver</button></td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" routerLink="/reservation">Réserver</button></td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" routerLink="/reservation">Réserver</button></td>
-            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" routerLink="/reservation">Réserver</button></td>
+            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(0)" >Réserver</button></td>
+            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(1)">Réserver</button></td>
+            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(2)">Réserver</button></td>
+            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(3)">Réserver</button></td>
+            <td class="p-4 border text-center"><button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800" (click)="goToPaymentPage(4)">Réserver</button></td>
           </tr>
         </tbody>
       </table>
