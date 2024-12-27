@@ -155,7 +155,7 @@ export class RegisterComponent {
           this.openDialog(response.message, true); // isSuccess = true pour succès
         },
         error => {
-          console.error('Error registering user', error);
+          //console.error('Error registering user', error);
           this.openDialog(error.error.message, false); // isSuccess = false pour erreur
         }
       );
