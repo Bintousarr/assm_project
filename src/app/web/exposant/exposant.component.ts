@@ -6,7 +6,7 @@ import { jsPDF } from 'jspdf';
 @Component({
   selector: 'app-exposant',
   standalone: true,
-  imports: [ TranslateModule, RouterLink],
+  imports: [ TranslateModule],
   templateUrl: './exposant.component.html',
   styleUrl: './exposant.component.scss'
 })

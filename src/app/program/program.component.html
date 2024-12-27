@@ -18,35 +18,35 @@
         <!-- Énumérations -->
         <div class="w-full flex justify-center text-white">
           <ul class="text-base sm:text-lg font-light space-y-4">
-            <li class="flex items-start gap-3">
+            <li class="flex items-start gap-3 text-2xl">
               <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
               <p class="ml-6">Conférence de presse de lancement</p>
             </li>
-            <li class="flex items-start gap-3">
+            <li class="flex items-start gap-3 text-2xl">
               <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
               <p class="ml-6">Cérémonie d'Ouverture</p>
             </li>
-            <li class="flex items-start gap-3">
+            <li class="flex items-start gap-3 text-2xl">
               <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
               <p class="ml-6">Expositions</p>
             </li>
-            <li class="flex items-start gap-3">
+            <li class="flex items-start gap-3 text-2xl">
               <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
               <p class="ml-6">Démonstration live</p>
             </li>
-            <li class="flex items-start gap-3">
+            <li class="flex items-start gap-3 text-2xl">
               <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
               <p class="ml-6">Dîner Gala</p>
             </li>
-            <li class="flex items-start gap-3">
+            <li class="flex items-start gap-3 text-2xl">
               <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
               <p class="ml-6">Showcase</p>
             </li>
-            <li class="flex items-start gap-3">
+            <li class="flex items-start gap-3 text-2xl">
               <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
               <p class="ml-6">Rencontres B2B</p>
             </li>
-            <li class="flex items-start gap-3">
+            <li class="flex items-start gap-3 text-2xl">
               <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
               <p class="ml-6">Cérémonie de Clôture</p>
             </li>
@@ -56,7 +56,7 @@
          <!-- Bouton -->
         <div class="w-full h-full sm:h-80 flex md:justify-center md:items-center mt-6 lg:mt-0">
           
-          <button (click)="downloadFile()" class="w-full lg:w-auto h-14 lg:h-16 bg-customBlue text-white text-base sm:text-lg font-bold rounded-lg shadow-lg hover:bg-red-900 flex justify-center items-center p-4">
+          <button (click)="downloadFile()" class="w-full  lg:w-auto h-14 lg:h-16 bg-customBlue text-white text-base sm:text-xl font-bold rounded-lg shadow-lg hover:bg-red-900 flex justify-center items-center p-4">
             <i class="fas fa-download mr-2"></i> Télécharger la brochure de MASS 2025
           </button>
         </div>
@@ -65,76 +65,81 @@
   </div>
 
   <div class="flex flex-col gap-10 mt-10 px-5 sm:px-10 lg:px-20">
-    <!-- Expositions et démonstrations -->
-    <div class="flex flex-col lg:flex-row items-center gap-10 p-8 bg-gray-100">
-      <div class="lg:w-1/2">
-        <img src="../../assets/termine.jpg" alt="Expositions et démonstrations" class="rounded-lg shadow-lg w-full h-[200px] object-cover">
+    <div class="flex flex-col lg:flex-row items-center gap-10 p-8">
+      <div class="lg:w-1/3">
+        <img src="../../assets/realty-free-image-uhd-wallpaper_1023251-95937.jpeg" alt="Expositions et démonstrations" class="rounded-lg shadow-lg w-full h-[350px] object-cover">
       </div>
-      <div class="lg:w-1/2">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-600 mb-6">EXPOSITIONS ET DÉMONSTRATIONS</h2>
+      <div class="lg:w-2/3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-800 mb-6">EXPOSITIONS ET DÉMONSTRATIONS</h2>
         <ul class="list-disc pl-5 space-y-4 text-base sm:text-lg text-gray-700">
           <li>
-            <span class="font-semibold">Expositions :</span> Le MASS 2025 offrira une plateforme prestigieuse pour les entreprises, institutions et startups du secteur spatial, permettant de présenter leurs dernières innovations et solutions.
+            <span class="font-semibold text-2xl">Expositions :</span>
+            <p class="text-xl"> Le MASS 2025 offrira une plateforme prestigieuse pour les entreprises, institutions et startups du secteur spatial, permettant de présenter leurs dernières innovations et solutions.</p>
           </li>
           <li>
-            <span class="font-semibold">Démonstrations :</span> Présentations pratiques et démonstrations en direct de solutions spatiales innovantes, permettant aux participants de voir les technologies en action et de comprendre leur application concrète.
+            <span class="font-semibold text-2xl">Démonstrations :</span> 
+            <p class="text-xl">Présentations pratiques et démonstrations en direct de solutions spatiales innovantes, permettant aux participants de voir les technologies en action et de comprendre leur application concrète.</p>
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- Rencontres B2B -->
-    <div class="flex flex-col lg:flex-row-reverse items-center gap-10 p-8 bg-gray-100">
-      <div class="lg:w-1/2">
-        <img src="../../assets/b2b.jpg" alt="Rencontres B2B" class="rounded-lg shadow-lg w-full h-[200px] object-cover">
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-10 p-8 ">
+      <div class="lg:w-1/3">
+        <img src="../../assets/african-business-male-people-shaking-hands.jpg" alt="Rencontres B2B" class="rounded-lg shadow-lg w-full h-[350px] object-cover">
       </div>
-      <div class="lg:w-1/2">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-600 mb-6">RENCONTRES B2B ET RENDEZ-VOUS PERSONNALISÉS</h2>
+      <div class="lg:w-2/3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-800 mb-6">RENCONTRES B2B ET RENDEZ-VOUS PERSONNALISÉS</h2>
         <ul class="list-disc pl-5 space-y-4 text-base sm:text-lg text-gray-700">
-          <li>
-            <span class="font-semibold">Sessions de Rencontres B2B :</span> Facilitation de rencontres entre entreprises, investisseurs, et autres parties prenantes pour explorer des opportunités de partenariat et de collaboration.
+          <li >
+            <span class="font-semibold text-2xl">Sessions de Rencontres B2B :</span> 
+            <p class="text-xl">Facilitation de rencontres entre entreprises, investisseurs, et autres parties prenantes pour explorer des opportunités de partenariat et de collaboration.</p>
           </li>
           <li>
-            <span class="font-semibold">Rendez-vous Personnalisés :</span> Organisation de réceptions et de cocktails en soirée pour offrir aux participants des opportunités informelles de réseautage.
+            <span class="font-semibold text-2xl">Rendez-vous Personnalisés :</span> 
+            <p class="text-xl">Organisation de réceptions et de cocktails en soirée pour offrir aux participants des opportunités informelles de réseautage.</p>
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- Cérémonie des Awards -->
-    <div class="flex flex-col lg:flex-row items-center gap-10 p-8 bg-gray-100">
-      <div class="lg:w-1/2">
-        <img src="../../assets/Ceremonie.jpg" alt="Cérémonie des Awards" class="rounded-lg shadow-lg w-full h-[200px] object-cover">
+    <div class="flex flex-col lg:flex-row items-center gap-10 p-8 ">
+      <div class="lg:w-1/3">
+        <img src="../../assets/waist-up-portrait-multi-ethnic-group-friends-holding-champagne-glasses-smiling-camera-while-enjoying-elegant-party.jpg" alt="Cérémonie des Awards" class="rounded-lg shadow-lg w-full h-[350px] object-cover">
       </div>
-      <div class="lg:w-1/2">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-600 mb-6">CÉRÉMONIE DES AWARDS ET HACKATHON</h2>
+      <div class="lg:w-2/3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-800 mb-6">CÉRÉMONIE DES AWARDS ET HACKATHON</h2>
         <ul class="list-disc pl-5 space-y-4 text-base sm:text-lg text-gray-700">
           <li>
-            <span class="font-semibold">Reconnaissance des Personnalités Remarquables :</span> Organisation d'une cérémonie de remise de prix pour honorer les personnalités et initiatives qui ont contribué de manière significative au développement et à l'avancement du secteur spatial en Afrique.
+            <span class="font-semibold text-2xl">Reconnaissance des Personnalités Remarquables :</span>
+            <p class="text-xl"> Organisation d'une cérémonie de remise de prix pour honorer les personnalités et initiatives qui ont contribué de manière significative au développement et à l'avancement du secteur spatial en Afrique.</p>
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- Événements Jeunes -->
-    <div class="flex flex-col lg:flex-row-reverse items-center gap-10 p-8 bg-gray-100">
-      <div class="lg:w-1/2">
-        <img src="../../assets/exposant.jpg" alt="Événement Jeunes" class="rounded-lg shadow-lg w-full h-[200px] object-cover">
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-10 p-8">
+      <div class="lg:w-1/3">
+        <img src="../../assets/post_thumbnail-0fc5c8b716c28617285aad5ffc5b3bb4.jpeg" alt="Événement Jeunes" class="rounded-lg shadow-lg w-full h-[350px] object-cover">
       </div>
-      <div class="lg:w-1/2">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-600 mb-6">ÉVÉNEMENTS POUR LES JEUNES</h2>
+      <div class="lg:w-2/3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-800 mb-6">ÉVÉNEMENTS POUR LES JEUNES</h2>
         <ul class="list-disc pl-5 space-y-4 text-base sm:text-lg text-gray-700">
           <li>
-            <span class="font-semibold">Ateliers Éducatifs :</span> Organisation d'ateliers interactifs pour les jeunes, visant à les sensibiliser aux sciences spatiales et à les inspirer à poursuivre des carrières dans ce domaine.
+            <span class="font-semibold text-2xl">Ateliers Éducatifs :</span> 
+            <p class="text-xl">Organisation d'ateliers interactifs pour les jeunes, visant à les sensibiliser aux sciences spatiales et à les inspirer à poursuivre des carrières dans ce domaine.</p>
           </li>
           <li>
-            <span class="font-semibold">Sessions de Mentorat :</span> Rencontres entre les jeunes participants et des professionnels du secteur spatial, offrant des conseils de carrière, des partages d'expériences, et des encouragements pour susciter des vocations.
+            <span class="font-semibold text-2xl">Sessions de Mentorat :</span>
+            <p class="text-xl"> Rencontres entre les jeunes participants et des professionnels du secteur spatial, offrant des conseils de carrière, des partages d'expériences, et des encouragements pour susciter des vocations.</p>
           </li>
           <li>
-            <span class="font-semibold">Activités Ludiques et Éducatives :</span> Jeux, concours, et autres activités ludiques pour rendre l'apprentissage des sciences spatiales attractif et engageant pour les jeunes. Ces activités viseront à éveiller la curiosité et à stimuler l'intérêt pour les technologies spatiales.
+            <span class="font-semibold text-2xl">Activités Ludiques et Éducatives :</span> 
+            <p class="text-xl">Jeux, concours, et autres activités ludiques pour rendre l'apprentissage des sciences spatiales attractif et engageant pour les jeunes. Ces activités viseront à éveiller la curiosité et à stimuler l'intérêt pour les technologies spatiales.</p>
           </li>
           <li>
-            <span class="font-semibold">Activités Touristiques :</span> Excursions culturelles et touristiques.
+            <span class="font-semibold text-2xl">Activités Touristiques :</span> 
+            <p class="text-xl">Excursions culturelles et touristiques.</p>
           </li>
         </ul>
       </div>

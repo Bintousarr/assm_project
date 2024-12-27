@@ -2,14 +2,12 @@
 
   <div class="p-4 flex flex-col lg:flex-row justify-center items-center lg:space-x-6">
     
-    <!-- Formulaire -->
     <div class="p-6 mb-6 max-w-full w-[95%] lg:w-[700px] mx-auto bg-white rounded-lg shadow-xl">
       <h2 class="text-2xl lg:text-3xl font-bold text-center text-gray-900 mb-6">Formulaire de Réservation</h2>
       <p class="text-base lg:text-lg text-center text-gray-600 mb-8">Nous avons ce qu'il vous faut !</p>
       
       <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
         
-        <!-- Prix Package -->
         <div class="mb-8">
           <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">Prix Package</label>
           <div *ngFor="let product of products; let i = index" class="flex items-center mb-4">
@@ -23,13 +21,11 @@
         </div>
         
   
-        <!-- Total -->
         <div class="flex justify-between items-center mb-8">
           <label class="text-lg lg:text-xl font-medium text-gray-700">Total</label>
           <span class="text-lg lg:text-xl font-semibold text-blue-600">{{ total | currency:'USD':'symbol' }}</span>
         </div>
   
-        <!-- Méthode de Paiement -->
         <div class="mb-8">
           <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">Méthode de Paiement</label>
           <div class="flex items-center space-x-6">
@@ -40,7 +36,6 @@
           </div>
         </div>
   
-        <!-- Nom de l'acheteur -->
         <div class="mb-8">
           <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">Nom de l'acheteur</label>
           <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6">
@@ -49,13 +44,11 @@
           </div>
         </div>
   
-        <!-- E-mail -->
         <div class="mb-8">
           <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">E-mail de l'acheteur</label>
           <input type="email" formControlName="email" placeholder="prenom@gmail.com" class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
         </div>
   
-        <!-- Bouton de Soumission -->
         <div class="text-center mt-8">
           <button type="submit" class="w-full lg:w-auto bg-blue-600 text-white py-3 px-6 rounded-lg text-lg lg:text-xl hover:bg-blue-700 transition duration-300">
             Soumettre
@@ -65,7 +58,6 @@
       </form>
     </div>
 
-    <!-- Image -->
     <div class="p-6 rounded-lg max-w-full w-[95%] lg:w-auto lg:order-none order-first">
       <img src="../../assets/3ea0029d8c.jpeg" class="w-full lg:w-auto h-48 lg:h-auto object-cover rounded-lg" alt="Illustration" />
     </div>
