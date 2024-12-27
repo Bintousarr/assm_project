@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import saveAs from 'file-saver';
 import { jsPDF } from 'jspdf';
@@ -12,6 +12,8 @@ import { jsPDF } from 'jspdf';
 })
 export class ExposantComponent {
   translate: TranslateService = inject(TranslateService)
+  constructor( private router:Router) {
+  }  
   ngOnInit() {
     this.translate.setDefaultLang('fr');
     
@@ -108,5 +110,7 @@ export class ExposantComponent {
       doc.save(`invitation_MASS2025_${lastName}.pdf`);
     }
     
-   
+    goToPaymentPage(selectedIndex: number) {
+      this.router.navigate(['/reservation'], { queryParams: { productIndex: selectedIndex } });
+    }
 }
