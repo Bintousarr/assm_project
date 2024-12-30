@@ -34,6 +34,7 @@ export class BannerComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    localStorage.removeItem('userToken');
     this.translate.setDefaultLang('en');
     this.currentLang = this.translate.currentLang; // Get the initial language
 

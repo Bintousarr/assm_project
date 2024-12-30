@@ -34,7 +34,8 @@ export class ProgramComponent  {
   translate: TranslateService = inject(TranslateService)
 
   ngOnInit() {
-    this.translate.setDefaultLang('fr');
+    localStorage.removeItem('userToken');
+    this.translate.setDefaultLang('en');
     
   }
 

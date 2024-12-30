@@ -17,7 +17,8 @@ export class ContactComponent {
 
   constructor(private emailService: EmailService) { console.log('EmailService injected:', !!emailService); }
   ngOnInit() {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
+    localStorage.removeItem('userToken');
   }
 
   translateText(lang: string) {

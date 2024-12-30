@@ -15,7 +15,8 @@ export class ExposantComponent {
   constructor( private router:Router) {
   }  
   ngOnInit() {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
+    localStorage.removeItem('userToken');
     
   }
   translateText(lang: string) {

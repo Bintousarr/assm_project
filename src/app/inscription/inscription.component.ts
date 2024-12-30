@@ -37,6 +37,7 @@ export class InscriptionComponent {
   }
 
   ngOnInit(): void {
+    localStorage.removeItem('userToken');
     // Initialise les checkboxes
     const productsArray = this.paymentForm.get('products') as FormArray;
 
