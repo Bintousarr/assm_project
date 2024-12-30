@@ -90,7 +90,7 @@ export class EvenementComponent {
 
   translate: TranslateService = inject(TranslateService)
  gotoReservation(){
-  window.location.href = '/reservation';
+  window.location.href = '/exposant';
   
    //this.router.navigate(['/reservation']);
 
