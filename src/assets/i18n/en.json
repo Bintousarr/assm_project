@@ -506,7 +506,7 @@
       "approved": "approved",
       "declined": "declined"
     },
-    "enter-reason": "Enter the reason",
+    "enter-reason": "Appointment purpose",
     "enter-your-reason": "Enter your reason here...",
     "validate": "Validate",
     "cancel": "Cancel"

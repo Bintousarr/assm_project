@@ -95,7 +95,7 @@ export class InscriptionComponent {
         totalPrice: this.total,
       };
       if (this.translate.currentLang == 'en') {
-        this.http.post('http://localhost:8000/generateDevisAndSendEmailEnglish.php', emailData).subscribe(
+        this.http.post('https://mass.otif-africa-space.com/devis/generateDevisAndSendEmailEnglish.php', emailData).subscribe(
           (response: any) => {
             //alert(response.message);
             this.openDialog('Please find your quote in your email inbox.', true)

@@ -514,7 +514,7 @@
       "approved": "approuvé",
       "declined": "décliné"
     },
-    "enter-reason": "Renseignez le motif",
+    "enter-reason": "Objet du rendez-vous",
     "enter-your-reason": "Entrez votre motif ici...",
     "validate": "Valider",
     "cancel": "Annuler"
