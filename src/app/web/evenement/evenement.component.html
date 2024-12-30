@@ -134,11 +134,11 @@
     
   
 </div>
-<!-- 
+
 <div class="bg-white min-h-screen block sm:flex items-center justify-center pb-4 mt-20 md:mt-0">
   <div class="text-center">
     <h1 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-8">
-      UN RENDEZ-VOUS CRUCIAL <br> POUR TOUT DECOUVRIR DU <br> SPATIAL
+      {{ 'CRUCIAL_EVENT' | translate }}<br>  {{ 'CRUCIAL_EVENT1' | translate }}<br>  {{ 'CRUCIAL_EVENT2' | translate }}
     </h1>
 
     
@@ -154,13 +154,13 @@
     </div>
     
     <p class="text-center text-white text-2xl leading-relaxed">
-      Rejoignez-nous pour cet événement exceptionnel, réunissant des experts du spatial<br>
-      Un moment unique de découverte, d'innovation et de collaboration !
-    </p>
+      {{ 'DESC1' | translate }}<br>
+      {{ 'DESC2' | translate }}   
+     </p>
   </div>
   
 </div>
--->
+
 
 <div class="bg-gray-200 py-2 ">
   <div class="container mx-auto flex flex-wrap justify-around items-center gap-8">
@@ -200,7 +200,7 @@
   <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     <!-- Bloc Exposants -->
     <div class="bg-blue-200  h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
-      <h2 class="text-3xl mb-8 md:text-5xl font-bold text-black">{{'accueil.navbar-block.desc' | translate}}</h2>
+      <h2 class="text-3xl mb-8 md:text-5xl font-bold text-black" >{{'accueil.navbar-block.desc' | translate}}</h2>
       <p class="mt-4 text-lg md:text-xl text-black">
         {{'exposant.position' | translate}}    
 
