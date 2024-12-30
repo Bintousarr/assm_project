@@ -1,7 +1,7 @@
 ;
 import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
-import { Router, RouterLink } from '@angular/router';
+import { Router, } from '@angular/router';
 import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 import { CommonModule } from '@angular/common';

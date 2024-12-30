@@ -25,7 +25,7 @@ export class RegistrationSuccessDialogComponent {
 
   onOkClick(): void {
     console.log(this.apiMessage)
-    if (this.apiMessage == 'User created successfully.' || this.apiMessage == 'Utilisateur créé et disponibilités définies avec succès.'|| this.apiMessage =='User registered successfully') {
+    if (this.apiMessage == 'User created successfully.' || this.apiMessage == 'Utilisateur créé et disponibilités définies avec succès.'|| this.apiMessage =='User registered successfully'||this.apiMessage=='Veuillez retrouver votre devis dans votre boîte mail.'|| this.apiMessage=='Please find your quote in your email inbox.') {
       this.dialogRef.close(); // Fermer le popup
       this.router.navigate(['/']); // Redirige vers la page d'accueil ou une autre page
     } else {

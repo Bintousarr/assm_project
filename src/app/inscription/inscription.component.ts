@@ -1,17 +1,22 @@
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { RegistrationSuccessDialogComponent } from '../registration-success-dialog/registration-success-dialog.component';
 
 @Component({
   selector: 'app-inscription',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, TranslateModule, ReactiveFormsModule, MatDialogModule],
   templateUrl: './inscription.component.html',
   styleUrl: './inscription.component.scss'
 })
 export class InscriptionComponent {
+  translate: TranslateService = inject(TranslateService)
+
   paymentForm: FormGroup;
   products = [
     { name: 'Start-Up', price: 1000 },
@@ -22,14 +27,9 @@ export class InscriptionComponent {
   ];
   total = 0;
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute) {
+  constructor(private fb: FormBuilder, private route: ActivatedRoute, private http: HttpClient, private dialog: MatDialog) {
     this.paymentForm = this.fb.group({
-      product0: [false],
-      product1: [false],
-      product2: [false],
-      product3: [false],
-      product4: [false],
-      paymentMethod: ['', Validators.required],
+      products: this.fb.array([]), // FormArray pour les checkboxes
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -37,56 +37,104 @@ export class InscriptionComponent {
   }
 
   ngOnInit(): void {
+    // Initialise les checkboxes
+    const productsArray = this.paymentForm.get('products') as FormArray;
+
+    // Initialise chaque produit avec un contrôle
+    this.products.forEach(() => productsArray.push(this.fb.control(false)));
+
+    // Pré-cocher un produit en fonction de l'URL
     const productIndex = Number(this.route.snapshot.queryParamMap.get('productIndex'));
-  
-    const controlsConfig: any = {};
-    this.products.forEach((_, index) => {
-      controlsConfig[`product${index}`] = [index === productIndex]; // Par défaut, coche le produit sélectionné
-    });
-  
-    this.paymentForm = this.fb.group({
-      ...controlsConfig,
-      paymentMethod: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-    });
-  
-    this.calculateTotal();
-  
+    if (!isNaN(productIndex) && productIndex >= 0 && productIndex < this.products.length) {
+
+      productsArray.at(productIndex).setValue(true); // Pré-cocher le produit
+      this.calculateTotal();
+    }
+
+    // Recalculer le total à chaque modification du formulaire
     this.paymentForm.valueChanges.subscribe(() => {
       this.calculateTotal();
     });
+
+
   }
-  
-  onCheckboxChange(selectedIndex: number): void {
-    this.products.forEach((_, index) => {
-      const controlName = `product${index}`;
-      this.paymentForm.get(controlName)?.setValue(index === selectedIndex);
-    });
-  
+
+  initFormArray(): void {
+    const productsArray = this.paymentForm.get('products') as FormArray;
+    this.products.forEach(() => productsArray.push(this.fb.control(false))); // Ajoute un contrôle par produit
+  }
+
+  preSelectProduct(index: number): void {
+    const productsArray = this.paymentForm.get('products') as FormArray;
+    productsArray.at(index).setValue(true); // Pré-cocher le produit
     this.calculateTotal();
   }
-  
+
+
   calculateTotal(): void {
-    this.total = this.products.reduce((acc, product, index) => {
-      return acc + (this.paymentForm.get(`product${index}`)?.value ? product.price : 0);
+    const productsArray = this.paymentForm.get('products') as FormArray;
+    this.total = productsArray.controls.reduce((acc, control, index) => {
+      return acc + (control.value ? this.products[index].price : 0);
     }, 0);
   }
-  
+
+
   onSubmit(): void {
+    //console.log('Current Language:', this.translate.currentLang);
     if (this.paymentForm.valid) {
-      console.log('Form Data:', this.paymentForm.value);
-      alert('Paiement soumis avec succès !');
+      const selectedProducts = this.products.filter((_, index) =>
+        this.paymentForm.value.products[index]
+      );
+      const emailData = {
+        firstName: this.paymentForm.value.firstName,
+        lastName: this.paymentForm.value.lastName,
+        email: this.paymentForm.value.email,
+        selectedProducts: selectedProducts.map((product) => product.name),
+        totalPrice: this.total,
+      };
+      if (this.translate.currentLang == 'en') {
+        this.http.post('https://mass.otif-africa-space.com/devis/generateDevisAndSendEmailEnglish.php', emailData).subscribe(
+          (response: any) => {
+            //alert(response.message);
+            this.openDialog('Please find your quote in your email inbox.', true)
+          },
+          (error) => {
+            // console.error('Erreur lors de l\'envoi de l\'email :', error);
+            this.openDialog('An error occurred while sending the quote.', false)
+
+            // alert('Une erreur s\'est produite lors de l\'envoi du devis.');
+          }
+        );
+
+      } else {
+        this.http.post('https://mass.otif-africa-space.com/devis/generateDevisAndSendEmail.php', emailData).subscribe(
+          (response: any) => {
+            //alert(response.message);
+            this.openDialog('Veuillez retrouver votre devis dans votre boîte mail.', true)
+          },
+          (error) => {
+            // console.error('Erreur lors de l\'envoi de l\'email :', error);
+            this.openDialog('Une erreur s\'est produite lors de l\'envoi du devis.', false)
+
+            // alert('Une erreur s\'est produite lors de l\'envoi du devis.');
+          }
+        );
+      }
+
     } else {
-      alert('Veuillez remplir tous les champs obligatoires.');
+      this.openDialog('Veuillez remplir tous les champs obligatoires.', false)
+
+      //   alert('Veuillez remplir tous les champs obligatoires.');
     }
   }
-  translate: TranslateService = inject(TranslateService)
-
 
   translateText(lang: string) {
     this.translate.use(lang);
   }
 
+  openDialog(message: string, isSuccess: boolean): void {
+    this.dialog.open(RegistrationSuccessDialogComponent, {
+      data: { message: message, isSuccess: isSuccess }
+    });
+  }
 }
