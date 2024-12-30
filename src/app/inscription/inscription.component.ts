@@ -6,6 +6,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { RegistrationSuccessDialogComponent } from '../registration-success-dialog/registration-success-dialog.component';
+import { QuoteSuccessDialogComponent } from '../quote-success-dialog/quote-success-dialog.component';
 
 @Component({
   selector: 'app-inscription',
@@ -94,7 +95,7 @@ export class InscriptionComponent {
         totalPrice: this.total,
       };
       if (this.translate.currentLang == 'en') {
-        this.http.post('https://mass.otif-africa-space.com/devis/generateDevisAndSendEmailEnglish.php', emailData).subscribe(
+        this.http.post('http://localhost:8000/generateDevisAndSendEmailEnglish.php', emailData).subscribe(
           (response: any) => {
             //alert(response.message);
             this.openDialog('Please find your quote in your email inbox.', true)
@@ -134,7 +135,7 @@ export class InscriptionComponent {
   }
 
   openDialog(message: string, isSuccess: boolean): void {
-    this.dialog.open(RegistrationSuccessDialogComponent, {
+    this.dialog.open(QuoteSuccessDialogComponent, {
       data: { message: message, isSuccess: isSuccess }
     });
   }

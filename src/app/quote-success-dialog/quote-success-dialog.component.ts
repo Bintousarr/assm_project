@@ -3,28 +3,25 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
 @Component({
-  selector: 'app-registration-success-dialog',
-  imports: [ CommonModule,TranslateModule],
+  selector: 'app-quote-success-dialog',
   standalone: true,
-  templateUrl: './registration-success-dialog.component.html',
-  styleUrls: ['./registration-success-dialog.component.scss']
+  imports: [CommonModule,TranslateModule],
+  templateUrl: './quote-success-dialog.component.html',
+  styleUrl: './quote-success-dialog.component.scss'
 })
-export class RegistrationSuccessDialogComponent {
+export class QuoteSuccessDialogComponent {
   isSuccess: boolean;
   apiMessage: string;
   translate: TranslateService = inject(TranslateService)
 
   currentLang: string;
-
   constructor(
-    public dialogRef: MatDialogRef<RegistrationSuccessDialogComponent>,  // Injecter MatDialogRef
+    public dialogRef: MatDialogRef<QuoteSuccessDialogComponent>,  // Injecter MatDialogRef
     @Inject(MAT_DIALOG_DATA) public data: { message: string, isSuccess: boolean },
     private router: Router
   ) {
-    this.currentLang = this.translate.currentLang || 'en';
-
+     this.currentLang = this.translate.currentLang || 'en';
     this.isSuccess = data.isSuccess;
     this.apiMessage = data.message;
   }
