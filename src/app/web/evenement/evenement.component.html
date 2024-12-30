@@ -93,7 +93,8 @@
         </ng-template>
       </h1>
     </div>
-    <div class="max-w-4xl py-10 px-6 text-gray-800 mx-auto">
+
+    <div class="max-w-5xl py-10 px-6 text-gray-800 mx-auto">
       <h1 class="text-center text-2xl md:text-3xl font-bold mb-4">
         {{ 'WELCOME_MASS_TITLE' | translate }}
       </h1>
@@ -112,7 +113,7 @@
           </li>
           <li class="flex items-start gap-3">
             <span class="rounded-full bg-red-800 w-3 h-3 mt-2"></span>
-            <p class="text-lg sm:text-xl">{{ 'PROGRAM_OPENING_CEREMONY' | translate }}</p>
+            <p class="text-lg sm:text-xl">Cérémonie d'ouverture</p>
           </li>
           <li class="flex items-start gap-3">
             <span class="rounded-full bg-red-800 w-3 h-3 mt-2"></span>
@@ -133,55 +134,31 @@
     
   
 </div>
-<!-- 
+
 <div class="bg-white min-h-screen block sm:flex items-center justify-center pb-4 mt-20 md:mt-0">
   <div class="text-center">
     <h1 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-8">
-      UN RENDEZ-VOUS CRUCIAL <br> POUR DECOUVRIR TOUT DE <br>L'ESPACE SPATIAL
+      {{ 'CRUCIAL_EVENT' | translate }}<br>  {{ 'CRUCIAL_EVENT1' | translate }}<br>  {{ 'CRUCIAL_EVENT2' | translate }}
     </h1>
 
     
   </div>
 
   <div class="bg-[#030d2e] rounded-xl shadow-xl transform transition-all duration-500 hover:scale-105 md:p-10 max-w-4xl w-full md:ml-40">
-    <div class="w-full h-80 rounded-lg overflow-hidden mb-8 relative">
+    <div class="w-full h-[500px] rounded-lg overflow-hidden mb-8 relative">
       <div class="top-0 left-0 right-0 bottom-0 bg-black bg-opacity-20 z-10"></div>
-      <video class="w-full h-full object-cover rounded-lg" controls>
+      <video class="w-full h-full rounded-lg"  controls autoplay loop>
         <source src="../../../assets/mass_video.mp4" type="video/mp4" />
         Votre navigateur ne supporte pas la lecture de vidéos.
       </video>
     </div>
-
-    <p class="text-center text-white text-2xl leading-relaxed">
-      Rejoignez-nous pour cet événement exceptionnel, réunissant des experts du spatial<br>
-      Un moment unique de découverte, d'innovation et de collaboration !
-    </p>
-  </div>
-</div> -->
-
-<div class="bg-white min-h-screen block sm:flex items-center justify-center p-4 mt-20 md:mt-0">
-  <div class="text-center w-full">
-    <h1 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-8">
-      {{ 'CRUCIAL_EVENT' | translate }}
-    </h1>
-  </div>
-
-  <div class="bg-[#030d2e] rounded-xl shadow-xl transform transition-all duration-500 hover:scale-105 md:p-10 max-w-4xl w-full md:ml-40">
-    <div class=" h-80 rounded-lg overflow-hidden mb-8 relative">
-      <div class="top-0 left-0 right-0 bottom-0 bg-black bg-opacity-20 z-10"></div>
-      <video class="w-full h-full object-cover rounded-lg" controls>
-        <source src="../../../assets/mass_video.mp4" type="video/mp4" />
-        {{ 'VIDEO_NOT_SUPPORTED' | translate }}
-      </video>
-    </div>
-    <div class="w-full">
-      <p class="text-center text-white text-2xl leading-relaxed">
-        {{ 'JOIN_US_VIDEO_TEXT' | translate }}
-      </p>
-    </div>
-
     
+    <p class="text-center text-white text-2xl leading-relaxed">
+      {{ 'DESC1' | translate }}<br>
+      {{ 'DESC2' | translate }}   
+     </p>
   </div>
+  
 </div>
 
 
@@ -223,7 +200,7 @@
   <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     <!-- Bloc Exposants -->
     <div class="bg-blue-200  h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
-      <h2 class="text-3xl mb-8 md:text-5xl font-bold text-black">{{'accueil.navbar-block.desc' | translate}}</h2>
+      <h2 class="text-3xl mb-8 md:text-5xl font-bold text-black" >{{'accueil.navbar-block.desc' | translate}}</h2>
       <p class="mt-4 text-lg md:text-xl text-black">
         {{'exposant.position' | translate}}    
 

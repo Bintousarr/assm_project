@@ -30,7 +30,7 @@ export class BannerComponent implements OnInit, OnDestroy {
   startAutoSlide(): void {
     setInterval(() => {
       this.currentSlide = (this.currentSlide + 1) % this.slides;
-    }, 5000); 
+    }, 8000); 
   }
 
   ngOnInit() {
@@ -50,7 +50,6 @@ export class BannerComponent implements OnInit, OnDestroy {
     this.stopSlideShow();
   }
 
-  
 
   stopSlideShow() {
     this.slideInterval?.unsubscribe();

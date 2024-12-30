@@ -10,25 +10,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import saveAs from 'file-saver';
 
-// interface Event {
-//   type: string;
-//   speakerImg: string;
-//   speakerName: string;
-//   title: string;
-//   description: string;
-// }
-
-// interface Day {
-//   day: string;
-//   events: Event[];
-// }
-
 @Component({
   selector: 'app-program',
   standalone: true,
   imports: [CommonModule,TranslateModule],
   templateUrl: './program.component.html',
-  styleUrls: ['./program.component.scss']
+  styleUrls: ['./program.component.scss'],
+  animations:[]
 })
 export class ProgramComponent  {
   translate: TranslateService = inject(TranslateService)
