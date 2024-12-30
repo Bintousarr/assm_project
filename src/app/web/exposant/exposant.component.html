@@ -96,11 +96,11 @@
       <thead>
         <tr class="bg-blue-600 text-white">
           <th class="p-4 text-left border">{{ 'PACKAGE' | translate }}</th>
-          <th class="p-4 text-center border">{{ 'START_UP' | translate }}</th>
-          <th class="p-4 text-center border">{{ 'SILVER' | translate }}</th>
-          <th class="p-4 text-center border">{{ 'GOLD' | translate }}</th>
-          <th class="p-4 text-center border">{{ 'PLATINUM' | translate }}</th>
-          <th class="p-4 text-center border">{{ 'OFFICIAL_SPONSOR' | translate }}</th>
+          <th class="p-4 text-center border"[innerHTML]="'START_UP' | translate" ></th>
+          <th class="p-4 text-center border" [innerHTML]="'SILVER' | translate"></th>
+          <th class="p-4 text-center border" [innerHTML]="'GOLD' | translate"></th>
+          <th class="p-4 text-center border" [innerHTML]="'PLATINUM' | translate"></th>
+          <th class="p-4 text-center border" [innerHTML]="'OFFICIAL_SPONSOR' | translate"></th>
         </tr>
       </thead>
       <tbody class="text-gray-700">
