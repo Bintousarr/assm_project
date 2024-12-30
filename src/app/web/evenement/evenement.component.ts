@@ -1,7 +1,7 @@
 ;
 import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
-import { Router, } from '@angular/router';
+import { Router, RouterLink, } from '@angular/router';
 import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-evenement',
   standalone: true,
-  imports: [TranslateModule, CommonModule],
+  imports: [TranslateModule, CommonModule, RouterLink],
   templateUrl: './evenement.component.html',
   styleUrl: './evenement.component.scss'
 })
