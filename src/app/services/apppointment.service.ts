@@ -116,7 +116,7 @@ export class ApppointmentService {
             appointment.appointment_date,
             `${appointment.start_time} - ${appointment.end_time}`,
             appointment.theme,
-            `${appointment.participant_first_name} ${appointment.participant_last_name}`
+            `${appointment.speaker_first_name} ${appointment.speaker_last_name}`
         ]);
     
         doc.autoTable({

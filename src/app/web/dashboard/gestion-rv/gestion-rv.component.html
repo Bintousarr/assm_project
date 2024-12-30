@@ -23,7 +23,7 @@
   <ul class="flex-1 ml-4 space-y-4 overflow-auto">
       <li *ngFor="let item of menuItems"
           [ngClass]="{'bg-red-700': activeRoute === item.route, 'text-white': activeRoute === item.route, 'w-82': !isCollapsed, 'w-11': isCollapsed}"
-          (click)="goto(item.route)"
+          (click)="item.route === 'download' ? downloadPdf() : goto(item.route)"
           class="h-12 p-2 flex items-center cursor-pointer hover:bg-red-700">
           <!-- Icône du menu -->
           <i [class]="item.icon" class="mr-2"></i>

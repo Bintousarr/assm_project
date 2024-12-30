@@ -6,6 +6,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { RegistrationSuccessDialogComponent } from '../registration-success-dialog/registration-success-dialog.component';
+import { QuoteSuccessDialogComponent } from '../quote-success-dialog/quote-success-dialog.component';
 
 @Component({
   selector: 'app-inscription',
@@ -37,6 +38,7 @@ export class InscriptionComponent {
   }
 
   ngOnInit(): void {
+    localStorage.removeItem('userToken');
     // Initialise les checkboxes
     const productsArray = this.paymentForm.get('products') as FormArray;
 
@@ -133,7 +135,7 @@ export class InscriptionComponent {
   }
 
   openDialog(message: string, isSuccess: boolean): void {
-    this.dialog.open(RegistrationSuccessDialogComponent, {
+    this.dialog.open(QuoteSuccessDialogComponent, {
       data: { message: message, isSuccess: isSuccess }
     });
   }

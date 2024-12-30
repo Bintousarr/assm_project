@@ -26,7 +26,7 @@ export interface User {
 @Component({
   selector: 'app-user-appointment',
   standalone: true,
-  imports: [SponsorComponent,CommonModule,TranslateModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './user-appointment.component.html',
   styleUrl: './user-appointment.component.scss'
 })

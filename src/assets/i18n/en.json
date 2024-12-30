@@ -99,7 +99,7 @@
         "titre3": "Prof. SHERIF SEDGY",
         "titre4": "Mr. ADAMA DIAWARA",
         "titre5": "Mr. IRIE Bi FABRICE",
-        "desc1": "African Union Commission, African Space Agency",
+        "desc1": "Expert in Technological and Space Sciences at the African Union Commission",
         "desc2": "Egyptian Space Agency",
         "desc3": "Ministry of Higher Education and Scientific Research",
         "desc4": "OTIF Space Africa"
@@ -506,7 +506,7 @@
       "approved": "approved",
       "declined": "declined"
     },
-    "enter-reason": "Enter the reason",
+    "enter-reason": "Appointment purpose",
     "enter-your-reason": "Enter your reason here...",
     "validate": "Validate",
     "cancel": "Cancel"
@@ -760,10 +760,10 @@
   "SLIDE_TWO_TITLE_LINE2": "IN IVORY COAST",
   "SLIDE_TWO_SUBTITLE": "AT THE EXHIBITION PARK",
   "SLIDE_TWO_ALT": "Meeting point",
-  "SLIDE_THREE_TITLE_LINE1": "The MASS opens",
+  "SLIDE_THREE_TITLE_LINE1": "MASS opens",
   "SLIDE_THREE_TITLE_LINE2": "its doors to everyone",
   "SLIDE_THREE_ALT": "Registration",
-  "WELCOME_MASS_TITLE": "Welcome to MASS, the African Market of Spatial Solutions",
+  "WELCOME_MASS_TITLE": "Welcome to MASS, African Market of Spatial Solutions",
   "WELCOME_MASS_DATE": "From May 6 to 9 2025, MASS will bring together key players in the spatial field at the",
   "WELCOME_MASS_LOCATION": "Exhibition Park of Abidjan",
   "WELCOME_MASS_PROGRAM": "From its very first edition, MASS offers one of the richest programs:",

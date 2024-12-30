@@ -27,7 +27,7 @@ export interface User {
 @Component({
   selector: 'app-home-user',
   standalone: true,
-  imports: [SponsorComponent,CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './home-user.component.html',
   styleUrl: './home-user.component.scss'
 })
