@@ -1,240 +1,33 @@
-<div class="p-8 font-poppins bg-gradient-to-r from-blue-300 to-red-900 text-white">
-  <div class="mb-12">
-    <h1 class="text-3xl lg:text-5xl font-bold animate-pulse mb-8 text-center">{{'sponsor-block.titre1' | translate}}</h1>
-    <div class="w-20 h-1 bg-white mx-auto mb-12"></div>
-
-    <div class="bg-white text-gray-800 p-8 rounded-lg shadow-xl mb-12">
-      <!-- <h3 class="text-2xl lg:text-3xl font-semibold mb-4 text-center animate-fade-in">{{'sponsor-block.titre2' | translate}}</h3> -->
-      <p class="text-base lg:text-lg mb-6 text-gray-600 text-center">{{'sponsor-block.titre3' | translate}}      </p>
-
-      
-      <div class="space-y-4">
-        <!-- République de la Côte d'Ivoire -->
-        <!-- <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <div class="flex items-center h-36">
-            <img src="../../../assets/republique_logo.jpg" class="max-h-28 object-contain">
-            <button 
-              (click)="toggleText()" 
-              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
-              <span class="text-xl font-bold">+</span>
-            </button>
-          </div>
-          <div *ngIf="isTextExpanded" class="transition-all duration-300 mt-2">
-            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.titre4' | translate}}   </p>
-            <p class="text-gray-600 mt-2 text-lg">  {{'sponsor-block.titre5' | translate}}      </p>
-          </div>
-        </div> -->
-
-         <!-- Union Africaine -->
-         <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <div class="flex items-center h-36">
-            <img *ngIf="currentLang === 'en'" src="../../assets/AFRICAN_UNION.png" class="max-h-60 object-contain" alt="Union Africaine" />
-            <img *ngIf="currentLang === 'fr'" src="../../assets/UA.jpg" class="max-h-60 object-contain" alt="African Union" />
-           
-            <!-- <img src="../../../assets/AFRICAN_UNION.png" class="max-h-60 object-contain"> -->
-            <button 
-              (click)="toggleUA()" 
-              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
-              <span class="text-xl font-bold">+</span>
-            </button>
-          </div>
-          <div *ngIf="isUAExpanded" class="transition-all duration-300 mt-2">
-            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.tit1' | translate}}   </p>
-            <p class="text-gray-600 mt-2 text-lg">{{'sponsor-block.tit2' | translate}}        </p>
-          </div>
-        </div>
-
-         <!-- Tourisme  -->
-         <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <div class="flex items-center h-36">
-            <img src="../../../assets/tourisme.png" class="max-h-40 object-contain">
-            <button 
-              (click)="toggleCI()" 
-              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
-              <span class="text-xl font-bold">+</span>
-            </button>
-          </div>
-          <div *ngIf="isCIExpanded" class="transition-all duration-300 mt-2">
-            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.t1' | translate}}   </p>
-            <p class="text-gray-600 mt-2 text-lg">{{'sponsor-block.t' | translate}}        </p>
-          </div>
-        </div>
-      
-        <!-- Agence Spatiale Européenne -->
-        <!-- <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <div class="flex items-center h-36">
-            <img src="../../../assets/esa.png" class="max-h-20 object-contain">
-            <button 
-              (click)="toggleESA()" 
-              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
-              <span class="text-xl font-bold">+</span>
-            </button>
-          </div>
-          <div *ngIf="isESAExpanded" class="transition-all duration-300 mt-2">
-            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.titre6' | translate}}   </p>
-            <p class="text-gray-600 mt-2 text-lg">{{'sponsor-block.agence' | translate}}        </p>
-          </div>
-        </div>
-       -->
-        <!-- NASA -->
-        <!-- <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <div class="flex items-center h-36">
-            <img src="../../../assets/nasa1.png" class="max-h-14 object-contain">
-            <button 
-              (click)="toggleNASA()" 
-              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
-              <span class="text-xl font-bold">+</span>
-            </button>
-          </div>
-          <div *ngIf="isNASAExpanded" class="transition-all duration-300 mt-2">
-            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.titre7' | translate}}   </p>
-            <p class="text-gray-600 mt-2 text-lg">{{'sponsor-block.centre' | translate}}         </p>
-          </div>
-        </div> -->
-      
-        <!-- CNES -->
-        <!-- <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <div class="flex items-center h-36">
-            <img src="../../../assets/cnes_logo.jpg" class="max-h-28 object-contain">
-            <button 
-              (click)="toggleCNES()" 
-              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
-              <span class="text-xl font-bold">+</span>
-            </button>
-          </div>
-          <div *ngIf="isCNESExpanded" class="transition-all duration-300 mt-2">
-            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.titre8' | translate}}   </p>
-            <p class="text-gray-600 mt-2 text-lg">{{'sponsor-block.national' | translate}}     </p>
-          </div>
-        </div> -->
-      
-        <!-- ISRO -->
-        <!-- <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <div class="flex items-center h-36">
-            <img src="../../../assets/ISRO1" class="max-h-28 object-contain">
-            <button 
-              (click)="toggleISRO()" 
-              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
-              <span class="text-xl font-bold">+</span>
-            </button>
-          </div>
-          <div *ngIf="isISROExpanded" class="transition-all duration-300 mt-2">
-            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.titre9' | translate}}   </p>
-            <p class="text-gray-600 mt-2 text-lg">{{'sponsor-block.indian' | translate}}     </p>
-          </div>
-        </div> -->
-      
-        <!-- Orange -->
-        <!-- <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <div class="flex items-center h-36">
-            <img src="../../../assets/Orange_logo.jpg" class="max-h-28 object-contain">
-            <button 
-              (click)="toggleORANGE()" 
-              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
-              <span class="text-xl font-bold">+</span>
-            </button>
-          </div>
-          <div *ngIf="isORANGEExpanded" class="transition-all duration-300 mt-2">
-            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.titre10' | translate}}   </p>
-            <p class="text-gray-600 mt-2 text-lg">{{'sponsor-block.orange' | translate}}      </p>
-          </div>
-        </div> -->
-      
-        <!-- Université Félix Houphouët-Boigny -->
-        <!-- <div class="relative border border-gray-300 p-2 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <div class="flex items-center h-36">
-            <img src="../../../assets/universite_felix_logo.jpg" class="max-h-40 object-contain">
-            <button 
-              (click)="toggleUV()" 
-              class="absolute top-2 right-2 bg-blue-600 text-white rounded-lg p-2">
-              <span class="text-xl font-bold">+</span>
-            </button>
-          </div>
-          <div *ngIf="isUVExpanded" class="transition-all duration-300 mt-2">
-            <p class="text-lg text-red-900 font-bold">{{'sponsor-block.titre11' | translate}}   </p>
-            <p class="text-gray-600 mt-2 text-lg">{{'sponsor-block.uv' | translate}}     </p>
-          </div>
-        </div> -->
+<div class=" font-poppins">
+  <div class="relative w-full">
+    <div class="relative h-[476px] lg:h-[600px]">
+      <img src="../../../assets/woman-is-holding-piece-clothing-smiling.jpg" class="absolute  w-full h-full object-cover">
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-5 gap-5">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white">
+          PROGRAMME 
+        </h2>
+        <p class="font-bold text-base md:text-2xl lg:text-2xl text-white ">
+          2025
+        </p>
       </div>
-      
-      <!-- Ajout d'ombre douce pour chaque div -->
-      <style>
-        .shadow-lg {
-          box-shadow: 0 10px 15px -3px rgba(3, 3, 3, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-      </style>
-      
-      <div class="bg-red-900 w-full lg:w-2/3 mx-auto shadow-lg rounded-lg p-4 mt-12 text-center text-white">
-        <h3 class="text-xl lg:text-2xl font-semibold mb-4 animate-fade-in">
-          {{ 'sponsor-block.titre12' | translate }}
-        </h3>
-        <a href="javascript:void(0)" (click)="downloadFile()" class="inline-block px-6 py-3 bg-white text-customBlue font-semibold rounded-lg hover:bg-gray-200 transition-col">
-          {{ 'sponsor-block.titre13' | translate }}
-        </a>
+   </div>
+  </div>
+  <div class="flex flex-col items-center justify-center h-screen bg-white text-center">
+    <div class="relative z-10">
+      <p class="text-black text-5xl -mt-80 ">
+        Le programme 2025 est en cours d’élaboration. <br />
+        Il sera disponible début 2025.
+      </p>
     </div>
+    <h1 class="text-gray-200 text-8xl font-bold tracking-wide absolute">
+      MARCHE AFRICAIN DES SOLUTIONS SAPTIALES 
+    </h1>
+  
     
-
+  </div>
 </div>
 
-<!-- Tailwind CSS animation classes -->
-<style>
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.5s ease-out forwards;
-}
-</style>
 
 
 
- <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-gradient-to-b from-white to-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
-          <img src="../../../assets/republique_logo.jpg" class="w-full h-40 object-contain mb-4">
-          <h4 class="text-xl font-semibold mb-2 text-center">{{'partner-block.block.titre4' | translate}}</h4>
-          <p class="text-sm text-center text-gray-600">{{'partner-block.block.titre5' | translate}}</p>
-        </div>
 
-        <div class="bg-gradient-to-b from-white to-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
-          <img src="../../../assets/esa.png" class="w-full h-40 object-contain mb-4">
-          <h4 class="text-xl font-semibold mb-2 text-center">ESA</h4>
-          <p class="text-sm text-center text-gray-600">{{'partner-block.block.titre6' | translate}}</p>
-        </div>
-
-        <div class="bg-gradient-to-b from-white to-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
-          <img src="../../../assets/nasa1.png" class="w-full h-40 object-contain mb-4">
-          <h4 class="text-xl font-semibold mb-2 text-center">NASA</h4>
-          <p class="text-sm text-center text-gray-600">{{'partner-block.block.titre7' | translate}}</p>
-        </div>
-
-        <div class="bg-gradient-to-b from-white to-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
-          <img src="../../../assets/cnes_logo.jpg" class="w-full h-40 object-contain mb-4">
-          <h4 class="text-xl font-semibold mb-2 text-center">CNES</h4>
-          <p class="text-sm text-center text-gray-600">{{'partner-block.block.titre8' | translate}}</p>
-        </div>
-
-        <div class="bg-gradient-to-b from-white to-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
-          <img src="../../../assets/ISRO1" class="w-full h-40 object-contain mb-4">
-          <h4 class="text-xl font-semibold mb-2 text-center">ISRO</h4>
-          <p class="text-sm text-center text-gray-600">{{'partner-block.block.titre9' | translate}}</p>
-        </div>
-
-        <div class="bg-gradient-to-b from-white to-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
-          <img src="../../../assets/Orange_logo.jpg" class="w-full h-40 object-contain mb-4">
-          <h4 class="text-xl font-semibold mb-2 text-center">Orange</h4>
-          <p class="text-sm text-center text-gray-600">{{'partner-block.block.titre10' | translate}}</p>
-        </div>
-
-        <div class="bg-gradient-to-b from-white to-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
-          <img src="../../../assets/universite_felix_logo.jpg" class="w-full h-40 object-contain mb-4">
-          <h4 class="text-xl font-semibold mb-2 text-center">{{'partner-block.block.titre11' | translate}}</h4>
-        </div>
-        
-      </div>
- -->
