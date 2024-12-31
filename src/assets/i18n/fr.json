@@ -99,7 +99,7 @@
       "titre3": "Prof SHERIF SEDGY",
       "titre4": "Mr ADAMA DIAWARA",
       "titre5": "Mr IRIE Bi FABRICE",
-      "desc1": "Expert en Sciences Technologiques et Spatiales à la Commission de l'Union Africaine",
+      "desc1": "Agence spatiale africaine (Février 2024-présent): Président élu du Conseil de l’Agence spatiale africaine. ",
       "desc2": "Agence Spatiale Égyptienne",
       "desc3": "Ministère de l’Enseignement Supérieur et de la Recherche Scientifique",
       "desc4": "OTIF Espace Afrique"
@@ -782,8 +782,14 @@
   "AFRICAN_MARKET": "MARCHÉ AFRICAIN DES SOLUTIONS SPATIALES",
   "SPONSORS_TITLE": "Sponsors",
   "YEAR_2025": "2025",
-  "SPONSORS_PAGE_MESSAGE": "La page des Sponsors est en cours d’élaboration. Il sera disponible début 2025."
+  "SPONSORS_PAGE_MESSAGE": "La page des Sponsors est en cours d’élaboration. Il sera disponible début 2025.",
+  
 
+  "INVITED_COUNTRIES": "Pays invité",
+  "DUBAI_TITLE": "DUBAI : ABU DHABI",
+  "REPRESENTED_BY": "Représenté par",
+  "BELHOUL_TITLE": "Son Excellence Dr. Ahmad Belhoul Al Falasi",
+  "BELHOUL_ROLE": "Ministre des Sports, Président de l'Agence spatiale des Émirats arabes unis"
   
   
 }

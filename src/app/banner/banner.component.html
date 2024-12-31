@@ -4,14 +4,28 @@
       <div class="flex flex-col md:flex-row items-center w-full bg-[#fbf6e5] h-[680px] flex-shrink-0">
         <div class="w-full md:w-1/4 p-8 md:p-16 text-center md:text-left space-y-4">
           <h1 class="text-4xl md:text-5xl ml-10 font-bold text-black leading-relaxed">
-            <span class="block"> {{ 'SLIDE_ONE_TITLE_LINE1' | translate }}</span>
+            <span class="block">{{ 'SLIDE_ONE_TITLE_LINE1' | translate }}</span>
             <span class="text-red-900">{{ 'SLIDE_ONE_TITLE_LINE2' | translate }}</span>
           </h1>
         </div>
         <div class="w-full flex justify-center md:justify-end h-full">
-          <img src="../../assets/Cover-SLIDE.jpg" alt="{{ 'SLIDE_ONE_ALT' | translate }}" class="object-cover w-full h-full" />
+          <!-- Image pour le français -->
+          <img
+            *ngIf="currentLang === 'fr'"
+            src="../../assets/Cover-SLIDE.jpg"
+            alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+            class="object-cover w-full h-full"
+          />
+          <!-- Image pour l'anglais -->
+          <img
+            *ngIf="currentLang === 'en'"
+            src="../../assets/Cover-SLIDESHOW.jpg"
+            alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+            class="object-cover w-full h-full"
+          />
         </div>
       </div>
+      
 
       <div class="flex flex-col md:flex-row items-center w-full  bg-[#fbf6e5] h-[680px] flex-shrink-0">
         <div class="w-full md:w-1/4 p-8 md:p-16 text-center md:text-left space-y-4">
@@ -24,7 +38,20 @@
           </p>
         </div>
         <div class="w-full flex justify-center md:justify-end h-full">
-          <img src="../../assets/Parc des expositions.jpg" alt="{{ 'SLIDE_TWO_ALT' | translate }}" class="object-cover w-full h-full" />
+          <!-- Image pour le français -->
+          <img
+            *ngIf="currentLang === 'fr'"
+            src="../../assets/Cover-SLIDESOW-2.jpg"
+            alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+            class="object-cover w-full h-full"
+          />
+          <!-- Image pour l'anglais -->
+          <img
+            *ngIf="currentLang === 'en'"
+            src="../../assets/Cover-SLIDESOW-A1.jpg"
+            alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+            class="object-cover w-full h-full"
+          />
         </div>
       </div>
 
@@ -36,7 +63,20 @@
           </h1>
         </div>
         <div class="w-full  flex justify-center md:justify-end h-full">
-          <img src="../../assets/Cover-SLIDE1.jpg" alt="Inscription" class="object-cover w-full h-full" />
+         <!-- Image pour le français -->
+         <img
+         *ngIf="currentLang === 'fr'"
+         src="../../assets/Cover-SLIDE1fr.png"
+         alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+         class="object-cover w-full h-full"
+       />
+       <!-- Image pour l'anglais -->
+       <img
+         *ngIf="currentLang === 'en'"
+         src="../../assets/Cover-SLIDE1.png"
+         alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+         class="object-cover w-full h-full"
+       />
         </div>
       </div>
     </div>
@@ -48,8 +88,32 @@
 <app-evenement></app-evenement>
 <app-keynote-speaker></app-keynote-speaker>
 <!-- <app-sponsor></app-sponsor> -->
-<div class="bg-blue-100 text-cabinet p-4 mt-4">
-  <h1 class="text-5xl text-center mt-10 font-bold">
+
+<div class="bg-[#fbf6e5] font-poppins p-8 rounded-xl shadow-lg mt-8">
+  <h1 class="text-6xl text-center font-extrabold mb-10 tracking-wide">
+    {{ 'INVITED_COUNTRIES' | translate }}
+  </h1>
+  <div class="flex flex-col md:flex-row items-center gap-10">
+    <div class="flex-shrink-0">
+      <img src="../../assets/belhoul.png" class="rounded-2xl w-full max-w-2xl shadow-lg transition-transform duration-300 hover:scale-105" alt="Dubai Image">
+    </div>
+
+    <div class="text-center md:text-left mt-6">
+      <p class="text-4xl text-red-800 font-bold mb-4">
+        {{ 'DUBAI_TITLE' | translate }}
+      </p>
+      <p class="text-xl leading-relaxed">
+        {{ 'REPRESENTED_BY' | translate }}
+        <span class="font-semibold">
+          {{ 'BELHOUL_TITLE' | translate }}
+        </span>, {{ 'BELHOUL_ROLE' | translate }}
+      </p>
+      <img src="../../assets/drapeau.png" class="rounded-xl w-48 mx-auto md:mx-0 mb-6 shadow-md" alt="Belhoul Image">
+    </div>
+  </div>
+</div>
+<div class="bg-[#fbf6e5]  text-cabinet p-4 mt-4">
+  <h1 class="text-6xl text-center mt-10 font-bold">
     {{ 'accueil.sponsor-block.titre1' | translate }}
   </h1>
   <div class="flex flex-wrap items-center justify-center gap-8 p-4">
@@ -58,6 +122,11 @@
     <img src="assets/tourisme_ci_logo.png" class="w-full sm:w-48 lg:w-60" alt="Orange" />
   </div>
 
+</div>
+
+
+
+   
 <!-- <div class="bg-white text-cabinet ">
   <div class="flex flex-col  items-center mt-10 p-2 justify-center ">
       <h1 class="font-bold text-5xl">Newsletter  </h1>
