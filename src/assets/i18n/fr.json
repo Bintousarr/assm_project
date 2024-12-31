@@ -1,4 +1,6 @@
 {
+  "titre":"CONNEXION",
+
   "accueil": {
     "header-block": {
       "lieu": "Abidjan, Côte d'Ivoire",
@@ -23,6 +25,7 @@
       "desc": "Exposants",
 
       "titre4": "CONTACT",
+      "titre5":"Pour toute information complémentaire, n'hésitez pas à nous contacter.",
       "menu": "Menu"
     },
     "banner-block": {

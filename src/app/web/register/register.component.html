@@ -170,40 +170,56 @@
   </div>
 
   <!-- Section gauche (infos contact) -->
-  <div class="w-full lg:w-1/2 bg-blue-500 rounded-lg items-center justify-center mt-10 lg:mt-0 lg:ml-28">
-    <div class="p-6 space-y-6 text-white">
-      <div class="flex flex-wrap items-center gap-6 pb-4 border-b border-white/30 animate-fade-in-left">
-        <span class="icon shrink-0 border border-dashed border-white rounded-full h-16 w-16 flex items-center justify-center">
-          <img src="../../../assets/call-msg.svg" alt="icon">
-        </span>
-        <div class="txt">
-          <span class="font-light">{{'login-block.card-block.titre1' | translate}}</span>
-          <h4 class="font-semibold text-2xl"><a href="tel:+208-555-0112">+336 78 55 85 45</a></h4>
+  <div class="lg:w-1/2 space-y-6">
+    <div class="bg-red-800 p-8 text-white rounded-lg shadow-lg space-y-6">
+        <div class="flex items-center gap-6 border-b pb-6">
+            <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
+                <img src="../../../assets/call-msg.svg" alt="Phone Icon">
+            </span>
+            <div>
+                <span class="block font-light">
+                    {{ 'contact.contact-block.telephone' | translate }}
+                </span>
+                <h4 class="text-xl font-semibold">
+                    <a href="tel:+208-555-0112" class="hover:underline">+225 27 22 476 459</a><br>
+                    <a href="tel:+208-555-0112" class="hover:underline">+33 9 84 57 15 36</a>
+                </h4>
+            </div>
         </div>
-      </div>
 
-      <div class="flex items-center gap-6 pb-4 border-b border-white/30 animate-fade-in-left">
-        <span class="icon shrink-0 border border-dashed border-white rounded-full h-16 w-16 flex items-center justify-center">
-          <img src="../../../assets/mail.svg" alt="icon">
-        </span>
-        <div class="txt">
-          <span class="font-light">{{'login-block.card-block.titre2' | translate}}</span>
-          <h4 class="font-semibold text-2xl"><a href="mailto:contact@otif-africa-space.com">contact&#64;mass.ci</a></h4>
+        <div class="flex items-center gap-6 border-b pb-6">
+            <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
+                <img src="../../../assets/mail.svg" alt="Mail Icon">
+            </span>
+            <div>
+                <span class="block font-light">
+                    {{ 'contact.contact-block.mail' | translate }}
+                </span>
+                <h4 class="text-xl font-semibold">
+                    <a href="mailto:contact@otif-africa-space.com" class="hover:underline">contact&#64;mass.ci</a>
+                </h4>
+            </div>
         </div>
-      </div>
 
-      <div class="flex items-center gap-6 pb-4 border-b border-white/30 animate-fade-in-left">
-        <span class="icon shrink-0 border border-dashed border-white rounded-full h-16 w-16 flex items-center justify-center">
-          <img src="../../../assets/location-dot-circle.svg" alt="icon">
-        </span>
-        <div class="txt">
-          <span class="font-light">{{'login-block.card-block.titre3' | translate}}</span>
-          <h4 class="font-semibold text-2xl">{{'login-block.card-block.titre4' | translate}}</h4>
+        <div class="flex items-center gap-6">
+            <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
+                <img src="../../../assets/location-dot-circle.svg" alt="Location Icon">
+            </span>
+            <div>
+                <span class="block font-light">
+                    {{ 'login-block.card-block.titre3' | translate }}
+                </span>
+                <h4 class="text-xl font-semibold">
+                    {{ 'contact.contact-block.lieu' | translate }}
+                </h4>
+            </div>
         </div>
-      </div>
-      <img class="max-w-full transition-transform duration-500 ease-in-out hover:scale-110 animate-fade-in" src="assets/Cover.png" alt>
     </div>
-  </div>
+
+    <div class="relative rounded-lg shadow-lg">
+        <img src="../../../assets/businessman-pressing-phone-button.jpg"  class="w-full rounded-lg">
+    </div>
+</div>
 </div>
 
 

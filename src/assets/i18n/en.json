@@ -1,4 +1,5 @@
 {
+  "titre":"LOGIN",
     "accueil": {
       "header-block": {
         "lieu": "Abidjan, Ivory Coast",
@@ -23,6 +24,7 @@
         "desc4": "EXHIBITOR",
         "desc": "Exhibitors",
         "titre4": "CONTACT",
+        "titre5":"For further information, feel free to contact us.",
         "menu": "Menu"
       },
       "banner-block": {
