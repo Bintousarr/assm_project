@@ -34,6 +34,7 @@ export class RegisterComponent {
     this.translate.use(lang);
   }
   
+  currentStep = 1;
   registrationForm: FormGroup;
   filteredCountries: string[] = [];
   countries: string[] = [
@@ -134,7 +135,17 @@ export class RegisterComponent {
     });
   }
 
+  nextStep() {
+    if (this.currentStep < 4) {
+      this.currentStep++;
+    }
+  }
 
+  previousStep() {
+    if (this.currentStep > 1) {
+      this.currentStep--;
+    }
+  }
   onSubmit() {
     if (this.registrationForm.invalid) {
       this.markAllFieldsAsTouched(); // Marque tous les champs comme "touchés" pour afficher les erreurs
