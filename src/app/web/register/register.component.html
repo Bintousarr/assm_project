@@ -1,227 +1,247 @@
-<div class="flex flex-col lg:flex-row ml-0 lg:ml-20 p-5 lg:p-10 mt-10 lg:mt-20 font-poppins mr-4">
-  <!-- Formulaire -->
-  <div class="w-full lg:w-1/2 bg-white flex flex-col justify-center items-center p-5 lg:p-0">
-    <div class="w-full lg:w-2/3">
-      <h1 class="mt-2 mb-8 text-2xl font-bold animate-fade-in-up text-center lg:text-left">{{'register-block.register.titre1' | translate}}</h1>
-      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-        
-        <!-- Sélection du Titre -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.titre2' | translate}}</label>
-          <select formControlName="title" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <option value>{{'register-block.register.titre3' | translate}}...</option>
-            <option>{{'register-block.register.opt1' | translate}}</option>
-            <option>{{'register-block.register.opt2' | translate}}</option>
-            <option>{{'register-block.register.opt3' | translate}}</option>
-            <option>{{'register-block.register.opt4' | translate}}</option>
-            <option>{{'register-block.register.opt5' | translate}}</option>
-          </select>
-          <div *ngIf="registrationForm.get('title')?.invalid && registrationForm.get('title')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-        </div>
+<div class="font-poppins">
+  <div class="relative w-full">
+    <div class="relative h-[476px] lg:h-[600px]">
+      <img src="../../../assets/Cover-register.jpg" class="absolute block w-full h-full object-cover">
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-5 gap-5">
+         <!-- <h2
+          class="text-3xl md:text-4xl -mt-20 lg:text-5xl font-black text-red-800">
 
-        <!-- Prénom -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.prenom' | translate}}</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="fas fa-user text-gray-500"></i>
-            </span>
-            <input formControlName="first_name" type="text" placeholder="{{'register-block.register.prenom' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <div *ngIf="registrationForm.get('first_name')?.invalid && registrationForm.get('first_name')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-          </div>
-        </div>
-
-        <!-- Nom -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.nom' | translate}}</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="fas fa-user text-gray-500"></i>
-            </span>
-            <input formControlName="last_name" type="text" placeholder="{{'register-block.register.nom' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <div *ngIf="registrationForm.get('last_name')?.invalid && registrationForm.get('last_name')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-          </div>
-        </div>
-
-        <!-- Genre -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.genre' | translate}}</label>
-          <div class="flex items-center">
-            <input formControlName="gender" type="radio" id="male" value="male" class="mr-2">
-            <label for="male" class="mr-4">{{'register-block.register.H' | translate}}</label>
-            <input formControlName="gender" type="radio" id="female" value="female" class="mr-2">
-            <label for="female">{{'register-block.register.F' | translate}}</label>
-          </div>
-          <div *ngIf="registrationForm.get('gender')?.invalid && registrationForm.get('gender')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-        </div>
-
-        <!-- Profession -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.profession' | translate}}</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="fas fa-briefcase text-gray-500"></i>
-            </span>
-            <input formControlName="poste" type="text" placeholder="{{'register-block.register.profession' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <div *ngIf="registrationForm.get('poste')?.invalid && registrationForm.get('poste')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-          </div>
-        </div>
-
-        <!-- Organisme -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.ese' | translate}}</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="fas fa-building text-gray-500"></i>
-            </span>
-            <input formControlName="organisme" type="text" placeholder="{{'register-block.register.ese' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <div *ngIf="registrationForm.get('organisme')?.invalid && registrationForm.get('organisme')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-          </div>
-        </div>
-
-        <!-- Photo -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.photo' | translate}}</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="fas fa-camera text-gray-500"></i>
-            </span>
-            <input type="file" accept="image/*" (change)="onFileSelected($event)" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <div *ngIf="registrationForm.get('photo')?.hasError('invalidFileType')" class="text-red-500 text-sm">{{'register-block.register.p1' | translate}}</div>
-            <div *ngIf="registrationForm.get('photo')?.hasError('fileTooLarge')" class="text-red-500 text-sm">{{'register-block.register.p2' | translate}}</div>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'login-block.login.titre2' | translate}}</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="fas fa-envelope text-gray-500"></i>
-            </span>
-            <input formControlName="email" type="email" id="email" placeholder="{{'login-block.login.titre2' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="text-red-500 text-sm">
-              <span *ngIf="registrationForm.get('email')?.errors?.['required']">{{'login-block.login.t1' | translate}}</span>
-              <span *ngIf="registrationForm.get('email')?.errors?.['email']">{{'login-block.login.t2' | translate}}</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mot de passe -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'login-block.login.titre3' | translate}}</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="fas fa-lock text-gray-500"></i>
-            </span>
-            <input formControlName="password" type="password" placeholder="{{'login-block.login.titre3' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-          </div>
-        </div>
-
-        <!-- Téléphone -->
-        <div class="mb-6">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.call' | translate}}</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="fas fa-phone text-gray-500"></i>
-            </span>
-            <input formControlName="phone" type="text" placeholder="{{'register-block.register.call' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <div *ngIf="registrationForm.get('phone')?.invalid && registrationForm.get('phone')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-          </div>
-        </div>
-
-        <!-- Pays -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.pays' | translate}}</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <i class="fas fa-globe text-gray-500"></i>
-            </span>
-            <input formControlName="country" type="text" placeholder="{{'register-block.register.pays' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" (input)="onCountryInput()">
-            <ul *ngIf="filteredCountries.length > 0" class="absolute z-10 w-full bg-white shadow-md max-h-40 overflow-y-auto">
-              <li *ngFor="let country of filteredCountries" (click)="selectCountry(country)" class="p-2 cursor-pointer hover:bg-blue-500 hover:text-white">{{ country }}</li>
-            </ul>
-            <div *ngIf="registrationForm.get('country')?.invalid && registrationForm.get('country')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-          </div>
-        </div>
-
-        <!-- Type de Participation -->
-        <div class="mb-4">
-          <label class="block mb-2 text-sm font-medium text-gray-700">{{'register-block.register.participation' | translate}}</label>
-          <select formControlName="role" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-            <option value>{{'register-block.register.titre3' | translate}}...</option>
-            <!-- <option>{{'register-block.register.part1' | translate}}</option>
-            <option>{{'register-block.register.part2' | translate}}</option>
-            <option>{{'register-block.register.part3' | translate}}</option>
-            <option>{{'register-block.register.part4' | translate}}</option>
-            <option>{{'register-block.register.part5' | translate}}</option> -->
-            <option>Sponsor</option>
-            <option>Visiteur</option>
-            <option>Participant</option>
-          </select>
-          <div *ngIf="registrationForm.get('role')?.invalid && registrationForm.get('role')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
-        </div>
-
-        <!-- Bouton de Soumission -->
-        <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-900" [disabled]="registrationForm.invalid">{{'register-block.register.button' | translate}}</button>
-      </form>
+          {{ 'accueil.header-block.inscription' | translate }}
+        </h2> -->
+       <!-- <p class="text-base md:text-lg lg:text-xl text-white font-light">
+          {{ 'EXHIBITIONS_DEMOS_DESC' | translate }}
+        </p> -->
+      </div>
     </div>
   </div>
 
-  <!-- Section gauche (infos contact) -->
-  <div class="lg:w-1/2 space-y-6">
-    <div class="bg-red-800 p-8 text-white rounded-lg shadow-lg space-y-6">
-        <div class="flex items-center gap-6 border-b pb-6">
-            <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
-                <img src="../../../assets/call-msg.svg" alt="Phone Icon">
-            </span>
-            <div>
-                <span class="block font-light">
-                    {{ 'contact.contact-block.telephone' | translate }}
-                </span>
-                <h4 class="text-xl font-semibold">
+  <div class="flex flex-col lg:flex-row ml-0 lg:ml-20 p-5 lg:p-10 mt-10 lg:mt-20  mr-4">
+    <!-- Formulaire -->
+    <div class="w-full lg:w-1/2 bg-red-800 rounded-xl flex flex-col justify-center items-center p-5 lg:p-0">
+      <div class="w-full lg:w-2/3 p-10 bg-[#fbf6e5]">
+        <h1 class="mt-2 mb-8 text-2xl font-bold animate-fade-in-up text-center lg:text-left">{{'register-block.register.titre1' | translate}}</h1>
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+          
+          <!-- Sélection du Titre -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.titre2' | translate}}</label>
+            <select formControlName="title" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <option value>{{'register-block.register.titre3' | translate}}...</option>
+              <option>{{'register-block.register.opt1' | translate}}</option>
+              <option>{{'register-block.register.opt2' | translate}}</option>
+              <option>{{'register-block.register.opt3' | translate}}</option>
+              <option>{{'register-block.register.opt4' | translate}}</option>
+              <option>{{'register-block.register.opt5' | translate}}</option>
+            </select>
+            <div *ngIf="registrationForm.get('title')?.invalid && registrationForm.get('title')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+          </div>
+  
+          <!-- Prénom -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.prenom' | translate}}</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-user text-gray-500"></i>
+              </span>
+              <input formControlName="first_name" type="text" placeholder="{{'register-block.register.prenom' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <div *ngIf="registrationForm.get('first_name')?.invalid && registrationForm.get('first_name')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+            </div>
+          </div>
+  
+          <!-- Nom -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.nom' | translate}}</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-user text-gray-500"></i>
+              </span>
+              <input formControlName="last_name" type="text" placeholder="{{'register-block.register.nom' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <div *ngIf="registrationForm.get('last_name')?.invalid && registrationForm.get('last_name')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+            </div>
+          </div>
+  
+          <!-- Genre -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.genre' | translate}}</label>
+            <div class="flex items-center">
+              <input formControlName="gender" type="radio" id="male" value="male" class="mr-2">
+              <label for="male" class="mr-4">{{'register-block.register.H' | translate}}</label>
+              <input formControlName="gender" type="radio" id="female" value="female" class="mr-2">
+              <label for="female">{{'register-block.register.F' | translate}}</label>
+            </div>
+            <div *ngIf="registrationForm.get('gender')?.invalid && registrationForm.get('gender')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+          </div>
+  
+          <!-- Profession -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.profession' | translate}}</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-briefcase text-gray-500"></i>
+              </span>
+              <input formControlName="poste" type="text" placeholder="{{'register-block.register.profession' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <div *ngIf="registrationForm.get('poste')?.invalid && registrationForm.get('poste')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+            </div>
+          </div>
+  
+          <!-- Organisme -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.ese' | translate}}</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-building text-gray-500"></i>
+              </span>
+              <input formControlName="organisme" type="text" placeholder="{{'register-block.register.ese' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <div *ngIf="registrationForm.get('organisme')?.invalid && registrationForm.get('organisme')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+            </div>
+          </div>
+  
+          <!-- Photo -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.photo' | translate}}</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-camera text-gray-500"></i>
+              </span>
+              <input type="file" accept="image/*" (change)="onFileSelected($event)" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <div *ngIf="registrationForm.get('photo')?.hasError('invalidFileType')" class="text-red-500 text-sm">{{'register-block.register.p1' | translate}}</div>
+              <div *ngIf="registrationForm.get('photo')?.hasError('fileTooLarge')" class="text-red-500 text-sm">{{'register-block.register.p2' | translate}}</div>
+            </div>
+          </div>
+  
+          <!-- Email -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'login-block.login.titre2' | translate}}</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-envelope text-gray-500"></i>
+              </span>
+              <input formControlName="email" type="email" id="email" placeholder="{{'login-block.login.titre2' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="text-red-500 text-sm">
+                <span *ngIf="registrationForm.get('email')?.errors?.['required']">{{'login-block.login.t1' | translate}}</span>
+                <span *ngIf="registrationForm.get('email')?.errors?.['email']">{{'login-block.login.t2' | translate}}</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Mot de passe -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'login-block.login.titre3' | translate}}</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-lock text-gray-500"></i>
+              </span>
+              <input formControlName="password" type="password" placeholder="{{'login-block.login.titre3' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+            </div>
+          </div>
+  
+          <!-- Téléphone -->
+          <div class="mb-6">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.call' | translate}}</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-phone text-gray-500"></i>
+              </span>
+              <input formControlName="phone" type="text" placeholder="{{'register-block.register.call' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <div *ngIf="registrationForm.get('phone')?.invalid && registrationForm.get('phone')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+            </div>
+          </div>
+  
+          <!-- Pays -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.pays' | translate}}</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fas fa-globe text-gray-500"></i>
+              </span>
+              <input formControlName="country" type="text" placeholder="{{'register-block.register.pays' | translate}}" class="pl-10 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" (input)="onCountryInput()">
+              <ul *ngIf="filteredCountries.length > 0" class="absolute z-10 w-full bg-white shadow-md max-h-40 overflow-y-auto">
+                <li *ngFor="let country of filteredCountries" (click)="selectCountry(country)" class="p-2 cursor-pointer hover:bg-blue-500 hover:text-white">{{ country }}</li>
+              </ul>
+              <div *ngIf="registrationForm.get('country')?.invalid && registrationForm.get('country')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+            </div>
+          </div>
+  
+          <!-- Type de Participation -->
+          <div class="mb-4">
+            <label class="block mb-2 text-lg font-medium text-gray-700">{{'register-block.register.participation' | translate}}</label>
+            <select formControlName="role" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+              <option value>{{'register-block.register.titre3' | translate}}...</option>
+              <!-- <option>{{'register-block.register.part1' | translate}}</option>
+              <option>{{'register-block.register.part2' | translate}}</option>
+              <option>{{'register-block.register.part3' | translate}}</option>
+              <option>{{'register-block.register.part4' | translate}}</option>
+              <option>{{'register-block.register.part5' | translate}}</option> -->
+              <option>Sponsor</option>
+              <option>Visiteur</option>
+              <option>Participant</option>
+            </select>
+            <div *ngIf="registrationForm.get('role')?.invalid && registrationForm.get('role')?.touched" class="text-red-500 text-sm">{{'login-block.login.t1' | translate}}</div>
+          </div>
+  
+          <!-- Bouton de Soumission -->
+          <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-900" [disabled]="registrationForm.invalid">{{'register-block.register.button' | translate}}</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Section gauche (infos contact) -->
+    <div class="lg:w-1/2 space-y-6 ml-60 mt-10">
+      <div class="bg-red-800 p-8 text-white rounded-lg shadow-lg space-y-6">
+          <div class="flex items-center gap-6 border-b pb-6">
+              <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
+                  <img src="../../../assets/call-msg.svg" alt="Phone Icon">
+              </span>
+              <div>
+                  <span class="block font-light">
+                      {{ 'contact.contact-block.telephone' | translate }}
+                  </span>
+                  <h4 class="text-xl font-semibold">
                     <a href="tel:+208-555-0112" class="hover:underline">+225 27 22 476 459</a><br>
-                    <a href="tel:+208-555-0112" class="hover:underline">+33 9 84 57 15 36</a>
+                    <a href="tel:+208-555-0112" class="hover:underline">+225 07 77 09 98 42</a><br>
+                    <a href="tel:+208-555-0112" class="hover:underline">+33 9 84 57 15 36</a> <br>
+                    <a href="tel:+208-555-0112" class="hover:underline">+33 6 78 55 85 45</a>
                 </h4>
-            </div>
-        </div>
-
-        <div class="flex items-center gap-6 border-b pb-6">
-            <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
-                <img src="../../../assets/mail.svg" alt="Mail Icon">
-            </span>
-            <div>
-                <span class="block font-light">
-                    {{ 'contact.contact-block.mail' | translate }}
-                </span>
-                <h4 class="text-xl font-semibold">
-                    <a href="mailto:contact@otif-africa-space.com" class="hover:underline">contact&#64;mass.ci</a>
-                </h4>
-            </div>
-        </div>
-
-        <div class="flex items-center gap-6">
-            <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
-                <img src="../../../assets/location-dot-circle.svg" alt="Location Icon">
-            </span>
-            <div>
-                <span class="block font-light">
-                    {{ 'login-block.card-block.titre3' | translate }}
-                </span>
-                <h4 class="text-xl font-semibold">
-                    {{ 'contact.contact-block.lieu' | translate }}
-                </h4>
-            </div>
-        </div>
-    </div>
-
-    <div class="relative rounded-lg shadow-lg">
-        <img src="../../../assets/businessman-pressing-phone-button.jpg"  class="w-full rounded-lg">
-    </div>
+              </div>
+          </div>
+  
+          <div class="flex items-center gap-6 border-b pb-6">
+              <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
+                  <img src="../../../assets/mail.svg" alt="Mail Icon">
+              </span>
+              <div>
+                  <span class="block font-light">
+                      {{ 'contact.contact-block.mail' | translate }}
+                  </span>
+                  <h4 class="text-xl font-semibold">
+                      <a href="mailto:contact@otif-africa-space.com" class="hover:underline">contact&#64;mass.ci</a>
+                  </h4>
+              </div>
+          </div>
+  
+          <div class="flex items-center gap-6">
+              <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
+                  <img src="../../../assets/location-dot-circle.svg" alt="Location Icon">
+              </span>
+              <div>
+                  <span class="block font-light">
+                      {{ 'login-block.card-block.titre3' | translate }}
+                  </span>
+                  <h4 class="text-xl font-semibold">
+                      {{ 'contact.contact-block.lieu' | translate }}
+                  </h4>
+              </div>
+          </div>
+      </div>
+  
+      <div class="relative rounded-lg shadow-lg">
+          <img src="../../../assets/businessman-pressing-phone-button.jpg"  class="w-full rounded-lg">
+      </div>
+  </div>
+  </div>
+  
 </div>
-</div>
-
 
 <!-- Tailwind CSS animation classes -->
 <style>
