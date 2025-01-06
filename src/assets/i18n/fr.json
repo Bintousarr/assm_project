@@ -102,7 +102,7 @@
       "titre3": "Prof SHERIF SEDGY",
       "titre4": "Mr ADAMA DIAWARA",
       "titre5": "Mr IRIE Bi FABRICE",
-      "desc1": "Agence spatiale africaine (Février 2024-présent): Président élu du Conseil de l’Agence spatiale africaine. ",
+      "desc1": "Président du Conseil Spatial Africain. ",
       "desc2": "Agence Spatiale Égyptienne",
       "desc3": "Ministère de l’Enseignement Supérieur et de la Recherche Scientifique",
       "desc4": "OTIF Espace Afrique"
@@ -115,7 +115,9 @@
       "desc2": "A propos",
       "desc3": "Linkdin",
       "desc4": "Contact",
-      "desc5": " Tous droits réservés"
+      "desc5": " Tous droits réservés",
+      "desc6":"Mentions légales",
+      "desc7":"Conditions de participation"
     }
   },
   "contact": {
@@ -437,7 +439,7 @@
   "tidianeOuattara": {
     "name": "Tidiane OUATTARA",
     "position": " Président du Conseil Spatial Africain  et de l'Agence Spatiale Africaine",
-    "description": "Dr. Tidiane Ouattara a obtenu un doctorat et une maîtrise en télédétection et en systèmes d’information géographique (SIG) à l’Université de Sherbrooke (Canada) en 2001 et 1996, respectivement. Il est également titulaire d'une maîtrise en géographie physique de l'Université de Cocody-Abidjan (Côte d'Ivoire). Dr. Ouattara a suivi une formation en leadership pour les cadres du service public du gouvernement fédéral canadien. Actuellement, Dr. Ouattara dirige la Division Science, Technologie et Espace au sein du Département de l'Éducation, de la Science, de la Technologie et de l'Innovation de la Commission de l'Union africaine et a récemment été nommé Président du Conseil Africain de l'Espace. Il possède une vaste expérience en relations internationales, en développement commercial, en recherche et développement (R&D), en développement stratégique de politiques et en gestion de programmes liés à l'environnement, aux ressources naturelles, ainsi qu'aux sciences et technologies. Il est actuellement président du Conseil spatial africain et de l'Agence spatiale africaine.",
+    "description": "Le Dr Tidiane Ouattara est un scientifique spatial ivoirien, reconnu pour son rôle central dans le développement des programmes spatiaux en Afrique. Né en Côte d'Ivoire, il a obtenu une maîtrise en géographie physique de l'Université Félix-Houphouët-Boigny à Abidjan, avant de poursuivre ses études au Canada, où il a décroché une maîtrise en 1996, puis un doctorat en télédétection et systèmes d'information géographique (SIG) en 2001 à l'Université de Sherbrooke. Entre 1996 et 2001, le Dr Ouattara a enseigné à l'Université de Sherbrooke, couvrant des disciplines scientifiques ainsi que des sujets liés à la géopolitique africaine et aux questions socioculturelles. Il a ensuite intégré le gouvernement fédéral canadien en 2002, occupant divers postes, notamment conseiller scientifique et politique au ministère des Ressources naturelles du Canada, et conseiller auprès du président de l'Agence spatiale canadienne entre 2004 et 2006. Dans ce dernier rôle, il supervisait des domaines tels que l'observation de la Terre, la navigation, le positionnement, la robotique et les sciences spatiales, avec un accent particulier sur l'Afrique, l'Amérique centrale et du Sud, ainsi que les Nations Unies. En 2016, le Dr Ouattara a rejoint la Commission de l'Union africaine en tant qu'expert en sciences et technologies spatiales. Il a coordonné le Programme de surveillance mondiale de l’environnement et de la sécurité (GMES & Afrique) et a joué un rôle clé dans la mise en œuvre de la politique et de la stratégie spatiales africaines, ainsi que dans la création et l'opérationnalisation de l'Agence spatiale africaine. En février 2024, il a été nommé président du Conseil spatial africain, supervisant la nouvelle Agence spatiale africaine. En reconnaissance de ses contributions significatives, le Dr Ouattara a reçu en 2023 le Prix national d'excellence de Côte d'Ivoire. Par ailleurs, il est président de l'Association des Ivoiriens vivant en Éthiopie, témoignant de son engagement envers la diaspora ivoirienne.",
     "institutionAlt": "Logo de la Commission de l'Union Africaine"
     
    

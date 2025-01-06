@@ -101,7 +101,7 @@
         "titre3": "Prof. SHERIF SEDGY",
         "titre4": "Mr. ADAMA DIAWARA",
         "titre5": "Mr. IRIE Bi FABRICE",
-        "desc1": "African Space Agency (February 2024–present): Elected President of the Council of the African Space Agency.",
+        "desc1": "President of the African Space Council.",
         "desc2": "Egyptian Space Agency",
         "desc3": "Ministry of Higher Education and Scientific Research",
         "desc4": "OTIF Space Africa"
@@ -114,7 +114,9 @@
         "desc2": "About",
         "desc3": "LinkedIn",
         "desc4": "Contact",
-        "desc5": "All rights reserved"
+        "desc5": "All rights reserved",
+        "desc6":"Legal Notice ",
+        "desc7":"Terms of Participation"
       }
     },
     "contact": {
@@ -431,7 +433,7 @@
   "tidianeOuattara": {
     "name": "Tidiane OUATTARA",
     "position": "President of the African Space Council, African Space Agency",
-    "description": "Dr Tidiane Ouattara received a PhD and a master’s degree in Remote Sensing and Geographical Information Systems (GIS) from Sherbrooke University (Canada) in 2001 and 1996, respectively. He also holds a master’s degree in physical geography from Université de Cocody-Abidjan (Côte-d’Ivoire). Dr. Ouattara graduated in Leadership for Canadian federal government public service executives. Currently, Dr. Ouattara heads the Science, Technology and Space Division at the Department of Education, Science, Technology and Innovation at the African Union Commission and was recently appointed the President of the African Space Council. He has gained tremendous experience in international relations and business development, research and development (R&D), strategic policy development and program management issues related to the environment, natural resources, and sciences and technology. He is actual President of the African Space Council, African Space Agency .",
+    "description": "Dr. Tidiane Ouattara is a distinguished Ivorian scientist and one of Africa’s leading figures in the field of space science and technology. As of February 2024, he serves as the President of the African Space Council, overseeing the operations of the African Space Agency. Dr. Ouattara was born in Côte d’Ivoire, where he began his academic journey. He earned a master's degree in physical geography from the University Félix Houphouët-Boigny in Abidjan. He later pursued advanced studies in Canada, completing a master's degree in 1996 and a Ph.D. in remote sensing and geographic information systems (GIS) at the University of Sherbrooke in 2001. During his time in Canada (1996–2001), Dr. Ouattara taught at the University of Sherbrooke, delivering courses in scientific disciplines and topics related to African geopolitics and sociocultural issues. In 2002, he joined the Canadian federal government, holding various roles, including: Scientific and Policy Advisor at Natural Resources Canada. Advisor to the President of the Canadian Space Agency (2004–2006), where he oversaw Earth observation, navigation, robotics, and space sciences, with a focus on Africa, Latin America, and global initiatives. In 2016, Dr. Ouattara transitioned to the African Union Commission as an expert in space science and technology. He spearheaded key initiatives such as: Coordination of the GMES & Africa Program: An Earth observation initiative to support environmental monitoring and security. Leading efforts in developing the African Space Policy and Strategy. Playing a pivotal role in the establishment and operationalization of the African Space Agency. In February 2024, he was appointed as the President of the African Space Council, making him a central figure in steering Africa’s space programs toward global competitiveness. Recognitions: Dr. Ouattara has received numerous accolades for his contributions to science and Africa's space sector, including the 2023 National Excellence Award in Côte d’Ivoire. He is also known for his leadership within the African diaspora, serving as the President of the Association of Ivorians in Ethiopia. Dr. Tidiane Ouattara's work underscores the transformative potential of space science for Africa’s development and positions him as a key player in the continent’s journey toward technological sovereignty.",
     "institutionAlt": "African Union Commission Logo"    
   },
   "day": {
@@ -696,7 +698,7 @@
   "TOURISM_ACTIVITIES": "Tourism Activities",
   "TOURISM_ACTIVITIES_DESC": "Cultural and tourism excursions.",
    "EXHIBITIONS_DEMOS_DESC": "Do you want to showcase your solutions? You are in the right place!",
-   "REASONS_TITLE": "5 Good Reasons to Participate in MASS",
+   "REASONS_TITLE": "5 Good Reasons to Participate to MASS",
    "REASON_1": "Privileged access to strategic meetings",
    "REASON_2": "Enhanced visibility in a growing market",
    "REASON_3": "Contribution to African technological development",
