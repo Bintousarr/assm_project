@@ -32,9 +32,9 @@ export class RegisterComponent {
 
   translateText(lang: string) {
     this.translate.use(lang);
-  }
-  
-  currentStep = 1;
+  } 
+  selectedFileName: string | null = null;
+    currentStep = 1;
   registrationForm: FormGroup;
   filteredCountries: string[] = [];
   countries: string[] = [
@@ -60,6 +60,12 @@ export class RegisterComponent {
   ];
 
   selectedFile: File = new File([], 'user.jpg');
+  participationOptions = [
+    { value: 'Sponsor', labelKey: 'register-block.register.part1' },
+    { value: 'Visiteur', labelKey: 'register-block.register.part2' },
+    { value: 'Participant', labelKey: 'register-block.register.part3' },
+  
+  ];
 
 
   constructor(private fb: FormBuilder, private _registerService: RegisterService, private dialog: MatDialog) {
@@ -178,9 +184,10 @@ export class RegisterComponent {
 
   onFileSelected(event: any) {
     const file = event.target.files[0];
+    const input = event.target as HTMLInputElement;
     if (file) {
       this.selectedFile = file;
-
+      this.selectedFileName =file.name;
       // Stocker seulement le nom du fichier dans le formulaire
       this.registrationForm.patchValue({ photo: file.name });
 
@@ -188,6 +195,8 @@ export class RegisterComponent {
       this.registrationForm.get('photo')?.setErrors(fileTypeValidator(['image/png', 'image/jpeg'])(file) ? { invalidFileType: true } : null);
 
       this.registrationForm.get('photo')?.updateValueAndValidity();  // Met à jour la validation
+    }else{
+      this.selectedFileName = null;
     }
   }
   private markAllFieldsAsTouched() {
