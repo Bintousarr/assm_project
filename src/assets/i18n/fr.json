@@ -12,7 +12,7 @@
       "titre1": "ACCUEIL",
       "t1": "Marché",
       "t2": "A voir sur le marché",
-      "t3": "VISITEUR",
+      "t3": "VISITER CI",
       "t":"Visiteurs ",
       "titre2": "AGENDA",
       "titre3": "MASS ",
@@ -76,6 +76,9 @@
     "sponsor-block": {
       "titre1": "Nos Partenaires",
       "t":"Sponsors",
+      "t0":"Accréditation",
+      "t01":"Cliquez sur le bouton pour generer les documents d'accréditation",
+      "t02":"Générer",
       "t1":"Associez votre image à cet événement unique.",
       "t3":"Devenez sponsor",
       "t4":"Participez à cette expérience passionnante et explorez de nouvelles opportunités.",
@@ -98,11 +101,13 @@
     },
     "orateur-block": {
       "titre1": "Ils seront là",
+      "t":"Kalil KONATÉ",
       "titre2": "Dr TIDIANE OUATTARA",
       "titre3": "Prof SHERIF SEDGY",
       "titre4": "Mr ADAMA DIAWARA",
       "titre5": "Mr IRIE Bi FABRICE",
       "desc1": "Président du Conseil Spatial Africain. ",
+      "desc":" Ministère de la Transition Numérique et de la Digitalisation, Co-Parrain du MASS",
       "desc2": "Agence Spatiale Égyptienne",
       "desc3": "Ministère de l’Enseignement Supérieur et de la Recherche Scientifique",
       "desc4": "OTIF Espace Afrique"

@@ -56,7 +56,7 @@
     </h2>
   </div>
   
-  <div class=" flex justify-center p-6 ">
+  <div class="flex flex-wrap items-center justify-center gap-6 p-6">
     <div
       *ngFor="let speaker of speakers"
       class="border w-full sm:w-1/4 border-blue-400 rounded-xl p-4 flex flex-col items-center shadow-md">
@@ -69,25 +69,25 @@
       </div>
   
       <!-- Name -->
-      <h3 class="mt-4 text-center text-lg font-semibold text-black">{{speaker.name | translate}}</h3>
+      <h3 class="mt-4 text-center text-lg font-semibold text-black">{{ speaker.name | translate }}</h3>
   
-      <div class="flex justify-between items-center w-full ">
+      <div class="flex justify-between items-center w-full">
         <!-- Organization -->
         <p class="w-full h-20 text-center justify-center text-xl text-gray-500 mt-1 leading-relaxed">
           {{ speaker.organization | translate }}
         </p>
-  
-        <!-- LinkedIn Icon -->
-        
       </div>
+  
+      <!-- LinkedIn Icon -->
       <a 
-          [href]="speaker.linkedin"
-          target="_blank"
-          class="w-full flex justify-end text-end">
-          <img src="../../assets/linkdnbleu.png" alt="LinkedIn Icon"
-            class="w-8 h-8">
-        </a>
+        [href]="speaker.linkedin"
+        target="_blank"
+        class="w-full flex justify-end text-end">
+        <img src="../../assets/linkdnbleu.png" alt="LinkedIn Icon"
+          class="w-8 h-8">
+      </a>
     </div>
   </div>
+  
   
 </div>
