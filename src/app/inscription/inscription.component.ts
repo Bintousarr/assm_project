@@ -20,11 +20,11 @@ export class InscriptionComponent {
 
   paymentForm: FormGroup;
   products = [
-    { name: 'Start-Up', price: 1000 },
-    { name: 'ARGENT', price: 6000 },
-    { name: 'GOLD', price: 12000 },
-    { name: 'PLATINIUM', price: 23000 },
-    { name: 'SPONSOR OFFICIEL', price: 50000 },
+    { name: 'Start-Up', price: 1000,quantity:1 },
+    { name: 'ARGENT', price: 6000,quantity:1 },
+    { name: 'GOLD', price: 12000,quantity:1 },
+    { name: 'PLATINIUM', price: 23000,quantity:1 },
+    { name: 'SPONSOR OFFICIEL', price: 50000,quantity:1 },
   ];
   total = 0;
 
@@ -91,7 +91,11 @@ export class InscriptionComponent {
         firstName: this.paymentForm.value.firstName,
         lastName: this.paymentForm.value.lastName,
         email: this.paymentForm.value.email,
-        selectedProducts: selectedProducts.map((product) => product.name),
+        selectedProducts: selectedProducts.map((product) => ({
+          name: product.name,
+          unitPrice: product.price, // Ajoutez le prix unitaire
+          quantity: product.quantity || 1, // Vous pouvez adapter pour inclure une quantité si elle est modifiable
+        })),
         totalPrice: this.total,
       };
       if (this.translate.currentLang == 'en') {
