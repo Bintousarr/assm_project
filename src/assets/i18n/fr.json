@@ -759,6 +759,7 @@
   "RESERVATION_FORM_TITLE": "Formulaire de Réservation",
   "RESERVATION_FORM_SUBTITLE": "Nous avons ce qu'il vous faut !",
   "PRICE_PACKAGE_LABEL": "Prix Package",
+  "QUANTITY_LABEL":"Quantité",
   "TOTAL_LABEL": "Total",
   "PAYMENT_METHOD_LABEL": "Méthode de Paiement",
   "BUYER_NAME_LABEL": "Nom",
@@ -781,7 +782,7 @@
   "SLIDE_THREE_TITLE_LINE2": "ses portes à tout le monde",
   "SLIDE_THREE_ALT": "Inscription",
   "WELCOME_MASS_TITLE": "Bienvenue au MASS, le Marché Africain des Solutions Spatiales",
-  "WELCOME_MASS_DATE": "Du 06 au 09 Mai 2025, le MASS rassemblera les acteurs clés du domaine Spatiales au",
+  "WELCOME_MASS_DATE": "Du 06 au 08 Mai 2025 MASS réunira les acteurs clés du secteur spatial au",
   "WELCOME_MASS_LOCATION": "Parc des Expositions d’Abidjan",
   "WELCOME_MASS_PROGRAM": "Dès sa première édition, le MASS propose une programmation des plus riches :",
   "PROGRAM_PRESS_CONFERENCE": "Conférence de presse de lancement",
@@ -797,9 +798,11 @@
   "SPONSORS_PAGE_MESSAGE": "La page des Sponsors est en cours d’élaboration. Il sera disponible début 2025.",
   
 
-  "INVITED_COUNTRIES": "Pays invité",
+  "INVITED_COUNTRIES": "Pays invités",
   "DUBAI_TITLE": "DUBAI : ABU DHABI",
+  "AS": "AFRIQUE DU SUD",
   "REPRESENTED_BY": "Représenté par",
+  "AS1":"l'Agence Spatiale Nationale Sud-africaine",
   "BELHOUL_TITLE": "Son Excellence Dr. Ahmad Belhoul Al Falasi",
   "BELHOUL_ROLE": "Ministre des Sports, Président de l'Agence spatiale des Émirats arabes unis"
   
