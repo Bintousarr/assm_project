@@ -30,36 +30,39 @@ export class InscriptionComponent {
 
   constructor(private fb: FormBuilder, private route: ActivatedRoute, private http: HttpClient, private dialog: MatDialog) {
     this.paymentForm = this.fb.group({
-      products: this.fb.array([]), // FormArray pour les checkboxes
+      products: this.fb.array([]), // FormArray pour les produits avec quantité
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
     });
   }
+  
 
-  ngOnInit(): void {
-    localStorage.removeItem('userToken');
-    // Initialise les checkboxes
-    const productsArray = this.paymentForm.get('products') as FormArray;
+ 
+ngOnInit(): void {
+  localStorage.removeItem('userToken');
+  const productsArray = this.paymentForm.get('products') as FormArray;
 
-    // Initialise chaque produit avec un contrôle
-    this.products.forEach(() => productsArray.push(this.fb.control(false)));
+  // Initialise chaque produit avec "selected" et "quantity"
+  this.products.forEach(() => {
+    productsArray.push(
+      this.fb.group({
+        selected: [false],
+        quantity: [1, [Validators.required, Validators.min(1)]],
+      })
+    );
+  });
 
-    // Pré-cocher un produit en fonction de l'URL
-    const productIndex = Number(this.route.snapshot.queryParamMap.get('productIndex'));
-    if (!isNaN(productIndex) && productIndex >= 0 && productIndex < this.products.length) {
-
-      productsArray.at(productIndex).setValue(true); // Pré-cocher le produit
-      this.calculateTotal();
-    }
-
-    // Recalculer le total à chaque modification du formulaire
-    this.paymentForm.valueChanges.subscribe(() => {
-      this.calculateTotal();
-    });
-
-
+  const productIndex = Number(this.route.snapshot.queryParamMap.get('productIndex'));
+  if (!isNaN(productIndex) && productIndex >= 0 && productIndex < this.products.length) {
+    const productGroup = productsArray.at(productIndex) as FormGroup;
+    productGroup.get('selected')?.setValue(true);
+    this.calculateTotal();
   }
+
+  // Recalculer le total à chaque modification
+  this.paymentForm.valueChanges.subscribe(() => this.calculateTotal());
+}
 
   initFormArray(): void {
     const productsArray = this.paymentForm.get('products') as FormArray;
@@ -76,10 +79,13 @@ export class InscriptionComponent {
   calculateTotal(): void {
     const productsArray = this.paymentForm.get('products') as FormArray;
     this.total = productsArray.controls.reduce((acc, control, index) => {
-      return acc + (control.value ? this.products[index].price : 0);
+      const productControl = control as FormGroup;
+      const isSelected = productControl.get('selected')?.value;
+      const quantity = productControl.get('quantity')?.value || 0;
+  
+      return acc + (isSelected ? this.products[index].price * quantity : 0);
     }, 0);
   }
-
 
   onSubmit(): void {
     //console.log('Current Language:', this.translate.currentLang);
