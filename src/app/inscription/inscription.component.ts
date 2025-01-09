@@ -20,11 +20,11 @@ export class InscriptionComponent {
 
   paymentForm: FormGroup;
   products = [
-    { name: 'Start-Up', price: 1000,quantity:1 },
-    { name: 'ARGENT', price: 6000,quantity:1 },
-    { name: 'GOLD', price: 12000,quantity:1 },
-    { name: 'PLATINIUM', price: 23000,quantity:1 },
-    { name: 'SPONSOR OFFICIEL', price: 50000,quantity:1 },
+    { name: 'Start-Up', price: 1000, quantity: 1 },
+    { name: 'ARGENT', price: 6000, quantity: 1 },
+    { name: 'GOLD', price: 12000, quantity: 1 },
+    { name: 'PLATINIUM', price: 23000, quantity: 1 },
+    { name: 'SPONSOR OFFICIEL', price: 50000, quantity: 1 },
   ];
   total = 0;
 
@@ -36,33 +36,33 @@ export class InscriptionComponent {
       email: ['', [Validators.required, Validators.email]],
     });
   }
-  
 
- 
-ngOnInit(): void {
-  localStorage.removeItem('userToken');
-  const productsArray = this.paymentForm.get('products') as FormArray;
 
-  // Initialise chaque produit avec "selected" et "quantity"
-  this.products.forEach(() => {
-    productsArray.push(
-      this.fb.group({
-        selected: [false],
-        quantity: [1, [Validators.required, Validators.min(1)]],
-      })
-    );
-  });
 
-  const productIndex = Number(this.route.snapshot.queryParamMap.get('productIndex'));
-  if (!isNaN(productIndex) && productIndex >= 0 && productIndex < this.products.length) {
-    const productGroup = productsArray.at(productIndex) as FormGroup;
-    productGroup.get('selected')?.setValue(true);
-    this.calculateTotal();
+  ngOnInit(): void {
+    localStorage.removeItem('userToken');
+    const productsArray = this.paymentForm.get('products') as FormArray;
+
+    // Initialise chaque produit avec "selected" et "quantity"
+    this.products.forEach(() => {
+      productsArray.push(
+        this.fb.group({
+          selected: [false],
+          quantity: [1, [Validators.required, Validators.min(1)]],
+        })
+      );
+    });
+
+    const productIndex = Number(this.route.snapshot.queryParamMap.get('productIndex'));
+    if (!isNaN(productIndex) && productIndex >= 0 && productIndex < this.products.length) {
+      const productGroup = productsArray.at(productIndex) as FormGroup;
+      productGroup.get('selected')?.setValue(true);
+      this.calculateTotal();
+    }
+
+    // Recalculer le total à chaque modification
+    this.paymentForm.valueChanges.subscribe(() => this.calculateTotal());
   }
-
-  // Recalculer le total à chaque modification
-  this.paymentForm.valueChanges.subscribe(() => this.calculateTotal());
-}
 
   initFormArray(): void {
     const productsArray = this.paymentForm.get('products') as FormArray;
@@ -82,7 +82,7 @@ ngOnInit(): void {
       const productControl = control as FormGroup;
       const isSelected = productControl.get('selected')?.value;
       const quantity = productControl.get('quantity')?.value || 0;
-  
+
       return acc + (isSelected ? this.products[index].price * quantity : 0);
     }, 0);
   }
@@ -90,18 +90,30 @@ ngOnInit(): void {
   onSubmit(): void {
     //console.log('Current Language:', this.translate.currentLang);
     if (this.paymentForm.valid) {
-      const selectedProducts = this.products.filter((_, index) =>
-        this.paymentForm.value.products[index]
-      );
+      const productsArray = this.paymentForm.get('products') as FormArray;
+      const selectedProducts = this.products
+        .map((product, index) => {
+          const productControl = productsArray.at(index) as FormGroup;
+          const isSelected = productControl.get('selected')?.value;
+          const quantity = productControl.get('quantity')?.value || 1;
+
+          // Retourner les informations du produit uniquement s'il est sélectionné
+          if (isSelected) {
+            return {
+              name: product.name,
+              unitPrice: product.price,
+              quantity: quantity,
+            };
+          }
+          return null; // Si non sélectionné, ignorer
+        })
+        .filter((product) => product !== null);
+      console.log(selectedProducts)
       const emailData = {
         firstName: this.paymentForm.value.firstName,
         lastName: this.paymentForm.value.lastName,
         email: this.paymentForm.value.email,
-        selectedProducts: selectedProducts.map((product) => ({
-          name: product.name,
-          unitPrice: product.price, // Ajoutez le prix unitaire
-          quantity: product.quantity || 1, // Vous pouvez adapter pour inclure une quantité si elle est modifiable
-        })),
+        selectedProducts: selectedProducts,
         totalPrice: this.total,
       };
       if (this.translate.currentLang == 'en') {
