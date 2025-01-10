@@ -804,7 +804,13 @@
   "REPRESENTED_BY": "Représenté par",
   "AS1":"l'Agence Spatiale Nationale Sud-africaine",
   "BELHOUL_TITLE": "Son Excellence Dr. Ahmad Belhoul Al Falasi",
-  "BELHOUL_ROLE": "Ministre des Sports, Président de l'Agence spatiale des Émirats arabes unis"
+  "BELHOUL_ROLE": "Ministre des Sports, Président de l'Agence spatiale des Émirats arabes unis",
+  "BUYER_COUNTRY_LABEL": "Pays",
+  "COMPANY_NAME_LABEL":"Nom de l'entreprise",
+  "COMPANY_NAME_PLACEHOLDER":"Nom de l'entreprise",
+  "SELECT_COUNTRY_PLACEHOLDER":"Sélectionner votre pays"
+
+
   
   
 }

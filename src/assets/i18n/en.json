@@ -798,7 +798,13 @@
   "REPRESENTED_BY": "Represented by",
   "BELHOUL_TITLE": "His Excellency Dr. Ahmad Belhoul Al Falasi",
     "AS1":"the South African National Space Agency",
-  "BELHOUL_ROLE": "Minister of Sports, Chairman of the UAE Space Agency"
+  "BELHOUL_ROLE": "Minister of Sports, Chairman of the UAE Space Agency",
+  "BUYER_COUNTRY_LABEL": "Country",
+  "COMPANY_NAME_LABEL":"Company name",
+  "COMPANY_NAME_PLACEHOLDER":"Company name",
+  "SELECT_COUNTRY_PLACEHOLDER":"Select your country"
+
+
   }
   
 
