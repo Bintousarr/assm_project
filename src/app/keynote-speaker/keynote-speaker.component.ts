@@ -50,12 +50,12 @@ export class KeynoteSpeakerComponent {
       image: '../../assets/tidiane.png',
       linkedin: 'https://www.linkedin.com/in/tidianeouattara/?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAAfilo4Bi1EGDGWeJ1rPGndzv_h45j8VDoM',
     },
-    {
-      name: 'M. Kalil KONATÉ',
-      organization: 'accueil.orateur-block.desc',
-      image: '../../assets/ministre_transition.jpg',
-      linkedin: 'https://www.linkedin.com/company/minist-re-de-la-transition-num-rique-et-de-la-digitalisation/?originalSubdomain=ci'
-    },
+    // {
+    //   name: 'M. Kalil KONATÉ',
+    //   organization: 'accueil.orateur-block.desc',
+    //   image: '../../assets/ministre_transition.jpg',
+    //   linkedin: 'https://www.linkedin.com/company/minist-re-de-la-transition-num-rique-et-de-la-digitalisation/?originalSubdomain=ci'
+    // },
     // {
     //   name: 'accueil.orateur-block.titre4',
     //   organization: 'accueil.orateur-block.desc3',
