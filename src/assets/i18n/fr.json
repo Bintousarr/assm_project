@@ -800,11 +800,16 @@
 
   "INVITED_COUNTRIES": "Pays invités",
   "DUBAI_TITLE": "DUBAI : ABU DHABI",
-  "AS": "AFRIQUE DU SUD",
   "REPRESENTED_BY": "Représenté par",
-  "AS1":"l'Agence Spatiale Nationale Sud-africaine",
   "BELHOUL_TITLE": "Son Excellence Dr. Ahmad Belhoul Al Falasi",
-  "BELHOUL_ROLE": "Ministre des Sports, Président de l'Agence spatiale des Émirats arabes unis"
+  "BELHOUL_ROLE": "Ministre des Sports, Président de l'Agence spatiale des Émirats arabes unis",
+  "AS": "AFRIQUE DU SUD",
+  "AS0":"Humbulani Mudau, ",
+  "AS1":"Directeur Général de l'Agence Spatiale Sud-Africaine",
   
-  
+  "PARRAIN":"Parrain",
+  "p1": "Monsieur Kalil KONATE",
+  "p2": "Ministre de la Transition Numérique et de la Digitalisation",
+  "p3": "Co-Parrain du MASS"
+
 }

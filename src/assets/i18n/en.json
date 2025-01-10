@@ -482,6 +482,7 @@
     "participants": "Participants",
     "my-appointments": "My Appointments",
     "appointment-management": "Appointment Management",
+    "download": "Download my planning",
     "calendar-management": "Calendar Management",
     "logout": "Logout",
     "speaker-list":"LISTS OF SPEAKERS  ",
@@ -785,19 +786,25 @@
   "WELCOME_MASS_INVITATION": "Whether you are an entrepreneur, investor, recent graduate, or simply curious, come and enjoy a unique experience.",
    "WELCOME_MASS_DATE_HTML": "From <strong>May 6 to 9, 2025</strong>, MASS will bring together key players in the spatial field at the <span class='font-semibold'>Exhibition Park of Abidjan</span>.",
 
-  "VISITOR_PAGE_MESSAGE": "The visitor page is under development. It will be available at the beginning of 2025.",
+  "VISITOR_PAGE_MESSAGE": "AVAILABLE SOON",
   "AFRICAN_MARKET": "AFRICAN SPACE SOLUTIONS MARKET",
   "SPONSORS_TITLE": "Sponsors",
   "YEAR_2025": "2025",
-  "SPONSORS_PAGE_MESSAGE": "The Sponsors page is under development. It will be available at the beginning of 2025.",
+  "SPONSORS_PAGE_MESSAGE": "AVAILABLE SOON ",
 
   "INVITED_COUNTRIES": "Invited Countries",
   "DUBAI_TITLE": "DUBAI: ABU DHABI",
-  "AS": "SOUTH AFRICA",
   "REPRESENTED_BY": "Represented by",
   "BELHOUL_TITLE": "His Excellency Dr. Ahmad Belhoul Al Falasi",
-    "AS1":"the South African National Space Agency",
-  "BELHOUL_ROLE": "Minister of Sports, Chairman of the UAE Space Agency"
+  "BELHOUL_ROLE": "Minister of Sports, Chairman of the UAE Space Agency",
+  "AS": "SOUTH AFRICA",
+  "AS0":"Humbulani Mudau, ",
+  "AS1":"Director General of the South African National Space Agency",
+
+  "PARRAIN":"Sponsor",
+  "p1": "Mr. Kalil KONATE",
+  "p2": "Minister of Digital Transition and Digitization",
+  "p3": "Co-Sponsor of MASS"
   }
   
 

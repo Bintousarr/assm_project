@@ -89,6 +89,41 @@
 <app-keynote-speaker></app-keynote-speaker>
 <!-- <app-sponsor></app-sponsor> -->
 
+<div class="bg-white font-poppins shadow-xl rounded-xl overflow-hidden">
+  <!-- Section Banner -->
+  <div class="relative h-64 bg-[#fbf6e5]">
+    <div class="absolute inset-0 flex justify-center items-center">
+      <h1 class=" text-6xl font-bold tracking-wider">
+        {{ 'PARRAIN' | translate }}
+      </h1>
+    </div>
+  </div>
+  
+  <div class="p-8 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+    <div class="col-span-1 flex justify-center">
+      <div class="relative">
+        <img src="../../assets/ministre_transition.jpg" 
+             class="w-80 h-80 object-cover rounded-full shadow-lg hover:scale-110 transition-transform duration-300" 
+             alt="Image Parrain">
+        <div class="absolute inset-0 rounded-full border-4 border-white"></div>
+      </div>
+    </div>
+
+    <div class="col-span-1 text-center md:text-left">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">
+        {{ 'p1' | translate }}
+      </h2>
+      <p class="text-2xl text-gray-600 leading-relaxed mb-6">
+        {{ 'p2' | translate }} <br>
+        <span class="text-customBlue font-semibold">
+          {{ 'p3' | translate }}
+        </span>
+      </p>
+     
+    </div>
+  </div>
+</div>
+
 <div class="bg-[#fbf6e5] font-poppins p-8 rounded-xl shadow-lg mt-8">
   <h1 class="text-6xl text-center font-extrabold mb-10 tracking-wide">
     {{ 'INVITED_COUNTRIES' | translate }}
@@ -102,7 +137,7 @@
       <p class="text-4xl text-red-800 font-bold mb-4">
         {{ 'DUBAI_TITLE' | translate }}
       </p>
-      <p class="text-xl leading-relaxed">
+      <p class="text-2xl leading-relaxed">
         {{ 'REPRESENTED_BY' | translate }}
         <span class="font-semibold">
           {{ 'BELHOUL_TITLE' | translate }}
@@ -119,13 +154,13 @@
 
     <div class="text-center md:text-left mt-6">
       <p class="text-4xl text-red-800 font-bold mb-4">
-        {{ 'AS' | translate }}
+        {{ 'AS' | translate }} Humbulani Mudau
       </p>
-      <p class="text-xl leading-relaxed">
+      <p class="text-2xl leading-relaxed">
         {{ 'REPRESENTED_BY' | translate }}
         <span class="font-semibold">
-          {{ 'AS1' | translate }}
-        </span>
+          {{ 'AS0' | translate }}
+        </span>, {{ 'AS1' | translate }}
       </p>
       <img src="../../assets/Flag_of_South_Africa.png" class="rounded-xl w-48 mx-auto md:mx-0 mb-6 shadow-md" alt="Belhoul Image">
     </div>
