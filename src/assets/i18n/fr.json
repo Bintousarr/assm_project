@@ -791,11 +791,11 @@
   "PROGRAM_B2B_MEETINGS": "Rencontres B2B",
   "WELCOME_MASS_INVITATION": "Que vous soyez entrepreneur, investisseur, jeune diplômé ou simple curieux, venez vivre une expérience unique.",
   "WELCOME_MASS_DATE_HTML": "Du <strong>06 au 08 Mai 2025</strong>, le MASS rassemblera les acteurs clés du domaine Spatiales au <span class='font-semibold'>Parc des Expositions d’Abidjan</span>.",
-  "VISITOR_PAGE_MESSAGE": "La page des visiteurs est en cours d’élaboration. Elle sera disponible début 2025.",
+  "VISITOR_PAGE_MESSAGE": "Bientôt disponible",
   "AFRICAN_MARKET": "MARCHÉ AFRICAIN DES SOLUTIONS SPATIALES",
   "SPONSORS_TITLE": "Sponsors",
   "YEAR_2025": "2025",
-  "SPONSORS_PAGE_MESSAGE": "La page des Sponsors est en cours d’élaboration. Il sera disponible début 2025.",
+  "SPONSORS_PAGE_MESSAGE": "Bientôt disponible",
   
 
   "INVITED_COUNTRIES": "Pays invités",
@@ -810,10 +810,6 @@
   "COMPANY_NAME_LABEL":"Nom de l'entreprise",
   "COMPANY_NAME_PLACEHOLDER":"Nom de l'entreprise",
   "SELECT_COUNTRY_PLACEHOLDER":"Sélectionner votre pays",
-
-
-  
-  
   "PARRAIN":"Parrain",
   "p1": "Monsieur Kalil KONATE",
   "p2": "Ministre de la Transition Numérique et de la Digitalisation",
