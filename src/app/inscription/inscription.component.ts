@@ -137,7 +137,7 @@ export class InscriptionComponent {
             this.openDialog('Veuillez retrouver votre devis dans votre boîte mail.', true)
           },
           (error) => {
-            // console.error('Erreur lors de l\'envoi de l\'email :', error);
+            console.error('Erreur lors de l\'envoi de l\'email :', error);
             this.openDialog('Une erreur s\'est produite lors de l\'envoi du devis.', false)
 
             // alert('Une erreur s\'est produite lors de l\'envoi du devis.');
