@@ -86,10 +86,9 @@
 
 
 <app-evenement></app-evenement>
-<app-keynote-speaker></app-keynote-speaker>
 <!-- <app-sponsor></app-sponsor> -->
 
-<div class="bg-[#fbf6e5] font-poppins shadow-xl rounded-xl overflow-hidden">
+<div class="bg-[#fbf6e5] mt-10 font-poppins shadow-xl rounded-xl overflow-hidden">
   <!-- Section Banner -->
   <div class="relative h-60 ">
     <div class="absolute inset-0 flex justify-center items-center">
@@ -110,28 +109,30 @@
     </div>
 
     <div class="col-span-1 text-center md:text-left">
+      
+      <p class="text-2xl text-gray-600 leading-relaxed mb-6">
+        {{ 'p2' | translate }} <br>
+        <!-- <span class="text-customBlue font-semibold">
+          {{ 'p3' | translate }}
+        </span> -->
+      </p>
       <h2 class="text-3xl font-bold text-gray-800 mb-4">
         {{ 'p1' | translate }}
       </h2>
-      <p class="text-2xl text-gray-600 leading-relaxed mb-6">
-        {{ 'p2' | translate }} <br>
-        <span class="text-customBlue font-semibold">
-          {{ 'p3' | translate }}
-        </span>
-      </p>
       <img src="../../assets/CI.jpg" class="rounded-xl w-48 mx-auto md:mx-0 mb-6 shadow-md" alt="Belhoul Image">
 
     </div>
   </div>
 </div>
+<app-keynote-speaker></app-keynote-speaker>
 
-<div class="bg-[#fbf6e5] font-poppins p-8 rounded-xl shadow-lg mt-8">
+<div class="bg-[#fbf6e5] font-poppins p-8 rounded-xl shadow-xl overflow-hidden mt-8">
   <h1 class="text-6xl text-center font-extrabold mb-10 tracking-wide">
     {{ 'INVITED_COUNTRIES' | translate }}
   </h1>
   <div class="flex flex-col md:flex-row items-center gap-10">
     <div class="flex-shrink-0">
-      <img src="../../assets/belhoul.png" class="rounded-2xl  w-[400px]  max-w-2xl h-[300px] shadow-lg transition-transform duration-300 hover:scale-105" alt="Dubai Image">
+      <img src="../../assets/belhoul.png" class="rounded-2xl  w-[300px]  max-w-2xl  shadow-lg transition-transform duration-300 hover:scale-105" alt="Dubai Image">
     </div>
 
     <div class="text-center md:text-left mt-6">
@@ -150,12 +151,12 @@
 
   <div class="flex flex-col md:flex-row items-center mt-10 gap-10">
     <div class="flex-shrink-0">
-      <img src="../../assets/SANSA.png" class="rounded-2xl w-[400px]  max-w-2xl h-[250px] shadow-lg transition-transform duration-300 hover:scale-105" alt="Dubai Image">
+      <img src="../../assets/AgenceSouthaAFrica.jpg" class="rounded-2xl w-[300px]  max-w-2xl shadow-lg transition-transform duration-300 hover:scale-105" alt="Dubai Image">
     </div>
 
     <div class="text-center md:text-left mt-6">
       <p class="text-4xl text-red-800 font-bold mb-4">
-        {{ 'AS' | translate }} Humbulani Mudau
+        {{ 'AS' | translate }}
       </p>
       <p class="text-2xl leading-relaxed">
         {{ 'REPRESENTED_BY' | translate }}
