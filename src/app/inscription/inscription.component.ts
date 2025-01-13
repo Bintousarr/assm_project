@@ -148,7 +148,7 @@ export class InscriptionComponent {
             this.openDialog('Please find your quote in your email inbox.', true)
           },
           (error) => {
-            // console.error('Erreur lors de l\'envoi de l\'email :', error);
+             console.error('Erreur lors de l\'envoi de l\'email :', error);
             this.openDialog('An error occurred while sending the quote.', false)
 
             // alert('Une erreur s\'est produite lors de l\'envoi du devis.');
