@@ -12,25 +12,25 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports:  [TranslateModule, ReactiveFormsModule, CommonModule,MatDialogModule],
+  imports: [TranslateModule, ReactiveFormsModule, CommonModule, MatDialogModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   loginForm: FormGroup;
- 
+
   translate: TranslateService = inject(TranslateService)
 
- 
-constructor(private fb: FormBuilder, private registerService: RegisterService,    private dialog: MatDialog, private router:Router) {
-  this.loginForm = this.fb.group({
-   
-    email: ['', [Validators.required, Validators.email]],
-    password:['', Validators.required],
-  
-  });
-}
- ngOnInit() {
+
+  constructor(private fb: FormBuilder, private registerService: RegisterService, private dialog: MatDialog, private router: Router) {
+    this.loginForm = this.fb.group({
+
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+
+    });
+  }
+  ngOnInit() {
     this.translate.setDefaultLang('fr');
   }
 
@@ -39,45 +39,62 @@ constructor(private fb: FormBuilder, private registerService: RegisterService,  
   }
 
 
-// onCountryInput() {
-//   const input = this.loginForm.get('country')?.value.toLowerCase();
-//   this.filteredCountries = this.countries.filter(country => 
-//     country.toLowerCase().startsWith(input)
-//   );
-// }   
+  // onCountryInput() {
+  //   const input = this.loginForm.get('country')?.value.toLowerCase();
+  //   this.filteredCountries = this.countries.filter(country => 
+  //     country.toLowerCase().startsWith(input)
+  //   );
+  // }   
 
 
-onLogin() {
-  if (this.loginForm.valid) {
-    this.registerService.login(this.loginForm.value).subscribe(
-      response => {
-        if (response.user) { // Vérifie si l'objet 'user' est présent dans la réponse
-          console.log('User login successfully', response);
-          const userString = JSON.stringify(response.user);
-          localStorage.setItem('userToken', userString);
-          // if(response.user.role=="Intervenant"){
-          //   window.location.href = '/dashboard';
-          // }else{
-          //   window.location.href = '/homeuser';
-          // }
-          window.location.href = '/homeuser';
-         // this.router.navigate(['/homeuser']);
-          //this.router.navigate(['/homeuser']);
-        } else {
-          console.error('test', response);
-          this.openDialog(response.message, false);
+  onLogin() {
+    if (this.loginForm.valid) {
+      this.registerService.login(this.loginForm.value).subscribe(
+        response => {
+          if (response.user) { // Vérifie si l'objet 'user' est présent dans la réponse
+            console.log('User login successfully', response);
+            const userString = JSON.stringify(response.user);
+            localStorage.setItem('userToken', userString);
+            // if(response.user.role=="Intervenant"){
+            //   window.location.href = '/dashboard';
+            // }else{
+            //   window.location.href = '/homeuser';
+            // }
+            window.location.href = '/homeuser';
+            // this.router.navigate(['/homeuser']);
+            //this.router.navigate(['/homeuser']);
+          } else {
+            // console.error('test', response);
+            // this.openDialog(response.message, false);
+            if (this.translate.currentLang == "en") {
+              this.openDialog(response.en, false); // Affiche le popup d'erreur
+             // console.log("rrrrr")
+  
+            }else{
+              this.openDialog(response.fr, false); // Affiche le popup d'erreur
+  
+            }
+  
+          }
+        },
+        error => {
+          console.error('Error login user', error);
+          if (this.translate.currentLang == "en") {
+            this.openDialog(error.error.en, false); // Affiche le popup d'erreur
+           // console.log("rrrrr")
+
+          }else{
+            this.openDialog(error.error.fr, false); // Affiche le popup d'erreur
+
+          }
+          //this.openDialog(error.error.message, false); // Affiche le popup d'erreur
         }
-      },
-      error => {
-        console.error('Error login user', error);
-        this.openDialog(error.error.message, false); // Affiche le popup d'erreur
-      }
-    );
+      );
+    }
   }
-}
-openDialog(message: string, isSuccess: boolean): void {
-  this.dialog.open(RegistrationSuccessDialogComponent, {
-    data: { message: message, isSuccess: isSuccess }
-  });
-}
+  openDialog(message: string, isSuccess: boolean): void {
+    this.dialog.open(RegistrationSuccessDialogComponent, {
+      data: { message: message, isSuccess: isSuccess }
+    });
+  }
 }

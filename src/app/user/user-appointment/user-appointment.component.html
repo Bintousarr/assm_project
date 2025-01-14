@@ -1,8 +1,8 @@
-<div class="flex font-poppins min-h-screen">
+<div class="flex font-poppins">
     <!-- Aside Section -->
     <aside
         [ngClass]="{'w-96 space-y-8': !isCollapsed, 'w-22 space-y-24': isCollapsed}"
-        class="bg-red-900 text-white rounded-xl flex flex-col py-4 h-full mx-2 mt-4 mb-4 ">
+        class="bg-red-900 text-white rounded-xl flex flex-col py-4 mx-2 mt-4 mb-4 ">
         <!-- Bouton pour basculer le menu -->
         <div class="px-4">
             <button (click)="toggleSidebar()" class="focus:outline-none pl-2">

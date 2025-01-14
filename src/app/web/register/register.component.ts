@@ -172,12 +172,28 @@ export class RegisterComponent {
 
   this._registerService.register(formData).subscribe(
     response => {
-      console.log('User registered successfully', response);
-      this.openDialog(response.message, true); // Affiche un message de succès
+     // console.log('User registered successfully', response);
+     // this.openDialog(response.message, true); // Affiche un message de succès
+      if (this.translate.currentLang == "en") {
+        this.openDialog(response.en, true); // Affiche le popup d'erreur
+       // console.log("rrrrr")
+
+      }else{
+        this.openDialog(response.fr, true); // Affiche le popup d'erreur
+
+      }
     },
     error => {
-      console.error('Error registering user', error);
-      this.openDialog(error.error.message || 'Une erreur est survenue.', false); // Affiche un message d'erreur
+     // console.error('Error registering user', error);
+     if (this.translate.currentLang == "en") {
+      this.openDialog(error.error.en, false); // Affiche le popup d'erreur
+     // console.log("rrrrr")
+
+    }else{
+      this.openDialog(error.error.fr, false); // Affiche le popup d'erreur
+
+    }
+      //this.openDialog(error.error.message || 'Une erreur est survenue.', false); // Affiche un message d'erreur
     }
   );
   }

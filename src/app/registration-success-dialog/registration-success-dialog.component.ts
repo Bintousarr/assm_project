@@ -28,12 +28,16 @@ export class RegistrationSuccessDialogComponent {
     this.isSuccess = data.isSuccess;
     this.apiMessage = data.message;
   }
+  ngOnInit(){
+    this.isSuccess = this.data.isSuccess;
+    console.log(this.isSuccess)
+
+  }
 
   onOkClick(): void {
-    console.log(this.apiMessage)
     if (this.apiMessage == 'User created successfully.' || this.apiMessage == 'Utilisateur créé et disponibilités définies avec succès.'|| this.apiMessage =='User registered successfully'||this.apiMessage=='Veuillez retrouver votre devis dans votre boîte mail.'|| this.apiMessage=='Please find your quote in your email inbox.') {
       this.dialogRef.close(); // Fermer le popup
-      this.router.navigate(['/']); // Redirige vers la page d'accueil ou une autre page
+      this.router.navigate(['/login']); // Redirige vers la page d'accueil ou une autre page
     } else {
       this.dialogRef.close(); // Fermer simplement le popup, reste sur la page de registre
     }

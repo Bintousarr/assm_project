@@ -20,11 +20,11 @@ export class InscriptionComponent {
 
   paymentForm: FormGroup;
   products = [
-    { name: 'Start-Up', price: 1000, quantity: 1 },
-    { name: 'ARGENT', price: 6000, quantity: 1 },
-    { name: 'GOLD', price: 12000, quantity: 1 },
+    { name: 'STARTUP', price: 1000, quantity: 1 },
+    { name: 'SILVER-PACK', price: 6000, quantity: 1 },
+    { name: 'GOLD-PACK', price: 12000, quantity: 1 },
     { name: 'PLATINIUM', price: 23000, quantity: 1 },
-    { name: 'SPONSOR OFFICIEL', price: 50000, quantity: 1 },
+    { name: 'HEADLINE SPONSOR', price: 50000, quantity: 1 },
   ];
   total = 0;
   countries: string[] = [
@@ -58,12 +58,14 @@ export class InscriptionComponent {
       companyName: [''], // Nouveau champ pour le nom de l'entreprise
       country: ['', Validators.required], // Champ pour le pays
     });
-  }
+    }
 
 
 
   ngOnInit(): void {
     localStorage.removeItem('userToken');
+    console.log("dsssdddddsssss")
+
     const productsArray = this.paymentForm.get('products') as FormArray;
 
     // Initialise chaque produit avec "selected" et "quantity"
@@ -179,6 +181,9 @@ export class InscriptionComponent {
 
   translateText(lang: string) {
     this.translate.use(lang);
+    
+    console.log("dsssdddddsssss")
+
   }
 
   openDialog(message: string, isSuccess: boolean): void {
