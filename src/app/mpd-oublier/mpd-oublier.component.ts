@@ -46,7 +46,8 @@ loginForm: FormGroup;
 
   onReset() {
     if (this.loginForm.valid) {
-      this.registerService.resetPassword(this.loginForm.value).subscribe(
+      const email = this.loginForm.get('email')?.value;
+      this.registerService.resetPassword(email).subscribe(
         response => {
           if (response.user) { // Vérifie si l'objet 'user' est présent dans la réponse
             console.log('User login successfully', response);

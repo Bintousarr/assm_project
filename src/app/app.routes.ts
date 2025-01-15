@@ -200,7 +200,12 @@ export const routes: Routes = [
     path: 'resetpass', loadComponent: () =>
       import('../app/mpd-oublier/mpd-oublier.component').then(m => m.MpdOublierComponent),
 
+  },  {
+    path: 'updatePass', loadComponent: () =>
+      import('../app/user/update-pass/update-pass.component').then(m => m.UpdatePassComponent),
+
   },
+  
   
   {
     path: '**', redirectTo: 'banner', pathMatch: 'full'

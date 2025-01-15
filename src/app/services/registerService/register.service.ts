@@ -36,10 +36,10 @@ export class RegisterService {
   }
 
   resetPassword(email: any): Observable<any> {
-    const url = `${environment.apiUrl}?resetPass`; // Endpoint de votre script PHP
-    const body = { email }; // Corps de la requête
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const url = `${environment.apiUrl}?action=resetPass`; // Endpoint de votre script PHP
+    const body = { 'email': email }; // Corps de la requête
+    // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    return this.http.post(url, email, { headers });
+    return this.http.post<any>(url, body,{ responseType: 'json' });
   }
 }
