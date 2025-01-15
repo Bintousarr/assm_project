@@ -478,7 +478,7 @@
     "appointment-management": "Appointment Management",
     "download": "Download my schedule",
     "calendar-management": "Calendar Management",
-    "home-user.pass":"Update password",
+    "pass":"Update password",
     "logout": "Logout",
     "speaker-list": "LISTS OF PERSONALITIES  ",
     "part-list": "PARTICIPANT LISTS",
@@ -799,6 +799,27 @@
 
   "PASSWORD": "FORGET PASSWORD",
   "reset":"Send",
-  "pass_text": "Enter your e-mail address to reset your password"
+  "pass_text": "Enter your e-mail address to reset your password",
+  "request-pass": "CHANGE PASSWORD",
+  "update-password": {
+    "title": "Update Password",
+    "old_password": "Old Password",
+    "old_password_placeholder": "Enter your old password",
+    "new_password": "New Password",
+    "new_password_placeholder": "Enter your new password",
+    "confirm_password": "Confirm New Password",
+    "confirm_password_placeholder": "Re-enter your new password",
+    "update_button": "Update Password",
+    "error": {
+      "old_password_required": "Old password is required.",
+      "new_password_required": "New password is required.",
+      "confirm_password_required": "Password confirmation is required.",
+      "password_mismatch": "Passwords do not match."
+    },
+    "success_message": "Your password has been updated successfully.",
+    "failure_message": "Failed to update the password. Please try again.",
+    "notmatch": "Passwords are not compliant"
+
+  }
 
 }

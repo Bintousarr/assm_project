@@ -51,6 +51,64 @@
     <!-- Main Content Section -->
     <main class="w-full lg:w-4/5 px-6 flex-grow h-full min-w-[60rem]">
         <h1 class="text-3xl font-bold text-red-900 mb-8">{{
-            'intervenant-detail.request-appointment' | translate }}</h1>
+            'request-pass' | translate }}</h1>
+        <div class="w-full max-w-md mx-auto mt-10 font-poppins">
+            <form [formGroup]="passwordForm" (ngSubmit)="onUpdatePassword()" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <h2 class="text-3xl font-semibold text-red-900 mb-6">{{ 'update-password.title' | translate }}</h2>
+        
+                <!-- Ancien mot de passe -->
+                <div class="mb-4">
+                <h2 *ngIf="notMacth" class="text-sm font-semibold text-red-600 mb-6">{{ 'update-password.notmatch' | translate }}</h2>
+
+                    <label for="oldPassword" class="block text-sm font-bold mb-2">{{ 'update-password.old_password' | translate }}</label>
+                    <input
+                        id="oldPassword"
+                        type="password"
+                        formControlName="oldPassword"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="{{ 'update-password.old_password_placeholder' | translate }}">
+                    <div *ngIf="passwordForm.get('oldPassword')?.touched && passwordForm.get('oldPassword')?.invalid" class="text-red-500 text-xs">
+                        {{ 'update-password.error.old_password_required' | translate }}
+                    </div>
+                </div>
+        
+                <!-- Nouveau mot de passe -->
+                <div class="mb-4">
+                    <label for="newPassword" class="block text-sm font-bold mb-2">{{ 'update-password.new_password' | translate }}</label>
+                    <input
+                        id="newPassword"
+                        type="password"
+                        formControlName="newPassword"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="{{ 'update-password.new_password_placeholder' | translate }}">
+                    <div *ngIf="passwordForm.get('newPassword')?.touched && passwordForm.get('newPassword')?.invalid" class="text-red-500 text-xs">
+                        {{ 'update-password.error.new_password_required' | translate }}
+                    </div>
+                </div>
+        
+                <!-- Confirmation du nouveau mot de passe -->
+                <div class="mb-4">
+                    <label for="confirmPassword" class="block text-sm font-bold mb-2">{{ 'update-password.confirm_password' | translate }}</label>
+                    <input
+                        id="confirmPassword"
+                        type="password"
+                        formControlName="confirmPassword"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="{{ 'update-password.confirm_password_placeholder' | translate }}">
+                    <div *ngIf="passwordForm.get('confirmPassword')?.touched && passwordForm.get('confirmPassword')?.invalid" class="text-red-500 text-xs">
+                        {{ 'update-password.error.confirm_password_required' | translate }}
+                    </div>
+                </div>
+        
+                <!-- Bouton de mise à jour -->
+                <div class="flex items-center justify-center">
+                    <button type="submit"
+                        class="bg-red-900 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        [disabled]="passwordForm.invalid">
+                        {{ 'update-password.update_button' | translate }}
+                    </button>
+                </div>
+            </form>
+        </div>
     </main>
 </div>

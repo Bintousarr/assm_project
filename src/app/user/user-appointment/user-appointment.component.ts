@@ -43,6 +43,7 @@ export class UserAppointmentComponent {
     { label: 'home-user.appointment-management', route: '/dashboard/gestion-rv', icon: 'fas fa-database' },
     { label: 'home-user.calendar-management', route: 'calandar', icon: 'fas fa-calendar-check' },
     { label: 'home-user.download', route: 'download', icon: 'fa fa-arrow-circle-down' },
+    { label: 'home-user.pass', route: '/updatePass', icon: 'fa fa-user' },
     // { label: 'home-user.logout', route: 'logout', icon: 'fas fa-sign-out-alt' },
   ];
   constructor( private router:Router,private userService: UserService,private appointmentService: ApppointmentService) {

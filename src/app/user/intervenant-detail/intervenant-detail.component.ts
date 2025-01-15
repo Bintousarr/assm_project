@@ -73,7 +73,7 @@ menuItems = [
     this.translate.setDefaultLang('fr');
     // Récupérer la chaîne JSON depuis le localStorage
     const storedUserString = localStorage.getItem('userToken');
-    console.log(localStorage.getItem('userToken'))
+ //   console.log(localStorage.getItem('userToken'))
 
     if (storedUserString) {
       // Convertir la chaîne JSON en objet JavaScript uniquement si elle n'est pas `null`
@@ -84,7 +84,7 @@ menuItems = [
     }
 
 
-    console.log('Stored user:', this.storedUser);
+   // console.log('Stored user:', this.storedUser);
     const intervenantId = this.route.snapshot.paramMap.get('id');
 
   this.intervant_id=intervenantId;
@@ -93,19 +93,19 @@ menuItems = [
       this.userService.getIntervenantById(this.intervant_id).subscribe(
         (data) => {
           this.intervenant = data;
-          console.log('Intervenant:', this.intervenant);
+        //  console.log('Intervenant:', this.intervenant);
         },
         (error) => {
-          console.error('Error fetching intervenant details', error);
+          console.error('Error fetching intervenant details');
         }
       );
 
       this.speakerAvalabilityService.getSpeakerAvailabilityWithDetails(parseInt( this.intervant_id)).subscribe((response) => {
         this.disponibilities = response;
-        console.log('Disponibilité:', this.disponibilities);
+       // console.log('Disponibilité:', this.disponibilities);
       },
         (error) => {
-          console.error('Error fetching disponibility details', error);
+          console.error('Error fetching disponibility details');
 
         })
     }else{
@@ -113,19 +113,19 @@ menuItems = [
       this.userService.getParticipantById( this.intervant_id).subscribe(
         (data) => {
           this.intervenant = data;
-          console.log('Intervenant:', this.intervenant);
+         // console.log('Intervenant:', this.intervenant);
         },
         (error) => {
-          console.error('Error fetching intervenant details', error);
+          console.error('Error fetching intervenant details');
         }
       );
 
       this.speakerAvalabilityService.getSpeakerAvailabilityWithDetails(parseInt( this.intervant_id)).subscribe((response) => {
         this.disponibilities = response;
-        console.log('Disponibilité:', this.disponibilities);
+       // console.log('Disponibilité:', this.disponibilities);
       },
         (error) => {
-          console.error('Error fetching disponibility details', error);
+          console.error('Error fetching disponibility details',);
 
         })
     }

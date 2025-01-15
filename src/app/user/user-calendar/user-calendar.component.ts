@@ -47,6 +47,7 @@ export class UserCalendarComponent {
     { label: 'home-user.appointment-management', route: '/dashboard/gestion-rv', icon: 'fas fa-database' },
     { label: 'home-user.calendar-management', route: 'calandar', icon: 'fas fa-calendar-check' },
     { label: 'home-user.download', route: 'download', icon: 'fa fa-arrow-circle-down' },
+    { label: 'home-user.pass', route: '/updatePass', icon: 'fa fa-user' },
     // { label: 'home-user.logout', route: 'logout', icon: 'fas fa-sign-out-alt' },
   ];
   constructor(private route: ActivatedRoute, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService,private router:Router,private appointmentService: ApppointmentService, private apppointmentService:ApppointmentService) { }
@@ -74,13 +75,12 @@ export class UserCalendarComponent {
       
       this.speakerAvalabilityService.getUserCalendar(parseInt( this.user.id)).subscribe((response) => {
         this.appointments = response;
-        console.log('Disponibilité:', this.appointments);
+       // console.log('Disponibilité:', this.appointments);
       },
         (error) => {
-          console.error('Error fetching disponibility details', error);
+          console.error('Error fetching disponibility details');
 
         })
-      console.log(this.user)
     } else {
       // Gérer le cas où `storedUserString` est `null`, par exemple, en affichant un message d'erreur
       console.error('No user token found in localStorage');
@@ -117,10 +117,8 @@ export class UserCalendarComponent {
     window.location.href = '/participants';
   }
   declineAvailability(id:any){
-      console.log(id)
       this.speakerAvalabilityService.updateAvailability(id).subscribe(
         (data)=>{
-          console.log(data)
           window.location.href = '/calandar';
 
         }

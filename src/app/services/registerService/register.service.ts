@@ -42,4 +42,8 @@ export class RegisterService {
 
     return this.http.post<any>(url, body,{ responseType: 'json' });
   }
+
+  updatePassword(data: {email:string; oldPassword: string; newPassword: string }): Observable<any> {
+    return this.http.post(`${environment.apiUrl}?action=updateMypass`, data,{ responseType: 'json' });
+  }
 }

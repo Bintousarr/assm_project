@@ -45,6 +45,7 @@ export class HomeUserComponent {
     { label: 'home-user.appointment-management', route: '/dashboard/gestion-rv', icon: 'fas fa-database' },
     { label: 'home-user.calendar-management', route: 'calandar', icon: 'fas fa-calendar-check' },
     { label: 'home-user.download', route: 'download', icon: 'fa fa-arrow-circle-down' },
+    { label: 'home-user.pass', route: '/updatePass', icon: 'fa fa-user' },
     // { label: 'home-user.logout', route: 'logout', icon: 'fas fa-sign-out-alt' },
   ];
 
@@ -52,12 +53,11 @@ export class HomeUserComponent {
 
   }
   ngOnInit(): void {
-    this.translate.setDefaultLang('fr');
     this.userService.getIntervenants().subscribe(
       (data:User[]) => {
         this.intervenants = data.filter(user => user.role === 'Intervenant'&& user.id!=this.user.id);
     
-        console.log('Intervenants:', this.intervenants);
+       // console.log('Intervenants:', this.intervenants);
         //this.intervenants = data;
         
         //console.log('Intervenants:', this.intervenants);
@@ -71,7 +71,7 @@ export class HomeUserComponent {
     if (storedUserString) {
       // Convertir la chaîne JSON en objet JavaScript uniquement si elle n'est pas `null`
       this.user = JSON.parse(storedUserString);
-      console.log(this.user)
+      //console.log(this.user)
     } else {
       // Gérer le cas où `storedUserString` est `null`, par exemple, en affichant un message d'erreur
       console.error('No user token found in localStorage');

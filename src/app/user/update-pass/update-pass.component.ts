@@ -4,23 +4,26 @@ import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
 import { SpeakerAvalabilityService } from '../../services/speaker-avalability.service'
 import { ApppointmentService } from '../../services/apppointment.service'
-import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { FormBuilder, ReactiveFormsModule, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DateFormatPipe } from '../../date-format.pipe';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { RegisterService } from '../../services/registerService/register.service';
+import { QuoteMdpComponent } from '../../quote-mdp/quote-mdp.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-update-pass',
   standalone: true,
-  imports: [CommonModule, FormsModule, DateFormatPipe, TranslateModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, TranslateModule,MatDialogModule],
   templateUrl: './update-pass.component.html',
   styleUrl: './update-pass.component.scss'
 })
 export class UpdatePassComponent {
+  passwordForm: FormGroup;
   intervenant: any;
   storedUser: any;
   disponibilities: any;
+  notMacth=false;
   idintervenant: number = 0;
   appointment = {
     speaker_id: 0,
@@ -66,11 +69,20 @@ export class UpdatePassComponent {
 
   translate: TranslateService = inject(TranslateService)
 
-  constructor(private route: ActivatedRoute, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService, private router: Router, private apppointmentService: ApppointmentService) { }
+  constructor(private dialog: MatDialog,private fb: FormBuilder, private route: ActivatedRoute, private registerService: RegisterService, private userService: UserService, private speakerAvalabilityService: SpeakerAvalabilityService, private router: Router, private apppointmentService: ApppointmentService) {
+    this.passwordForm = this.fb.group({
+      oldPassword: ['', Validators.required],
+      newPassword: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['', Validators.required]
+    });
+  }
 
   ngOnInit(): void {
-
-    this.translate.setDefaultLang('fr');
+    this.passwordForm = this.fb.group({
+      oldPassword: ['', Validators.required],
+      newPassword: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['', Validators.required]
+    });
     // Récupérer la chaîne JSON depuis le localStorage
     const storedUserString = localStorage.getItem('userToken');
     if (storedUserString) {
@@ -80,7 +92,7 @@ export class UpdatePassComponent {
       // Gérer le cas où `storedUserString` est `null`, par exemple, en affichant un message d'erreur
       console.error('No user token found in localStorage');
     }
-    
+
   }
 
 
@@ -88,7 +100,7 @@ export class UpdatePassComponent {
     this.translate.use(lang);
   }
 
-  
+
 
   logout() {
     // Vider le token du localStorage
@@ -135,4 +147,65 @@ export class UpdatePassComponent {
   toggleSidebar(): void {
     this.isCollapsed = !this.isCollapsed;
   }
+
+  onUpdatePassword(): void {
+    if (this.passwordForm.invalid) {
+      return;
+    }
+
+    const { oldPassword, newPassword, confirmPassword } = this.passwordForm.value;
+    const passReset = {
+      "email": this.storedUser.email,
+      "oldPassword": oldPassword,
+      "newPassword": newPassword
+    }
+
+    if (newPassword !== confirmPassword) {
+      this.notMacth=true;
+      return;
+    } else {
+      this.registerService.updatePassword(passReset).subscribe(response => {
+        //window.location.href = '/homeuser';
+        console.log(response)
+        if (this.translate.currentLang == "en") {
+          this.openDialog(response.message, true); // Affiche le popup d'erreur
+         // console.log("rrrrr")
+  
+        }else{
+          this.openDialog(response.fr, true); // Affiche le popup d'erreur
+  
+        }
+
+      }, (error) => {
+        console.log(error)
+        //this.openDialog(error.fr, false); // Affiche le popup d'erreur
+         //window.location.href = '/homeuser';
+         if (this.translate.currentLang == "en") {
+          this.openDialog(error.message, true); // Affiche le popup d'erreur
+         // console.log("rrrrr")
+  
+        }else{
+          this.openDialog(error.fr, true); // Affiche le popup d'erreur
+  
+        }
+
+      })
+
+    }
+    // this.userService.updatePassword({ oldPassword, newPassword }).subscribe(
+    //   (response) => {
+    //     alert('Mot de passe mis à jour avec succès !');
+    //     this.passwordForm.reset();
+    //   },
+    //   (error) => {
+    //     alert('Erreur lors de la mise à jour du mot de passe : ' + error.message);
+    //   }
+    // );
+  }
+
+   openDialog(message: string, isSuccess: boolean): void {
+      this.dialog.open(QuoteMdpComponent, {
+        data: { message: message, isSuccess: isSuccess }
+      });
+    }
 }

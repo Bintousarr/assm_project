@@ -27,6 +27,7 @@ export class UserAppointmentsComponent implements OnInit {
     { label: 'home-user.appointment-management', route: '/dashboard/gestion-rv', icon: 'fas fa-database' },
     { label: 'home-user.calendar-management', route: 'calandar', icon: 'fas fa-calendar-check' },
     { label: 'home-user.download', route: 'download', icon: 'fa fa-arrow-circle-down' },
+    { label: 'home-user.pass', route: '/updatePass', icon: 'fa fa-user' },
     // { label: 'home-user.logout', route: 'logout', icon: 'fas fa-sign-out-alt' },
   ];
   constructor(private appointmentService: ApppointmentService, private router:Router,) {}
@@ -48,10 +49,10 @@ export class UserAppointmentsComponent implements OnInit {
       this.appointmentService.getAppointmentsByUser(this.storedUser.id).subscribe(
         (data) => {
           this.appointments = data;
-          console.log('User appointments:', this.appointments);
+         // console.log('User appointments:', this.appointments);
         },
         (error) => {
-          console.error('Error fetching user appointments', error);
+          console.error('Error fetching user appointments',);
         }
       );
     }
@@ -90,7 +91,6 @@ export class UserAppointmentsComponent implements OnInit {
   }
   downloadPdf() {
     const userId = '123'; // ID de l'utilisateur
-    console.log(this.storedUser)
     this.appointmentService.downloadCalendar(this.storedUser.id);
   }
 

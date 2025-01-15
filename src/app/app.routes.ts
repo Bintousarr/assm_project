@@ -203,6 +203,7 @@ export const routes: Routes = [
   },  {
     path: 'updatePass', loadComponent: () =>
       import('../app/user/update-pass/update-pass.component').then(m => m.UpdatePassComponent),
+    canActivate: [authGuard]  // Protection de la route
 
   },
   
