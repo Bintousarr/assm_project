@@ -202,8 +202,10 @@
       "t2": "Invalid email address.",
       "titre3": "Password",
       "titre4": "Login",
-      "registerText": "Don't have an account?",
-      "registerLink": "Click here to register"
+      "registerText": "Don't have an account ?",
+      "passText": "Forgot your password ?",
+      "registerLink": "Click here to register",
+      "resetLink": "Click here to reset"
     },
     "card-block": {
       "titre1": "Call us on ",
@@ -791,5 +793,11 @@
   "SILVER-PACK": "SILVER",
   "GOLD-PACK": "GOLD",
   "PLATINIUM": "PLATINIUM",
-  "HEADLINE SPONSOR": "HEADLINE SPONSOR"
+  "HEADLINE SPONSOR": "HEADLINE SPONSOR",
+  "pass":"PASSWORD",
+
+  "PASSWORD": "FORGET PASSWORD",
+  "reset":"Send",
+  "pass_text": "Enter your e-mail address to reset your password"
+
 }

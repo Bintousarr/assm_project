@@ -141,19 +141,27 @@ export const routes: Routes = [
   },
   {
     path: 'admin', loadComponent: () =>
-      import('./web/admin/admin.component').then((c) => c.AdminComponent)
+      import('./web/admin/admin.component').then((c) => c.AdminComponent),
+    canActivate: [authGuard]  // Protection de la route
+
   },
   {
     path: 'admin/gestion-user', loadComponent: () =>
-      import('./web/admin/gestion-user/gestion-user.component').then((c) => c.GestionUserComponent)
+      import('./web/admin/gestion-user/gestion-user.component').then((c) => c.GestionUserComponent),
+    canActivate: [authGuard]  // Protection de la route
+
   },
   {
     path: 'admin/gestion-jour', loadComponent: () =>
-      import('./web/admin/gestion-jour/gestion-jour.component').then((c) => c.GestionJourComponent)
+      import('./web/admin/gestion-jour/gestion-jour.component').then((c) => c.GestionJourComponent),
+    canActivate: [authGuard]  // Protection de la route
+
   },
   {
     path: 'admin/gestion-horaire', loadComponent: () =>
-      import('./web/admin/gestion-horaire/gestion-horaire.component').then((c) => c.GestionHoraireComponent)
+      import('./web/admin/gestion-horaire/gestion-horaire.component').then((c) => c.GestionHoraireComponent),
+   canActivate: [authGuard]  // Protection de la route
+
   },
   {
     path: 'homeuser', loadComponent: () =>
@@ -188,6 +196,12 @@ export const routes: Routes = [
     canActivate: [authGuard]  // Protection de la route
 
   },
+  {
+    path: 'resetpass', loadComponent: () =>
+      import('../app/mpd-oublier/mpd-oublier.component').then(m => m.MpdOublierComponent),
+
+  },
+  
   {
     path: '**', redirectTo: 'banner', pathMatch: 'full'
 

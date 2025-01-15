@@ -203,7 +203,9 @@
       "titre3": "Mot de passe",
       "titre4": "Se connecter",
       "registerText": "Vous n'avez pas de compte ?",
-      "registerLink": "Cliquez ici pour vous inscrire"
+      "passText": "Mot de pass oublier ?",
+      "registerLink": "Cliquez ici pour vous inscrire",
+      "resetLink": "Cliquez ici"
     },
     "card-block": {
       "titre1": "Appelez au ",
@@ -791,5 +793,9 @@
   "SILVER-PACK": "ARGENT",
   "GOLD-PACk": "GOLD",
   "PLATINIUM": "PLATINIUM",
-  "HEADLINE SPONSOR": "SPONSOR OFFICIEL"
+  "HEADLINE SPONSOR": "SPONSOR OFFICIEL",
+  "pass":"MOT DE PASSE",
+  "PASSWORD":"MOT DE PASSE OUBLIER",
+  "reset":"Envoyé",
+  "pass_text": "renseigné votre mail pour renitialler votre mot de pass"
 }
