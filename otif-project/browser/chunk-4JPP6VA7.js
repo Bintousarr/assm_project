@@ -1,1 +1,0 @@
-import{$a as o,_ as i,ab as a,qb as r,zb as s}from"./chunk-PZVZLHCQ.js";import"./chunk-ODN5LVDJ.js";var m=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=i({type:e,selectors:[["app-tidiane"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,d){n&1&&(o(0,"p"),r(1,"tidiane works!"),a())}});let t=e;return t})();export{m as TidianeComponent};
