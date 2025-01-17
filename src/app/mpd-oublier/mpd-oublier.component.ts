@@ -15,7 +15,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './mpd-oublier.component.scss'
 })
 export class MpdOublierComponent {
-loginForm: FormGroup;
+  loginForm: FormGroup;
 
   translate: TranslateService = inject(TranslateService)
 
@@ -47,42 +47,29 @@ loginForm: FormGroup;
   onReset() {
     if (this.loginForm.valid) {
       const email = this.loginForm.get('email')?.value;
-      this.registerService.resetPassword(email).subscribe(
-        response => {
-          if (response.user) { // Vérifie si l'objet 'user' est présent dans la réponse
-            console.log('User login successfully', response);
-            const userString = JSON.stringify(response.user);
-            localStorage.setItem('userToken', userString);
-          
 
-            window.location.href = '/login';
-          } else {
-             console.error('test', response);
-            // this.openDialog(response.message, false);
-            if (this.translate.currentLang == "en") {
-              this.openDialog(response.en, false); // Affiche le popup d'erreur
-             // console.log("rrrrr")
-  
-            }else{
-              this.openDialog(response.fr, false); // Affiche le popup d'erreur
-  
-            }
-  
-          }
-        },
-        error => {
-          console.error('Error login user', error);
-          if (this.translate.currentLang == "en") {
+      if (this.translate.currentLang == 'en') {
+        this.registerService.resetPassword(email).subscribe(
+          response => {
+            this.openDialog(response.en, false); // Affiche le popup d'erreur
+          },
+          error => {
             this.openDialog(error.error.en, false); // Affiche le popup d'erreur
-           // console.log("rrrrr")
-
-          }else{
-            this.openDialog(error.error.fr, false); // Affiche le popup d'erreur
-
           }
-          //this.openDialog(error.error.message, false); // Affiche le popup d'erreur
-        }
-      );
+        );
+      } else {
+        this.registerService.regenerePassword(email).subscribe(
+          response => {
+            this.openDialog(response.fr, false); // Affiche le popup d'erreur
+          },
+          error => {
+
+            this.openDialog(error.error.fr, false); // Affiche le popup d'erreur
+          }
+        );
+
+      }
+
     }
   }
   openDialog(message: string, isSuccess: boolean): void {

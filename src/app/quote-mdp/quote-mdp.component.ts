@@ -30,7 +30,6 @@ export class QuoteMdpComponent {
   }
   ngOnInit(){
     this.isSuccess = this.data.isSuccess;
-    console.log(this.isSuccess)
 
   }
 

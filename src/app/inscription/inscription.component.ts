@@ -181,8 +181,6 @@ export class InscriptionComponent {
 
   translateText(lang: string) {
     this.translate.use(lang);
-    
-    console.log("dsssdddddsssss")
 
   }
 

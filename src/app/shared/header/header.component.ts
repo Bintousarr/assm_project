@@ -24,7 +24,7 @@ export class HeaderComponent {
   isLoggedIn: boolean = false;
   isDropdownOpen = false; 
   currentLanguage = 'EN'; 
-  currentFlag = '../../../assets/ru.png' ; 
+  currentFlag = '../../../assets/drapeau_uk.jpg' ; 
 
   isMenuOpen: boolean = false; // Variable pour contrôler l'ouverture du menu mobile
   openSubMenus: Set<string> = new Set();
@@ -78,9 +78,7 @@ export class HeaderComponent {
   ngOnInit() {
     this.translate.setDefaultLang('en');
     this.authService.isLoggedIn.subscribe(loggedIn => {
-      console.log("lelog:",loggedIn)
       this.isLoggedIn = loggedIn;
-      console.log("ishh", this.isLoggedIn)
     });
   }
    toggleDropdown2(): void {
@@ -95,7 +93,7 @@ export class HeaderComponent {
     } else if (language === 'en') {
       this.currentLanguage = 'EN';
       this.translateText('en')
-      this.currentFlag = '../../../assets/ru.png';
+      this.currentFlag = '../../../assets/drapeau_uk.jpg';
     }
     this.isDropdownOpen = false; // Close dropdown after selection
   }
