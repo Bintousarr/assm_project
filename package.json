@@ -26,7 +26,6 @@
     "animate.css": "^4.1.1",
     "date-fns": "^3.0.2-rc.1",
     "file-saver": "^2.0.5",
-    "git-filter-repo": "^0.0.30",
     "jquery": "^3.7.1",
     "jspdf": "^2.5.2",
     "jspdf-autotable": "^3.8.4",
