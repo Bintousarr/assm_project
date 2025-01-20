@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { authGuard } from './auth.guard';
 export const routes: Routes = [
   {
-    path: '',
+    path: '/',
     loadComponent: () =>
       import('./banner/banner.component').then((x) => x.BannerComponent),
     children: [

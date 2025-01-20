@@ -4,8 +4,8 @@
 /dist
 /tmp
 /out-tsc
-/bazel-out
-/otif-project
+/bazel-output
+
 # Node
 /node_modules
 npm-debug.log
