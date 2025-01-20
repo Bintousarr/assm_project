@@ -1,0 +1,108 @@
+<div class="bg-red-900 font-poppins p-8">
+    <div class="flex ml-20 items-center space-x-6 font-poppins ">
+      <img  src="../../../assets/diawara.jpg"  class="w-60 h-60 rounded-full object-cover"/>
+      <div>
+        <h1 class="text-white text-4xl font-bold">ADAMA DIAWARA</h1>
+        <p class="text-white text-lg">Ministre de l’Enseignement Supérieur et de la Recherche scientifique</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-8 text-justify ml-20 font-poppins">
+    <div class="flex items-center">
+
+      <p class="text-gray-700 text-lg">
+        Il est chargé de superviser les politiques liées à l'éducation supérieure à la recherche
+         scientifique, <br> et au développement des institutions académiques dans le pays. 
+         Son rôle inclut également la <br> promotion de la recherche et l'amélioration de la qualité de
+         l'enseignement supérieur en Côte d'Ivoire.
+    </p>
+    <div class=" py-6 ml-40  w-80">
+      <img src="../../../../assets/Logo_du_MESRS.png" alt="">
+    </div>
+    </div>
+   
+    <hr class="my-2 border-gray-300 mt-10" />
+    <h2 class="text-xl font-bold mb-4 font-poppins ">Jour d'intervention</h2>
+    
+    <div class="flex items-center space-x-8">
+      <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="bg-customBlue text-white px-6 py-3 flex items-center">
+          <div>
+            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold">Jour 2 </h3>
+            <p class="ml-auto text-lg">03, Déc-2024</p>
+          </div>
+        </div>
+        
+        <div class="px-6 py-4">
+          <span class="block text-xl font-bold mb-2">10:00 - 12:00</span>
+          <span class="text-black text-xl">Discours</span>
+        </div>
+      </div>
+    
+      <div class="w-full max-w-7xl mt-4 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="bg-customBlue text-white px-6 py-3 flex items-center">
+          <div>
+            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 14v4m-4-8h8M3 8v12a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold">Jour 5 </h3>
+            <p class="ml-auto text-lg">05, Déc-2024</p>
+          </div>
+        </div>
+        
+        <div class="px-6 py-4">
+          <span class="block text-xl font-bold mb-2">10:00 - 12:00</span>
+          <span class="text-black text-xl">Discours</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="max-w-full mx-auto bg-gray-100 mt-10 p-4 shadow-lg rounded-lg">
+        <div class="flex items-center p-4">
+            <img src="../../../../../assets/adama-diawara.jpg" alt="Krys Logo" class="w-12 h-12 mr-4">
+            <div>
+                <h2 class="text-lg font-semibold text-blue-700">Entretien avec Mr DIAWARA</h2>
+                <p class="text-gray-500"><i class="fas fa-map-marker-alt"></i> Abidjan, Côte d'Ivoire</p>
+            </div>
+        </div>
+    
+        <div class="px-4 pb-4">
+            <button class="w-full bg-blue-500 text-white py-3 text-lg rounded hover:bg-blue-700">PRENDRE RENDEZ-VOUS</button>
+        </div>
+    
+        <div class="px-4 pb-4 border-t">
+            <div class="grid grid-cols-6 gap-4 text-center">
+                <div *ngFor="let day of days" class="text-gray-500">
+                    {{ day.name }}<br>
+                    <span class="font-semibold">{{ day.date }}</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-6 gap-4 text-center mt-2">
+                <div *ngFor="let slots of timeSlots">
+                    <div *ngFor="let slot of slots" class="mt-2">
+                        <button *ngIf="slot !== '—'" (click)="openModal(slot)" class="bg-blue-100 text-blue-700 py-2 px-4 text-lg rounded hover:bg-blue-300">{{ slot }}</button>
+                        <div *ngIf="slot === '—'" class="text-gray-400 py-2 mt-1 text-lg">—</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div *ngIf="isModalOpen" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96 relative z-10">
+            <h2 class="text-xl font-semibold mb-4">Renseignez le motif</h2>
+            <textarea [(ngModel)]="motif" rows="4" class="w-full p-3 border border-gray-300 rounded-md mb-4 text-lg" placeholder="Entrez votre motif ici..."></textarea>
+            <div class="flex justify-end space-x-4">
+                <button (click)="submitMotif()" class="bg-blue-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-600">Valider</button>
+                <button (click)="closeModal()" class="bg-red-500 text-white px-6 py-3 rounded-md text-lg hover:bg-red-600">Annuler</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+  

@@ -1,0 +1,93 @@
+<!-- <div class="flex flex-col font-poppins ml-4">
+    <h2 class="text-4xl font-poppins font-bold mb-4 ml-20">
+      {{'accueil.orateur-block.titre1' | translate}}
+      <span class="block w-12 h-1 bg-red-800 mt-1"></span>
+    </h2>
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="card">
+          <img src="../../assets/page_20_img_1.png" class="rounded-full w-32 h-32 mx-auto" alt="Dr TIDIANE OUATTARA">
+          <h3 class="text-xl font-semibold mt-4 text-center"> {{'accueil.orateur-block.titre2' | translate}}
+          </h3>
+          <p class="text-center text-red-700 "> {{'accueil.orateur-block.desc1' | translate}}</p>
+          <a href="https://www.linkedin.com/in/tidianeouattara/?originalSubdomain=et" class="text-sky-800 mt-4 inline-block text-center w-full hover:text-blue-600">
+            <i class="fab fa-linkedin fa-2x"></i> 
+          </a>
+        </div>
+        
+        <div class="card">
+          <img src="../../assets/Sheri.jpeg" class="rounded-full w-32 h-32 mx-auto" alt="Prof SHERIF SEDGY">
+          <h3 class="text-xl font-semibold mt-4 text-center">{{'accueil.orateur-block.titre3' | translate}}
+          </h3>
+          <p class="text-center text-red-700 ">{{'accueil.orateur-block.desc2' | translate}}</p>
+          <a href="https://www.linkedin.com/in/sherif-sedky-1215b2/?originalSubdomain=eg" class="text-sky-800 mt-4 inline-block text-center w-full hover:text-blue-600">
+            <i class="fab fa-linkedin fa-2x"></i> 
+          </a>
+        </div>
+        
+        <div class="card">
+          <img src="../../assets/adama-diawara.jpg" class="rounded-full w-32 h-32 mx-auto" alt="Mr ADAMA DIAWARA">
+          <h3 class="text-xl font-semibold mt-4 text-center"> {{'accueil.orateur-block.titre4' | translate}}
+          </h3>
+          <p class="text-center text-red-700 ">{{'accueil.orateur-block.desc3' | translate}}</p>
+          <a href="https://www.linkedin.com/in/adama-diawara-3b06b61aa/?originalSubdomain=ci" class="text-sky-800 mt-4 inline-block text-center w-full">
+            <i class="fab fa-linkedin fa-2x"></i> 
+          </a>
+        </div>
+        
+        <div class="card">
+          <img src="../../assets/image_irie_fabrice.png" class="rounded-full w-32 h-32 mx-auto" alt="Mr IRIE Bi FABRICE">
+          <h3 class="text-xl font-semibold mt-4 text-center">{{'accueil.orateur-block.titre5' | translate}}
+          </h3>
+          <p class="text-center text-red-700 ">{{'accueil.orateur-block.desc4' | translate}}</p>
+          <a href="https://www.linkedin.com/in/irie-fabrice-irie-bi-47b13315/" class="text-sky-800 mt-4 inline-block text-center w-full">
+            <i class="fab fa-linkedin fa-2x"></i> 
+          </a>
+        </div>
+        
+      </div>
+    </div> 
+</div> -->
+<div class=" mt-10 py-10 bg-gray-100 ">
+  <div class=" text-center">
+    <h2 class="text-5xl font-bold mb-4">
+      {{'accueil.orateur-block.titre1' | translate}}
+      <!-- <span class="block w-12 h-1 bg-red-800 mt-1"></span> -->
+    </h2>
+  </div>
+  
+  <div class="flex flex-wrap items-center justify-center">
+    <div
+      *ngFor="let speaker of speakers"
+      class="border w-full sm:w-1/4 border-blue-400 rounded-xl p-4 flex flex-col items-center shadow-md">
+      <!-- Image -->
+      <div class="relative">
+        <img
+          [src]="speaker.image"
+          alt="Photo of {{ speaker.name }}"
+          class="w-full h-full rounded-lg object-cover" />
+      </div>
+  
+      <!-- Name -->
+      <h3 class="mt-4 text-center text-lg font-semibold text-black">{{ speaker.name | translate }}</h3>
+  
+      <div class="flex justify-between items-center w-full">
+        <!-- Organization -->
+        <p class="w-full h-20 text-center justify-center text-xl text-gray-500 mt-1 leading-relaxed">
+          {{ speaker.organization | translate }}
+        </p>
+      </div>
+  
+      <!-- LinkedIn Icon -->
+      <a 
+        [href]="speaker.linkedin"
+        target="_blank"
+        class="w-full flex justify-end text-end">
+        <img src="../../assets/linkdnbleu.png" alt="LinkedIn Icon"
+          class="w-8 h-8">
+      </a>
+    </div>
+  </div>
+  
+  
+</div>

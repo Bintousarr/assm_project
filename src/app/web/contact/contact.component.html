@@ -1,0 +1,126 @@
+<div class="font-poppins">
+    <div class="relative w-full ">
+        <div class="relative h-[500px] lg:h-[600px]">
+            <img 
+                src="../../../assets/businessman-pressing-phone-button.jpg" 
+                class="absolute inset-0 w-full h-full object-cover" 
+                style="object-position: center 20%;" alt="Hero Image">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center gap-6 p-8 bg-black/50">
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-white drop-shadow-lg animate-fade-in-up">
+                    {{ 'accueil.navbar-block.titre4' | translate }}
+                </h2>
+                <p class="text-xl lg:text-xl text-white font-bold max-w-xl">
+                    {{ 'accueil.navbar-block.titre5' | translate }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-screen-xl mx-auto p-6 font-poppins">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-bold inline-block relative">
+                <i class="fas fa-contact text-red-800"></i>
+                {{ 'contact.contact-block.titre' | translate }}
+                <span class="block h-1 w-16 bg-red-800 mt-2 mx-auto rounded"></span>
+            </h2>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8 mt-20">
+            <div class="lg:w-1/2 space-y-6">
+                <div class="bg-red-800 p-8 text-white rounded-lg shadow-lg space-y-6">
+                    <div class="flex items-center gap-6 border-b pb-6">
+                        <span class="h-16 w-32 md:w-16  flex items-center justify-center border-dashed border rounded-full">
+                            <img src="../../../assets/call-msg.svg" alt="Phone Icon w-8">
+                        </span>
+                        <div>
+                            <span class="block font-light">
+                                {{ 'contact.contact-block.telephone' | translate }}
+                            </span><br>
+                            <h4 class="text-xl font-semibold ">
+                                <a class="">+225 27 22 476 459 / +225 07 07 34 79 04</a><br><br>
+                                <a class="">+33 9 84 57 15 36 / +336 78 55 85 45</a><br>
+                               
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 border-b pb-6">
+                        <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
+                            <img src="../../../assets/mail.svg" alt="Mail Icon">
+                        </span>
+                        <div>
+                            <span class="block font-light">
+                                {{ 'contact.contact-block.mail' | translate }}
+                            </span>
+                            <h4 class="text-xl font-semibold">
+                                <a href="/contact" class="hover:underline">contact&#64;mass.ci</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+                        <span class="h-16 w-16 flex items-center justify-center border-dashed border rounded-full">
+                            <img src="../../../assets/location-dot-circle.svg" alt="Location Icon">
+                        </span>
+                        <div>
+                            <span class="block font-light">
+                                {{ 'login-block.card-block.titre3' | translate }}
+                            </span>
+                            <h4 class="text-xl font-semibold">
+                                {{ 'contact.contact-block.lieu' | translate }}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative rounded-lg shadow-lg">
+                    <img src="../../../assets/businessman-pressing-phone-button.jpg"  class="w-full rounded-lg">
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 bg-gray-400 p-8 rounded-lg  shadow-lg">
+                <h2 class="text-3xl font-bold mb-4">
+                    {{ 'contact.contact-block.titre1' | translate }}?
+                </h2>
+                <p class="text-lg mb-8">
+                    {{ 'contact.contact-block.titre2' | translate }}
+                </p>
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="grid gap-6">
+                    <div>
+                        <label for="et-contact-name" class="font-medium text-lg">
+                            {{ 'contact.contact-block.titre3' | translate }}*
+                        </label>
+                        <input 
+                            type="text" name="name" id="et-contact-name" placeholder="Your Name"
+                            class="w-full h-12 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-800"
+                            ngModel required>
+                    </div>
+                    <div>
+                        <label for="et-contact-email" class="font-medium  text-lg">
+                            {{ 'contact.contact-block.titre4' | translate }}*
+                        </label>
+                        <input 
+                            type="email" name="email" id="et-contact-email" placeholder="Your Email"
+                            class="w-full h-12 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-800"
+                            ngModel required>
+                    </div>
+                    <div>
+                        <label for="et-contact-message" class="font-medium text-lg">
+                            {{ 'contact.contact-block.titre5' | translate }}*
+                        </label>
+                        <textarea 
+                            name="message" id="et-contact-message" placeholder="Your Message"
+                            class="w-full h-32 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-800"
+                            ngModel required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full h-12 bg-red-800 text-white font-medium text-lg rounded-md shadow hover:bg-red-700 transition">
+                            {{ 'contact.contact-block.titre6' | translate }}
+                            <i class="fa-solid fa-arrow-right-long pl-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

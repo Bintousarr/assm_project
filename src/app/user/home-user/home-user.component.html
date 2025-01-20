@@ -1,0 +1,80 @@
+<!-- home-user.component.html -->
+<div class="flex font-poppins">
+    <!-- Aside Section -->
+    <aside
+        [ngClass]="{'w-96 space-y-8': !isCollapsed, 'w-22 space-y-24': isCollapsed}"
+        class="bg-red-900 text-white rounded-xl flex flex-col py-4 mx-2 mt-4 mb-4 ">
+        <!-- Bouton pour basculer le menu -->
+        <div class="px-4">
+            <button (click)="toggleSidebar()" class="focus:outline-none pl-2">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Section d'accueil avec message personnalisé -->
+        <div [ngClass]="{'block': !isCollapsed, 'hidden': isCollapsed}"
+            class="p-4 text-center">
+            <p class="text-xl font-semibold">
+                {{ 'home-user.hello' | translate }} {{ user.first_name }} {{
+                user.last_name }}
+            </p>
+        </div>
+
+        <!-- Liste des éléments du menu -->
+        <ul class="flex-1 ml-4 space-y-4 overflow-auto">
+            <li *ngFor="let item of menuItems"
+                [ngClass]="{'bg-red-700': activeRoute === item.route, 'text-white': activeRoute === item.route, 'w-82': !isCollapsed, 'w-11': isCollapsed}"
+                (click)="item.route === 'download' ? downloadPdf() : goto(item.route)"
+                class="h-12 p-2 flex items-center cursor-pointer hover:bg-red-700">
+                <!-- Icône du menu -->
+                <i [class]="item.icon" class="mr-2"></i>
+                <!-- Label du menu (visible uniquement si le menu n'est pas réduit) -->
+                <span class="text-xs sm:text-lg font-light"
+                    *ngIf="!isCollapsed">{{ item.label | translate }}</span>
+            </li>
+        </ul>
+
+        <!-- Bouton de déconnexion -->
+        <button
+            class="bg-white text-red-900 p-2 rounded mt-auto mx-4 flex items-center justify-center"
+            (click)="logout()">
+            <ng-container *ngIf="!isCollapsed">
+                <i class="fas fa-sign-out-alt mr-2"></i> {{ 'home-user.logout' |
+                translate }}
+            </ng-container>
+            <ng-container *ngIf="isCollapsed">
+                <i class="fas fa-sign-out-alt"></i>
+            </ng-container>
+        </button>
+    </aside>
+
+    <!-- Main Content Section -->
+    <main class="w-4/5 px-6 flex-grow overflow-auto h-full min-w-[300px]">
+        <h1 class="text-3xl font-bold text-red-900 mb-8">{{
+            'home-user.speaker-list' | translate }}</h1>
+
+        <div class="font-poppins bg-gray-200 rounded-lg p-6">
+            <div>
+                <h2 class="text-3xl ml-12 font-bold mb-4">
+                    {{ 'home-user.meet-our-speakers' | translate }}
+                    <span class="block w-12 h-1 bg-red-800 mt-1"></span>
+                </h2>
+            </div>
+            <div class="w-full flex flex-wrap justify-center">
+                <div *ngFor="let intervenant of intervenants"
+                    class="relative bg-white rounded-lg shadow-lg w-72 m-4 text-center overflow-hidden group transition-transform transform hover:scale-105"
+                    (click)="goToDetail(intervenant.id)">
+                    <img class="w-full h-80 object-cover"
+                        [src]="'../../../assets/' + intervenant.image">
+                    <div class="p-4">
+                        <button class="text-lg font-semibold">{{
+                            intervenant.first_name }} {{ intervenant.last_name
+                            }}</button>
+                        <p class="text-lg text-red-900 font-bold mb-4">{{
+                            intervenant.poste }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

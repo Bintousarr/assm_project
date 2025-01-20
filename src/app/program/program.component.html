@@ -1,0 +1,156 @@
+<div class="font-poppins">
+  <div class="relative w-full">
+    <div class="relative h-48 md:h-80 overflow-hidden lg:h-[600px]">
+      <img src="../../assets/Agenda.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2" alt="...">
+      <div class="absolute inset-0 flex flex-col items-center justify-center gap-10 p-5 lg:p-20 lg:px-96">
+      </div>
+    </div>
+  </div>
+
+  <div class="pt-10 pb-14 bg-red-800 w-full flex flex-col lg:flex-row gap-5 md:gap-10 justify-center px-5">
+    <div class="w-full text-center">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl text-red-800 font-bold mb-6">
+        {{ 'EVENTS_TITLE' | translate }}
+      </h2>
+      <div class="flex flex-col lg:flex-row items-start lg:justify-between">
+        <!-- Énumérations -->
+        <div class="w-full flex justify-center text-white">
+          <ul class="text-base sm:text-lg font-light space-y-4">
+            <li class="flex items-start gap-3 text-2xl">
+              <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
+              <p class="ml-6">{{ 'EVENT_PRESS_CONFERENCE' | translate }}</p>
+            </li>
+            <li class="flex items-start gap-3 text-2xl">
+              <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
+              <p class="ml-6">{{ 'EVENT_OPENING_CEREMONY' | translate }}</p>
+            </li>
+            <li class="flex items-start gap-3 text-2xl">
+              <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
+              <p class="ml-6">{{ 'EVENT_EXHIBITIONS' | translate }}</p>
+            </li>
+            <li class="flex items-start gap-3 text-2xl">
+              <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
+              <p class="ml-6">{{ 'EVENT_LIVE_DEMO' | translate }}</p>
+            </li>
+            <li class="flex items-start gap-3 text-2xl">
+              <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
+              <p class="ml-6">{{ 'EVENT_GALA_DINNER' | translate }}</p>
+            </li>
+            <li class="flex items-start gap-3 text-2xl">
+              <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
+              <p class="ml-6">{{ 'EVENT_SHOWCASE' | translate }}</p>
+            </li>
+            <li class="flex items-start gap-3 text-2xl">
+              <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
+              <p class="ml-6">{{ 'EVENT_B2B_MEETINGS' | translate }}</p>
+            </li>
+            <li class="flex items-start gap-3 text-2xl">
+              <span class="rounded-full bg-customBlue w-4 h-4 mt-1"></span>
+              <p class="ml-6">{{ 'EVENT_CLOSING_CEREMONY' | translate }}</p>
+            </li>
+          </ul>
+        </div>
+
+         <!-- Bouton -->
+        <div class="w-full h-full sm:h-80 flex md:justify-center md:items-center mt-6 lg:mt-0">
+          <button (click)="downloadFile()" class="w-full lg:w-auto h-14 lg:h-16 bg-customBlue text-white text-base sm:text-xl font-bold rounded-lg shadow-lg hover:bg-red-900 flex justify-center items-center p-4">
+            <i class="fas fa-download mr-2"></i> {{ 'DOWNLOAD_BROCHURE' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="flex flex-col gap-10 mt-10 px-5 sm:px-10 lg:px-20">
+    <div class="flex flex-col lg:flex-row items-center gap-10 p-8">
+      <div class="lg:w-1/3">
+        <img src="../../assets/realty-free-image-uhd-wallpaper_1023251-95937.jpeg" alt="Expositions et démonstrations" class="rounded-lg shadow-lg w-full h-[350px] object-cover">
+      </div>
+      <div class="lg:w-2/3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-800 mb-6">
+          {{ 'EXHIBITIONS_DEMOS_TITLE' | translate }}
+        </h2>
+        <ul class="list-disc pl-5 space-y-4 text-base sm:text-lg text-gray-700">
+          <li>
+            <span class="font-semibold text-2xl">{{ 'EXHIBITIONS' | translate }}:</span>
+            <p class="text-xl">{{ 'EXHIBITIONS_DESC' | translate }}</p>
+          </li>
+          <li>
+            <span class="font-semibold text-2xl">{{ 'DEMOS' | translate }}:</span>
+            <p class="text-xl">{{ 'DEMOS_DESC' | translate }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-10 p-8">
+      <div class="lg:w-1/3">
+        <img src="../../assets/african-business-male-people-shaking-hands.jpg" alt="Rencontres B2B" class="rounded-lg shadow-lg w-full h-[350px] object-cover">
+      </div>
+      <div class="lg:w-2/3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-800 mb-6">
+          {{ 'B2B_MEETINGS_TITLE' | translate }}
+        </h2>
+        <ul class="list-disc pl-5 space-y-4 text-base sm:text-lg text-gray-700">
+          <li>
+            <span class="font-semibold text-2xl">{{ 'B2B_SESSIONS' | translate }}:</span>
+            <p class="text-xl">{{ 'B2B_SESSIONS_DESC' | translate }}</p>
+          </li>
+          <li>
+            <span class="font-semibold text-2xl">{{ 'CUSTOM_MEETINGS' | translate }}:</span>
+            <p class="text-xl">{{ 'CUSTOM_MEETINGS_DESC' | translate }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="flex flex-col lg:flex-row items-center gap-10 p-8">
+      <div class="lg:w-1/3">
+        <img src="../../assets/waist-up-portrait-multi-ethnic-group-friends-holding-champagne-glasses-smiling-camera-while-enjoying-elegant-party.jpg" alt="Cérémonie des Awards" class="rounded-lg shadow-lg w-full h-[350px] object-cover">
+      </div>
+      <div class="lg:w-2/3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-800 mb-6">
+          {{ 'AWARDS_CEREMONY_TITLE' | translate }}
+        </h2>
+        <ul class="list-disc pl-5 space-y-4 text-base sm:text-lg text-gray-700">
+          <li>
+            <span class="font-semibold text-2xl">{{ 'AWARDS_RECOGNITION' | translate }}:</span>
+            <p class="text-xl">{{ 'AWARDS_RECOGNITION_DESC' | translate }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-10 p-8">
+      <div class="lg:w-1/3">
+        <img src="../../assets/post_thumbnail-0fc5c8b716c28617285aad5ffc5b3bb4.jpeg" alt="Événement Jeunes" class="rounded-lg shadow-lg w-full h-[350px] object-cover">
+      </div>
+      <div class="lg:w-2/3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-red-800 mb-6">
+          {{ 'YOUTH_EVENTS_TITLE' | translate }}
+        </h2>
+        <ul class="list-disc pl-5 space-y-4 text-base sm:text-lg text-gray-700">
+          <li>
+            <span class="font-semibold text-2xl">{{ 'EDUCATIONAL_WORKSHOPS' | translate }}:</span>
+            <p class="text-xl">{{ 'EDUCATIONAL_WORKSHOPS_DESC' | translate }}</p>
+          </li>
+          <li>
+            <span class="font-semibold text-2xl">{{ 'MENTORSHIP_SESSIONS' | translate }}:</span>
+            <p class="text-xl">{{ 'MENTORSHIP_SESSIONS_DESC' | translate }}</p>
+          </li>
+          <li>
+            <span class="font-semibold text-2xl">{{ 'FUN_ACTIVITIES' | translate }}:</span>
+            <p class="text-xl">{{ 'FUN_ACTIVITIES_DESC' | translate }}</p>
+          </li>
+          <li>
+            <span class="font-semibold text-2xl">{{ 'TOURISM_ACTIVITIES' | translate }}:</span>
+            <p class="text-xl">{{ 'TOURISM_ACTIVITIES_DESC' | translate }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+</div>

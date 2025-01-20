@@ -1,0 +1,38 @@
+video {
+    border: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  video:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+  
+  button {
+    box-shadow: 0px 10px 15px -3px rgba(59, 130, 246, 0.4);
+  }
+  
+  button:hover {
+    box-shadow: 0px 15px 20px -3px rgba(59, 130, 246, 0.6);
+  }
+  
+
+.new-font{
+    
+font-family: 'Cabinet Grotesk';
+
+font-style : 'normal';
+
+
+
+}
+.text_bande{
+    font-family: 'Cabinet Grotesk';
+
+font-style : 'normal';
+
+}
+
+.new_back{
+    background: rgba(26, 151, 201, 0.1);
+}

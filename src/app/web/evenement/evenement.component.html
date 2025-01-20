@@ -1,0 +1,206 @@
+
+
+<div class=" font-poppins flex flex-col items-center justify-center text-center p-8 md:p-16 mb-60  bg-gray-100">
+  <div class="mass-title text-center lg:text-left lg:mb-0">
+      <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
+        <ng-container *ngIf="translate.currentLang === 'fr'; else englishTitle">
+          <!-- <span class="text-red-700">M</span><span class="text-black">ASS</span> - -->
+          <span class="text-newRED ">M</span><span class="text-black">arché</span>
+          <span class="text-newRED "> A</span><span class="text-black">fricain</span>
+          <span class="text-black"> d</span><span class="text-black">es</span>
+          <span class="text-newRED"> S</span><span class="text-black">olutions</span>
+          <span class="text-newRED"> S</span><span class="text-black">patiales</span>
+        </ng-container>
+    
+        <ng-template #englishTitle>
+          <!-- <span class="text-newRED">M</span><span class="text-black">ASS</span> - -->
+          <span class="text-newRED">A</span><span class="text-black">frican</span>
+          <span class="text-newRED"> S</span><span class="text-black">pace</span>
+          <span class="text-newRED"> S</span><span class="text-black">olutions</span>
+          <span class="text-newRED"> M</span><span class="text-black">arket</span>
+
+        </ng-template>
+      </h1>
+  </div>
+
+  <div class="max-w-6xl py-10 px-6 text-gray-800 mx-auto">
+      <h1 class="text-center text-2xl md:text-3xl font-bold mb-4">
+        {{ 'WELCOME_MASS_TITLE' | translate }}
+      </h1>
+      <div class="text-lg">
+        <p class="text-center text-gray-700 mb-4" [innerHTML]="'WELCOME_MASS_DATE_HTML' | translate"></p>
+
+        
+        <p class="mb-4">
+          {{ 'WELCOME_MASS_PROGRAM' | translate }}
+        </p>
+    
+        <ul class="mt-4 space-y-4 md:ml-32">
+          <li class="flex items-start gap-3">
+            <span class="rounded-full bg-red-800 w-3 h-3 mt-2"></span>
+            <p class="text-lg sm:text-xl">{{ 'PROGRAM_PRESS_CONFERENCE' | translate }}</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="rounded-full bg-red-800 w-3 h-3 mt-2"></span>
+            <p class="text-lg sm:text-xl">{{ 'EVENT_OPENING_CEREMONY' | translate }}</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="rounded-full bg-red-800 w-3 h-3 mt-2"></span>
+            <p class="text-lg sm:text-xl">{{ 'PROGRAM_EXHIBITIONS' | translate }}</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="rounded-full bg-red-800 w-3 h-3 mt-2"></span>
+            <p class="text-lg sm:text-xl">{{ 'PROGRAM_B2B_MEETINGS' | translate }}</p>
+          </li>
+        </ul>
+    
+        <p class="mt-6 text-gray-700">
+          {{ 'WELCOME_MASS_INVITATION' | translate }}
+        </p>
+      </div>
+  </div>
+    
+    
+  
+</div>
+
+<div class="bg-white  block sm:flex items-center justify-center pb-4 mt-2 mb-24 md:mt-0">
+  <!-- <div class="text-center">
+    <h1 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-8">
+      {{ 'CRUCIAL_EVENT' | translate }}<br>  {{ 'CRUCIAL_EVENT1' | translate }}<br>  {{ 'CRUCIAL_EVENT2' | translate }}
+    </h1>
+
+    
+  </div> -->
+
+  <div class="bg-[#030d2e] rounded-xl shadow-xl -mt-32 transform transition-all duration-500 hover:scale-105 md:p-10 max-w-6xl w-full">
+    <div class="w-full h-[500px] rounded-lg overflow-hidden mb-8 relative"> 
+      <div class="top-0 left-0 right-0 bottom-0 bg-black bg-opacity-20 z-10"></div>
+      <video *ngIf="translate.currentLang === 'en'" class="w-[1200px] h-full rounded-lg" controls loop>
+        <source src="" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture de vidéo
+      </video>
+
+      <video *ngIf="translate.currentLang === 'fr'" class="w-[1200px] h-full rounded-lg" controls loop>
+        <source src="" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture de vidéo
+      </video>
+    </div>
+    
+    <p class="text-center text-white text-2xl leading-relaxed">
+      {{ 'DESC1' | translate }}<br>
+      {{ 'DESC2' | translate }}   
+     </p>
+  </div>
+  
+</div>
+
+
+<div class="bg-gray-200 py-2 font-poppins ">
+  <div class="container mx-auto flex flex-wrap justify-around items-center gap-8">
+    <!-- Participants -->
+    <div class="flex items-center space-x-4">
+      <img src="../../../assets/participants.png" alt="Participants" class="w-12 h-12 md:w-14 md:h-14">
+      <div>
+        <p class="text-black font-extrabold text-xl md:text-2xl mt-2"> + {{ counter }}</p>
+        <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc1' | translate }}</p>
+      </div>
+    </div>
+    
+
+    <!-- Jours de sommet -->
+    <div class="flex items-center space-x-4">
+      <img src="../../../assets/calandar.png" alt="Calendrier" class="w-12 h-12 md:w-14 md:h-14">
+      <div>
+        <p class="text-black font-extrabold text-xl md:text-2xl mt-2">3</p>
+        <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc3' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <img src="../../../assets/newAtelier.png" alt="Calendrier" class="w-12 h-12 md:w-14 md:h-14">
+      <div>
+        <p class="text-black font-extrabold text-xl md:text-2xl mt-2">+ {{ counterTwo }}</p>
+        <p class="text-gray-700 text-sm md:text-base">{{ 'accueil.compte-rebours.desc' | translate }}</p>
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+<div class="py-20 pt-18 px-2 bg-white font-poppins">
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-blue-200  h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
+      <h2 class="text-3xl mb-8 md:text-4xl font-bold text-black" >{{'accueil.navbar-block.desc' | translate}}</h2>
+      <p class="mt-4 text-lg md:text-xl text-black">
+        {{'exposant.position' | translate}}    
+
+      </p>
+      <button routerLink="/exposant" class="mt-6 bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+        {{'exposant.reservez' | translate}}    
+        </button>
+    </div> 
+
+    <div class="bg-blue-200  h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
+      <h2 class="text-3xl mb-8 md:text-4xl font-bold text-black">{{ 'accueil.sponsor-block.t' | translate }}</h2>
+      <p class="mt-4 text-lg md:text-xl text-black">
+        {{ 'accueil.sponsor-block.t1' | translate }}
+      </p>
+      <button (click)="gotoSponsor()" class="mt-6 bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+        {{ 'accueil.sponsor-block.t3' | translate }}
+      </button>
+    </div>
+<!-- 
+    <div class="bg-blue-200  h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
+      <h2 class="text-3xl mb-8 md:text-4xl font-bold text-black">{{ 'accueil.sponsor-block.t0' | translate }}</h2>
+      <p class="mt-4 text-lg md:text-xl text-black">
+        {{ 'accueil.sponsor-block.t01' | translate }}
+      </p>
+      <button  class="mt-6 bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+        {{ 'accueil.sponsor-block.t02' | translate }}
+      </button>
+    </div> -->
+
+    <div class="bg-blue-200  h-auto p-6 md:p-10 rounded-lg shadow-md flex flex-col justify-between">
+      <h2 class="text-3xl mb-8 md:text-4xl font-bold text-black">{{'accueil.sponsor-block.t7' | translate}}</h2>
+      <p class="mt-4 text-lg md:text-xl text-black">
+        {{'accueil.sponsor-block.t4' | translate}}
+      </p> 
+      <div class="mt-6 flex flex-wrap gap-4">
+        <button (click)="gotoVisiteur()"  class="border border-red-800 text-red-500 py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-500 hover:text-white">
+          {{'accueil.sponsor-block.t5' | translate}}
+        </button>
+        <button (click)="gotoVisiteur()"  class="bg-red-800 text-white py-2 px-4 rounded-full text-base md:text-xl hover:bg-red-600">
+          {{'accueil.sponsor-block.t6' | translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex flex-wrap justify-center font-poppins gap-8 p-2  bg-gray-200 text-center rounded-lg">
+  <div class="text-red-600">
+    <img src="../../../assets/loader.png" class="h-20" alt="Loader">
+  </div>
+  <div class="flex items-center gap-6">
+    <div>
+      <p class="text-3xl font-bold">{{ days }}</p>
+      <p class="text-sm text-gray-600">{{ 'accueil.compte-rebours.titre2' | translate }}</p>
+    </div>
+    <div>
+      <p class="text-3xl font-bold">{{ hours }}</p>
+      <p class="text-sm text-gray-600">{{ 'accueil.compte-rebours.titre3' | translate }}</p>
+    </div>
+    <div>
+      <p class="text-3xl font-bold">{{ minutes }}</p>
+      <p class="text-sm text-gray-600">{{ 'accueil.compte-rebours.titre4' | translate }}</p>
+    </div>
+    <div>
+      <p class="text-3xl font-bold">{{ seconds }}</p>
+      <p class="text-sm text-gray-600">{{ 'accueil.compte-rebours.titre5' | translate }}</p>
+    </div>
+  </div>
+</div>
+

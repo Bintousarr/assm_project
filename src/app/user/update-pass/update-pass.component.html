@@ -1,0 +1,114 @@
+<!-- home-user.component.html -->
+<div class="flex font-poppins ">
+    <!-- Aside Section -->
+    <aside
+        [ngClass]="{'w-96 space-y-8': !isCollapsed, 'w-22 space-y-24': isCollapsed}"
+        class="bg-red-900 text-white rounded-xl flex flex-col py-4 h-full mx-2 mt-4 mb-4 ">
+        <!-- Bouton pour basculer le menu -->
+        <div class="px-4">
+            <button (click)="toggleSidebar()" class="focus:outline-none pl-2">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Section d'accueil avec message personnalisé -->
+        <div [ngClass]="{'block': !isCollapsed, 'hidden': isCollapsed}"
+            class="p-4 text-center">
+            <p class="text-xl font-semibold">
+                {{ 'home-user.hello' | translate }} {{storedUser.first_name}}
+                {{storedUser.last_name}}
+            </p>
+        </div>
+
+        <!-- Liste des éléments du menu -->
+        <ul class="flex-1 ml-4 space-y-4 overflow-auto">
+            <li *ngFor="let item of menuItems"
+                [ngClass]="{'bg-red-700': activeRoute === item.route, 'text-white': activeRoute === item.route, 'w-82': !isCollapsed, 'w-11': isCollapsed}"
+                (click)="item.route === 'download' ? downloadPdf() : goto(item.route)"
+                class="h-12 p-2 flex items-center cursor-pointer hover:bg-red-700">
+                <!-- Icône du menu -->
+                <i [class]="item.icon" class="mr-2"></i>
+                <!-- Label du menu (visible uniquement si le menu n'est pas réduit) -->
+                <span class="text-xs sm:text-lg font-light"
+                    *ngIf="!isCollapsed">{{ item.label | translate }}</span>
+            </li>
+        </ul>
+
+        <!-- Bouton de déconnexion -->
+        <button
+            class="bg-white text-red-900 p-2 rounded mt-auto mx-4 flex items-center justify-center"
+            (click)="logout()">
+            <ng-container *ngIf="!isCollapsed">
+                <i class="fas fa-sign-out-alt mr-2"></i> {{ 'home-user.logout' |
+                translate }}
+            </ng-container>
+            <ng-container *ngIf="isCollapsed">
+                <i class="fas fa-sign-out-alt"></i>
+            </ng-container>
+        </button>
+    </aside>
+
+    <!-- Main Content Section -->
+    <main class="w-full lg:w-4/5 px-6 flex-grow h-full min-w-[60rem]">
+        <h1 class="text-3xl font-bold text-red-900 mb-8">{{
+            'request-pass' | translate }}</h1>
+        <div class="w-full max-w-md mx-auto mt-10 font-poppins">
+            <form [formGroup]="passwordForm" (ngSubmit)="onUpdatePassword()" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <h2 class="text-3xl font-semibold text-red-900 mb-6">{{ 'update-password.title' | translate }}</h2>
+        
+                <!-- Ancien mot de passe -->
+                <div class="mb-4">
+                <h2 *ngIf="notMacth" class="text-sm font-semibold text-red-600 mb-6">{{ 'update-password.notmatch' | translate }}</h2>
+
+                    <label for="oldPassword" class="block text-sm font-bold mb-2">{{ 'update-password.old_password' | translate }}</label>
+                    <input
+                        id="oldPassword"
+                        type="password"
+                        formControlName="oldPassword"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="{{ 'update-password.old_password_placeholder' | translate }}">
+                    <div *ngIf="passwordForm.get('oldPassword')?.touched && passwordForm.get('oldPassword')?.invalid" class="text-red-500 text-xs">
+                        {{ 'update-password.error.old_password_required' | translate }}
+                    </div>
+                </div>
+        
+                <!-- Nouveau mot de passe -->
+                <div class="mb-4">
+                    <label for="newPassword" class="block text-sm font-bold mb-2">{{ 'update-password.new_password' | translate }}</label>
+                    <input
+                        id="newPassword"
+                        type="password"
+                        formControlName="newPassword"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="{{ 'update-password.new_password_placeholder' | translate }}">
+                    <div *ngIf="passwordForm.get('newPassword')?.touched && passwordForm.get('newPassword')?.invalid" class="text-red-500 text-xs">
+                        {{ 'update-password.error.new_password_required' | translate }}
+                    </div>
+                </div>
+        
+                <!-- Confirmation du nouveau mot de passe -->
+                <div class="mb-4">
+                    <label for="confirmPassword" class="block text-sm font-bold mb-2">{{ 'update-password.confirm_password' | translate }}</label>
+                    <input
+                        id="confirmPassword"
+                        type="password"
+                        formControlName="confirmPassword"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="{{ 'update-password.confirm_password_placeholder' | translate }}">
+                    <div *ngIf="passwordForm.get('confirmPassword')?.touched && passwordForm.get('confirmPassword')?.invalid" class="text-red-500 text-xs">
+                        {{ 'update-password.error.confirm_password_required' | translate }}
+                    </div>
+                </div>
+        
+                <!-- Bouton de mise à jour -->
+                <div class="flex items-center justify-center">
+                    <button type="submit"
+                        class="bg-red-900 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        [disabled]="passwordForm.invalid">
+                        {{ 'update-password.update_button' | translate }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>

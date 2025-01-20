@@ -1,0 +1,201 @@
+<section class="relative h-[680px] overflow-hidden font-poppins"> 
+  <div class="relative w-full h-full">
+    <div class="absolute inset-0 flex transition-transform duration-700 ease-linear" [style.transform]="'translateX(-' + currentSlide * 100 + '%)'">
+      <div class="flex flex-col md:flex-row items-center w-full bg-[#fbf6e5] h-[680px] flex-shrink-0">
+        <div class="w-full md:w-1/4 p-8 md:p-16 text-center md:text-left space-y-4">
+          <h1 class="text-2xl md:text-4xl lg:text-5xl ml-10 font-bold text-black leading-relaxed">
+            <span class="block">{{ 'SLIDE_ONE_TITLE_LINE1' | translate }}</span>
+            <span class="text-red-900">{{ 'SLIDE_ONE_TITLE_LINE2' | translate }}</span>
+          </h1>
+        </div>
+        <div class="w-full flex justify-center md:justify-end h-full">
+          <!-- Image pour le français -->
+          <img
+            *ngIf="currentLang === 'fr'"
+            src="../../assets/Cover-SLIDE.jpg"
+            alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+            class="object-cover w-full h-full"
+          />
+          <!-- Image pour l'anglais -->
+          <img
+            *ngIf="currentLang === 'en'"
+            src="../../assets/Cover-SLIDESHOW.jpg"
+            alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+      
+
+      <div class="flex flex-col md:flex-row items-center w-full  bg-[#fbf6e5] h-[680px] flex-shrink-0">
+        <div class="w-full md:w-1/4 p-8 md:p-8 text-center md:text-left space-y-4">
+          <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold  leading-relaxed">
+            <span class="block">{{ 'SLIDE_TWO_TITLE_LINE1' | translate }}</span>
+            <span class="text-customBlue pt-5 mb-1">{{ 'SLIDE_TWO_TITLE_LINE2' | translate }}</span>
+          </h1>
+          <p class="text-red-800 text-3xl font-bold leading-relaxed">
+            {{ 'SLIDE_TWO_SUBTITLE' | translate }} 
+          </p>
+        </div>
+        <div class="w-full flex justify-center md:justify-end h-full">
+          <!-- Image pour le français -->
+          <img
+            *ngIf="currentLang === 'fr'"
+            src="../../assets/Cover-SLIDESOW-2.jpg"
+            alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+            class="object-cover w-full h-full"
+          />
+          <!-- Image pour l'anglais -->
+          <img
+            *ngIf="currentLang === 'en'"
+            src="../../assets/Cover-SLIDESOW-A1.jpg"
+            alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center w-full  bg-[#fbf6e5] h-[680px] flex-shrink-0">
+        <div class="w-full md:w-1/4 p-8 md:p-16 text-center  md:text-left space-y-4">
+          <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold  leading-relaxed">
+            <span class="block"> {{ 'SLIDE_THREE_TITLE_LINE1' | translate }} </span>
+            <span class="text-red-900"> {{ 'SLIDE_THREE_TITLE_LINE2' | translate }} </span>
+          </h1>
+        </div>
+        <div class="w-full  flex justify-center md:justify-end h-full">
+         <!-- Image pour le français -->
+         <img
+         *ngIf="currentLang === 'fr'"
+         src="../../assets/Cover-SLIDE1fr.png"
+         alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+         class="object-cover w-full h-full"
+       />
+       <!-- Image pour l'anglais -->
+       <img
+         *ngIf="currentLang === 'en'"
+         src="../../assets/Cover-SLIDE1.png"
+         alt="{{ 'SLIDE_ONE_ALT' | translate }}"
+         class="object-cover w-full h-full"
+       />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+<app-evenement></app-evenement>
+<!-- <app-sponsor></app-sponsor> -->
+
+<div class="flex flex-col justify-center items-center mt-10 mb-10 space-y-6">
+  
+  
+  <div class="flex flex-col justify-center items-center mt-10 mb-10 space-y-6">
+    <div class="relative">
+      <img src="../../assets/ministre_transition.jpg" 
+           class="w-80 h-80 object-cover rounded-full" 
+           alt="Image Parrain">
+      <div class="absolute inset-0"></div>
+    </div>
+  
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-2">
+        {{ 'p1' | translate }}
+      </h2>
+      <p class="text-2xl text-gray-600 leading-relaxed">
+        {{ 'p2' | translate }} <br>
+      </p>
+    </div>
+  
+    <img src="../../assets/CI.jpg"  class="rounded-xl  w-48 shadow-md" 
+         alt="Belhoul Image">
+  </div>
+  
+</div>
+<app-keynote-speaker></app-keynote-speaker>
+
+<div class="bg-[#fbf6e5] font-poppins p-8 rounded-xl shadow-xl overflow-hidden mt-8 ">
+  <h1 class="text-6xl text-center font-extrabold mb-10 tracking-wide">
+    {{ 'INVITED_COUNTRIES' | translate }} 
+  </h1> 
+  <div class="flex flex-col md:flex-row items-center gap-10">
+    <div class="flex-shrink-0">
+      <img src="../../assets/belhoul.png" class="rounded-2xl  w-[300px]  max-w-2xl  shadow-lg transition-transform duration-300 hover:scale-105" alt="Dubai Image">
+    </div>
+
+    <div class="text-center md:text-left mt-6 md:w-4/5">
+      <p class="text-4xl text-red-800 font-bold mb-4">
+        {{ 'DUBAI_TITLE' | translate }}
+      </p>
+      <p class="text-2xl leading-relaxed mb-4">
+        {{ 'REPRESENTED_BY' | translate }}
+        <span class="font-semibold">
+          {{ 'BELHOUL_TITLE' | translate }}
+        </span>, {{ 'BELHOUL_ROLE' | translate }}
+      </p>
+      <img src="../../assets/drapeau.png" class="rounded-xl w-48 mx-auto md:mx-0 mb-6 " alt="Belhoul Image">
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center mt-10 gap-10">
+    <div class="flex-shrink-0">
+      <img src="../../assets/AgenceSouthaAFrica.jpg" class="rounded-2xl w-[300px]  max-w-2xl shadow-lg transition-transform duration-300 hover:scale-105" alt="Dubai Image">
+    </div>
+
+    <div class="text-center md:text-left mt-6 md:w-4/5">
+      <p class="text-4xl text-red-800 font-bold mb-4">
+        {{ 'AS' | translate }}
+      </p>
+      <p class="text-2xl leading-relaxed mb-6">
+        {{ 'REPRESENTED_BY' | translate }}
+        <span class="font-semibold">
+          {{ 'AS0' | translate }}
+        </span>, {{ 'AS1' | translate }}
+      </p>
+      <img src="../../assets/Flag_of_South_Africa.png" class="rounded-xl w-48 mx-auto md:mx-0 mb-6 " alt="Belhoul Image">
+    </div>
+  </div>
+</div>
+<div class="bg-gray-100  text-cabinet mt-8 p-4 ">
+  <h1 class="text-5xl text-center  font-bold mt-5">
+    {{ 'accueil.sponsor-block.titre1' | translate }}
+  </h1>
+  <div class="flex flex-wrap items-center justify-center gap-8 p-4">
+    <a href="https://au.int/en/node/35984"  target="_blank" rel="noopener noreferrer">
+      <img *ngIf="currentLang === 'en'" src="../../assets/AU.png"  class="w-full sm:w-48 lg:w-60" alt="Union Africaine" />
+    </a>
+    <a href="https://au.int/fr/accueil" target="_blank" rel="noopener noreferrer">
+      <img *ngIf="currentLang === 'fr'" src="../../assets/UA.jpg" class="w-full sm:w-48 lg:w-60" alt="African Union" />
+    </a>
+    <a href="https://tourismecotedivoire.ci/" target="_blank" rel="noopener noreferrer">
+      <img src="assets/tourisme_ci_logo.png" class="w-full sm:w-48 lg:w-60" alt="Tourisme Côte d'Ivoire" />
+    </a>
+    <a href="https://www.flycorsair.com/fr-ci" target="_blank" rel="noopener noreferrer">
+      <img src="../../assets/corsair.png" class="w-full sm:w-48 lg:w-60" alt="Tourisme Côte d'Ivoire" />
+    </a>
+  </div>
+
+</div>
+
+
+<button
+  id="scrollToTop"
+  class="fixed bottom-6 right-6 w-12 h-12 bg-blue-900 text-white rounded-full shadow-md flex items-center justify-center transition-opacity opacity-0 pointer-events-none"
+  aria-label="Scroll to top"
+>
+  ▲
+</button>
+
+   
+<!-- <div class="bg-white text-cabinet ">
+  <div class="flex flex-col  items-center mt-10 p-2 justify-center ">
+      <h1 class="font-bold text-5xl">Newsletter  </h1>
+      <p class="text-2xl mt-4 text-center" >{{'accueil.event-details.p4' |  translate}}
+      </p>
+          <input class="border border-gray-400 b-4 p-2 px-6 mt-4 rounded-xl w-full max-w-lg "  type="text" placeholder="exemple@gmail.com">
+          <button routerLink="/register" class="bg-blue-500 p-2 px-6 mt-4 rounded-xl w-full text-white max-w-lg text-lg">{{'accueil.event-details.p5' |  translate}}</button>
+  </div>
+</div> -->
+
+

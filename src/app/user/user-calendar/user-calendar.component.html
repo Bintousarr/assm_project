@@ -1,0 +1,96 @@
+<div class="flex font-poppins">
+    <!-- Aside Section -->
+    <!-- Aside Section -->
+    <aside
+        [ngClass]="{'w-96 space-y-8': !isCollapsed, 'w-22 space-y-24': isCollapsed}"
+        class="bg-red-900 text-white rounded-xl flex flex-col py-4 mx-2 mt-4 mb-4 ">
+        <!-- Bouton pour basculer le menu -->
+        <div class="px-4">
+            <button (click)="toggleSidebar()" class="focus:outline-none pl-2">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Section d'accueil avec message personnalisé -->
+        <div [ngClass]="{'block': !isCollapsed, 'hidden': isCollapsed}"
+            class="p-4 text-center">
+            <p class="text-xl font-semibold">
+                {{ 'home-user.hello' | translate }} {{ user.first_name }} {{
+                user.last_name }}
+            </p>
+        </div>
+
+        <!-- Liste des éléments du menu -->
+        <ul class="flex-1 ml-4 space-y-4 overflow-auto">
+            <li *ngFor="let item of menuItems"
+                [ngClass]="{'bg-red-700': activeRoute === item.route, 'text-white': activeRoute === item.route, 'w-82': !isCollapsed, 'w-11': isCollapsed}"
+                (click)="item.route === 'download' ? downloadPdf() : goto(item.route)"
+                class="h-12 p-2 flex items-center cursor-pointer hover:bg-red-700">
+                <!-- Icône du menu -->
+                <i [class]="item.icon" class="mr-2"></i>
+                <!-- Label du menu (visible uniquement si le menu n'est pas réduit) -->
+                <span class="text-xs sm:text-lg font-light"
+                    *ngIf="!isCollapsed">{{ item.label | translate }}</span>
+            </li>
+        </ul>
+
+        <!-- Bouton de déconnexion -->
+        <button
+            class="bg-white text-red-900 p-2 rounded mt-auto mx-4 flex items-center justify-center"
+            (click)="logout()">
+            <ng-container *ngIf="!isCollapsed">
+                <i class="fas fa-sign-out-alt mr-2"></i> {{ 'home-user.logout' |
+                translate }}
+            </ng-container>
+            <ng-container *ngIf="isCollapsed">
+                <i class="fas fa-sign-out-alt"></i>
+            </ng-container>
+        </button>
+    </aside>
+    <!-- Main Content Section -->
+    <main class="w-4/5 px-6 flex-grow">
+        <h1 class="text-3xl font-bold text-red-900 mb-8">MES RENDEZ-VOUS</h1>
+
+        <div class="container mx-auto p-8 bg-gray-200 rounded-lg shadow-lg">
+            <h2
+                class="text-3xl font-extrabold mb-8 text-center text-gray-800">Mes
+                Rendez-vous</h2>
+            <div class="overflow-x-auto">
+                <table
+                    class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                    <thead class="bg-red-800 text-white">
+                        <tr>
+                            <th
+                                class="py-3 px-4 text-center font-light">Date</th>
+                            <th
+                                class="py-3 px-4 text-center font-light">Horaire</th>
+                            <th
+                                class="py-3 px-4 text-center font-light">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let appointment of appointments"
+                            [ngClass]="{'bg-red-100 hover:bg-red-100': appointment.available ==  '0'}"
+                            class="hover:bg-gray-100">
+                            <td
+                                class="border px-4 py-4 text-center text-gray-700">{{
+                                appointment.date | dateFormat }}</td>
+                            <td
+                                class="border px-4 py-4 text-center text-gray-700">{{
+                                appointment.start_time }} - {{
+                                appointment.end_time }}</td>
+                            <td class="border px-4 py-4 text-center">
+                                <button
+                                    (click)="declineAvailability(appointment.availability_id)"
+                                    class="text-red-600 hover:text-red-900"
+                                    [disabled]="appointment.available == '0'">
+                                    <i class="fas fa-times-circle"></i> Décliner
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
