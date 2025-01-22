@@ -820,6 +820,11 @@
     "failure_message": "Failed to update the password. Please try again.",
     "notmatch": "Passwords are not compliant"
 
-  }
+  },
+  "paymentMode.label": "Payment Mode",
+    "paymentMode.options.carte": "Bank Card",
+    "paymentMode.options.virement": "Bank Transfer",
+    "paymentMode.options.cheque": "Cheque",
+    "text":" Please make your cheque payable to MASS OTIF"
 
 }

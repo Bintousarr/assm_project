@@ -50,56 +50,101 @@
             {{ total | currency:'USD':'symbol' }}
           </span>
         </div>
+        
+        <!-- Mode de Paiement -->
+      <div class="mb-8">
+        <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">
+          {{'paymentMode.label' | translate }}
+        </label>
 
-        <!-- Autres informations -->
-        <div class="mb-8">
-          <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">
-            {{ 'BUYER_NAME_LABEL' | translate }}
-          </label>
-          <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6">
-            <input type="text" formControlName="firstName" placeholder="{{ 'FIRST_NAME_PLACEHOLDER' | translate }}" class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
-            <input type="text" formControlName="lastName" placeholder="{{ 'LAST_NAME_PLACEHOLDER' | translate }}" class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
+        <div class="space-y-4">
+          <div>
+            <input type="radio" id="carte" name="paymentMode" value="carte" (change)="selectPaymentMode('carte')" />
+            <label for="carte" class="ml-4 text-lg ">{{'paymentMode.options.carte' | translate }}</label>
+          </div>
+
+          <div>
+            <input type="radio" id="virement" name="paymentMode" value="virement" (change)="selectPaymentMode('virement')" />
+            <label for="virement" class="ml-4  text-lg">{{'paymentMode.options.virement' | translate }}</label>
+          </div>
+
+          <div>
+            <input type="radio" id="cheque" name="paymentMode" value="cheque" (change)="selectPaymentMode('cheque')" />
+            <label for="cheque" class="ml-4 text-lg">{{'paymentMode.options.cheque' | translate }}</label>
           </div>
         </div>
 
+        <div class="mt-4">
+          <!-- Formulaire Carte Bancaire -->
+          <div *ngIf="paymentMode === 'carte'" class="mt-4">
+            <label for="numeroCarte">Numero Carte</label>
+            <input type="text" id="numeroCarte" formControlName="numeroCarte" placeholder="num" class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
+          </div>
+
+          <!-- Formulaire Virement -->
+          <div *ngIf="paymentMode === 'virement'" class="mt-4">
+            <!-- Inclus déjà les champs actuels : Nom, Email, etc. -->
+            <div class="mb-8">
+              <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">
+                {{ 'BUYER_NAME_LABEL' | translate }}
+              </label>
+              <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6">
+                <input type="text" formControlName="firstName" placeholder="{{ 'FIRST_NAME_PLACEHOLDER' | translate }}" class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
+                <input type="text" formControlName="lastName" placeholder="{{ 'LAST_NAME_PLACEHOLDER' | translate }}" class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
+              </div>
+            </div>
 
 
-        <!-- Nom de l'entreprise -->
-        <div class="mb-8">
-          <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">
-            {{ 'COMPANY_NAME_LABEL' | translate }}
-          </label>
-          <input
-            type="text"
-            formControlName="companyName"
-            placeholder="{{ 'COMPANY_NAME_PLACEHOLDER' | translate }}"
-            class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
+
+            <!-- Nom de l'entreprise -->
+            <div class="mb-8">
+              <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">
+                {{ 'COMPANY_NAME_LABEL' | translate }}
+              </label>
+              <input
+                type="text"
+                formControlName="companyName"
+                placeholder="{{ 'COMPANY_NAME_PLACEHOLDER' | translate }}"
+                class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
+            </div>
+          
+            <!-- Email -->
+            <div class="mb-8">
+              <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">
+                {{ 'BUYER_EMAIL_LABEL' | translate }}
+              </label>
+              <input
+                type="email"
+                formControlName="email"
+                placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}"
+                class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
+            </div>
+          
+            <!-- Pays -->
+            <div class="mb-8">
+              <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">
+                {{ 'BUYER_COUNTRY_LABEL' | translate }}
+              </label>
+              <select
+                formControlName="country"
+                class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300">
+                <option value="" disabled>{{ 'SELECT_COUNTRY_PLACEHOLDER' | translate }}</option>
+                <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+              </select>
+            </div>
+            <!-- Reprise des autres champs du virement existants -->
+          </div>
+
+          <!-- Message pour Chèque -->
+          <div *ngIf="paymentMode === 'cheque'" class="mt-4 text-gray-600">
+           {{'text' | translate }}
+          </div>
         </div>
-      
-        <!-- Email -->
-        <div class="mb-8">
-          <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">
-            {{ 'BUYER_EMAIL_LABEL' | translate }}
-          </label>
-          <input
-            type="email"
-            formControlName="email"
-            placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}"
-            class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300" />
-        </div>
-      
-        <!-- Pays -->
-        <div class="mb-8">
-          <label class="block text-lg lg:text-xl font-medium text-gray-800 mb-3">
-            {{ 'BUYER_COUNTRY_LABEL' | translate }}
-          </label>
-          <select
-            formControlName="country"
-            class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300">
-            <option value="" disabled>{{ 'SELECT_COUNTRY_PLACEHOLDER' | translate }}</option>
-            <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
-          </select>
-        </div>
+      </div>
+
+        
+        <!-- Autres informations -->
+       
         <div class="text-center mt-8">
           <button type="submit" class="w-full lg:w-auto bg-blue-600 text-white py-3 px-6 rounded-lg text-lg lg:text-xl hover:bg-blue-700 transition duration-300">
             {{ 'SUBMIT_BUTTON' | translate }}

@@ -48,10 +48,13 @@ export class InscriptionComponent {
     'Tonga', 'Trinité-et-Tobago', 'Tunisie', 'Turkménistan', 'Turquie', 'Tuvalu', 'Ukraine', 'Uruguay', 'Vanuatu', 'Vatican', 'Venezuela',
     'Viêt Nam', 'Yémen', 'Zambie', 'Zimbabwe'
   ];
+  paymentMode: string = '';
+
 
   constructor(private fb: FormBuilder, private route: ActivatedRoute, private http: HttpClient, private dialog: MatDialog) {
     this.paymentForm = this.fb.group({
       products: this.fb.array([]), // FormArray pour les produits avec quantité
+      numeroCarte: [''],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -178,7 +181,15 @@ export class InscriptionComponent {
       //   alert('Veuillez remplir tous les champs obligatoires.');
     }
   }
-
+  selectPaymentMode(mode: string): void {
+    this.paymentMode = mode;
+    if (mode === 'carte') {
+      this.paymentForm.get('numeroCarte')?.setValidators([Validators.required]);
+    } else {
+      this.paymentForm.get('numeroCarte')?.clearValidators();
+    }
+    this.paymentForm.get('numeroCarte')?.updateValueAndValidity();
+  }
   translateText(lang: string) {
     this.translate.use(lang);
 
