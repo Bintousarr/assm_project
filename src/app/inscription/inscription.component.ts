@@ -114,6 +114,7 @@ export class InscriptionComponent {
       return acc + (isSelected ? this.products[index].price * quantity : 0);
     }, 0);
   }
+  
 
   onSubmit(): void {
     //console.log('Current Language:', this.translate.currentLang);
