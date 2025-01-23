@@ -40,7 +40,9 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/slick-carousel/slick/slick.min.js"
+              "node_modules/slick-carousel/slick/slick.min.js",
+                "https://cdn.cinetpay.com/seamless/main.js"
+
             ]
           },
           "configurations": {

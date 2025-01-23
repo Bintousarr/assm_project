@@ -818,5 +818,10 @@
     "success_message": "Votre mot de passe a été mis à jour avec succès.",
     "failure_message": "La mise à jour du mot de passe a échoué. Veuillez réessayer.",
     "notmatch": "Les mots de passe ne sont pas conformes"
-  }
+  },
+  "paymentMode.label": "Mode de paiement",
+  "paymentMode.options.carte": "Carte bancaire",
+  "paymentMode.options.virement": "Virement",
+  "paymentMode.options.cheque": "Chèque",
+  "text":" Veuillez mettre votre chèque sous le nom de MASS OTIF"
 }
