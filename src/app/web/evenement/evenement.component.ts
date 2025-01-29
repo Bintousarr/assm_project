@@ -108,6 +108,11 @@ gotoVisiteur(){
 
 }
 
+gotoVisiteurPublic(){
+  window.location.href = '/grand-public';
+  
+}
+
 
 
 }

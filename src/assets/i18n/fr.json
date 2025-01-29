@@ -575,24 +575,29 @@
     "texte1": "OTIF présente sa première édition de l'événement du Spatial, le Marché Africain des Solutions Spatiales (MASS), qui aura lieu du ",
     "t": "06 au 08 Mai 2025.",
     "texte2": "Vous êtes passionnés par le Spatial ? Alors, c'est un événement à ne surtout pas rater !",
-    "texte3": "Participez au MASS pour rencontrer les acteurs clés de l'industrie spatiale, créer des alliances durables, renforcer vos compétences et découvrir les technologies qui façonneront l'avenir.",
+    "texte3": "Rejoignez cette dynamique et faites partie des acteurs qui façonnent l’avenir spatial du continent. Ne manquez pas cette chance d’innover et d’investir !",
     "reservation_titre": "Reservation & Paiement",
-    "reservation_1": "1. Accès illimité à la zone professionnelle",
-    "reservation_texte1": "Participez aux panels et conférences de haut niveau et échangez avec les leaders du secteur des ressources extractives et énergétiques. Profitez des espaces dédiés au networking et aux rencontres B to B pour établir des connexions stratégiques avec des décideurs du secteur.",
-    "reservation_2": "2. Accès aux espaces d’exposition",
-    "reservation_texte2": "Explorez les stands des entreprises locales et internationales qui présentent leurs solutions dans le secteur des mines, du pétrole et de l'énergie. Découvrez les dernières innovations technologiques et les tendances du marché.",
-    "reservation_3": "3. Inscription sur l’application du salon",
-    "reservation_texte3": "Un identifiant personnalisé vous sera fourni pour l'application du SIREXE, vous permettant de réserver vos rendez-vous avec les exposants et les partenaires, consulter le programme en temps réel et recevoir toutes les informations pratiques liées au salon.",
-    "reservation_4": "4. Invitation aux cérémonies officielles",
-    "reservation_texte4": "Assistez aux moments clés du salon tels que la cérémonie de lancement, la cérémonie de clôture et les side events organisés par nos partenaires et sponsors.",
-    "reservation_5": "5. Kit participant complet",
-    "reservation_texte5": "Recevez le swag bag officiel du salon contenant notamment un bloc-notes, un stylo, le magazine officiel du salon, le catalogue des exposants et un plan détaillé du site.",
+    "advantge":"Avantages",
+    "textadvantge":"Participer au marché des solutions spatiales offre de nombreux avantages pour vous professionnel, notamment :",
+
+    "reservation_1": "1. Opportunités de croissance et d'innovation",
+    "reservation_texte1": "Possibilité de développer des solutions basées sur le spatial (géolocalisation, observation de la Terre, télécommunications, etc.).",
+    "reservation_2": "2. Impact mondial et applications multisectorielles",
+    "reservation_texte2": "Utilisation des technologies spatiales pour divers secteurs (agriculture, climat, défense, transport, etc.).",
+    "reservation_texte22": "Contribution à la connectivité mondiale (Internet par satellite, communication dans les zones reculées).",
+    "reservation_3": "3. Accès au financement et aux partenariats stratégiques",
+    "reservation_texte3": "Possibilités de rencontrer des partenaires stratégiques (ESA, CNES, NASA, Union Européenne…).",
+    "reservation_texte32": "Collaboration avec des entreprises privées et des institutions de recherche.",
+    "reservation_4": "4. Avantage concurrentiel et reconnaissance",
+    "reservation_texte4": "Accès aux marchés internationaux et à de nouvelles opportunités commerciales.",
     "comment_reserver": "Comment réserver votre Stand?",
     "comment_texte": "La réservation de votre stand est simple et rapide :",
     "etape1": "cliquez sur le bouton ci-dessous",
     "etape2": "remplissez le formulaire",
     "etape3": "et réglez votre inscription par CB Visa, Virement Bancaire ou Wave.",
-    "bouton_reserver": "Passez votre réservation"
+    "bouton_reserver": "Passez votre réservation",
+    "sumury":"<p> En résumé, s’engager sur le marché des solutions spatiales permet d’accéder à un écosystème innovant, international et à fort impact, avec des opportunités de croissance importantes. Le marché est ouvert et GRATUIT. <a href=\"register\" class=\"text-blue-600\">Inscrivez-vous</a> et générer votre badge</p>."
+
   },
   "reservation": {
     "reservation": "RESERVATION",
@@ -823,5 +828,86 @@
   "paymentMode.options.carte": "Carte bancaire",
   "paymentMode.options.virement": "Virement",
   "paymentMode.options.cheque": "Chèque",
-  "text":" Veuillez mettre votre chèque sous le nom de MASS OTIF"
+  "text":" Veuillez mettre votre chèque sous le nom de MASS OTIF",
+  "PAYMENT_FORM": {
+    "TITLE": "Formulaire de Paiement",
+    "AMOUNT_LABEL": "Montant",
+    "AMOUNT_PLACEHOLDER": "Entrez le montant",
+    "CLIENT_NAME_LABEL": "Nom du Client",
+    "CLIENT_NAME_PLACEHOLDER": "Entrez votre nom",
+    "CLIENT_SURNAME_LABEL": "Prénom du Client",
+    "CLIENT_SURNAME_PLACEHOLDER": "Entrez votre prénom",
+    "CLIENT_EMAIL_LABEL": "Email du Client",
+    "CLIENT_EMAIL_PLACEHOLDER": "Entrez votre email",
+    "CLIENT_PHONE_LABEL": "Téléphone du Client",
+    "CLIENT_PHONE_PLACEHOLDER": "Entrez votre numéro de téléphone",
+    "CLIENT_ADDRESS_LABEL": "Adresse du Client",
+    "CLIENT_ADDRESS_PLACEHOLDER": "Entrez votre adresse",
+    "CLIENT_CITY_LABEL": "Ville",
+    "CLIENT_CITY_PLACEHOLDER": "Entrez votre ville",
+    "CLIENT_COUNTRY_LABEL": "Pays",
+    "SELECT_COUNTRY_PLACEHOLDER": "Sélectionnez votre pays",
+    "CLIENT_ZIP_LABEL": "Code Postal",
+    "CLIENT_ZIP_PLACEHOLDER": "Entrez votre code postal",
+    "SUBMIT_BUTTON": "Payer"
+  },
+  "pageTitle": "Inscription Visiteur",
+  "description": "Rejoignez-nous pour explorer l'avenir de l'Afrique à travers l'innovation spatiale ! Que vous soyez passionné par la technologie, entrepreneur, chercheur ou simplement curieux, ce marché est une opportunité unique de découvrir des solutions spatiales adaptées aux défis du continent.",
+  "freeEntry": "L'entrée est entièrement gratuite ! Ne manquez pas cette occasion unique !",
+  "eventInvitation": "Vous êtes passionnés par le Spatial ? Alors, c'est un événement à ne surtout pas rater !",
+  "eventNetworking": "Participez au MASS pour rencontrer les acteurs clés de l'industrie spatiale et découvrir les technologies de demain.",
+  "programSummary": "Pourquoi participer ?",
+  "resumpro":"<p>Ne manquez pas cette occasion de faire partie de la révolution spatiale africaine ! <a href=\"register\" class=\"text-blue-600\">Inscrivez-vous</a> dès maintenant !</p> ",
+  "sections": {
+    "technicalWorkshops": "1. Ateliers Techniques et Travaux de Recherche",
+    "technicalWorkshopsContent": "Le programme de cette première édition sera rythmé par des ateliers techniques, des retours d’expériences et des travaux de recherche visant à présenter et découvrir les dernières innovations dans le domaine spatial. Ces sessions permettront aux experts et passionnés d’échanger sur les défis et perspectives du secteur.",
+
+    "galaEvening": "2. Soirée de Gala et Récompenses",
+    "galaEveningContent": "Une soirée d’exception sera organisée pour honorer les figures émérites du secteur spatial. Ce sera une occasion unique de célébrer les contributions exceptionnelles et de reconnaître les réalisations des pionniers et leaders du domaine. La soirée inclura une remise de prix et des discours inspirants.",
+
+    "commercialExhibition": "3. Grande Exposition Commerciale",
+    "commercialExhibitionContent": "Un espace entièrement dédié aux entreprises et startups du secteur spatial sera mis en place. Ce sera l’opportunité pour ces dernières de présenter leurs produits, services et innovations aux visiteurs et investisseurs. Ce sera également un moment privilégié pour établir des partenariats stratégiques et découvrir les avancées technologiques du domaine.",
+
+    "conferencesPanels": "4. Conférences et Panels Techniques",
+    "conferencesPanelsContent": "Des conférences et panels interactifs seront animés par des experts et décideurs du secteur spatial. Ces sessions permettront d’aborder les tendances actuelles et futures, les défis liés à l'exploration spatiale, la recherche scientifique, ainsi que les nouvelles applications des technologies satellitaires et géospatiales.",
+
+    "handsOnWorkshops": "5. Ateliers et Formations Pratiques",
+    "handsOnWorkshopsContent": "Afin de permettre aux participants d'approfondir leurs connaissances et compétences, plusieurs formations pratiques et ateliers spécialisés seront organisés. Ces sessions incluront des démonstrations en direct, des formations sur l’utilisation des outils spatiaux, et des exercices immersifs.",
+
+    "networkingEvening": "6. Soirée de Réseautage",
+    "networkingEveningContent": "Une soirée de réseautage sera organisée pour permettre aux participants d’échanger dans un cadre convivial. Ce sera une occasion idéale pour rencontrer des experts, nouer des contacts professionnels et discuter de futures collaborations avec des entreprises et partenaires du secteur.",
+
+    "liveTechDemos": "7. Démonstrations Technologiques",
+    "liveTechDemosContent": "Les dernières innovations technologiques seront mises en avant lors de sessions de démonstrations interactives. Les visiteurs pourront découvrir les nouvelles avancées dans les domaines des satellites, de l'observation de la Terre, de la navigation spatiale et des applications géospatiales."
+  },
+
+  "section2":{
+    "participate1": "1. Découvrir des technologies innovantes",
+ "participate2":"2. Échanger avec des experts et des entrepreneurs",
+  "participate3":"3. Saisir des opportunités de collaboration et d’investissement"
+
+  },
+  "visitorForm": {
+    "title": "Visiteur",
+    "titlePro":"Visiteur Professionnel",
+    "subtitle": "Inscription",
+    "titleGene":"Générer le badge",
+
+    "lastName": "Nom",
+    "lastNamePlaceholder": "Entrez votre nom",
+    "lastNameRequired": "Last name is required.",
+    "firstName": "Prénom",
+    "firstNamePlaceholder": "Entrez votre prénom",
+    "firstNameRequired": "Le prénom est requis.",
+    "entrpriseName":"Nom de l'entreprise",
+    "entrpriseNamePlaceholder":"Entrez le nom de l'entreprise",
+    "companyNameRequired": "Company name is required.",
+    "generateBadge": "Générer le Badge"
+
+  },
+  "PAYMENT_SUCCESS": {
+    "TITLE": "Paiement effectué avec succès !",
+    "MESSAGE": "Merci pour votre paiement. Votre transaction a été traitée avec succès.",
+    "BUTTON_HOME": "Retour à l'accueil"
+  }
 }

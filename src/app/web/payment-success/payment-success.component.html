@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+    <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
+      <h2 class="text-2xl font-semibold text-green-600 mb-4">
+        ✅ {{ 'PAYMENT_SUCCESS.TITLE' | translate }}
+      </h2>
+  
+      <p class="text-lg text-gray-700 mb-6">
+        {{ 'PAYMENT_SUCCESS.MESSAGE' | translate }}
+      </p>
+  
+      <button  
+        (click)="goToHome()" 
+        class="bg-blue-600 text-white py-3 px-6 rounded-lg text-lg hover:bg-blue-700 transition duration-300">
+        {{ 'PAYMENT_SUCCESS.BUTTON_HOME' | translate }}
+      </button>
+    </div>
+</div>
+
+  

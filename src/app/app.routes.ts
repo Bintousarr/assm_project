@@ -64,6 +64,10 @@ export const routes: Routes = [
       import('./web/profesional-visitor/profesional-visitor.component').then((c) => c.ProfesionalVisitorComponent)
   },
   {
+    path: 'payment-success', loadComponent: () =>
+      import('./web/payment-success/payment-success.component').then((c) => c.PaymentSuccessComponent )
+  },
+  {
     path: 'grand-public', loadComponent: () =>
       import('./web/grand-public/grand-public.component').then((c) => c.GrandPublicComponent)
   },
