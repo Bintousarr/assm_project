@@ -2,13 +2,12 @@ import { Component } from '@angular/core';
 
 import { HomeComponent } from "./main-application/components/home/home.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { LoaderComponent } from './shared/loader/loader.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ LoaderComponent, TranslateModule,HomeComponent],
+  imports: [ TranslateModule,HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

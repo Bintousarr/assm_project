@@ -903,6 +903,6 @@
     "MESSAGE": "Thank you for your payment. Your transaction has been successfully processed.",
     "BUTTON_HOME": "Return to Home"
   },
-    "cheque_contact":"<p>Merci de contacter notre service client. <a href=\"contact\" class=\"text-blue-600\">Cliquez-ici</a> and generate your badge!</p>"
+    "cheque_contact":"<p>Please contact our customer service department. <a href=\"contact\" class=\"text-blue-600\">Click here</a> !</p>"
 
 }

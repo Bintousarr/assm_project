@@ -292,8 +292,7 @@
             <!-- Message pour Chèque -->
             <div *ngIf="paymentMode === 'cheque'"
               class="mt-4 text-gray-600 items-center">
-              <p class="mt-8 text-lg text-black font-bold text-center"> {{'text'
-                | translate }}</p>
+              <p class="mt-8 text-lg text-black font-bold text-center" [innerHTML]="'cheque_contact' | translate"></p>
             </div>
           </div>
         </div>

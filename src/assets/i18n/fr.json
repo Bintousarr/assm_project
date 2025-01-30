@@ -909,5 +909,7 @@
     "TITLE": "Paiement effectué avec succès !",
     "MESSAGE": "Merci pour votre paiement. Votre transaction a été traitée avec succès.",
     "BUTTON_HOME": "Retour à l'accueil"
-  }
+  },
+  "cheque_contact":"<p>Merci de contacter notre service client. <a href=\"contact\" class=\"text-blue-600\">Cliquez-ici</a> !</p>"
+
 }
