@@ -97,6 +97,10 @@ export class GrandPublicComponent {
       doc.setFont('helvetica', 'normal');
       doc.text("Visiteur", 42.5, 60, { align: 'center' });
 
+
+       
+
+
       // Ajout de la photo en bas
       //doc.addImage(`data:image/png;base64,${this.photoData}`, 'PNG', 30, 38, 25, 25);
 
@@ -109,6 +113,9 @@ export class GrandPublicComponent {
 
       QRCode.toDataURL(qrText, { width: qrSize, margin: 1 }).then((qrImage: any) => {
         doc.addImage(qrImage, 'PNG', qrX, qrY, qrSize, qrSize);
+        doc.setFontSize(12);
+        doc.text("6-8 May 2025", 42.5, 110, { align: 'center' });
+        doc.text("Abidjan , Parc des expositions", 42.5, 115, { align: 'center' });
 
         // Téléchargement du badge
         doc.save(`badge_${firstName}_${lastName}.pdf`);

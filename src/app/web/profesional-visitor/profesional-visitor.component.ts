@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router, } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import QRCode from 'qrcode';
 import jsPDF from 'jspdf';
@@ -11,7 +11,7 @@ import jsPDF from 'jspdf';
 @Component({
   selector: 'app-profesional-visitor',
   standalone: true,
-  imports: [RouterLink, TranslateModule,FormsModule,CommonModule],
+  imports: [ TranslateModule,FormsModule,CommonModule],
   templateUrl: './profesional-visitor.component.html',
   styleUrl: './profesional-visitor.component.scss'
 })
@@ -93,7 +93,7 @@ export class ProfesionalVisitorComponent {
 
       // Ajout de l’entreprise
       doc.setFontSize(14);
-      doc.setFont('helvetica', 'normal');
+      doc.setFont('helvetica', 'normal'); 
       doc.text(companyName.toUpperCase(), 42.5, 60, { align: 'center' });
 
       // Ajout de la photo en bas
@@ -108,6 +108,9 @@ export class ProfesionalVisitorComponent {
 
       QRCode.toDataURL(qrText, { width: qrSize, margin: 1 }).then((qrImage: any) => {
         doc.addImage(qrImage, 'PNG', qrX, qrY, qrSize, qrSize);
+        doc.setFontSize(12);
+        doc.text("6-8 May 2025", 42.5, 110, { align: 'center' });
+        doc.text("Abidjan , Parc des expositions", 42.5, 115, { align: 'center' });
 
         // Téléchargement du badge
         doc.save(`badge_${firstName}_${lastName}.pdf`);

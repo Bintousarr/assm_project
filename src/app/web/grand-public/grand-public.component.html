@@ -1,124 +1,142 @@
 <div class="font-poppins ">
-<div class="font-poppins">
-  <!-- Section d'introduction -->
-  <div class="flex flex-col md:flex-row items-center p-10 md:p-16 space-y-8 md:space-y-0 md:space-x-12 shadow-2xl rounded-xl overflow-hidden">
-    
-    <div class="md:w-1/2 space-y-6 text-justify">
-      <h1
-        class="text-2xl md:text-4xl font-extrabold text-red-800 leading-tight">
-        {{ 'visiteur.titre1' | translate }}
-      </h1>
-      <p class="text-lg md:text-xl">
-        {{ 'description' | translate }}
-      </p>
-      <p class="text-lg md:text-xl">
-        {{ 'freeEntry' | translate }}
-      </p>
-      <p class="text-lg md:text-xl">
-        {{ 'eventInvitation' | translate }}
-      </p>
-      <!-- <p class="text-lg md:text-xl">
+  <div class="font-poppins">
+    <!-- Section d'introduction -->
+    <div
+      class="flex flex-col md:flex-row items-center p-10 md:p-16 space-y-8 md:space-y-0 md:space-x-12 shadow-2xl rounded-xl overflow-hidden">
+
+      <div class="md:w-1/2 space-y-6 text-justify">
+        <h1
+          class="text-2xl md:text-4xl font-extrabold text-red-800 leading-tight">
+          {{ 'visiteur.titre1' | translate }}
+        </h1>
+        <p class="text-lg md:text-xl">
+          {{ 'description' | translate }}
+        </p>
+        <p class="text-lg md:text-xl">
+          {{ 'freeEntry' | translate }}
+        </p>
+        <p class="text-lg md:text-xl">
+          {{ 'eventInvitation' | translate }}
+        </p>
+        <!-- <p class="text-lg md:text-xl">
         {{ 'eventNetworking' | translate }}
       </p> -->
-    </div>
-    
-    <div class="w-full md:w-1/2 flex items-center justify-center">
-      <img *ngIf="currentLang === 'fr'" src="../../assets/Cover-SLIDE1fr.png" class="object-cover w-full h-full" />
-      <img *ngIf="currentLang === 'en'" src="../../assets/Cover-SLIDE1.png" class="object-cover w-full h-full" />
-    </div>
-  </div> 
+      </div>
 
-  <!-- Programme du MASS -->
-  <div class="bg-gray-100 py-12">
-    <h2 class="text-3xl font-bold text-center mb-6">{{ 'programSummary' | translate }}</h2>
+      <div class="w-full md:w-1/2 flex items-center justify-center">
+        <img *ngIf="currentLang === 'fr'" src="../../assets/Cover-SLIDE1fr.png"
+          class="object-cover w-full h-full" />
+        <img *ngIf="currentLang === 'en'" src="../../assets/Cover-SLIDE1.png"
+          class="object-cover w-full h-full" />
+      </div>
+    </div>
+
+    <!-- Programme du MASS -->
+    <div class="bg-gray-100 py-12">
+      <h2 class="text-3xl font-bold text-center mb-6">{{ 'programSummary' |
+        translate }}</h2>
+      <div class="flex justify-center mb-8">
+        <div class="h-1 w-20 bg-red-800"></div>
+      </div>
+      <div class="  justify-between text-lg max-w-6xl mx-auto text-center pt-0 p-10">
+        <div class="flex items-center">
+          <div class="w-4/5">
+            <div *ngFor="let section of sections" class=" text-justify">
+              <h3 class="text-lg font-bold text-red-800 mt-4">{{ section.title |
+                translate }}</h3>
+              <!-- <p class="mt-2">{{ section.content | translate }}</p> -->
+            </div>
+          </div>
+          
+          <div class="w-1/5" >
+            <img *ngIf="currentLang === 'en'" src="../../assets/free_PNG90756.png"
+              class="object-cover w-full h-full" />
+              <img *ngIf="currentLang === 'fr'" src="../../assets/gratuit.jpg"
+              class="object-cover w-full h-full" />
+  
+          </div>
+          
+        </div>
+       
+
+        <div>
+
+          <p class="mt-12 text-lg text-justify "
+            [innerHTML]="'resumpro' | translate">
+            <!-- {{ 'visiteur.sumury' | translate }} -->
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-10 p-6">
+    <h2 class="text-3xl font-bold text-center mb-6">{{ 'visitorForm.title' |
+      translate }}</h2>
     <div class="flex justify-center mb-8">
       <div class="h-1 w-20 bg-red-800"></div>
     </div>
-    <div class="text-lg max-w-6xl mx-auto text-center pt-0 p-10">
-      <div *ngFor="let section of sections" class="text-justify">
-        <h3 class="text-lg font-bold text-red-800 mt-4">{{ section.title | translate }}</h3>
-        <!-- <p class="mt-2">{{ section.content | translate }}</p> -->
-      </div>
 
-      
-      <div>
+    <div class="max-w-xl mx-auto bg-white shadow-lg rounded-lg p-6 mt-10">
+      <h2 class="text-2xl font-semibold text-center text-red-900 mb-4">{{
+        'visitorForm.subtitle' | translate }}</h2>
 
-        <p class="mt-12 text-lg text-justify "
-          [innerHTML]="'resumpro' | translate">
-          <!-- {{ 'visiteur.sumury' | translate }} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div> 
-
-<div class="mt-10 p-6">
-  <h2 class="text-3xl font-bold text-center mb-6">{{ 'visitorForm.title' | translate }}</h2>
-  <div class="flex justify-center mb-8">
-    <div class="h-1 w-20 bg-red-800"></div>
-  </div>
-
-  <div class="max-w-xl mx-auto bg-white shadow-lg rounded-lg p-6 mt-10">
-    <h2 class="text-2xl font-semibold text-center text-red-900 mb-4">{{ 'visitorForm.subtitle' | translate }}</h2>
-  
-    <form #visitorForm="ngForm" (ngSubmit)="generateBadge(visitorForm)">
-      <!-- Nom -->
-      <div class="mb-4">
-        <label class="block text-sm font-medium text-gray-700">{{
-          'visitorForm.lastName' | translate }}</label>
-        <input type="text" class="w-full border rounded-lg p-2"
-          [(ngModel)]="visitorData.lastName"
-          #lastName="ngModel"
-          id="lastName"
-          name="lastName"
-          placeholder="{{ 'visitorForm.lastNamePlaceholder' | translate }}"
-          required />
+      <form #visitorForm="ngForm" (ngSubmit)="generateBadge(visitorForm)">
+        <!-- Nom -->
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">{{
+            'visitorForm.lastName' | translate }}</label>
+          <input type="text" class="w-full border rounded-lg p-2"
+            [(ngModel)]="visitorData.lastName"
+            #lastName="ngModel"
+            id="lastName"
+            name="lastName"
+            placeholder="{{ 'visitorForm.lastNamePlaceholder' | translate }}"
+            required />
           <div *ngIf="visitorForm.submitted && lastName.invalid"
-          class="text-red-500 text-xs">
-          {{ 'visitorForm.lastNameRequired' | translate }}
+            class="text-red-500 text-xs">
+            {{ 'visitorForm.lastNameRequired' | translate }}
+          </div>
         </div>
-      </div>
 
-      <!-- Prénom -->
-      <div class="mb-4">
-        <label class="block text-sm font-medium text-gray-700">{{
-          'visitorForm.firstName' | translate }}</label>
-        <input type="text" class="w-full border rounded-lg p-2"
-          [(ngModel)]="visitorData.firstName"
-          #firstName="ngModel"
-          id="firstName"
-          name="firstName"
-          placeholder="{{ 'visitorForm.firstNamePlaceholder' | translate }}"
-          required />
+        <!-- Prénom -->
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">{{
+            'visitorForm.firstName' | translate }}</label>
+          <input type="text" class="w-full border rounded-lg p-2"
+            [(ngModel)]="visitorData.firstName"
+            #firstName="ngModel"
+            id="firstName"
+            name="firstName"
+            placeholder="{{ 'visitorForm.firstNamePlaceholder' | translate }}"
+            required />
 
-        <div *ngIf="visitorForm.submitted && firstName.invalid "
-          class="text-red-500 text-xs">
-          {{ 'visitorForm.firstNameRequired' | translate }}
+          <div *ngIf="visitorForm.submitted && firstName.invalid "
+            class="text-red-500 text-xs">
+            {{ 'visitorForm.firstNameRequired' | translate }}
+          </div>
         </div>
-      </div>
-  
-  
-      <!-- Photo -->
-      <!-- <div class="mb-4">
+
+        <!-- Photo -->
+        <!-- <div class="mb-4">
         <label class="block text-sm font-medium text-gray-700">Photo</label>
         <input type="file" (change)="onFileSelected($event)" accept="image/*" class="w-full border rounded-lg p-2" required />
       </div> -->
-  
-      <!-- Aperçu de la photo -->
-      <!-- <div *ngIf="photoPreview" class="text-center mb-4">
+
+        <!-- Aperçu de la photo -->
+        <!-- <div *ngIf="photoPreview" class="text-center mb-4">
         <img [src]="photoPreview" alt="Prévisualisation" class="w-24 h-24 rounded-full border" />
       </div> -->
-  
-      <!-- Bouton Générer le badge -->
-      <div class="text-center mt-4">
-        <button type="submit" class="bg-red-900 text-white px-6 py-2 rounded-lg hover:bg-red-700">
-          {{ 'visitorForm.generateBadge' | translate }}
-        </button>
-      </div>
-    </form>
+
+        <!-- Bouton Générer le badge -->
+        <div class="text-center mt-4">
+          <button type="submit"
+            class="bg-red-900 text-white px-6 py-2 rounded-lg hover:bg-red-700">
+            {{ 'visitorForm.generateBadge' | translate }}
+          </button>
+        </div>
+      </form>
+    </div>
+
   </div>
-  
-</div>
-
-
-  

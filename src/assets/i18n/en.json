@@ -572,8 +572,8 @@
   },
   "visiteur": {
     "titre1": "African Space Solutions Market",
-    "texte1": "OTIF presents its first edition of the Spatial Event, the African Space Solutions Market (MASS), which will take place from ",
-    "t": "May 6 to 8, 2025",
+    "texte1": "The first edition of t African Space Solutions Market (MASS), which will take place from",
+    "t": "May 6 to 8, 2025.",
     "texte2": "Are you passionate about Space? Then, this is an event not to be missed!",
     "texte3": "Become a part of the next generation shaping the future of space in Africa! This is your chance to innovate and invest in a rapidly growing industry. ",
     "reservation_titre": "Reservation & Payment",
@@ -883,7 +883,7 @@
   "visitorForm": {
     "title": "Visitor",
     "titlePro": "Professional Visitor ",
-    "titleGene":"Generate badge",
+    "titleGene":"Generate  your badge",
 
     "subtitle": "Registration",
     "lastName": "Last Name",
@@ -896,11 +896,13 @@
     "entrpriseNamePlaceholder":"Enter your company name",
     "companyNameRequired": "Le nom de l'entreprise est requis.",
 
-    "generateBadge": "Generate Badge"
+    "generateBadge": "Generate  your badge"
   },
   "PAYMENT_SUCCESS": {
     "TITLE": "Payment Successful!",
     "MESSAGE": "Thank you for your payment. Your transaction has been successfully processed.",
     "BUTTON_HOME": "Return to Home"
-  }
+  },
+    "cheque_contact":"<p>Merci de contacter notre service client. <a href=\"contact\" class=\"text-blue-600\">Cliquez-ici</a> and generate your badge!</p>"
+
 }
