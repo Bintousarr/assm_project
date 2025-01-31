@@ -3,16 +3,39 @@ import { CommonModule } from '@angular/common';
 import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import saveAs from 'file-saver';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sponsor-page',
   standalone: true,
-  imports: [TranslateModule, CommonModule, CarouselModule],
+  imports: [TranslateModule, CommonModule, CarouselModule,RouterLink],
   templateUrl: './sponsor-page.component.html',
   styleUrl: './sponsor-page.component.scss'
 })
 export class SponsorPageComponent {
   translate: TranslateService = inject(TranslateService);
+
+  logos = [
+    { src: 'assets/AU.png', link: 'https://au.int/en/node/35984' },
+    { src: 'assets/tourisme_ci_logo.png', link: 'https://tourismecotedivoire.ci/' },
+    { src: 'assets/corsair.png',  link: 'https://www.flycorsair.com/fr-ci' },
+    { src: 'assets/digitaux.png',  link: 'https://www.3fpt.sn' },
+  ];
+
+  customOptions: OwlOptions = {
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 2 },
+      1000: { items: 4 }
+    }
+  };
 
 
   // Variables pour contrôler le déroulement
@@ -107,24 +130,7 @@ export class SponsorPageComponent {
     this.isUVExpanded = !this.isUVExpanded;
   }
   
-  customOptions: OwlOptions = {
-    loop: true,
-    margin: 10,
-    nav: true,
-    navText: ['<', '>'],
-    dots: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 5
-      }
-    }
-  }
+ 
 
  
 }

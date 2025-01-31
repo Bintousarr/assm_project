@@ -12,14 +12,158 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-col items-center justify-center h-screen bg-white text-center">
-    <div class="relative z-10">
-      <p class="text-black text-5xl -mt-80">
-        {{ 'SPONSORS_PAGE_MESSAGE' | translate }}
-      </p>
+  <div class="flex flex-col md:flex-row items-center p-6 md:p-16 space-y-8 md:space-y-0 md:space-x-8 shadow-2xl rounded-xl overflow-hidden">
+  
+    <!-- Texte -->
+    <div class="w-full md:w-1/2 space-y-4 md:space-y-6 mt-10">
+      <h1 class="text-lg">{{ 'spr.title' | translate }}</h1>
+  
+      <h2 class="text-xl font-semibold">{{ 'spr.why_invest' | translate }}</h2>
+  
+      <p class="text-base md:text-lg" [innerHTML]="'spr.growth' | translate"></p>
+      <p class="text-base md:text-lg" [innerHTML]="'spr.visibility' | translate"></p>
+      <p class="text-base md:text-lg" [innerHTML]="'spr.partnerships' | translate"></p>
+      <p class="text-base md:text-lg" [innerHTML]="'spr.roi' | translate"></p>
+  
+      <p class="text-base md:text-lg">{{ 'spr.invitation' | translate }}</p>
+  
+      <p class="text-lg font-semibold text-red-800">{{ 'spr.join' | translate }}</p>
     </div>
-    <h1 class="text-gray-200 text-8xl font-bold tracking-wide absolute">
-      {{ 'AFRICAN_MARKET' | translate }}
-    </h1>
+  
+    <!-- Image -->
+    <div class="w-full md:w-1/2 flex items-center justify-center">
+      <img
+        
+        src="../../../assets/sponsoring.jpg"
+        alt="Image en français"
+        class="object-cover w-full h-full rounded-md shadow-md" />
+  
+      
+    </div>
+  
   </div>
+  
+  <div>
+    <h1 class="text-5xl text-center  font-bold mt-10 text-red-800">
+      {{ 'sponsor.info-block.desc' | translate }}
+    </h1>
+    <div class="grid grid-cols-4 gap-6 p-6 mt-10">
+      <div *ngFor="let logo of logos" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+        <a [href]="logo.link" target="_blank">
+        <img [src]="logo.src"  class="w-full h-auto object-contain">
+      </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container font-poppins mx-auto my-10">
+    <h2 class="text-5xl font-bold text-center mb-6">
+      {{ 'SPONSOR_OPTIONS_TITLE' | translate }}
+    </h2>
+    <div class="flex justify-center mb-4 md:mb-8">
+      <div class="h-1 w-16 md:w-20 bg-red-800"></div>
+    </div>
+  
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse border border-gray-300">
+        <thead>
+          <tr class="bg-blue-600 text-white">
+            <th class="p-4 text-left border">{{ 'PACKAGE' | translate }}</th>
+            <th class="p-4 text-center border" [innerHTML]="'OFFICIAL_SPONSOR' | translate"></th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="bg-gray-100">
+            <td colspan="2" class="text-lg font-semibold p-4 text-blue-600 border">
+              {{ 'PROMOTION_MARKETING' | translate }}
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'LOGO_ON_BAG' | translate }}</td>
+            <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'LOGO_ON_PUBLICATIONS' | translate }}</td>
+            <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'LOGO_ON_BANNERS' | translate }}</td>
+            <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'LOGO_ON_FLYERS' | translate }}</td>
+            <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'LOGO_ON_EMAIL' | translate }}</td>
+            <td class="p-4 border text-center text-red-500 font-bold">✔️</td>
+          </tr>
+          <tr class="bg-gray-100">
+            <td colspan="7" class="text-lg font-semibold p-4 text-blue-600 border">
+              {{ 'PRE_EVENT_ADVERTISING' | translate }}
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'EMAIL_COMMUNICATION' | translate }}</td>
+            
+             <td class="p-4 border text-center font-bold">1</td> 
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'WEBSITE_PROFILE' | translate }}</td>
+
+             <td class="p-4 border text-center font-bold">200 {{ 'WORDS' | translate }}</td> 
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'EXCLUSIVE_INTERVIEW' | translate }}</td>
+         
+            <td class="p-4 border text-center">✔️</td> 
+          </tr>
+          <tr class="bg-gray-100">
+            <td colspan="2" class="text-lg font-semibold p-4 text-blue-600 border">
+              {{ 'EVENT_VISIBILITY' | translate }}
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'EVENT_GUIDE_AD' | translate }}</td>
+            <td class="p-4 border text-center font-bold">{{ 'FULL_PAGE' | translate }}</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'COMPANY_PROFILE' | translate }}</td>
+            <td class="p-4 border text-center font-bold">200 {{ 'WORDS' | translate }}</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'BANNER_DISPLAY' | translate }}</td>
+            <td class="p-4 border text-center font-bold">2</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'PROMOTIONAL_ITEMS' | translate }}</td>
+            <td class="p-4 border text-center font-bold">2 {{ 'ITEM' | translate }}</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'SESSION_RECOGNITION' | translate }}</td>
+            <td class="p-4 border text-center">✔️</td>
+          </tr>
+          <tr class="bg-gray-100">
+            <td colspan="2" class="text-lg font-semibold p-4 text-blue-600 border">
+              {{ 'PARTICIPATION_BENEFITS' | translate }}
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'EXHIBITION_SPACE' | translate }}</td>
+            <td class="p-4 border text-center font-bold">36 m² & 6 {{ 'REGISTRATIONS' | translate }}</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 border">{{ 'RESERVATION' | translate }}</td>
+            <td class="p-4 border text-center">
+              <button class="rounded-lg bg-blue-500 w-40 p-2 text-white text-lg hover:bg-blue-800">
+                {{ 'BOOK' | translate }}
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
 </div>

@@ -140,7 +140,8 @@
       "desc": "Our sponsors",
       "titre1": "OTIF 2025 BROCHURE",
       "titre2": "For more information, please contact us"
-    }
+    },
+    "join": "Join us to shape the Spatial future of Africa together!"
   },
   "orateur": {
     "block": {
@@ -577,9 +578,8 @@
     "texte2": "Are you passionate about Space? Then, this is an event not to be missed!",
     "texte3": "Become a part of the next generation shaping the future of space in Africa! This is your chance to innovate and invest in a rapidly growing industry. ",
     "reservation_titre": "Reservation & Payment",
-    "advantge":"Advantages",
-    "textadvantge":"The space solutions market offers numerous advantages, such as:",
-
+    "advantge": "Advantages",
+    "textadvantge": "The space solutions market offers numerous advantages, such as:",
     "reservation_1": "1. Opportunities for Growth and Innovation",
     "reservation_texte1": "Develop cutting-edge space-based solutions, including geolocation, Earth observation, telecommunications, and more.",
     "reservation_2": "2. Global Impact & Multi-Sector Applications",
@@ -596,7 +596,7 @@
     "etape2": "fill in the form",
     "etape3": "and pay for your registration by Visa, Bank Transfer, or Wave.",
     "bouton_reserver": "Make your reservation",
-    "sumury":"<p>In summary, entering the space solutions market opens doors to an innovative, international ecosystem with immense potential for growth and a lasting global impact. The marketplace is FREE and open to all. <a href=\"register\" class=\"text-blue-600\">Register now </a> and generate your badge!</p>"
+    "sumury": "<p>In summary, entering the space solutions market opens doors to an innovative, international ecosystem with immense potential for growth and a lasting global impact. The marketplace is FREE and open to all. <a href=\"register\" class=\"text-blue-600\">Register now </a> and generate your badge!</p>"
   },
   "reservation": {
     "reservation": "RESERVATION",
@@ -712,6 +712,8 @@
   "LOGO_ON_BAG": "Logo on bag",
   "LOGO_ON_PUBLICATIONS": "Logo on event-related publications",
   "LOGO_ON_BANNERS": "Logo on banners or screens",
+  "LOGO_ON_FLYERS": "Logo on Event publicity flyer (updates as received)",
+  "LOGO_ON_EMAIL":"Logo in email confirmation of registration to participants",
   "PRE_EVENT_ADVERTISING": "Pre-event Advertising",
   "EMAIL_COMMUNICATION": "Email communication about the partner via media channels",
   "WEBSITE_PROFILE": "Company profile, logo, web link on the event website",
@@ -856,8 +858,7 @@
   "eventInvitation": "Are you passionate about space? This is an event you shouldn't miss!",
   "eventNetworking": "Join MASS to meet key players in the space industry and discover the latest technologies.",
   "programSummary": "Why Participate?",
-  "resumpro":"<p>Be Part of Africa's Space Revolution ! <a href=\"register\" class=\"text-blue-600\">Register Now</a> to secure your spot and generate your event badge !</p> ",
-
+  "resumpro": "<p>Be Part of Africa's Space Revolution ! <a href=\"register\" class=\"text-blue-600\">Register Now</a> to secure your spot and generate your event badge !</p> ",
   "sections": {
     "technicalWorkshops": "1. Technical Workshops and Research",
     "technicalWorkshopsContent": "The first edition of this event will be marked by technical workshops, experience sharing, and research presentations to showcase and explore the latest innovations in the space sector. These sessions will provide experts and enthusiasts with the opportunity to discuss the challenges and future perspectives of the industry.",
@@ -874,17 +875,15 @@
     "liveTechDemos": "7. Live Technology Demonstrations",
     "liveTechDemosContent": "The latest technological innovations will be showcased in interactive demonstration sessions. Visitors will be able to discover new advancements in satellite technology, Earth observation, space navigation, and geospatial applications."
   },
-  "section2":{
+  "section2": {
     "participate1": "1. Discover cutting-edge space technologies",
- "participate2":"2. Connect with experts, entrepreneurs, and innovators",
-  "participate3":"3. Unlock collaboration and investment opportunities"
-
+    "participate2": "2. Connect with experts, entrepreneurs, and innovators",
+    "participate3": "3. Unlock collaboration and investment opportunities"
   },
   "visitorForm": {
     "title": "Visitor",
     "titlePro": "Professional Visitor ",
-    "titleGene":"Generate  your badge",
-
+    "titleGene": "Generate  your badge",
     "subtitle": "Registration",
     "lastName": "Last Name",
     "lastNamePlaceholder": "Enter your last name",
@@ -892,10 +891,9 @@
     "firstName": "First Name",
     "firstNamePlaceholder": "Enter your first name",
     "firstNameRequired": "Le prénom est requis.",
-    "entrpriseName":"Company name",
-    "entrpriseNamePlaceholder":"Enter your company name",
+    "entrpriseName": "Company name",
+    "entrpriseNamePlaceholder": "Enter your company name",
     "companyNameRequired": "Le nom de l'entreprise est requis.",
-
     "generateBadge": "Generate  your badge"
   },
   "PAYMENT_SUCCESS": {
@@ -903,6 +901,16 @@
     "MESSAGE": "Thank you for your payment. Your transaction has been successfully processed.",
     "BUTTON_HOME": "Return to Home"
   },
-    "cheque_contact":"<p>Please contact our customer service department. <a href=\"contact\" class=\"text-blue-600\">Click here</a> !</p>"
-
+  "cheque_contact": "<p>Please contact our customer service department. <a href=\"contact\" class=\"text-blue-600\">Click here</a> !</p>",
+  
+  "spr": {
+    "title": "As a sponsor, you will have the unique opportunity to align yourself with this visionary movement and unlock new perspectives for your company in the African space solutions market.",
+    "why_invest": "Why Invest in the African Space Solutions Market?",
+    "growth": "<span class='font-bold text-red-800'>Massive Growth Potential:</span> Africa is a hotbed for technological innovation, and the rapidly expanding space sector is unlocking incredible opportunities in critical fields such as agriculture, energy, telecommunications, and natural disaster management.",
+    "visibility": "<span class='font-bold text-red-800'>Elevated Brand Visibility:</span> As a sponsor, your brand will gain unprecedented visibility within an emerging and transformative sector. This exposure will extend both locally and internationally, positioning your company as a key contributor to Africa's growth and technological future.",
+    "partnerships": "<span class='font-bold text-red-800'>Strategic Partnerships:</span> This is your chance to form invaluable connections with opinion leaders, space agencies, technology pioneers, and African governments. These relationships can shape the future of the space industry on the continent.",
+    "roi": "<span class='font-bold text-red-800'>Strong Return on Investment:</span> By investing in this dynamic and rapidly growing sector, you stand to gain significant long-term returns—both financially and through positive social and environmental impact.",
+    "invitation": "We invite you to seize this historic opportunity to be part of this exciting journey and support the growth of Africa’s space sector.",
+    "join": "Join us in shaping Africa's future in space!"
+  }
 }

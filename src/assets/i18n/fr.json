@@ -713,6 +713,8 @@
   "LOGO_ON_BAG": "Logo sur le sac",
   "LOGO_ON_PUBLICATIONS": "Logo sur les publications liées à l'événement",
   "LOGO_ON_BANNERS": "Logo sur les bannières ou écrans",
+  "LOGO_ON_FLYERS": "Logo sur le flyer publicitaire de l'évènement (mises à jour reçues)",
+  "LOGO_ON_EMAIL":"Logo dans l'email de confirmation d'inscription envoyé aux participants",
   "PRE_EVENT_ADVERTISING": "Publicité Avant l'Événement",
   "EMAIL_COMMUNICATION": "Communication par email sur le partenaire via les canaux médiatiques",
   "WEBSITE_PROFILE": "Profil d'entreprise, logo, lien web de l'entreprise sur le site de l'évènement",
@@ -910,6 +912,18 @@
     "MESSAGE": "Merci pour votre paiement. Votre transaction a été traitée avec succès.",
     "BUTTON_HOME": "Retour à l'accueil"
   },
-  "cheque_contact":"<p>Merci de contacter notre service client. <a href=\"contact\" class=\"text-blue-600\">Cliquez-ici</a> !</p>"
+  "cheque_contact":"<p>Merci de contacter notre service client. <a href=\"contact\" class=\"text-blue-600\">Cliquez-ici</a> !</p>",
 
+  
+  
+  "spr": {
+    "title": "En tant que sponsor, vous aurez l'occasion unique de vous associer à ce mouvement visionnaire et d'ouvrir de nouvelles perspectives pour votre entreprise sur le marché africain des solutions spatiales.",
+    "why_invest": "Pourquoi investir dans le marché africain des solutions spatiales ?",
+    "growth": "<span class='font-bold text-red-800'>Un potentiel de croissance immense :</span> L'Afrique est un terrain fertile pour les innovations technologiques, et le secteur spatial en plein essor ouvre de nouvelles possibilités dans des domaines tels que l'agriculture, l'énergie, les télécommunications et la gestion des catastrophes naturelles.",
+    "visibility": "<span class='font-bold text-red-800'>Une visibilité accrue :</span> En tant que sponsor, votre marque bénéficiera d'une visibilité unique dans un secteur clé, tant au niveau local qu'international. Vous vous positionnerez comme un acteur de premier plan dans l’avenir de l'Afrique.",
+    "partnerships": "<span class='font-bold text-red-800'>Des partenariats stratégiques :</span> Profitez de la chance de tisser des liens avec des leaders d'opinion, des agences spatiales, des entreprises de technologie et des gouvernements africains.",
+    "roi": "<span class='font-bold text-red-800'>Un retour sur investissement prometteur :</span> L'engagement dans ce secteur dynamique présente un retour sur investissement considérable à long terme, tant sur le plan commercial qu'en termes d'impact social et environnemental.",
+    "invitation": "Nous vous invitons à saisir cette occasion historique de faire partie de cette aventure passionnante et de soutenir le développement du secteur spatial africain.",
+    "join": "Rejoignez-nous pour façonner ensemble l'avenir spatial de l'Afrique !"
+  }
 }
