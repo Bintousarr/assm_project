@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-sponsor-page',
   standalone: true,
-  imports: [TranslateModule, CommonModule, CarouselModule,RouterLink],
+  imports: [TranslateModule, CommonModule, CarouselModule],
   templateUrl: './sponsor-page.component.html',
   styleUrl: './sponsor-page.component.scss'
 })
