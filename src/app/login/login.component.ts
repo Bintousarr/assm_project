@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { RegistrationSuccessDialogComponent } from '../registration-success-dialog/registration-success-dialog.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpErrorResponse, HttpStatusCode } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -48,6 +49,10 @@ export class LoginComponent {
 
 
   onLogin() {
+    if (this.loginForm.invalid) {
+      this.loginForm.markAllAsTouched(); // Force l'affichage des erreurs si le formulaire est invalide
+      return;
+    }
     if (this.loginForm.valid) {
       this.registerService.login(this.loginForm.value).subscribe(
         response => {
@@ -57,29 +62,37 @@ export class LoginComponent {
             localStorage.setItem('userToken', userString);
             window.location.href = '/homeuser';
           } else {
-            // console.error('test', response);
-            // this.openDialog(response.message, false);
-            if (this.translate.currentLang == "en") {
-              this.openDialog(response.en, false); // Affiche le popup d'erreur
-             // console.log("rrrrr")
+            //  console.error('test', response);
+            // // this.openDialog(response.message, false);
+            // if (this.translate.currentLang == "en") {
+            //   this.openDialog(response.en, false); // Affiche le popup d'erreur
+            //  // console.log("rrrrr")
   
-            }else{
-              this.openDialog(response.fr, false); // Affiche le popup d'erreur
+            // }else{
+            //   this.openDialog(response.fr, false); // Affiche le popup d'erreur
   
-            }
+            // }
   
           }
         },
         error => {
           console.error('Error login user', error);
-          if (this.translate.currentLang == "en") {
-            this.openDialog(error.error.en, false); // Affiche le popup d'erreur
-           // console.log("rrrrr")
+          if(error || error.status==HttpStatusCode.NotFound || error.status==0){
+            if (this.translate.currentLang == "en") {
+              this.openDialog("Incorrect email address or password. Please check the information you have entered.", false); // Affiche le popup d'erreur
+            }else{
+              this.openDialog("Email ou mot de passe incorrect. Veuillez vérifier les informations saisies.", false); // Affiche le popup d'erreur
 
-          }else{
-            this.openDialog(error.error.fr, false); // Affiche le popup d'erreur
-
+            }
           }
+          // if (this.translate.currentLang == "en") {
+          //   this.openDialog(error.error.en, false); // Affiche le popup d'erreur
+          //  // console.log("rrrrr")
+
+          // }else{
+          //   this.openDialog(error.error.fr, false); // Affiche le popup d'erreur
+
+          // }
           //this.openDialog(error.error.message, false); // Affiche le popup d'erreur
         }
       );
