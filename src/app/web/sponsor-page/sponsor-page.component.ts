@@ -19,7 +19,7 @@ export class SponsorPageComponent {
     { src: 'assets/AU.png', link: 'https://au.int/en/node/35984' },
     { src: 'assets/tourisme_ci_logo.png', link: 'https://tourismecotedivoire.ci/' },
     { src: 'assets/corsair.png',  link: 'https://www.flycorsair.com/fr-ci' },
-    { src: 'assets/digitaux.png',  link: 'https://www.3fpt.sn' },
+    { src: 'assets/digitaux.png',  link: 'https://telecom.gouv.ci/new/index.php/ministere/organigramme-du-ministere' },
   ];
 
   customOptions: OwlOptions = {
