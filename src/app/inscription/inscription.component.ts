@@ -25,7 +25,7 @@ export class InscriptionComponent {
     { name: 'SILVER-PACK', price: 6000, quantity: 1 },
     { name: 'GOLD-PACK', price: 12000, quantity: 1 },
     { name: 'PLATINIUM', price: 23000, quantity: 1 },
-    // { name: 'HEADLINE SPONSOR', price: 50000, quantity: 1 },
+    { name: 'HEADLINE SPONSOR', price: 50000, quantity: 1 },
   ];
   total = 0;
   totalFCA: number = 0; // Total en XOF

@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+// import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-voir-marche',
   standalone: true,
-  imports: [RouterLink, TranslateModule],
+  imports: [ TranslateModule],
   templateUrl: './voir-marche.component.html',
   styleUrl: './voir-marche.component.scss'
 })
