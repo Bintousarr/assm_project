@@ -71,6 +71,10 @@ export class MpdOublierComponent {
       }
 
     }
+    if (this.loginForm.invalid) {
+      this.loginForm.markAllAsTouched(); // Force l'affichage des erreurs si le formulaire est invalide
+      return;
+    }
   }
   openDialog(message: string, isSuccess: boolean): void {
     this.dialog.open(RegistrationSuccessDialogComponent, {
