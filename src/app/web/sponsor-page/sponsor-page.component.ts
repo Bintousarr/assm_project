@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import saveAs from 'file-saver';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sponsor-page',
   standalone: true,
-  imports: [TranslateModule, CommonModule, CarouselModule,RouterLink],
+  imports: [TranslateModule, CommonModule, CarouselModule],
   templateUrl: './sponsor-page.component.html',
   styleUrl: './sponsor-page.component.scss'
 })
@@ -50,6 +50,7 @@ export class SponsorPageComponent {
   isUVExpanded: boolean = false;
 
   currentLang: string = 'en'; // Initialize language to 'en'
+  constructor(private router: Router){}
 
   ngOnInit() {
     this.translate.setDefaultLang('en');
@@ -131,6 +132,8 @@ export class SponsorPageComponent {
   }
   
  
-
+  goToPaymentPage(selectedIndex: number) {
+    this.router.navigate(['/reservation'], { queryParams: { productIndex: selectedIndex } });
+  }
  
 }
