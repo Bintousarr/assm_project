@@ -44,9 +44,13 @@
   </div>
   
   <div>
-    <h1 class="text-5xl text-center  font-bold mt-10 text-red-800">
+    <h1 class="text-5xl text-center  font-bold mt-10 ">
       {{ 'sponsor.info-block.desc' | translate }}
     </h1>
+    <div class="flex justify-center mt-6 mb-4 md:mb-8">
+      <div class="h-1 w-16 md:w-20 bg-red-800"></div>
+    </div>
+  
     <div class="grid grid-cols-4 gap-6 p-6 mt-10">
       <div *ngFor="let logo of logos" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
         <a [href]="logo.link" target="_blank">
