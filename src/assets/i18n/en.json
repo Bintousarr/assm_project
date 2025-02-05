@@ -577,7 +577,7 @@
   },
   "visiteur": {
     "titre1": "African Space Solutions Market",
-    "texte1": "The first edition of t African Space Solutions Market (MASS), which will take place from",
+    "texte1": "The first edition of the African Space Solutions Market (MASS), will take place from",
     "t": "May 6 to 8, 2025.",
     "texte2": "Are you passionate about Space? Then, this is an event not to be missed!",
     "texte3": "Become a part of the next generation shaping the future of space in Africa! This is your chance to innovate and invest in a rapidly growing industry. ",
@@ -708,6 +708,7 @@
   "SPONSOR_OPTIONS_TITLE": "Available Stand packages",
   "PACKAGE": "Package",
   "START_UP": "Start UP<br>1,000 $",
+  "BRONZE": "Bronze<br>3,000 $",
   "SILVER": "Silver<br>6,000 $",
   "GOLD": "Gold<br>12,000 $",
   "PLATINUM": "Platinum<br>23,000 $",

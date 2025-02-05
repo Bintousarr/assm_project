@@ -575,7 +575,7 @@
   },
   "visiteur": {
     "titre1": "Marché Africain des Solutions Spatiales",
-    "texte1": "OTIF présente sa première édition de l'événement du Spatial, le Marché Africain des Solutions Spatiales (MASS), qui aura lieu du ",
+    "texte1": "La première édition du Marché Africain des Solutions Spatiales (MASS),  aura lieu ",
     "t": "06 au 08 Mai 2025.",
     "texte2": "Vous êtes passionnés par le Spatial ? Alors, c'est un événement à ne surtout pas rater !",
     "texte3": "Rejoignez cette dynamique et faites partie des acteurs qui façonnent l’avenir spatial du continent. Ne manquez pas cette chance d’innover et d’investir !",
@@ -708,6 +708,7 @@
   "SPONSOR_OPTIONS_TITLE": "Options de Sponsoring pour le MASS",
   "PACKAGE": "Package",
   "START_UP": "Start UP<br>1 000 $",
+  "BRONZE": "Bronze<br>3,000 $",
   "SILVER": "Argent<br>6 000 $",
   "GOLD": "Gold<br>12 000 $",
   "PLATINUM": "Platinium<br>23 000 $",
