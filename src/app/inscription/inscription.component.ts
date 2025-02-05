@@ -211,7 +211,7 @@ export class InscriptionComponent {
         country: this.paymentForm.value.country
       };
       if (this.translate.currentLang == 'en') {
-        this.http.post('https://mass.otif-africa-space.com/devis/generateDevisAndSendEmailEnglish.php', emailData).subscribe(
+        this.http.post('https://mass.ci/devis/generateDevisAndSendEmailEnglish.php', emailData).subscribe(
           (response: any) => {
             //alert(response.message);
             this.openDialog('Please find your quote in your email inbox.', true)
@@ -225,7 +225,7 @@ export class InscriptionComponent {
         );
 
       } else {
-        this.http.post('https://mass.otif-africa-space.com/devis/generateDevisAndSendEmail.php', emailData).subscribe(
+        this.http.post('https://mass.ci/devis/generateDevisAndSendEmail.php', emailData).subscribe(
           (response: any) => {
             //alert(response.message);
             this.openDialog('Veuillez retrouver votre devis dans votre boîte mail.', true)
@@ -277,7 +277,7 @@ export class InscriptionComponent {
         apikey: '15611078206799ff602425f0.36041230', // Remplacez par votre clé API
         site_id: '105886679', // Remplacez par votre site ID
         //notify_url: 'https://votre-backend.com/cinetpay/callback',
-        notify_url: 'https://mass.otif-africa-space.com/payment-success',
+        notify_url: 'https://mass.ci/payment-success',
         mode: 'PRODUCTION'
       });
 

@@ -34,7 +34,7 @@ export class RegistrationSuccessDialogComponent {
   }
 
   onOkClick(): void {
-    if (this.apiMessage == 'User created successfully.' || this.apiMessage == 'Utilisateur créé et disponibilités définies avec succès.'|| this.apiMessage =='User registered successfully'||this.apiMessage=='Veuillez retrouver votre devis dans votre boîte mail.'|| this.apiMessage=='Please find your quote in your email inbox.'|| this.apiMessage=='A new password has been sent to your email address.' || this.apiMessage=='Un nouveau mot de passe a été envoyé à votre adresse e-mail.') {
+    if (this.apiMessage == "User created and availabilities successfully defined." || this.apiMessage == 'User created successfully.' || this.apiMessage == 'Utilisateur créé et disponibilités définies avec succès.'|| this.apiMessage =='User registered successfully'||this.apiMessage=='Veuillez retrouver votre devis dans votre boîte mail.'|| this.apiMessage=='Please find your quote in your email inbox.'|| this.apiMessage=='A user with this email already exists.' || this.apiMessage=='Un utilisateur avec cet email existe déjà.') {
       this.dialogRef.close(); // Fermer le popup
       this.router.navigate(['/login']); // Redirige vers la page d'accueil ou une autre page
     } else {

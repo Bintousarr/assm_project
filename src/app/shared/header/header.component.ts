@@ -34,6 +34,17 @@ export class HeaderComponent {
     // Ajoute d'autres sous-menus si nécessaire
   };
   toggleDropdown(menu: string) {
+    console.log(this.activeDropdown)
+    console.log(menu)
+    if (this.activeDropdown === menu) {
+      this.activeDropdown = null;  // Ferme le dropdown si c'est déjà ouvert
+    } else {
+      this.activeDropdown = menu;  // Ouvre le dropdown du menu cliqué
+    }
+  }
+
+  toggleDropdownd(menu: string) {
+    console.log(this.activeDropdown)
     if (this.activeDropdown === menu) {
       this.activeDropdown = null;  // Ferme le dropdown si c'est déjà ouvert
     } else {

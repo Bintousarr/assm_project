@@ -32,18 +32,20 @@
     </div>
   </div>
 
-  <header    class="flex flex-col lg:flex-row items-center justify-between  text-red-700 mt-10 sm:mt-0 p-2 pt-8">
+  <header
+    class="flex flex-col lg:flex-row items-center justify-between  text-red-700 mt-10 sm:mt-0 p-2 pt-8">
 
     <div class="flex items-center mt-4 lg:mb-0 w-1/5">
       <a href="/">
         <img src="../../../assets/newlogo.png" alt="Logo MASS"
-        class="h-auto  md:w-2/3 ">
+          class="h-auto  md:w-2/3 ">
       </a>
-     
+
     </div>
 
     <!-- Hamburger Menu for Mobile -->
-    <div class="lg:hidden flex items- justify-start space-x-2"  *ngIf="!isLoggedIn" 
+    <div class="lg:hidden flex items- justify-start space-x-2"
+      *ngIf="!isLoggedIn"
       (click)="toggleMenu()">
       <button class="text-newRED focus:outline-none">
         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -59,7 +61,8 @@
       class="hidden lg:flex items-center justify-center text-sm sm:text-base text-black w-full">
       <div class="flex space-x-8 w-3/4 items-center justify-center ">
         <div class="relative group">
-          <a [routerLink]="['']" class="nav-item capitalize hover:text-red-600">{{
+          <a [routerLink]="['']"
+            class="nav-item capitalize hover:text-red-600">{{
             'accueil.navbar-block.titre1' | translate }}</a>
           <!-- <div
             class="absolute w-60 left-0 mt-2 bg-white border border-gray-200 text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
@@ -71,9 +74,9 @@
               'accueil.navbar-block.t2' | translate }}</a>
           </div> -->
         </div>
-  
+
         <!-- MASS Dropdown -->
-           <div class="relative group">
+        <div class="relative group">
           <a class="nav-item capitalize hover:text-red-600">{{
             'accueil.navbar-block.titre3' | translate }}</a>
           <div
@@ -81,7 +84,7 @@
             <a [routerLink]="['program']"
               class="block px-4 py-2 hover:bg-gray-200">{{
               'accueil.navbar-block.titre2' | translate }}</a>
-         <!--  <a [routerLink]="['sponsor-page']"
+            <!--  <a [routerLink]="['sponsor-page']"
               class="block px-4 py-2 hover:bg-gray-200">{{
               'accueil.navbar-block.m1' | translate }}</a>
             <a [routerLink]="['personnalite']"
@@ -91,38 +94,62 @@
               class="block px-4 py-2 hover:bg-gray-200">{{
               'accueil.navbar-block.desc2' | translate }}</a> -->
           </div>
-        </div> 
-  
+        </div>
+
         <!-- <a [routerLink]="['program']"
         class="block px-4 py-2 hover:bg-gray-200">{{
         'accueil.navbar-block.titre2' | translate }}</a> -->
         <!-- Exposants -->
-         <div>
-           <a [routerLink]="['exposant']"
-          class="nav-item capitalize hover:text-red-600">{{
-          'accueil.navbar-block.desc4' | translate }}</a>
-         </div>
-       
-  
+        <div>
+          <a [routerLink]="['exposant']"
+            class="nav-item capitalize hover:text-red-600">{{
+            'accueil.navbar-block.desc4' | translate }}</a>
+        </div>
+
         <!-- Visiteurs -->
         <!-- <a [routerLink]="['']"
           class="nav-item capitalize hover:text-red-600">{{
           'accueil.navbar-block.t3' | translate }}</a>  -->
-  
-        <!-- Contact -->
-         <div>
-          <a [routerLink]="['contact']"
-          class="nav-item capitalize hover:text-red-600 w-full">{{
-          'accueil.navbar-block.titre4' | translate }}</a>
-         </div>
-      
 
+
+            <!-- MASS Dropdown -->
+        <div class="relative group">
+          <a class="nav-item capitalize hover:text-red-600">{{
+            'visitorForm.title' | translate }}</a>
+          <div
+            class="absolute w-60 left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+            <a [routerLink]="['profesional-visitor']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.sponsor-block.t5' | translate }}</a>
+              
+                <a [routerLink]="['grand-public']"
+                class="block px-4 py-2 hover:bg-gray-200">{{
+                'accueil.sponsor-block.t6' | translate }}</a>
+            <!--  <a [routerLink]="['sponsor-page']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.navbar-block.m1' | translate }}</a>
+            <a [routerLink]="['personnalite']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.navbar-block.m2' | translate }}</a>
+            <a [routerLink]="['accomodation']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.navbar-block.desc2' | translate }}</a> -->
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <a [routerLink]="['contact']"
+            class="nav-item capitalize hover:text-red-600 w-full">{{
+            'accueil.navbar-block.titre4' | translate }}</a>
+        </div>
 
       </div>
       <!-- Accueil Dropdown -->
-     
+
       <!-- Language Selector and Login Button -->
-      <div class="  w-1/4 flex items-center justify-end space-x-2 mt-4 lg:mt-0 mr-8">
+      <div
+        class="  w-1/4 flex items-center justify-end space-x-2 mt-4 lg:mt-0 mr-8">
         <!-- Language Selector -->
         <div class="relative">
           <button
@@ -130,7 +157,7 @@
             (click)="toggleDropdown2()">
             <img [src]="currentFlag" [alt]="currentLanguage"
               class="h-4 w-4 mr-2 rounded-full">
-            <span >{{ currentLanguage }}</span>
+            <span>{{ currentLanguage }}</span>
             <svg xmlns="http://www.w3.org/2000/svg"
               class="h-4 w-4 ml-2 text-gray-500" viewBox="0 0 20 20"
               fill="currentColor">
@@ -157,10 +184,12 @@
         </div>
 
         <!-- Login Button -->
-        <button routerLink="/login" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">
+        <button routerLink="/login"
+          class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">
           {{'accueil.header-block.connexion' | translate}}
         </button>
-        <button routerLink="/register" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">
+        <button routerLink="/register"
+          class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">
           {{'accueil.header-block.inscription' | translate}}
         </button>
       </div>
@@ -169,7 +198,7 @@
     <!-- Mobile Menu (Hidden by default, toggled via click on Hamburger) -->
     <div *ngIf="isMenuOpen &&!isLoggedIn"
       class="lg:hidden absolute top-16 left-0 right-0 bg-white text-black shadow-lg z-50">
-  
+
       <nav class="flex flex-col items-center py-4">
         <div class="flex justify-end p-4">
           <!-- Close Button (Cross Icon) -->
@@ -202,16 +231,16 @@
           </li>
           <li class="relative group">
             <button (click)="toggleDropdown('mass-mobile')"
-              class="flex justify-between w-full capitalize hover:text-red-600 focus:outline-none">{{'accueil.navbar-block.titre3'
+              class="flex justify-around w-full capitalize hover:text-red-600 focus:outline-none">{{'accueil.navbar-block.titre3'
               | translate}}
               <span>&#x25BC;</span>
             </button>
             <ul *ngIf="activeDropdown === 'mass-mobile'"
-              class=" text-black mt-2 space-y-2 pl-4"> 
-               <li><a [routerLink]="['program']"
+              class=" text-black mt-2 space-y-2">
+              <li><a [routerLink]="['program']"
                   class="block px-4 py-2 hover:bg-gray-200">{{
                   'accueil.navbar-block.titre2' | translate }}</a>
-  
+
               </li>
               <!-- <li> <a [routerLink]="['sponsor-page']"
                   class="block px-4 py-2 hover:bg-gray-200">{{
@@ -224,11 +253,11 @@
                   'accueil.navbar-block.desc2' | translate }}</a></li> -->
             </ul>
           </li>
-  
+
           <li><a [routerLink]="['exposant']"
               class="nav-item capitalize hover:text-red-600">{{
               'accueil.navbar-block.desc4' | translate }}</a>
-  
+
           </li>
           <!-- Contact -->
           <!-- <li>
@@ -236,20 +265,49 @@
               class="nav-item capitalize hover:text-red-600">{{
               'accueil.navbar-block.t3' | translate }}</a>
           </li> -->
-  
+
           <!-- <li><a [routerLink]="['program']"
               class="capitalize hover:text-red-600">{{'accueil.navbar-block.desc1'
               | translate}}</a></li> -->
-  
+
           <!-- Contact -->
-  
+
+          <li class="relative group">
+            <button (click)="toggleDropdownd('visiteur')"
+              class="flex justify-around w-full capitalize hover:text-red-600 focus:outline-none">{{'visitorForm.title'
+              | translate}}
+              <span>&#x25BC;</span>
+            </button>
+            <ul *ngIf="activeDropdown == 'visiteur'"
+              class=" text-black mt-2 space-y-2 ">
+              <li><a [routerLink]="['profesional-visitor']"
+                  class="block hover:bg-gray-200">{{
+                  'accueil.sponsor-block.t5' | translate }}</a>
+
+              </li>
+              <li><a [routerLink]="['grand-public']"
+                class="block hover:bg-gray-200">{{
+                'accueil.sponsor-block.t6' | translate }}</a>
+
+            </li>
+              <!-- <li> <a [routerLink]="['sponsor-page']"
+                  class="block px-4 py-2 hover:bg-gray-200">{{
+                  'accueil.navbar-block.m1' | translate }}</a></li>
+              <li><a [routerLink]="['personnalite']"
+                  class="block px-4 py-2 hover:bg-gray-200">{{
+                  'accueil.navbar-block.m2' | translate }}</a></li>
+              <li><a [routerLink]="['accomodation']"
+                  class="block px-4 py-2 hover:bg-gray-200">{{
+                  'accueil.navbar-block.desc2' | translate }}</a></li> -->
+            </ul>
+          </li>
+
           <li><a [routerLink]="['contact']"
               class="nav-item capitalize hover:text-red-600">{{
               'accueil.navbar-block.titre4' | translate }}</a></li>
-          
+
         </ul>
 
-    
         <!-- Language Selector and Login Button -->
         <div
           class=" w-1/5 flex items-center justify-end space-x-4 mt-1 lg:mt-0">
@@ -288,27 +346,27 @@
         </div>
         <!-- Connexion Button -->
         <div class="mt-4">
-        
+
           <button routerLink="/login"
-          class="bg-blue-500 text-white px-4 py-2 mr-2 rounded-full hover:bg-blue-600">
-          {{'accueil.header-block.connexion' | translate}}
-        </button>
-        <button routerLink="/register"
-        class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">
-        {{'accueil.header-block.inscription' | translate}}
-      </button>
+            class="bg-blue-500 text-white px-4 py-2 mr-2 rounded-full hover:bg-blue-600">
+            {{'accueil.header-block.connexion' | translate}}
+          </button>
+          <button routerLink="/register"
+            class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">
+            {{'accueil.header-block.inscription' | translate}}
+          </button>
         </div>
-        
+
       </nav>
     </div>
 
-    <div class="relative" *ngIf="isLoggedIn" >
+    <div class="relative" *ngIf="isLoggedIn">
       <button
         class="flex items-center border rounded-full sm:mr-20 px-3 py-2 bg-white text-gray-700 focus:outline-none"
         (click)="toggleDropdown2()">
         <img [src]="currentFlag" [alt]="currentLanguage"
           class="h-4 w-4 mr-2 rounded-full">
-        <span >{{ currentLanguage }}</span>
+        <span>{{ currentLanguage }}</span>
         <svg xmlns="http://www.w3.org/2000/svg"
           class="h-4 w-4 ml-2 text-gray-500" viewBox="0 0 20 20"
           fill="currentColor">

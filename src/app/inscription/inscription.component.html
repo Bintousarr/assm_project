@@ -63,13 +63,13 @@
           </label>
 
           <div class="flex justify-between ">
-            <div>
+            <!-- <div>
               <input type="radio" id="carte" name="paymentMode" value="carte"
                 (change)="selectPaymentMode('carte')" />
               <label for="carte"
                 class="ml-4 text-lg ">{{'paymentMode.options.carte' | translate
                 }}</label>
-            </div>
+            </div> -->
 
             <div>
               <input type="radio" id="virement" name="paymentMode"
@@ -282,8 +282,9 @@
                   class="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-300">
                   <option value disabled>{{ 'SELECT_COUNTRY_PLACEHOLDER' |
                     translate }}</option>
-                  <option *ngFor="let country of countries" [value]="country">{{
-                    country }}</option>
+                  <option *ngFor="let country of countries" [value]="country.name">{{
+                    country.name }}</option>
+                  
                 </select>
               </div>
               <!-- Reprise des autres champs du virement existants -->

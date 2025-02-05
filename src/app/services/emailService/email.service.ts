@@ -8,8 +8,8 @@ import { environment } from '../../services/environnements/environement.service'
   providedIn: 'root'
 })
 export class EmailService {
- // private apiUrl = 'https://mass.ci/email/send_mail.php'; // Remplacez par l'URL de votre APIhttps://mass.otif-africa-space.com
- private apiUrl = 'https://otif-africa-space.com/api/send_mail.php'; // Remplacez par l'URL de votre API
+  private apiUrl = 'https://mass.ci/email/send_mail.php'; // Remplacez par l'URL de votre APIhttps://mass.otif-africa-space.com
+// private apiUrl = 'https://otif-africa-space.com/api/send_mail.php'; // Remplacez par l'URL de votre API
   constructor(private http: HttpClient) { }
 
   sendEmail(emailData: any): Observable<any> {

@@ -38,26 +38,28 @@
       <div class="flex justify-center mb-8">
         <div class="h-1 w-20 bg-red-800"></div>
       </div>
-      <div class="  justify-between text-lg max-w-6xl mx-auto text-center pt-0 p-10">
-        <div class="flex items-center">
-          <div class="w-4/5">
+      <div
+        class="  justify-between text-lg max-w-6xl mx-auto text-center pt-0 p-10">
+        <div class="md:flex items-center">
+          <div class="md:w-4/5">
             <div *ngFor="let section of sections" class=" text-justify">
               <h3 class="text-lg font-bold text-red-800 mt-4">{{ section.title |
                 translate }}</h3>
               <!-- <p class="mt-2">{{ section.content | translate }}</p> -->
             </div>
           </div>
-          
-          <div class="w-1/5" >
-            <img *ngIf="currentLang === 'en'" src="../../assets/free_PNG90756.png"
+
+          <div class=" mt-4 md:mt-0 md:w-1/5">
+            <img *ngIf="currentLang === 'en'"
+              src="../../assets/free_PNG90756.png"
               class="object-cover w-full h-full" />
-              <img *ngIf="currentLang === 'fr'" src="../../assets/free_PNG90756.png"
+            <img *ngIf="currentLang === 'fr'"
+              src="../../assets/free_PNG90756.png"
               class="object-cover w-full h-full" />
-  
+
           </div>
-          
+
         </div>
-       
 
         <div>
 
