@@ -210,6 +210,11 @@ export const routes: Routes = [
     canActivate: [authGuard]  // Protection de la route
 
   },
+  {
+    path: 'our-exposant', loadComponent: () =>
+      import('../app/participants/participants.component').then(m => m.ParticipantsComponent),
+
+  },
   
   
   {

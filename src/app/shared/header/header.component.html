@@ -100,10 +100,25 @@
         class="block px-4 py-2 hover:bg-gray-200">{{
         'accueil.navbar-block.titre2' | translate }}</a> -->
         <!-- Exposants -->
-        <div>
+        <!-- <div>
           <a [routerLink]="['exposant']"
             class="nav-item capitalize hover:text-red-600">{{
             'accueil.navbar-block.desc4' | translate }}</a>
+        </div> -->
+        <!-- MASS Dropdown -->
+        <div class="relative group">
+          <a class="nav-item capitalize hover:text-red-600">{{
+            'accueil.navbar-block.desc4' | translate }}</a>
+          <div
+            class="absolute w-60 left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+            <a [routerLink]="['exposant']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.navbar-block.Book_stand' | translate }}</a>
+
+            <a [routerLink]="['our-exposant']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.navbar-block.desc' | translate }}</a>
+          </div>
         </div>
 
         <!-- Visiteurs -->
@@ -111,20 +126,19 @@
           class="nav-item capitalize hover:text-red-600">{{
           'accueil.navbar-block.t3' | translate }}</a>  -->
 
-
-            <!-- MASS Dropdown -->
+        <!-- MASS Dropdown -->
         <div class="relative group">
           <a class="nav-item capitalize hover:text-red-600">{{
-            'visitorForm.title' | translate }}</a>
+            'visitorForm.Title' | translate }}</a>
           <div
             class="absolute w-60 left-0 mt-2 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
             <a [routerLink]="['profesional-visitor']"
               class="block px-4 py-2 hover:bg-gray-200">{{
               'accueil.sponsor-block.t5' | translate }}</a>
-              
-                <a [routerLink]="['grand-public']"
-                class="block px-4 py-2 hover:bg-gray-200">{{
-                'accueil.sponsor-block.t6' | translate }}</a>
+
+            <a [routerLink]="['grand-public']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.sponsor-block.t6' | translate }}</a>
             <!--  <a [routerLink]="['sponsor-page']"
               class="block px-4 py-2 hover:bg-gray-200">{{
               'accueil.navbar-block.m1' | translate }}</a>
@@ -259,6 +273,35 @@
               'accueil.navbar-block.desc4' | translate }}</a>
 
           </li>
+          <li class="relative group">
+            <button (click)="toggleDropdownd('exposant')"
+              class="flex justify-around w-full capitalize hover:text-red-600 focus:outline-none">{{'accueil.navbar-block.desc4'
+              | translate}}
+              <span>&#x25BC;</span>
+            </button>
+            <ul *ngIf="activeDropdown == 'exposant'"
+              class=" text-black mt-2 space-y-2 ">
+              <li><a [routerLink]="['exposant']"
+                  class="block hover:bg-gray-200">{{
+                  'accueil.navbar-block.Book_stand' | translate }}</a>
+
+              </li>
+              <li><a [routerLink]="['our-exposant']"
+                  class="block hover:bg-gray-200">{{
+                  'accueil.navbar-block.desc' | translate }}</a>
+
+              </li>
+              <!-- <li> <a [routerLink]="['sponsor-page']"
+                  class="block px-4 py-2 hover:bg-gray-200">{{
+                  'accueil.navbar-block.m1' | translate }}</a></li>
+              <li><a [routerLink]="['personnalite']"
+                  class="block px-4 py-2 hover:bg-gray-200">{{
+                  'accueil.navbar-block.m2' | translate }}</a></li>
+              <li><a [routerLink]="['accomodation']"
+                  class="block px-4 py-2 hover:bg-gray-200">{{
+                  'accueil.navbar-block.desc2' | translate }}</a></li> -->
+            </ul>
+          </li>
           <!-- Contact -->
           <!-- <li>
             <a [routerLink]="['profesional-visitor']"
@@ -274,7 +317,7 @@
 
           <li class="relative group">
             <button (click)="toggleDropdownd('visiteur')"
-              class="flex justify-around w-full capitalize hover:text-red-600 focus:outline-none">{{'visitorForm.title'
+              class="flex justify-around w-full capitalize hover:text-red-600 focus:outline-none">{{'visitorForm.Title'
               | translate}}
               <span>&#x25BC;</span>
             </button>
@@ -286,10 +329,10 @@
 
               </li>
               <li><a [routerLink]="['grand-public']"
-                class="block hover:bg-gray-200">{{
-                'accueil.sponsor-block.t6' | translate }}</a>
+                  class="block hover:bg-gray-200">{{
+                  'accueil.sponsor-block.t6' | translate }}</a>
 
-            </li>
+              </li>
               <!-- <li> <a [routerLink]="['sponsor-page']"
                   class="block px-4 py-2 hover:bg-gray-200">{{
                   'accueil.navbar-block.m1' | translate }}</a></li>

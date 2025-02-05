@@ -24,7 +24,9 @@
       "desc": "Exposants",
       "titre4": "CONTACT",
       "titre5": "Pour toute information complémentaire, n'hésitez pas à nous contacter.",
-      "menu": "Menu"
+      "menu": "Menu",
+      "Book_stand":"Réserver un stand"
+
     },
     "banner-block": {
       "conference": "Marché Africain des Solutions Spatiales (MASS)",
@@ -72,6 +74,7 @@
     },
     "sponsor-block": {
       "titre1": "Nos Partenaires",
+      "titre2": "Nos Exposants",
       "t": "Sponsors",
       "t0": "Accréditation",
       "t01": "Cliquez sur le bouton pour generer les documents d'accréditation",
@@ -894,6 +897,7 @@
     "titlePro":"Visiteur Professionnel",
     "subtitle": "Inscription",
     "titleGene":"Générer le badge",
+    "Title":"VISITEUR",
 
     "lastName": "Nom",
     "lastNamePlaceholder": "Entrez votre nom",

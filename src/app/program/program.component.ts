@@ -42,8 +42,8 @@ export class ProgramComponent  {
           fileUrl = '/assets/TDR_MASS_2025_FR_Compress_Version.pdf';
           fileName = 'TDR_MASS_2025_FR_Compress_Version.pdf';
         } else {
-          fileUrl = '/assets/TDR_MASS_2025_FR_Compress_Version.pdf';
-          fileName = 'TDR_MASS_2025_FR_Compress_Version.pdf';
+          fileUrl = '/assets/TDR_MASS_2025_EN_Compress_Version.pdf';
+          fileName = 'TDR_MASS_2025_EN_Compress_Version.pdf';
         }
     
         // Télécharger le fichier

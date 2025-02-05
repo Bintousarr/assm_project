@@ -7,6 +7,7 @@
       "inscription": "REGISTER ",
       "connexion": "LOGIN"
     },
+
     "navbar-block": {
       "titre1": "HOME",
       "t1": "Market",
@@ -25,7 +26,8 @@
       "desc": "Exhibitors",
       "titre4": "CONTACT",
       "titre5": "For further information, feel free to contact us.",
-      "menu": "Menu"
+      "menu": "Menu",
+      "Book_stand":"Book a stand"
     },
     "banner-block": {
       "conference": "African Space Solutions Market (MASS)",
@@ -73,6 +75,8 @@
     },
     "sponsor-block": {
       "titre1": "Our Partners",
+      "titre2": "Our Exhibitors",
+
       "t": "Sponsors",
       "t0": "Accreditation",
       "t01": "Click on the button to generate accreditation documents",
@@ -884,6 +888,8 @@
     "title": "Visitor",
     "titlePro": "Professional Visitor ",
     "titleGene": "Generate  your badge",
+    "Title":"VISITOR",
+
     "subtitle": "Registration",
     "lastName": "Last Name",
     "lastNamePlaceholder": "Enter your last name",
