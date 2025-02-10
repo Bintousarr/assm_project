@@ -41,7 +41,16 @@ export class RegisterService {
     return this.http.post<any>(url, body,{ responseType: 'json' });
   }
 
-  updatePassword(data: {email:string; oldPassword: string; newPassword: string }): Observable<any> {
-    return this.http.post(`${environment.apiUrl}?action=updateMypass`, data,{ responseType: 'json' });
+
+  updatePassword(data: any): Observable<any> {
+    const url = `${environment.apiUrl}?action=updateMypass`; // Endpoint de votre script PHP
+    const body =  data ; // Corps de la requête
+    // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.post<any>(url, body,{ responseType: 'json' });
   }
+
+  // updatePassword(data: {email:string; oldPassword: string; newPassword: string }): Observable<any> {
+  //   return this.http.post(`${environment.apiUrl}?action=updateMypass`, data,{ responseType: 'json' });
+  // }
 }

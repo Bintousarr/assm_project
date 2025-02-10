@@ -22,6 +22,7 @@ export class InscriptionComponent {
   cartepaymentForm: FormGroup;
   products = [
     { name: 'STARTUP', price: 1000, quantity: 1 },
+    { name: 'BRONZE-PACK', price: 3000, quantity: 1 },
     { name: 'SILVER-PACK', price: 6000, quantity: 1 },
     { name: 'GOLD-PACK', price: 12000, quantity: 1 },
     { name: 'PLATINIUM', price: 23000, quantity: 1 },
@@ -211,7 +212,7 @@ export class InscriptionComponent {
         country: this.paymentForm.value.country
       };
       if (this.translate.currentLang == 'en') {
-        this.http.post('https://mass.otif-africa-space.com/devis/generateDevisAndSendEmailEnglish.php', emailData).subscribe(
+        this.http.post('https://mass.ci/devis/generateDevisAndSendEmailEnglish.php', emailData).subscribe(
           (response: any) => {
             //alert(response.message);
             this.openDialog('Please find your quote in your email inbox.', true)
@@ -225,7 +226,7 @@ export class InscriptionComponent {
         );
 
       } else {
-        this.http.post('https://mass.otif-africa-space.com/devis/generateDevisAndSendEmail.php', emailData).subscribe(
+        this.http.post('https://mass.ci/devis/generateDevisAndSendEmail.php', emailData).subscribe(
           (response: any) => {
             //alert(response.message);
             this.openDialog('Veuillez retrouver votre devis dans votre boîte mail.', true)
