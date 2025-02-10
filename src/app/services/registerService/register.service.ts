@@ -43,7 +43,7 @@ export class RegisterService {
 
 
   updatePassword(data: any): Observable<any> {
-    const url = `${environment.apiUrl}?action=updateMypass`; // Endpoint de votre script PHP
+    const url = `${environment.apiUrl}?action=newPass`; // Endpoint de votre script PHP
     const body =  data ; // Corps de la requête
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
