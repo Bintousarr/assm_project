@@ -18,8 +18,8 @@ export class SponsorPageComponent {
   logos = [
     { src: 'assets/AU.png', link: 'https://au.int/en/node/35984' },
     { src: 'assets/tourisme_ci_logo.png', link: 'https://tourismecotedivoire.ci/' },
-    { src: 'assets/corsair.png',  link: 'https://www.flycorsair.com/fr-ci' },
-    { src: 'assets/digitaux.png',  link: 'https://telecom.gouv.ci/new/index.php/ministere/organigramme-du-ministere' },
+    { src: 'assets/corsair.png', link: 'https://www.flycorsair.com/fr-ci' },
+    { src: 'assets/digitaux.png', link: 'https://telecom.gouv.ci/new/index.php/ministere/organigramme-du-ministere' },
   ];
 
   customOptions: OwlOptions = {
@@ -50,7 +50,7 @@ export class SponsorPageComponent {
   isUVExpanded: boolean = false;
 
   currentLang: string = 'en'; // Initialize language to 'en'
-  constructor(private router: Router){}
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.translate.setDefaultLang('en');
@@ -65,7 +65,7 @@ export class SponsorPageComponent {
   translateText(lang: string) {
     this.translate.use(lang);
   }
-  
+
   downloadFile() {
     // Obtenir la langue actuelle
     const currentLang = this.translate.currentLang;
@@ -90,18 +90,18 @@ export class SponsorPageComponent {
       })
       .catch(error => console.error('Error downloading the file:', error));
   }
- 
- 
-   // Méthodes pour toggle les divs
-   toggleText() {
-     this.isTextExpanded = !this.isTextExpanded;
-   }
 
-   toggleESA() {
+
+  // Méthodes pour toggle les divs
+  toggleText() {
+    this.isTextExpanded = !this.isTextExpanded;
+  }
+
+  toggleESA() {
     this.isESAExpanded = !this.isESAExpanded;
   }
 
-  
+
   toggleUA() {
     this.isUAExpanded = !this.isUAExpanded;
   }
@@ -111,29 +111,56 @@ export class SponsorPageComponent {
   }
 
 
-   toggleNASA() {
-     this.isNASAExpanded= !this.isNASAExpanded;
-   }
+  toggleNASA() {
+    this.isNASAExpanded = !this.isNASAExpanded;
+  }
 
-   toggleCNES() {
+  toggleCNES() {
     this.isCNESExpanded = !this.isCNESExpanded;
   }
 
   toggleISRO() {
-    this.isISROExpanded= !this.isISROExpanded;
+    this.isISROExpanded = !this.isISROExpanded;
   }
 
-   toggleORANGE() {
+  toggleORANGE() {
     this.isORANGEExpanded = !this.isORANGEExpanded;
   }
 
   toggleUV() {
     this.isUVExpanded = !this.isUVExpanded;
   }
-  
- 
+
+
   goToPaymentPage(selectedIndex: number) {
     this.router.navigate(['/reservation'], { queryParams: { productIndex: selectedIndex } });
   }
- 
+  sendEmail() {
+    let nomPackage = ""
+    if (this.currentLang == "en") {
+      nomPackage = "Official Sponsor"
+
+    const email = "secretariat@mass.ci"; // Remplace par l'adresse email souhaitée
+    // const packageName = "Nom du Package"; // Remplace par le nom du package
+    const subject = encodeURIComponent("Request for a quote");
+    const body = encodeURIComponent(`Hello,\n\nI would like a quote for the ${nomPackage} package from MASS.\n\nBest regards.`);
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+
+    window.location.href = mailtoLink;
+    } else {
+      nomPackage = "Sponsor Officiel"
+      const email = "secretariat@mass.ci"; // Remplace par l'adresse email souhaitée
+    // const packageName = "Nom du Package"; // Remplace par le nom du package
+    const subject = encodeURIComponent("Demande de devis");
+    const body = encodeURIComponent(`Bonjour,\n\nJ'aimerais un devis pour le package ${nomPackage} du MASS.\n\nCordialement.`);
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+
+
+    }
+    
+
+  
+  }
 }
