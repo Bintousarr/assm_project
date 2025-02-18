@@ -103,10 +103,10 @@ export const routes: Routes = [
     path: 'login', loadComponent: () =>
       import('../app/login/login.component').then((c) => c.LoginComponent)
   },
-  // {
-  //   path: 'reservation', loadComponent: () =>
-  //     import('../app/inscription/inscription.component').then((c) => c.InscriptionComponent)
-  // },
+   {
+     path: 'reservation', loadComponent: () =>
+       import('../app/inscription/inscription.component').then((c) => c.InscriptionComponent)
+   },
   {
     path: 'paiement', loadComponent: () =>
       import('../app/paiement/paiement.component').then((c) => c.PaiementComponent)

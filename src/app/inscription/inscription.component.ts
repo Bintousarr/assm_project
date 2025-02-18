@@ -20,13 +20,69 @@ export class InscriptionComponent {
 
   paymentForm: FormGroup;
   cartepaymentForm: FormGroup;
+  sponsorPackages = [
+    {
+      name: "SP_SPONSOR_ETOILE",
+      fullname_fr:"Sponsor Étoile",
+      fullname_en:"Star Sponsor",
+      priceUSD: "12 000",
+      priceXOF: "7 500 000",
+      standSize: "SP_STAND_18M2",
+      bgColor: "bg-gray-900",
+      equipments: ["SP_TABLES_2", "SP_CHAIRS_4", "SP_LIGHTINGS_2", "SP_PLUGS_2"],
+      features: [
+        "SP_SPONSOR_STATUS", "SP_LOGO_ON_WEBSITE", "SP_LOGO_ON_COVER", "SP_QUARTER_PAGE_AD",
+        "SP_LOGO_ON_COMMUNICATION", "SP_PROMO_ITEMS", "SP_PRESENCE_KAKEMONO",
+        "SP_LIVE_INTERVIEW", "SP_VIDEO_PLAY_30S", "SP_AGORA_SPEECH_15MIN", "SP_GALA_ACCESS",
+        "SP_HONORED_GUESTS_ACCESS", "SP_VIP_LUNCH_ACCESS", "SP_INSTITUTIONAL_SPOT_MASS_WEBSITE",
+        "SP_SPONSOR_EVENT_ITEM"
+      ]
+    },
+    {
+      name: "SP_SPONSOR_CONSTELLATION",
+      fullname_fr:"Sponsor Constellation",
+      fullname_en:"Constellation Sponsor",
+      priceUSD: "20 000",
+      priceXOF: "12 500 000",
+      standSize: "SP_STAND_27M2",
+      bgColor: "bg-gray-700",
+      equipments: ["SP_TABLES_3", "SP_CHAIRS_6", "SP_LIGHTINGS_3", "SP_PLUGS_3"],
+      features: [
+        "SP_SPONSOR_STATUS", "SP_LOGO_ON_WEBSITE", "SP_LOGO_ON_COVER", "SP_HALF_PAGE_AD",
+        "SP_LOGO_ON_ALL_SUPPORTS", "SP_PROMO_ITEMS", "SP_PRESENCE_KAKEMONO",
+        "SP_LIVE_INTERVIEW", "SP_VIDEO_PLAY_1MIN30", "SP_AGORA_SPEECH_20MIN", "SP_GALA_ACCESS",
+        "SP_PRIORITY_BOOKING", "SP_OPENING_CEREMONY_INVITES_5", "SP_INSTITUTIONAL_SPOT_MASS_WEBSITE",
+        "SP_SPONSOR_EVENT_ITEM"
+      ]
+    },
+    {
+      name: "SP_SPONSOR_GALAXIE",
+      fullname_fr:"Sponsor Galaxie",
+      fullname_en:"Galaxy Sponsor",
+      priceUSD: "35 000",
+      priceXOF: "22 000 000",
+      standSize: "SP_STAND_36M2",
+      bgColor: "bg-gray-900",
+      equipments: ["SP_TABLES_4", "SP_CHAIRS_8", "SP_LIGHTINGS_4", "SP_PLUGS_4"],
+      features: [
+        "SP_SPONSOR_STATUS", "SP_LOGO_ON_WEBSITE", "SP_LOGO_ON_COVER", "SP_FULL_PAGE_AD",
+        "SP_LOGO_ON_ALL_SUPPORTS", "SP_PROMO_ITEMS", "SP_PRESENCE_KAKEMONO",
+        "SP_LIVE_INTERVIEW", "SP_VIDEO_PLAY_2MIN", "SP_AGORA_SPEECH_30MIN", "SP_GALA_ACCESS",
+        "SP_RECOGNITION_AT_EVENT", "SP_INSTITUTIONAL_SPOT_MASS_WEBSITE", "SP_SPONSOR_EVENT_ITEM",
+        "SP_PRIORITY_BOOKING", "SP_OPENING_CEREMONY_INVITES_10",
+        "SP_PROMOTIONAL_ACTIONS", "SP_BRANDING_CONTEST_OPPORTUNITY",
+        "SP_GALA_TABLE_RESERVATION", "SP_VIP_LUNCH_ACCESS", "SP_EXCLUSIVE_INTERVIEW_WEB_TV",
+        "SP_COMPANY_MENTION_RADIO_AD", "SP_MASS_SCREEN_PRESENCE"
+      ]
+    }
+  ];
   products = [
-    { name: 'STARTUP', price: 1000, quantity: 1 },
-    { name: 'BRONZE-PACK', price: 3000, quantity: 1 },
-    { name: 'SILVER-PACK', price: 6000, quantity: 1 },
-    { name: 'GOLD-PACK', price: 12000, quantity: 1 },
-    { name: 'PLATINIUM', price: 23000, quantity: 1 },
-    { name: 'HEADLINE SPONSOR', price: 50000, quantity: 1 },
+    { name: 'PACK_DECOLLAGE', price: 3000, quantity: 1 },
+    { name: 'PACK_ASCENSION', price: 6000, quantity: 1 },
+    { name: 'PACK_EN_ORBITE', price: 9000, quantity: 1 },
+    { name: 'SP_SPONSOR_ETOILE', price: 12000, quantity: 1 },
+    { name: 'SP_SPONSOR_CONSTELLATION', price: 20000, quantity: 1 },
+    { name: 'SP_SPONSOR_GALAXIE', price: 35000, quantity: 1 },
   ];
   total = 0;
   totalFCA: number = 0; // Total en XOF
@@ -123,7 +179,6 @@ export class InscriptionComponent {
 
   ngOnInit(): void {
     localStorage.removeItem('userToken');
-    console.log("dsssdddddsssss")
 
     const productsArray = this.paymentForm.get('products') as FormArray;
 

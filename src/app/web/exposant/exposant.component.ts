@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -6,12 +7,44 @@ import { jsPDF } from 'jspdf';
 @Component({
   selector: 'app-exposant',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule,CommonModule],
   templateUrl: './exposant.component.html',
   styleUrl: './exposant.component.scss'
 })
 export class ExposantComponent {
   translate: TranslateService = inject(TranslateService)
+
+  exhibitorPackages = [
+    {
+      name: "PACK_DECOLLAGE",
+      priceUSD: "3 000",
+      priceXOF: "1 900 000",
+      area: "1_BOX_9M2",
+      features: ["1_TABLE", "2_CHAIRS", "1_LIGHTING", "1_PLUG"],
+      img:"../../../assets/pack-decollage.png"
+    },
+    {
+      name: "PACK_ASCENSION",
+      priceUSD: "6 000",
+      priceXOF: "3 750 000",
+      area: "2_BOX_9M2",
+      features: ["2_TABLES", "4_CHAIRS", "2_LIGHTINGS", "2_PLUGS"],
+      img:"../../../assets/pack-ascension.png"
+
+      
+    },
+    {
+      name: "PACK_EN_ORBITE",
+      priceUSD: "9 000",
+      priceXOF: "5 700 000",
+      area: "3_BOX_9M2",
+      features: ["3_TABLES", "6_CHAIRS", "3_LIGHTINGS", "3_PLUGS"],
+      img:"../../../assets/pack-orbite.png"
+
+     
+    }
+  ];
+
   constructor(private router: Router) {
   }
   ngOnInit() {

@@ -84,16 +84,30 @@
             <a [routerLink]="['program']"
               class="block px-4 py-2 hover:bg-gray-200">{{
               'accueil.navbar-block.titre2' | translate }}</a>
-            <!--  <a [routerLink]="['sponsor-page']"
+             <!--  <a [routerLink]="['sponsor-page']"
               class="block px-4 py-2 hover:bg-gray-200">{{
               'accueil.navbar-block.m1' | translate }}</a>
-            <a [routerLink]="['personnalite']"
+           <a [routerLink]="['personnalite']"
               class="block px-4 py-2 hover:bg-gray-200">{{
               'accueil.navbar-block.m2' | translate }}</a>
             <a [routerLink]="['accomodation']"
               class="block px-4 py-2 hover:bg-gray-200">{{
               'accueil.navbar-block.desc2' | translate }}</a> -->
           </div>
+        </div>
+        <div class="relative group">
+          <a [routerLink]="['sponsor-page']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.navbar-block.desc5' | translate }}</a>
+          <!-- <div
+            class="absolute w-60 left-0 mt-2 bg-white border border-gray-200 text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+            <a [routerLink]="['marche']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.navbar-block.t1' | translate }}</a>
+            <a [routerLink]="['voir-marche']"
+              class="block px-4 py-2 hover:bg-gray-200">{{
+              'accueil.navbar-block.t2' | translate }}</a>
+          </div> -->
         </div>
 
         <!-- <a [routerLink]="['program']"
@@ -268,9 +282,9 @@
             </ul>
           </li>
 
-          <li><a [routerLink]="['exposant']"
+          <li><a [routerLink]="['sponsor-page']"
               class="nav-item capitalize hover:text-red-600">{{
-              'accueil.navbar-block.desc4' | translate }}</a>
+              'accueil.navbar-block.desc5' | translate }}</a>
 
           </li>
           <li class="relative group">
